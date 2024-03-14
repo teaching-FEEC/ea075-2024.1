@@ -6,7 +6,7 @@ O objetivo geral do projeto final desta disciplina é dar a oportunidade dos alu
 
 Nesta primeira entrega, siga as seguintes instruções atentamente:
  * Garanta que cada membro da equipe tenha uma conta github (serão monitoradas as contribuições de cada membro).
- * Faça fork deste repositório.
+ * Faça [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks) deste repositório.
  * No seu fork, dentro da pasta de `projetos`, *crie uma nova pasta* com o *nome do seu projeto*.
  * Faça o commit dos arquivos associados a esta entrega, conforme descrito a seguir.
  * Quando tudo estiver pronto para entrega, crie uma tag de release no repositório identificada como `2023.1_EA075_E1`.
