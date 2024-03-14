@@ -1,4 +1,4 @@
-# 2023.2 EA075 - Projeto - Segunda Entrega (E2)
+# 2024.1 EA075 - Projeto - Segunda Entrega (E2)
 
 ## Instruções Gerais
 
