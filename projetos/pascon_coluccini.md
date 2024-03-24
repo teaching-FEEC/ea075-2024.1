@@ -13,5 +13,5 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 >| João Pedro Souza Pascon  | 239733  | Eng. Elétrica|
 
 ## Descrição do Projeto
-
+GAbriel è meu grande amigão
 
