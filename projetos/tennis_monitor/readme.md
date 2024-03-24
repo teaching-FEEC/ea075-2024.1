@@ -28,25 +28,43 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
   
 > É possível estabelecer um valor econômico associado?
 
-
 ## Descrição Funcional
 > A descrição funcional do projeto é a principal entrega do E1 e pode ser realizada neste próprio arquivo Markdown,
 > com links para diagramas ou outros arquivos que estejam no próprio repositório.
 
 ### Funcionalidades
 > Detalhe todas as tarefas que o sistema será capaz de executar
-- 
+- contar número de batidas
+- medir tempo jogado
+- medir intensidade das batidas
+- estimar qualidade das batidas
+- medir ângulo/posição da raquete?
+- sinalizar nível de bateria
+- exportar dados em arquivo de formato específico (e.g. .csv)
+- encaixe com a raquete
+- ter bateria
 
 ### Configurabilidade
 > Detalhe, se houver, todas as possíveis configurações do circuito e todos os pontos de alteração da configuração.
+- ligar/desligar
 
 ### Eventos
 > Quais eventos o sistema deve tratar?
 > Se aplicável, classifique os eventos que são periódicos (procure especificar a periodicidade) e os que são não-periódicos
 > (qual o tempo mínimo entre dois eventos sucessivos)?
+1. botão on/off acionado
+2. exportação de dados solicitada
+3. carregamento iniciado/finalizado
+4. aceleração medida
+5. variação na posição medida 
 
 ### Tratamento de Eventos
 > Qual comportamento o sistema deve ter para tratar corretamente cada evento?
+1. Fornecimento de energia ao microcontrolador e início do monitoramento.
+2. formatação do arquivo e envio.
+3. mudar led RGB de carregamento (verde: carregado, vermelho: carregando, apagado: fora do carregamento)
+4. armazenamento do dado medido com determinada taxa de amostragem
+5. armazenamento do dado medido com determinada taxa de amostragem
 
 ## Descrição Estrutural do Sistema
 > Junto com a descrição do comportamento do sistema, deve-se especificar, em nível de bloco ou sistema, a estrutura necessária 
