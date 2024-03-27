@@ -1,5 +1,5 @@
-# `<Monitor de Tênis>`
-# `<Tennis Monitor>`
+# `TennisTracker`
+# `TennisTracker`
 
 ## Apresentação
 
@@ -10,12 +10,14 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 > |Nome  | RA | Curso|
 > |--|--|--|
 > | Nathan Shen Baldon  | 242448 | Eng. Elétrica|
-> | Nome2  | 123456  | Eng. de Computação|
+> | Gabriel Buzzi Sanches  | 256389  | Eng. Elétrica|
 
 
 ## Descrição do Projeto
 > Descrição do objetivo principal do projeto, incluindo contexto gerador, motivação.
 > Escreva essa seção imaginando que está tentando convencer alguém a investir financeiramente no seu projeto.
+
+O Tênis é conhecido por ser um esporte difícil de se praticar pela exigência de cordenação física e agilidade nos movimentos. Sabendo disso os feedbacks de cada jogada são de extrema importância para quem está aprendendo ou quer melhorar no esporte. Pensando nisso nosso objetivo é entregar esses feedbacks tirando proveito da mecânida dos movimentos da raquete do jogador durante uma partida, assim excluindo também qualquer viés devido a um observador terceiro (professor ou treinador) e ainda oferencendo uma base fixa para comparação dos resultados. Para isso um sistema eletrônico embarcado será projetado para ficar fixado na raquete do jogador enquanto ele prática o esporte aquisitando e armazenando dados variados que posteriormente podem ser analisados em cumputador. Inicialmente qualquer processamento em tempo real é deixado de lado, focando apenas na aquisição dos dados, mas o projeto do sistema irá considerar como uma medida de escalabilidade a capacidade de realizar processamentos em tempo real e retornar respostas mesmo durante a jogatina.  
 
 > Qual problema vocês pretendem solucionar?
 - Análise quantitativa do desempenho de jogadores de tênis em treinos e partidas.
@@ -27,22 +29,30 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 - Uso pela mídia e entidades do esporte em partidas oficiais para levantamento de estatísticas.
   
 > É possível estabelecer um valor econômico associado?
-
+Sim, o dispositivo poderia ser vendido para qualquer possoa interessada em monitorar seu desempenho no esporte Tênis.
 ## Descrição Funcional
 > A descrição funcional do projeto é a principal entrega do E1 e pode ser realizada neste próprio arquivo Markdown,
 > com links para diagramas ou outros arquivos que estejam no próprio repositório.
 
 ### Funcionalidades
 > Detalhe todas as tarefas que o sistema será capaz de executar
-- contar número de batidas
-- medir tempo jogado
-- medir intensidade das batidas
-- estimar qualidade das batidas
-- medir ângulo/posição da raquete?
-- sinalizar nível de bateria
-- exportar dados em arquivo de formato específico (e.g. .csv)
-- encaixe com a raquete
-- ter bateria
+Funcionalidade do dispositivo:
+- Fixar na raquete
+- Armazenar os dados aquisitados
+- Medir a velocidade da raquete
+- Medir a intensidade das colisões com a bolinha
+- Medir a altura da raquete
+- Media o ângulo com a horizontal da raquete
+- Interface para controlar quando começar quando parar aquisição
+- Interface para exportar os dados
+- Peso reduzido
+- Sinalizar o nível de bateria
+- Armazenamento de energia (bateria)
+
+Funcionalidade de análise:
+- Contar o número de golpes
+- Medir o tempo jogado
+- Estimar a qualidade dos golpes
 
 ### Configurabilidade
 > Detalhe, se houver, todas as possíveis configurações do circuito e todos os pontos de alteração da configuração.
@@ -52,19 +62,18 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 > Quais eventos o sistema deve tratar?
 > Se aplicável, classifique os eventos que são periódicos (procure especificar a periodicidade) e os que são não-periódicos
 > (qual o tempo mínimo entre dois eventos sucessivos)?
-1. botão on/off acionado
-2. exportação de dados solicitada
-3. carregamento iniciado/finalizado
-4. aceleração medida
-5. variação na posição medida 
+1. Ligar (botão on/off)
+2. Desligar (botão on/off)
+3. Exportação de dados solicitada
+4. Conectar o carregador
 
 ### Tratamento de Eventos
 > Qual comportamento o sistema deve ter para tratar corretamente cada evento?
-1. Fornecimento de energia ao microcontrolador e início do monitoramento.
-2. formatação do arquivo e envio.
-3. mudar led RGB de carregamento (verde: carregado, vermelho: carregando, apagado: fora do carregamento)
-4. armazenamento do dado medido com determinada taxa de amostragem
-5. armazenamento do dado medido com determinada taxa de amostragem
+O número de cada item da lista é referente a um evento da lista anterior.
+1. Iniciar medições de grandezas (posição, velocidade, aceleração, etc.) (periódico com taxa de amostragem) + acender led
+2. Interromper as medições e o fornecimento de energia + apagar led
+3. Ligar no modo de comunicação
+4. Desligar os sensores e carregar a bateria
 
 ## Descrição Estrutural do Sistema
 > Junto com a descrição do comportamento do sistema, deve-se especificar, em nível de bloco ou sistema, a estrutura necessária 
