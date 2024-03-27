@@ -28,14 +28,14 @@ O Tênis é conhecido por ser um esporte difícil de se praticar pela exigência
 - Treinadores que desejam coletar dados para validar seu método de treimamento.
 - Uso pela mídia e entidades do esporte em partidas oficiais para levantamento de estatísticas.
   
-> É possível estabelecer um valor econômico associado?
+> É possível estabelecer um valor econômico associado?  
 Sim, o dispositivo poderia ser vendido para qualquer possoa interessada em monitorar seu desempenho no esporte Tênis.
 ## Descrição Funcional
 > A descrição funcional do projeto é a principal entrega do E1 e pode ser realizada neste próprio arquivo Markdown,
 > com links para diagramas ou outros arquivos que estejam no próprio repositório.
 
 ### Funcionalidades
-> Detalhe todas as tarefas que o sistema será capaz de executar
+> Detalhe todas as tarefas que o sistema será capaz de executar  
 Funcionalidade do dispositivo:
 - Fixar na raquete
 - Armazenar os dados aquisitados
