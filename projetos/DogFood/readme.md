@@ -10,7 +10,7 @@ O presente projeto foi originado no contexto das atividades da disciplina de gra
  | Victor Potença Macchini | 225205  | Eng.  de Computação |
 
 
-## Descrição do Projeto e Descrição Estrutural do Sistema
+## Descrição do Projeto
 Muitas vezes, pessoas que têm animais de estimação se encontram em uma situação onde precisam se ausentar de sua residência por alguns dias; nessas situações, a preocupação com a alimentação do pet é uma dor inevitável. O projeto é pensado para resolver esse problema,  garantindo a alimentação do animal de estimação de forma automática, regulada, segura e livre de desperdícios - evitando a dor de cabeça do dono com a gestão da ração.
 
 Existem hoje alguns dispositivos até mesmo caseiros que tentam solucionar esse problema, porém, não lidam tão bem com situações adversas: a não-presença do pet em casa, o horário de refeição restrito, a quantidade de porções servidas e o desperdício da comidinha - > fatores que podem comprometer a saúde do animal.
@@ -21,7 +21,7 @@ Dispositivos com propostas semelhantes estão em torno de R$300,00 no mercado ho
 
 
 
-## Descrição Funcional
+## Descrição Funcional e Descrição Estrutural do Sistema
 <img src="\dogfood_diagr.png">
 
 ### Funcionalidades
