@@ -3,11 +3,11 @@
 ## Apresentação
 O presente projeto foi originado no contexto das atividades da disciplina de graduação EA075 - Introdução ao Projeto de Sistemas Embarcados, oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dra. Paula Dornhofer Paro Costa, do Departamento de Engenharia de Computação e Automação (DCA) da Faculdade de Engenharia Elétrica e de Computação (FEEC).
 
-> |Nome  | RA | Curso|
-> |--|--|--|
-> | Fernando H. Velmae Nicchio  | 197003  | Eng. de Computação|
-> | Rafael Cristian Nascimento  | 223622  | Eng. Elétrica|
-> | Victor Potença Macchini | 225205  | Eng.  de Computação |
+ |Nome  | RA | Curso|
+ |--|--|--|
+ | Fernando H. Velmae Nicchio  | 197003  | Eng. de Computação|
+ | Rafael Cristian Nascimento  | 223622  | Eng. Elétrica|
+ | Victor Potença Macchini | 225205  | Eng.  de Computação |
 
 
 ## Descrição do Projeto e Descrição Estrutural do Sistema
