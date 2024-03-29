@@ -1,5 +1,5 @@
-# `<Título em Português do Projeto>`
-# `<Project Title in in English>`
+# `<Projeto de Casa Inteligente>`
+# `<Smart Home Project>`
 
 ## Apresentação
 
@@ -9,8 +9,8 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 > Incluir nome RA e foco de especialização de cada membro do grupo. Os projetos devem ser desenvolvidos em duplas.
 > |Nome  | RA | Curso|
 > |--|--|--|
-> | Nome1  | 123456  | Eng. Elétrica|
-> | Nome2  | 123456  | Eng. de Computação|
+> | Daniel Alexander Ortega Rodriguez  | 261261  | Eng. Elétrica|
+> | Luciano Ferreira Cardoso Filho     | xxxxxx  | Eng. Elétrica|
 
 
 ## Descrição do Projeto
