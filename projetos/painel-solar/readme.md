@@ -1,5 +1,5 @@
-# `Sistema de Inclinação Variável para painéis solares`
-# `Variable Slope System for Solar Panels`
+# `Painéis Solares de Inclinação Adaptável`
+# `Adaptive Slope Solar Panels`
 
 ## Apresentação
 
