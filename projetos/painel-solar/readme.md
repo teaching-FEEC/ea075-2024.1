@@ -1,5 +1,5 @@
-# `Painel Solar de Ângulo variável`
-# `<Project Title in in English>`
+# `Sistema de Inclinação Variável para painéis solares`
+# `Variable Slope System for Solar Panels`
 
 ## Apresentação
 
