@@ -1,4 +1,4 @@
-# `<Título em Português do Projeto>`
+# `<Painel Solar de Ângulo variável>`
 # `<Project Title in in English>`
 
 ## Apresentação
