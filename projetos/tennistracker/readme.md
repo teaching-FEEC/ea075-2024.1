@@ -41,7 +41,7 @@ O dispositivo poderia ser vendido para qualquer possoa interessada em monitorar 
 - **Sinalizar o nível de bateria**: o sistema deve ser capaz de exibir o nível da bateria.
 - **Armazenamento de energia (bateria)**: o sistema deve ser capaz de funcionar sem necessidade de cabos de energia.
 
-##### Funcionalidade de análise:
+### Funcionalidade de análise:
 Uma vez que o dados forem aquisitados, via software poderemos executar:
 - Contar o número de golpes
 - Medir o tempo jogado
@@ -52,21 +52,17 @@ Uma vez que o dados forem aquisitados, via software poderemos executar:
 - Avaliar caracteristicas dos golpes que resultam em pontos na partida
 
 ### Configurabilidade
-> Detalhe, se houver, todas as possíveis configurações do circuito e todos os pontos de alteração da configuração.
 - Aquisição
 - Carregamento
 - Carregamento + Transferência de Dados
 
 ### Eventos
-> Quais eventos o sistema deve tratar?
-> Se aplicável, classifique os eventos que são periódicos (procure especificar a periodicidade) e os que são não-periódicos
-> (qual o tempo mínimo entre dois eventos sucessivos)?
-> |Eventos  | 
-> |--|
-> | Ligar (botão on/off)  | 
-> | Desligar (botão on/off)  |
-> | USB com interface de dados conectado |
-> | USB de alimentação conectado | 
+|Eventos  | 
+|--|
+| Ligar (botão on/off)  | 
+| Desligar (botão on/off)  |
+| USB com interface de dados conectado |
+| USB de alimentação conectado | 
 
 ### Tratamento de Eventos
 
