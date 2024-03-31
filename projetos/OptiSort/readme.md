@@ -11,34 +11,38 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 > | Henrique Stumm Rocha  | 239694  | Eng. Elétrica|
 > | Melvin Gustavo Maradiaga Elvir  | 185068  | Eng. Elétrica|
 
-
 ## Descrição do Projeto
 > Descrição do objetivo principal do projeto, incluindo contexto gerador, motivação.
-> Escreva essa seção imaginando que está tentando convencer alguém a investir financeiramente no seu projeto.
-> Qual problema vocês pretendem solucionar?
-> Quem são os potenciais usuários?
-> É possível estabelecer um valor econômico associado?
 
+### Contexto Gerador e Motivação
+Todo ano a ONU realiza um estudo, nomeado _Food Waste Index Report_, onde reportam a produção global de alimento e analizam o desperdiço alimentar gerado nos níveis de distribuição e consumidor final. Na versão mais recente [1] apresentaram-se os resultados oriundos de uma pesquisa realizada no Rio de Janeiro (pg.20-21) coletando dados de 102 lares distintos de díversos posicionamentos socio-econômicos. Nele, reportaram que um 39% do desperdiço era de alimentos ainda comestíveis, e estimaram uma produção anual de 77kg/capita de resíduo desta classe (classe II).
+Dessa vez, olhando para a região de São Paulo em 2022 foi publicado um artigo na revista Sustainability [2] fornecendo métricas de resíduo alimentar oriundo de feiras dentro da cidade, estimando uma produção de 27,9 kg de desperdiço por barraca. Estes dados, ao serem extrapolados ao periodo de um ano em todas as barracas da cidade, oferece uma primeira estimativa da geração de desperdiço na cidade, umas 59.300 toneladas ao ano.
+Ainda com iniciativas de sustentabilidade dentro do Brasil, a identificação, o registro e o acompanhamento de desperdiço alimentar dentro do país precisa de maior atenção. Por conta disso, estamos propondo um projeto que consiga auxiliar algumas das instituições que já trabalham dentro dessa área, focando ele mais como uma iniciativa social do que comercial.
+
+### Projeto
+O OptiSort tem como objetivo realizar a classificação do desperdiço em centros de coleta alimentar (como bancos de alimentos) mediante a utilização de técnicas avançadas de visão computacional e aprendizado de máquina, sendo capaz de armazenar e disponibilizar os dados coletados ao longo da sua operação para o usuario.
+Mediante sua implementação espera-se agilizar a classificação alimentar dentro dos locais onde ele for instalado, espera-se diminuir a perda de alimentos oriunda do erro humano dentro da classificação e espera-se apoiar o registro de desperdiço alimentar dentro da cidade.
+
+> Atualmente não conseguimos levantar o valor econômico associado ao projeto por conta de ainda estar determinando
+> os materiais que serão utilizados para o desenvolvimento do projeto. Após termos feito isso, será possível realizar uma estimativa inicial.
 
 ## Descrição Funcional
 > A descrição funcional do projeto é a principal entrega do E1 e pode ser realizada neste próprio arquivo Markdown,
 > com links para diagramas ou outros arquivos que estejam no próprio repositório.
 
 ### Funcionalidades
-O OptiSort é um sistema de classificação automática para linhas de produção, com foco na indústria alimentícia, farmacêutica, automobilística e outras. Sua função principal é garantir a qualidade dos produtos através da identificação, classificação e remoção de itens que não atendam aos padrões de qualidade.
+O OptiSort, como dito anteriormente, é um sistema de classificação automática para linhas de produção com foco na indústria alimentícia, mas tendo aplicações nas industrias farmacêuticas, automobilísticas e outras. Sua função principal é garantir a qualidade dos produtos através da identificação, classificação e remoção de itens que não atendam aos padrões de qualidade estabelecidos pelo usuario.
 
-
-* Identificação e classificação: Reconhece diferentes tipos de itens e os separa em categorias, utilizando técnicas avançadas de visão computacional e aprendizado de máquina.
-* Atuação na linha de produção: Remove automaticamente os itens defeituosos da esteira principal com um servomotor, direcionando-os para uma linha secundária para reavaliação ou descarte.
+Ele realiza três grandes tarefas:
+* **Identificação e classificação:** Reconhece diferentes tipos de itens e os separa em categorias, utilizando técnicas de visão computacional e aprendizado de máquina para identificar a qualidade associada a cada item.
+* **Atuação na linha de produção:** Remove automaticamente os itens defeituosos da esteira principal com um servomotor, direcionando-os para uma linha secundária para reavaliação ou descarte.
+* * **Registro:** Armazena os dados de qualidade, quantidade, origem e descarte automáticamente numa base de dados.
 
 #### Exemplo de aplicação
-
 Em uma linha de separação de frutas, o OptiSort:
-
 * Detecta frutas estragadas por visão computacional.
-* Empurra as frutas estragadas para fora da esteira principal com um servomotor.
+* Empurra as frutas estragadas para fora da esteira principal.
 * Direciona as frutas estragadas para uma linha secundária para reavaliação ou descarte.
-
 
 ### Configurabilidade
 O sistema OptiSort oferece diversas configurações para atender às necessidades específicas de cada aplicação. As principais configurações disponíveis são:
@@ -158,4 +162,7 @@ Eventos Não Periódicos:
 > 
 
 ## Referências
-> Seção obrigatória. Inclua aqui referências utilizadas no projeto.
+> Colocar as referências no formato AMA.
+[1] United Nations Environment Programme, Food Waste Index Report 2024. Think Eat Save: Tracking Progress to Halve Global Food Waste. [online]. Available: https://wedocs.unep.org/20.500.11822/45230. [Accessed: Mar. 31, 2024]. 
+[2] Brancoli P, Makishi F, Lima PG, Rousta K. Compositional Analysis of Street Market Food Waste in Brazil. Sustainability. 2022; 14(12):7014. [online]. Available: https://doi.org/10.3390/su14127014 . [Accessed: Mar. 31, 2024].
+[3]
