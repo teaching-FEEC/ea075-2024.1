@@ -1,4 +1,4 @@
-# `TennisTracker`
+# `Monitor de Desempenho de Jogadores de Tênis`
 # `TennisTracker`
 
 ## Apresentação
@@ -14,51 +14,48 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 
 
 ## Descrição do Projeto
-> Descrição do objetivo principal do projeto, incluindo contexto gerador, motivação.
-> Escreva essa seção imaginando que está tentando convencer alguém a investir financeiramente no seu projeto.
 
 O Tênis é conhecido por ser um esporte difícil de se praticar pela exigência de cordenação física e agilidade nos movimentos. Sabendo disso os feedbacks de cada jogada são de extrema importância para quem está aprendendo ou quer melhorar no esporte. Pensando nisso nosso objetivo é entregar esses feedbacks tirando proveito da mecânida dos movimentos da raquete do jogador durante uma partida, assim excluindo também qualquer viés devido a um observador terceiro (professor ou treinador) e ainda oferencendo uma base fixa para comparação dos resultados. Para isso um sistema eletrônico embarcado será projetado para ficar fixado na raquete do jogador enquanto ele prática o esporte aquisitando e armazenando dados variados que posteriormente podem ser analisados em cumputador. Inicialmente qualquer processamento em tempo real é deixado de lado, focando apenas na aquisição dos dados, mas o projeto do sistema irá considerar como uma medida de escalabilidade a capacidade de realizar processamentos em tempo real e retornar respostas mesmo durante a jogatina.  
 
-> Qual problema vocês pretendem solucionar?
-- Análise quantitativa do desempenho de jogadores de tênis em treinos e partidas.
-- Acompanhamento da qualidade e consistência de jogadas ao longo do tempo.
-  
-> Quem são os potenciais usuários?
+##### Potenciais usuários
 - Jogadores de tênis (desde iniciantes até profissionais) que desejam acompanhar sua jornada e desenvolvimento no esporte.
 - Treinadores que desejam coletar dados para validar seu método de treimamento.
 - Uso pela mídia e entidades do esporte em partidas oficiais para levantamento de estatísticas.
   
-> É possível estabelecer um valor econômico associado?  
+##### Valor econômico associado  
 
-Sim, o dispositivo poderia ser vendido para qualquer possoa interessada em monitorar seu desempenho no esporte Tênis.
+O dispositivo poderia ser vendido para qualquer possoa interessada em monitorar seu desempenho no esporte Tênis.
 
 ## Descrição Funcional
-> A descrição funcional do projeto é a principal entrega do E1 e pode ser realizada neste próprio arquivo Markdown,
-> com links para diagramas ou outros arquivos que estejam no próprio repositório.
 
 ### Funcionalidades
-> Detalhe todas as tarefas que o sistema será capaz de executar  
-Funcionalidade do dispositivo:
-- Fixar na raquete: o sistema deve poder ser afixado na raquete de tênis.
-- Armazenar os dados aquisitados: o sistema deve ser capaz de salavar na memória os dados dos sensores.
-- Medir a velocidade da raquete: o sistema deve adquirir dados que permitam estimar velocidade.
-- Medir a intensidade das colisões com a bolinha: o sistema deve adquirir dados que permitam estimar a intensidade de colisões com a bola.
-- Medir a altura da raquete: o sistema deve adquirir dados que permitam estimar a altura da raquete em relação ao solo.
-- Medir o ângulo com a horizontal da raquete: o sistema deve adquirir dados que permitam estimar o ângulo da raquete em relação ao solo.
-- Interface para controlar quando começar quando parar aquisição: deve ser possível controlar quando interromper as medições.
-- Interface para exportar os dados: deve ser possível exportar os dados para análise externa.
-- Peso reduzido: o sistema deve ser leve, para que não influencie nas jogadas.
-- Sinalizar o nível de bateria: o sistema deve ser capaz de exibir o nível da bateria.
-- Armazenamento de energia (bateria): o sistema deve ser capaz de funcionar sem necessidade de cabos de energia.
+- **Fixar na raquete**: o sistema deve poder ser afixado na raquete de tênis.
+- **Armazenar os dados aquisitados**: o sistema deve ser capaz de salavar na memória os dados dos sensores.
+- **Medir a velocidade da raquete**: o sistema deve adquirir dados que permitam estimar velocidade.
+- **Medir a intensidade das colisões com a bolinha**: o sistema deve adquirir dados que permitam estimar a intensidade de colisões com a bola.
+- **Medir a altura da raquete**: o sistema deve adquirir dados que permitam estimar a altura da raquete em relação ao solo.
+- **Medir o ângulo com a horizontal da raquete**: o sistema deve adquirir dados que permitam estimar o ângulo da raquete em relação ao solo.
+- **Interface para controlar quando começar quando parar aquisição**: deve ser possível controlar quando interromper as medições.
+- **Interface para exportar os dados**: deve ser possível exportar os dados para análise externa.
+- **Peso reduzido**: o sistema deve ser leve, para que não influencie nas jogadas.
+- **Sinalizar o nível de bateria**: o sistema deve ser capaz de exibir o nível da bateria.
+- **Armazenamento de energia (bateria)**: o sistema deve ser capaz de funcionar sem necessidade de cabos de energia.
 
-Funcionalidade de análise:
+##### Funcionalidade de análise:
+Uma vez que o dados forem aquisitados, via software poderemos executar:
 - Contar o número de golpes
 - Medir o tempo jogado
 - Estimar a qualidade dos golpes
+- Identificar golpes
+- Encontrar correlações entre a varáveis medidas e desempenho na partida
+- Avaliar o rendimento físico do atleta
+- Avaliar caracteristicas dos golpes que resultam em pontos na partida
 
 ### Configurabilidade
 > Detalhe, se houver, todas as possíveis configurações do circuito e todos os pontos de alteração da configuração.
-- ligar/desligar
+- Aquisição
+- Carregamento
+- Carregamento + Transferência de Dados
 
 ### Eventos
 > Quais eventos o sistema deve tratar?
@@ -66,43 +63,31 @@ Funcionalidade de análise:
 > (qual o tempo mínimo entre dois eventos sucessivos)?
 > |Eventos  | 
 > |--|
-> |Ligar (botão on/off)  | 
+> | Ligar (botão on/off)  | 
 > | Desligar (botão on/off)  |
-> | Exportação de dados solicitada |
-> | Conectar o carregador | 
+> | USB com interface de dados conectado |
+> | USB de alimentação conectado | 
 
 ### Tratamento de Eventos
-> Qual comportamento o sistema deve ter para tratar corretamente cada evento?
 
->
-> |Eventos  | Tratamento  | 
-> |--|--|
-> |Ligar (botão on/off)  | Iniciar medições de grandezas (posição, velocidade, aceleração, etc.) (periódico com taxa de amostragem) + ativar LED RGB em verde  |
-> | Desligar (botão on/off)  | Interromper as medições e o fornecimento de energia + apagar LED RGB  |
-> | Exportação de dados solicitada  |  Ligar no modo de comunicação  |
-> | Conectar o carregador |  Desligar os sensores e carregar a bateria |
+|Eventos  | Tratamento  | 
+|--|--|
+|Ligar (botão on/off)  | Iniciar medições de grandezas (posição, velocidade, aceleração, etc.) (periódico com taxa de amostragem) + ativar LED RGB em verde  |
+| Desligar (botão on/off)  | Interromper as medições e o fornecimento de energia + apagar LED RGB  |
+| USB com interface de dados conectado  |  Desligar os sensores, carregar a bateria e ligar o modo de comunicação de dados  |
+| USB de alimentação conectado |  Desligar os sensores e carregar a bateria |
 
 ## Descrição Estrutural do Sistema
-> Junto com a descrição do comportamento do sistema, deve-se especificar, em nível de bloco ou sistema, a estrutura necessária 
-> para captar os eventos do mundo externo, para alojar e processar o programa de tratamento de eventos, e para atuar sobre o mundo externo.
->
-> Para essa descrição recomenda-se a criação de diagramas de blocos.
-> Nesse diagrama, devem ser destacados os blocos funcionais que compõem o sistema, incluindo uma síntese das funcionalidades de cada bloco.
-> Além disso, deve-se esclarecer também o relacionamento entre estes blocos, incluindo os principais sinais de comunicação entre
-> os blocos de forma a assegurar a execução de todas as tarefas que o sistema deve realizar.
-> 
-> Você sabia? Ferramentas como o `draw.io` permitem integração com o Github.
 
 Atuadores:
 - Display indicador de bateria
 - LED RGB
 
 Sensores:
-- Acelerômetro
+- Acelerômetro e Giroscópio MPU-6050
 
 Botões:
 - Botão ON/OFF
-- Botão Export
 
 Diagrama Estrutural:
 [![diagrama_estrutural.svg editável](/projetos/tennistracker/diagrama_estrutural.svg)](https://app.diagrams.net/?libs=general;#Hshen-n%2Fea075-2024.1%2Fmain%2Fprojetos%2Ftennistracker%2Fdiagrama_estrutural.svg#%7B%22pageId%22%3A%2290a13364-a465-7bf4-72fc-28e22215d7a0%22%7D)
