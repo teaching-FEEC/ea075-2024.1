@@ -64,18 +64,24 @@ Funcionalidade de análise:
 > Quais eventos o sistema deve tratar?
 > Se aplicável, classifique os eventos que são periódicos (procure especificar a periodicidade) e os que são não-periódicos
 > (qual o tempo mínimo entre dois eventos sucessivos)?
-1. Ligar (botão on/off)
-2. Desligar (botão on/off)
-3. Exportação de dados solicitada
-4. Conectar o carregador
+> |Eventos  | 
+> |--|
+> |Ligar (botão on/off)  | 
+> | Desligar (botão on/off)  |
+> | Exportação de dados solicitada  |
+> | Conectar o carregador | 
+
 
 ### Tratamento de Eventos
 > Qual comportamento o sistema deve ter para tratar corretamente cada evento?
-O número de cada item da lista é referente a um evento da lista anterior.
-1. Iniciar medições de grandezas (posição, velocidade, aceleração, etc.) (periódico com taxa de amostragem) + acender led
-2. Interromper as medições e o fornecimento de energia + apagar led
-3. Ligar no modo de comunicação
-4. Desligar os sensores e carregar a bateria
+
+>
+> |Eventos  | Tratamento  |
+> |--|--|
+> |Ligar (botão on/off)  | Iniciar medições de grandezas (posição, velocidade, aceleração, etc.) (periódico com taxa de amostragem) + ativar LED RGB em verde  |
+> | Desligar (botão on/off)  | Interromper as medições e o fornecimento de energia + apagar LED RGB  |
+> | Exportação de dados solicitada  |  Ligar no modo de comunicação  |
+> | Conectar o carregador |  Desligar os sensores e carregar a bateria |
 
 ## Descrição Estrutural do Sistema
 > Junto com a descrição do comportamento do sistema, deve-se especificar, em nível de bloco ou sistema, a estrutura necessária 
@@ -87,7 +93,11 @@ O número de cada item da lista é referente a um evento da lista anterior.
 > os blocos de forma a assegurar a execução de todas as tarefas que o sistema deve realizar.
 > 
 > Você sabia? Ferramentas como o `draw.io` permitem integração com o Github.
-> 
+
+
+
+
+
 
 ## Referências
 > Seção obrigatória. Inclua aqui referências utilizadas no projeto.
