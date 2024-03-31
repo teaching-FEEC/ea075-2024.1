@@ -9,7 +9,7 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 > Incluir nome RA e foco de especialização de cada membro do grupo. Os projetos devem ser desenvolvidos em duplas.
 > |Nome  | RA | Curso|
 > |--|--|--|
-> | Nome1  | 123456  | Eng. Elétrica|
+> | Thiago Masanori Hata | 194345  | Eng. Elétrica|
 > | Nome2  | 123456  | Eng. de Computação|
 
 
