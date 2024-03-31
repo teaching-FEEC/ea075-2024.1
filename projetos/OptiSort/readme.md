@@ -1,5 +1,5 @@
-# `<Título em Português do Projeto>`
-# `<Project Title in in English>`
+# `<OptiSort: Classificador de objetos>`
+# `<OptiSort: Object classifier>`
 
 ## Apresentação
 
