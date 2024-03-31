@@ -68,7 +68,7 @@ Funcionalidade de análise:
 > |--|
 > |Ligar (botão on/off)  | 
 > | Desligar (botão on/off)  |
-> | Exportação de dados solicitada  |
+> | Exportação de dados solicitada |
 > | Conectar o carregador | 
 
 
@@ -93,6 +93,9 @@ Funcionalidade de análise:
 > os blocos de forma a assegurar a execução de todas as tarefas que o sistema deve realizar.
 > 
 > Você sabia? Ferramentas como o `draw.io` permitem integração com o Github.
+> 
+[![diagrama.svg editável](/projetos/tennistracker/diagrama.svg)](https://app.diagrams.net/#Hshen-n%2Fea075-2024.1%2Fmain%2Fprojetos%2Ftennistracker%2Fdiagrama.svg#%7B%22pageId%22%3A%2242789a77-a242-8287-6e28-9cd8cfd52e62%22%7D)
+
 
 
 
