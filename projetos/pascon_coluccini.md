@@ -14,42 +14,53 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 
 ## Descrição do Projeto
 
-Um Gate Driver de MOSFET está associado ao controle de forma específica e coordenada de chaves MOSFETs, como por exemplo um inversor de potência. No atual contexto econômico global, podemos destacar as enormes possibilidades de mercados que esses dispositivos encontrarão em transição energética e eletrificação veicular, sem contar as indústrias já bem consolidadas.
+Um Gate Driver de MOSFET está associado ao controle de forma específica e coordenada de chaves MOSFETs, como por exemplo um inversor de potência. No atual contexto econômico global, podemos destacar as enormes possibilidades de mercados que esses dispositivos encontrarão em transição energética e eletrificação veicular, sem contar as indústrias já bem consolidadas que utilizam esses equipamentos para controle de motores.
 
-No cenário macroeconômico global, estamos diante de um ciclo de cortes nas taxas de juros, tanto do FED quanto BC, fazendo com que investimentos em reservas nacionais com baixíssimo risco ofereçam um retorno mais baixo. Como consequência cria-se um cenário em que investidores precisam tomar mais riscos a fim de obter bons retornos, trazendo o ciclo de 2024 um momento embrionário de novos projetos e empreendimentos.
+Os usuários são vastos e variados. Podemos citar usinas sucroalcooleiras,  celulose (muito fortes aqui na região sudeste com nomes como Raízen, São Martinho) geradoras, transmissoras e distribuidoras (que cada vez mais adotam a eletrônica de potência, como CPFL e NeoEnergia). Além das novas áreas, como novos parques eólicos (muito proeminentes nas regiões sul e nordeste); parques solares; novas usinas de etanol de milho; além da eletrificação veicular que traz uma grande gama de novos compradores em potencial.
+
+No cenário macroeconômico global, estamos diante de um ciclo de cortes nas taxas de juros, tanto do FED quanto BC, fazendo com que investimentos em reservas nacionais com baixíssimo risco ofereçam um retorno mais baixo. Como consequência, cria-se um cenário em que investidores precisam tomar mais riscos a fim de obter bons retornos, tornando o ciclo de 2024 um momento embrionário de novos projetos e empreendimentos.
  
 Apesar dos bons panoramas, é preciso ter em mente que os desafios de mercado ainda são enormes, uma vez que este setor é dominado por gigantes multinacionais (como Siemens; RockWell; ABB e até mesmo WEG) com produtos muito bem estabelecidos e alto poder de investimento. Além disso, muitas vezes essas companhias possuem linhas completas, isto é: motores, controladores, sensores e softwares plug and play, e vendem esse pacote como um conjunto, conseguindo assim um maior poder de barganha frente a um concorrente de menor tamanho.
 
-O game changer desse mercado, estaria na nova tecnologia de MOSFETs utilizando os materiais WBG – como SiC e GaN –  uma vez que essa tecnologia ainda não está bem consolidada e em constante avanço. O aprofundamento em nuances destes materiais alongaria o corpo deste texto para o projeto específico desta disciplina, mas, é preciso ter consciência da importância destes materiais para a viabilização econômica do dispositivo.
+O game changer desse mercado, estaria nas novas tecnologias de MOSFETs utilizando os materiais WBG – como SiC e GaN –  uma vez que essa tecnologia ainda não está bem consolidada e em constante avanço. O aprofundamento em nuances destes materiais alongaria o corpo deste texto para o projeto específico desta disciplina, mas, é preciso ter consciência da importância destes materiais para a viabilização econômica do dispositivo.
 
-Isso porque, para o escopo desta disciplina, propõe-se um modelo rudimentar de gate driver. Com o objetivo de criar uma curva de aprendizado e familiarização com o mecanismo, atuando em um half-bridge com carga indutiva para onda senoidal. Chamamos o modelo de “rudimentar” porque um dispositivo deste, em estado da arte, é um trabalho para um time de vários engenheiros e com anos de experiência e não um trabalho para dois alunos de graduação em um semestre – tampouco fora pontuado como objetivo do trabalho a implementação de tal.
+Dessa forma, para o escopo desta disciplina, propõe-se um modelo rudimentar de gate driver. Com o objetivo de criar uma curva de aprendizado e familiarização com o sistema, atuando em um half-bridge com carga indutiva para onda senoidal. Chamamos o modelo de “rudimentar” porque um dispositivo deste, em estado da arte, é um trabalho para um time de vários engenheiros e com anos de experiência, sendo impossível trazer um dispositivo deste para o escopo desta disciplina
 
-Os usuários são vastos e variados. Podemos citar as diversas usinas de açúcar e etanol,  celulose (muito fortes aqui na região sudeste com nomes como Raízen, São Martinho) geradoras, transmissoras e distribuidoras (que cada vez mais adotam a eletrônica de potência, com nomes como CPFL, NeoEnergia). Além das novas áreas, como novos parques eólicos (muito proeminentes nas regiões sul e nordeste) e parques solares; além da eletrificação veicular com controle de motores e estações de carregamento.
 
  ### Funcionalidades
  
-Embora seja fato que diversos gate drivers comerciais já existentes e bem estabelecidos comercialmente propõem inúmeras funções como: operações do MOSFET em regiões de triodo; adaptabilidade de Vgs; e, nos mais avançados, controle ativo. O projeto proposto não visa chegar em tal ponto de adaptabilidade e escalabilidade, mas sim, permitir um modelo base para criar o início de uma curva de aprendizado e 
+Embora seja fato que diversos gate drivers comerciais já existentes e bem estabelecidos comercialmente propõem inúmeras funções como: operações do MOSFET em regiões de triodo; adaptabilidade de Vgs; e, nos mais avançados, controle ativo. O projeto proposto não visa chegar em tal ponto de adaptabilidade e escalabilidade, mas sim, permitir um modelo base para criar o início de uma curva de aprendizado e, se possível, futuras melhorias.
 
-Dessa forma, como funcionalidade do projeto, entende-se o controle de um par de MOSFETs a fim de criar uma onda senoidal a partir de uma fonte contínua.
+Dessa forma, como funcionalidade do projeto, propomos a implementação de um algoritmo em um DSP, que realiza a leitura de potenciômetros, a fim controlar sua frequência de operação e amplitude da onda senoidal resultante de uma fonte de corrente contínua.
 
 ### Configurabilidade
 
-Algumas configurações que podem ser incluídas seria o resistor de saída do gate driver, diretamente relacionado com o tempo de transiente da chave e amortecimento da onda. Entretanto, não acredito ser possível, tampouco conveniente, detalhar isso nesse momento ainda do projeto.
-	Em dispositivos mais avançados pode haver a inclusão de sistemas de proteção para garantir a segurança e a integridade dos sistemas nas mais diversas condições, como proteções contra a sobrecorrente e sobretensão e acoplamentos ópticos.
+Duas configurações de leitrua devem ser feitas: 
+- Ler o potênciometro de frequência
+- Ler o potênciometro de amplitude
 
  ### Tratamento de Eventos
 
  Os eventos a serem tratados pelo sistema e que podem ser considerados como periódicos são aqueles que devem ser tratados na geração de um PWM com carrier technique.
 
-- Monitoramento da tensão de saída, utilizados para detectar e responder a eventos de sobrecorrente, garantindo a malha de controle do sistema.
+- Monitoramento dos potenciômetros
+- Monitoramento da tensão de saída
 
 Os eventos a serem tratados pelo sistema e que podem ser considerados como não-periódicos, são:
 
-Ativação do estado proibido do MOSFETs
+ - Ativação do estado proibido do MOSFETs
 
 ## Referencias
 
 RASHID, M. H. (2001) Power Electronics Handbook
+
+J. F. Guerreiro, H. Guillardi and J. A. Pomilio, "Design Procedures and Prototyping of a
+Full-Bridge High Frequency Power Inverter," 2019 IEEE 15th Brazilian Power Electronics
+Conference and 5th IEEE Southern Power Electronics Conference (COBEP/SPEC), Santos, Brazil,
+2019, pp. 1-6, doi: 10.1109/COBEP/SPEC44138.2019.9065318.
+keywords: {MOSFET;Logic gates;Capacitors;Gate
+drivers;Oscillators;Inverters;Switches;MOSFETs;Power Converter;Inverter;High Switching
+Frequency}
 
 
 
