@@ -14,7 +14,7 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 
 ## Descrição do Projeto
 
-Um Gate Driver de MOSFET está associado ao controle de forma específica e coordenada de chaves MOSFETs, como por exemplo um inversor de potência. No atual contexto econômico global, podemos destacar as enormes possibilidades de mercados que esses dispositivos encontrarão em transição energética e eletrificação veicular, sem contar as indústrias já bem consolidadas.
+	Um Gate Driver de MOSFET está associado ao controle de forma específica e coordenada de chaves MOSFETs, como por exemplo um inversor de potência. No atual contexto econômico global, podemos destacar as enormes possibilidades de mercados que esses dispositivos encontrarão em transição energética e eletrificação veicular, sem contar as indústrias já bem consolidadas.
 
 No cenário macroeconômico global, estamos diante de um ciclo de cortes nas taxas de juros, tanto do FED quanto BC, fazendo com que investimentos em reservas nacionais com baixíssimo risco ofereçam um retorno mais baixo. Como consequência cria-se um cenário em que investidores precisam tomar mais riscos a fim de obter bons retornos, trazendo o ciclo de 2024 um momento embrionário de novos projetos e empreendimentos.
  
