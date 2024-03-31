@@ -39,17 +39,17 @@ Sim, o dispositivo poderia ser vendido para qualquer possoa interessada em monit
 ### Funcionalidades
 > Detalhe todas as tarefas que o sistema será capaz de executar  
 Funcionalidade do dispositivo:
-- Fixar na raquete
-- Armazenar os dados aquisitados
-- Medir a velocidade da raquete
-- Medir a intensidade das colisões com a bolinha
-- Medir a altura da raquete
-- Media o ângulo com a horizontal da raquete
-- Interface para controlar quando começar quando parar aquisição
-- Interface para exportar os dados
-- Peso reduzido
-- Sinalizar o nível de bateria
-- Armazenamento de energia (bateria)
+- Fixar na raquete: o sistema deve poder ser afixado na raquete de tênis.
+- Armazenar os dados aquisitados: o sistema deve ser capaz de salavar na memória os dados dos sensores.
+- Medir a velocidade da raquete: o sistema deve adquirir dados que permitam estimar velocidade.
+- Medir a intensidade das colisões com a bolinha: o sistema deve adquirir dados que permitam estimar a intensidade de colisões com a bola.
+- Medir a altura da raquete: o sistema deve adquirir dados que permitam estimar a altura da raquete em relação ao solo.
+- Medir o ângulo com a horizontal da raquete: o sistema deve adquirir dados que permitam estimar o ângulo da raquete em relação ao solo.
+- Interface para controlar quando começar quando parar aquisição: deve ser possível controlar quando interromper as medições.
+- Interface para exportar os dados: deve ser possível exportar os dados para análise externa.
+- Peso reduzido: o sistema deve ser leve, para que não influencie nas jogadas.
+- Sinalizar o nível de bateria: o sistema deve ser capaz de exibir o nível da bateria.
+- Armazenamento de energia (bateria): o sistema deve ser capaz de funcionar sem necessidade de cabos de energia.
 
 Funcionalidade de análise:
 - Contar o número de golpes
@@ -71,12 +71,11 @@ Funcionalidade de análise:
 > | Exportação de dados solicitada |
 > | Conectar o carregador | 
 
-
 ### Tratamento de Eventos
 > Qual comportamento o sistema deve ter para tratar corretamente cada evento?
 
 >
-> |Eventos  | Tratamento  |
+> |Eventos  | Tratamento  |  Descri
 > |--|--|
 > |Ligar (botão on/off)  | Iniciar medições de grandezas (posição, velocidade, aceleração, etc.) (periódico com taxa de amostragem) + ativar LED RGB em verde  |
 > | Desligar (botão on/off)  | Interromper as medições e o fornecimento de energia + apagar LED RGB  |
@@ -93,7 +92,15 @@ Funcionalidade de análise:
 > os blocos de forma a assegurar a execução de todas as tarefas que o sistema deve realizar.
 > 
 > Você sabia? Ferramentas como o `draw.io` permitem integração com o Github.
-> 
+
+Atuadores:
+- Display indicador de bateria
+- LED RGB
+
+Sensores:
+- Acelerômetro
+
+
 [![diagrama.svg editável](/projetos/tennistracker/diagrama.svg)](https://app.diagrams.net/#Hshen-n%2Fea075-2024.1%2Fmain%2Fprojetos%2Ftennistracker%2Fdiagrama.svg#%7B%22pageId%22%3A%2242789a77-a242-8287-6e28-9cd8cfd52e62%22%7D)
 
 
