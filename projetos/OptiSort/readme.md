@@ -25,7 +25,7 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 > com links para diagramas ou outros arquivos que estejam no próprio repositório.
 
 ### Funcionalidades
-> O OptiSort é um sistema de classificação automática para linhas de produção, com foco na indústria alimentícia, farmacêutica, automobilística e outras. Sua função principal é garantir a qualidade dos produtos através da identificação, classificação e remoção de itens que não atendam aos padrões de qualidade.
+O OptiSort é um sistema de classificação automática para linhas de produção, com foco na indústria alimentícia, farmacêutica, automobilística e outras. Sua função principal é garantir a qualidade dos produtos através da identificação, classificação e remoção de itens que não atendam aos padrões de qualidade.
 
 
 * Identificação e classificação: Reconhece diferentes tipos de itens e os separa em categorias, utilizando técnicas avançadas de visão computacional e aprendizado de máquina.
