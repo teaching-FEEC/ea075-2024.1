@@ -75,7 +75,7 @@ Funcionalidade de análise:
 > Qual comportamento o sistema deve ter para tratar corretamente cada evento?
 
 >
-> |Eventos  | Tratamento  |  Descri
+> |Eventos  | Tratamento  | 
 > |--|--|
 > |Ligar (botão on/off)  | Iniciar medições de grandezas (posição, velocidade, aceleração, etc.) (periódico com taxa de amostragem) + ativar LED RGB em verde  |
 > | Desligar (botão on/off)  | Interromper as medições e o fornecimento de energia + apagar LED RGB  |
