@@ -7,10 +7,10 @@ O presente projeto foi originado no contexto das atividades da disciplina de gra
 oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dra. Paula Dornhofer Paro Costa, do Departamento de Engenharia de Computação e Automação (DCA) da Faculdade de Engenharia Elétrica e de Computação (FEEC).
 
 
-> |Nome  | RA | Curso|
-> |--|--|--|
-> | Nathan Shen Baldon  | 242448 | Eng. Elétrica|
-> | Gabriel Buzzi Sanches  | 256389  | Eng. Elétrica|
+|Nome  | RA | Curso|
+|--|--|--|
+| Nathan Shen Baldon  | 242448 | Eng. Elétrica|
+| Gabriel Buzzi Sanches  | 256389  | Eng. Elétrica|
 
 
 ## Descrição do Projeto
