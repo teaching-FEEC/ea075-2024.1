@@ -14,18 +14,22 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 
 ## Descrição do Projeto
 
-	Um Gate Driver de MOSFET está associado ao controle de forma específica e coordenada de chaves MOSFETs, como por exemplo um inversor de potência. No atual contexto econômico global, podemos destacar as enormes possibilidades de mercados que esses dispositivos encontrarão em transição energética e eletrificação veicular, sem contar as indústrias já bem consolidadas.
+Um Gate Driver de MOSFET está associado ao controle de forma específica e coordenada de chaves MOSFETs, como por exemplo um inversor de potência. No atual contexto econômico global, podemos destacar as enormes possibilidades de mercados que esses dispositivos encontrarão em transição energética e eletrificação veicular, sem contar as indústrias já bem consolidadas.
 
 No cenário macroeconômico global, estamos diante de um ciclo de cortes nas taxas de juros, tanto do FED quanto BC, fazendo com que investimentos em reservas nacionais com baixíssimo risco ofereçam um retorno mais baixo. Como consequência cria-se um cenário em que investidores precisam tomar mais riscos a fim de obter bons retornos, trazendo o ciclo de 2024 um momento embrionário de novos projetos e empreendimentos.
  
 Apesar dos bons panoramas, é preciso ter em mente que os desafios de mercado ainda são enormes, uma vez que este setor é dominado por gigantes multinacionais (como Siemens; RockWell; ABB e até mesmo WEG) com produtos muito bem estabelecidos e alto poder de investimento. Além disso, muitas vezes essas companhias possuem linhas completas, isto é: motores, controladores, sensores e softwares plug and play, e vendem esse pacote como um conjunto, conseguindo assim um maior poder de barganha frente a um concorrente de menor tamanho.
+
 O game changer desse mercado, estaria na nova tecnologia de MOSFETs utilizando os materiais WBG – como SiC e GaN –  uma vez que essa tecnologia ainda não está bem consolidada e em constante avanço. O aprofundamento em nuances destes materiais alongaria o corpo deste texto para o projeto específico desta disciplina, mas, é preciso ter consciência da importância destes materiais para a viabilização econômica do dispositivo.
+
 Isso porque, para o escopo desta disciplina, propõe-se um modelo rudimentar de gate driver. Com o objetivo de criar uma curva de aprendizado e familiarização com o mecanismo, atuando em um half-bridge com carga indutiva para onda senoidal. Chamamos o modelo de “rudimentar” porque um dispositivo deste, em estado da arte, é um trabalho para um time de vários engenheiros e com anos de experiência e não um trabalho para dois alunos de graduação em um semestre – tampouco fora pontuado como objetivo do trabalho a implementação de tal.
-	Os usuários são vastos e variados. Podemos citar as diversas usinas de açúcar e etanol,  celulose (muito fortes aqui na região sudeste com nomes como Raízen, São Martinho) geradoras, transmissoras e distribuidoras (que cada vez mais adotam a eletrônica de potência, com nomes como CPFL, NeoEnergia). Além das novas áreas, como novos parques eólicos (muito proeminentes nas regiões sul e nordeste) e parques solares; além da eletrificação veicular com controle de motores e estações de carregamento.
+
+Os usuários são vastos e variados. Podemos citar as diversas usinas de açúcar e etanol,  celulose (muito fortes aqui na região sudeste com nomes como Raízen, São Martinho) geradoras, transmissoras e distribuidoras (que cada vez mais adotam a eletrônica de potência, com nomes como CPFL, NeoEnergia). Além das novas áreas, como novos parques eólicos (muito proeminentes nas regiões sul e nordeste) e parques solares; além da eletrificação veicular com controle de motores e estações de carregamento.
 
  ### Funcionalidades
  
- Embora seja fato que diversos gate drivers comerciais já existentes e bem estabelecidos comercialmente propõem inúmeras funções como: operações do MOSFET em regiões de triodo; adaptabilidade de Vgs; e, nos mais avançados, controle ativo. O projeto proposto não visa chegar em tal ponto de adaptabilidade e escalabilidade, mas sim, permitir um modelo base para ser evoluído futuramente e uma necessária curva de aprendizado para os engenheiros projetistas.
+Embora seja fato que diversos gate drivers comerciais já existentes e bem estabelecidos comercialmente propõem inúmeras funções como: operações do MOSFET em regiões de triodo; adaptabilidade de Vgs; e, nos mais avançados, controle ativo. O projeto proposto não visa chegar em tal ponto de adaptabilidade e escalabilidade, mas sim, permitir um modelo base para criar o início de uma curva de aprendizado e 
+
 Dessa forma, como funcionalidade do projeto, entende-se o controle de um par de MOSFETs a fim de criar uma onda senoidal a partir de uma fonte contínua.
 
 ### Configurabilidade
