@@ -12,8 +12,8 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 ## Descrição do Projeto
 ### Contexto Gerador e Motivação
 Todo ano a ONU realiza um estudo, nomeado _Food Waste Index Report_, onde reportam a produção global de alimento e analizam o desperdiço alimentar gerado nos níveis de distribuição e consumidor final. Na versão mais recente [1] apresentaram-se os resultados oriundos de uma pesquisa realizada no Rio de Janeiro (pg.20-21) coletando dados de 102 lares distintos de díversos posicionamentos socio-econômicos. Nele, reportaram que um 39% do desperdiço era de alimentos ainda comestíveis, e estimaram uma produção anual de 77kg/capita de resíduo desta classe (classe II).  
-Agora, olhando para a região de São Paulo, em 2022 foi publicado um artigo na revista Sustainability [2] fornecendo métricas de resíduo alimentar oriundo de feiras dentro da cidade, estimando uma produção de 27,9 kg de desperdiço por barraca. Estes dados, ao serem extrapolados ao periodo de um ano em todas as barracas da cidade, oferece uma primeira estimativa da geração de desperdiço na cidade, umas 59.300 toneladas ao ano.  
-Com essas informações fica claro que ainda com iniciativas de fomento à sustentabilidade dentro do Brasil, a identificação, o registro e o acompanhamento de desperdiço alimentar dentro do país precisa de maior atenção. Por conta disso, estamos propondo um projeto que consiga auxiliar algumas das instituições que já trabalham dentro dessa área.
+Agora, olhando para a região de São Paulo, em 2022 foi publicado um artigo na revista Sustainability [2] fornecendo métricas de resíduo alimentar oriundo de feiras dentro da cidade, estimando uma produção de 27,9 kg de desperdiço por barraca. Estes dados, ao serem extrapolados ao periodo de um ano em todas as barracas da cidade, oferece uma primeira estimativa da geração de desperdiço na cidade, umas 59.300 toneladas ao ano, com uma parcela não desprezível sendo material ainda comestível.  
+Com esses dados espera-se ter apontado que Brasil gera bastante desperdiço alimentar que, ainda com iniciativas auxiliando no seu aproveitamento (como o banco de alimentos dentro dos municípios), precisa ser contabilizado e administrado de formas mais eficientes para permitir o descarte (ou reuso) apropríado. Por conta disso, estamos propondo um projeto que consiga auxiliar na identificação, o registro e acompanhamento de desperdiço alimentar dentro dos principais centros de coleta de resíduo alimentar.
 
 ### Projeto
 O OptiSort tem como objetivo realizar a classificação do desperdiço em centros de coleta alimentar (como bancos de alimentos) mediante a utilização de técnicas avançadas de visão computacional e aprendizado de máquina, sendo capaz de armazenar e disponibilizar os dados coletados ao longo da sua operação para o usuario.
@@ -50,7 +50,7 @@ Para atingir a flexibilidade desejada deste sistema, o OptiSort conta com divers
    - **Ação do servomotor:** Distância em que o servomotor atua para remover os itens defeituosos da esteira. Pode ser regulada de acordo com os parâmetros da linha de separação.
 
 #### Parâmetros de Registro
-   - **Periodo de Monitoramento:** Intervalo de tempo entre cada "monitoramento" do estado atual do dispositivo.
+   - **Regularidade do Monitoramento:** Intervalo de tempo entre cada "monitoramento" do estado atual do dispositivo.
 
 Os parâmetros mais físicos (como sendo os de atuação e alguns de registro) poderão ser configurados de forma dinâmica enquanto a linha de produção está em operação mediante um controlador.
 
@@ -65,69 +65,54 @@ Os parâmetros mais físicos (como sendo os de atuação e alguns de registro) p
 Ao longo da sua operação definem-se vários tipos de "eventos" que descrevem o comportamento do sistema num determinado instante de tempo.
 
 #### Eventos Periódicos
-1. Aquisição de Imagens:
-    Periodicidade: Contínua (cada X millisegundos).
-    Descrição: O sistema captura imagens da esteira transportadora prévio a realizar a identificação e classificação dos itens.
+1. **Aquisição de Imagens:**  
+    Periodicidade: _Contínua (cada X millisegundos)._  
+    Descrição: _O sistema captura imagens da esteira transportadora prévio a realizar a identificação e classificação dos itens._
 
-2. Processamento de Imagens:
-    Periodicidade: Contínua (cada X millisegundos).
-    Descrição: O sistema aplica algoritmos de visão computacional e aprendizado de máquina para identificar os itens de interesse
+2. **Processamento de Imagens:**  
+    Periodicidade: _Contínua (cada X millisegundos)._  
+    Descrição: _O sistema aplica algoritmos de visão computacional e aprendizado de máquina para identificar os itens de interesse e realizar a análise da sua qualidade._
 
-4. Monitoramento do Sistema:
-    Periodicidade: Variável (pode ser configurado).
-    Descrição: O sistema monitora seu próprio desempenho e gera relatórios de produção.
-
-5. Atualizações de Software:
-    Periodicidade: Variável (manual ou automática).
-    Descrição: O sistema pode receber atualizações de software para melhorar seu desempenho ou adicionar novas funcionalidades.
+3. **Monitoramento do Sistema:**  
+    Periodicidade: _Variável (pode ser configurado)._  
+    Descrição: _O sistema monitora seu próprio desempenho, realiza tarefas dependendo do estado atual e encaminha a informação a uma base de dados._
 
 #### Eventos Não Periódicos:
+1. **Atuação na Linha de Produção:**
+    Descrição: _O sistema detecta um item de qualidade baixa na linha principal e ativa os atuadores._
 
-1. Atuação na Linha de Produção:
-    Descrição: O sistema remove os itens defeituosos da esteira de acordo com as configurações definidas.
+2. **Passagem de item defeituoso para a próxima etapa:**  
+    Descrição: _Devido a algum fator externo, como excesso de itens na esteira, o OptiSort não é capaz de remover o item defeituoso a tempo e ele passa para a próxima etapa de produção._
 
-2. Passagem de item defeituoso para a próxima etapa:
-    Descrição: Devido a algum fator externo, como excesso de itens na esteira, o OptiSort não é capaz de remover o item defeituoso a tempo e ele passa para a próxima etapa de produção.
+3. **Captação de dados do controlador:**
+   Descrição: _O sistema detecta que houve uma manipulação ao controlador de configuração._
+   
+4. **Registro de dados de operação:**
+   Descrição: _O sistema armazena os dados de operação da esteira numa base de dados._
 
+5. **Atualizações de Software:**
+    Descrição: _O sistema pode receber atualizações de software para melhorar seu desempenho ou adicionar novas funcionalidades._
 
 ### Tratamento de Eventos
-Tratamento de Eventos no Sistema OptiSort
+Abaixo, detalhamos mais sobre o comportamento do sistema para cada tipo de evento.
 
-O tratamento de eventos é crucial para o bom funcionamento do sistema OptiSort. Abaixo, detalhamos o comportamento do sistema para cada tipo de evento.
+#### Eventos Periódicos:
+1. **Aquisição de Imagens:** O sistema captura imagens da esteira transportadora mediante uma câmera ligada ao dispositivo controlador. As imagens são armazenadas em um buffer de memória para serem processadas posteriormente.  
 
-Eventos Periódicos:
+2. **Processamento de Imagens:** O sistema aplica algoritmos de visão computacional e aprendizado de máquina para analisar as imagens e identificar os itens. As características dos itens (por exemplo, cor, tamanho, forma, textura) são extraídas e utilizadas para classificá-los. Mediante os pesos associados a cada item (determinados por prévio treinamento do algoritmo) o dispositivo determina a qualidade dos itens dentro da imagem.  
 
-1. Aquisição de Imagens:
+3. **Monitoramento do Sistema:** O sistema monitora alguns parâmetros, como temperatura, humidade, vibração e consumo de energia. Se um parâmetro estiver fora da faixa normal, o sistema gera um alarme para alertar o operador.  
 
-    O sistema captura imagens da esteira transportadora utilizando uma câmera de alta resolução.
-    As imagens são armazenadas em um buffer de memória para serem processadas posteriormente.
+#### Eventos Não Periódicos:
+1. **Atuação na Linha de Produção:** Se um item defeituoso for detectado, o sistema aciona um servomotor para removê-lo da esteira. O item defeituoso é direcionado para uma linha secundária para reavaliação ou descarte.
 
-2. Processamento de Imagens:
+2. **Passagem de item defeituoso para a próxima etapa:** A passagem acidental de um item defeituoso é registrada na memória do sistema. Se o número de itens defeituosos que passarem para a próxima etapa de produção for maior que o parâmetro especificado, o OptiSort interrompe a esteira e solicita avaliação do operador.
 
-    O sistema aplica algoritmos de visão computacional e aprendizado de máquina para analisar as imagens e identificar os itens.
-    As características dos itens (por exemplo, cor, tamanho, forma, textura) são extraídas e utilizadas para classificá-los.
+3.  **Captação de dados do controlador:** O usuario manipula o controlador vinculado ao dispositivo, gerando uma série de interrupções que permitem a manipulação da interface enquanto o controlador realiza suas tarefas principais. Após ter colocado e confirmado as alterações, o controlador controla a esteira com a nova informação armazenada dentro da sua memória.
 
-3. Monitoramento do Sistema:
+4.  **Registro de dados de operação:** Depois de cada registro e classificação de item sendo realizado pela câmera e o controlador, ele vai encaminhando os dados registrados dentro da sua memória a uma base de dados que possa ser visualizada pelo operador.
 
-    O sistema monitora diversos parâmetros, como temperatura, vibração e consumo de energia.
-    Se um parâmetro estiver fora da faixa normal, o sistema gera um alarme para alertar o operador.
-
-4. Atualizações de Software:
-
-    O sistema pode ser atualizado via software para melhorar seu desempenho ou adicionar novas funcionalidades.
-    As atualizações podem ser instaladas manualmente ou automaticamente.
-
-Eventos Não Periódicos:
-
-1. Atuação na Linha de Produção:
-
-    Se um item defeituoso for detectado, o sistema aciona um servomotor para removê-lo da esteira.
-    O item defeituoso é direcionado para uma linha secundária para reavaliação ou descarte.
-
-2. Passagem de item defeituoso para a próxima etapa:
-
-    A passagem acidental de um item defeituoso é registrada na memória do sistema. Se o número de itens defeituosos que passarem para a próxima etapa de produção for maior que o parâmetro especificado, o OptiSort interrompe a esteira e solicita avaliação do operador.
-
+5. **Atualizações de Software:** Reprogramação do controlador principal acrescentando ou modificando features dentro do funcionamento dele.
 
 ## Descrição Estrutural do Sistema
 > Junto com a descrição do comportamento do sistema, deve-se especificar, em nível de bloco ou sistema, a estrutura necessária 
