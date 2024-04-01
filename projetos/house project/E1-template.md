@@ -10,7 +10,7 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 > |Nome  | RA | Curso|
 > |--|--|--|
 > | Daniel Alexander Ortega Rodriguez  | 261261  | Eng. Elétrica|
-> | Luciano Cardoso Ferreira Filho     | xxxxxx  | Eng. Elétrica|
+> | Luciano Cardoso Ferreira Filho     | 240276  | Eng. Elétrica|
 
 
 ## Descrição do Projeto
@@ -19,10 +19,7 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 > Qual problema vocês pretendem solucionar?
 > Quem são os potenciais usuários?
 > É possível estabelecer um valor econômico associado?
-O objetivo principal desse projeto é poder fazer criar uma forma que posso ajudar a uma casa a operar de uma forma inteligente de uma forma eficiente, podendo assim
-ajudar desde casas menores de poucas pessoas até casas com uma familia grande, trazendo confiança, segurança e eficiência ao lar de cada individuo. O projeto inclui
-algumas coisas como sistema de segurança para evitar roubos ou até alertar algum vazamento de gâs na casa, sensor de temperatura para poder agir conforme os moradores
-escolham melhor, sensores de presença para evitar coisas simples como deixar a luz acessa do quarto sem ninguém estar usando ele entre outras funcionalidades.
+> O objetivo principal desse projeto é poder criar um sistema de segurança eficiente, podendo assim ajudar desde casas menores de poucas pessoas até casas com uma familia grande, trazendo confiança, segurança e eficiência ao lar de cada individuo. O projeto inclui algumas coisas como sistema de segurança para evitar roubos ou até alertar algum vazamento de gâs na casa, sensor de temperatura para poder agir conforme os moradores escolham melhor, sensores de presença para evitar coisas simples como deixar a luz acessa do quarto sem ninguém estar usando ele entre outras funcionalidades.
 
 ## Descrição Funcional
 > A descrição funcional do projeto é a principal entrega do E1 e pode ser realizada neste próprio arquivo Markdown,
@@ -32,7 +29,7 @@ escolham melhor, sensores de presença para evitar coisas simples como deixar a 
 > Detalhe todas as tarefas que o sistema será capaz de executar
 Sistema de Segurança: Alertar ao sentir uma presença não desejada com uso do sensor de presença (Do estilo home alone caso ninguém esteja em casa) ou mediante quebra de porta/janela.
 Sistema de Sensor de Temperatura: Caso a casa chegar a uma temperatura indesejada, ligar o aquecedor ou ar condicionado de acordo ao que o operador deseja (precisaria um sistema pra saber se tem alguem em casa pra não gastar energia)
-Sistema de sensor de vazamento de gâs: Principalmente na cozinha, caso chegar nums niveis elevados de gâs, fazer um alerta que possa ligar para os bombeiros, caso alguem tenha esquecido o gâs aberto ou um vazamento.
+Sistema de sensor de vazamento de gâs: Principalmente na cozinha, caso detectado vazamento de gás, fazer um alerta que possa alertar os donos da casa.
 Sistema de sensor de fumaça: Detector de fumaça na casa com ligação automática aos bombeiros
 
 ### Configurabilidade
@@ -42,6 +39,8 @@ Sistema de sensor de fumaça: Detector de fumaça na casa com ligação automát
 > Quais eventos o sistema deve tratar?
 > Se aplicável, classifique os eventos que são periódicos (procure especificar a periodicidade) e os que são não-periódicos
 > (qual o tempo mínimo entre dois eventos sucessivos)?
+
+
 if sistema de segurança on:
   case quebraram janela
   case porta invadida
