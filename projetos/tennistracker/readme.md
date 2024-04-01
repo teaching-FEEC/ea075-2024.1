@@ -33,7 +33,6 @@ O dispositivo poderia ser vendido para qualquer possoa interessada em monitorar 
 - **Armazenar os dados aquisitados**: o sistema deve ser capaz de salavar na memória os dados dos sensores.
 - **Medir a velocidade da raquete**: o sistema deve adquirir dados que permitam estimar velocidade.
 - **Medir a intensidade das colisões com a bolinha**: o sistema deve adquirir dados que permitam estimar a intensidade de colisões com a bola.
-- **Medir a altura da raquete**: o sistema deve adquirir dados que permitam estimar a altura da raquete em relação ao solo.
 - **Medir o ângulo com a horizontal da raquete**: o sistema deve adquirir dados que permitam estimar o ângulo da raquete em relação ao solo.
 - **Interface para controlar quando começar quando parar aquisição**: deve ser possível controlar quando interromper as medições.
 - **Interface para exportar os dados**: deve ser possível exportar os dados para análise externa.
@@ -85,6 +84,9 @@ Sensores:
 Botões:
 - Botão ON/OFF
 
+Comunicação:
+- Comunicação via cabo USB
+
 ### Diagrama Estrutural:
 
 [![diagrama_estrutural.svg editável](/projetos/tennistracker/diagrama_estrutural.svg)](https://app.diagrams.net/?libs=general;#Hshen-n%2Fea075-2024.1%2Fmain%2Fprojetos%2Ftennistracker%2Fdiagrama_estrutural.svg#%7B%22pageId%22%3A%2290a13364-a465-7bf4-72fc-28e22215d7a0%22%7D)
@@ -92,9 +94,6 @@ Botões:
 ### Diagrama de Estados:
 
 [![diagrama.svg editável](/projetos/tennistracker/diagrama.svg)](https://app.diagrams.net/#Hshen-n%2Fea075-2024.1%2Fmain%2Fprojetos%2Ftennistracker%2Fdiagrama.svg#%7B%22pageId%22%3A%2242789a77-a242-8287-6e28-9cd8cfd52e62%22%7D)
-
-
-
 
 
 ## Referências
