@@ -49,7 +49,8 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 > os blocos de forma a assegurar a execução de todas as tarefas que o sistema deve realizar.
 > 
 > Você sabia? Ferramentas como o `draw.io` permitem integração com o Github.
-> 
+> ![Inicializar](https://github.com/nathaliagondo/ea075-2024.1/assets/165518289/fc771e96-53b4-4542-a22a-ef8bc89a5591)
+
 
 ## Referências
 > Seção obrigatória. Inclua aqui referências utilizadas no projeto.
