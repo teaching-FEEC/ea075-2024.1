@@ -19,12 +19,12 @@ O Tênis é conhecido por ser um esporte difícil de se praticar pela exigência
 
 ##### Potenciais usuários
 - Jogadores de tênis (desde iniciantes até profissionais) que desejam acompanhar sua jornada e desenvolvimento no esporte.
-- Treinadores que desejam coletar dados para validar seu método de treimamento.
+- Treinadores que desejam coletar dados para validar seu método de treinamento.
 - Uso pela mídia e entidades do esporte em partidas oficiais para levantamento de estatísticas.
   
 ##### Valor econômico associado  
 
-O dispositivo poderia ser vendido para qualquer possoa interessada em monitorar seu desempenho no esporte Tênis.
+O dispositivo poderia ser vendido para qualquer pessoa interessada em monitorar seu desempenho no esporte Tênis.
 
 ## Descrição Funcional
 
@@ -69,8 +69,8 @@ Uma vez que o dados forem aquisitados, via software poderemos executar:
 |--|--|
 |Ligar (botão on/off)  | Iniciar medições de grandezas (posição, velocidade, aceleração, etc.) (periódico com taxa de amostragem) + ativar LED RGB em verde  |
 | Desligar (botão on/off)  | Interromper as medições e o fornecimento de energia + apagar LED RGB  |
-| USB com interface de dados conectado  |  Desligar os sensores, carregar a bateria e ligar o modo de comunicação de dados  |
-| USB de alimentação conectado |  Desligar os sensores e carregar a bateria |
+| USB com interface de dados conectado  |  Desligar os sensores, carregar a bateria e ligar o modo de comunicação de dados + LED RGB em azul |
+| USB de alimentação conectado |  Desligar os sensores e carregar a bateria + LED RGB em vermelho|
 
 ## Descrição Estrutural do Sistema
 
