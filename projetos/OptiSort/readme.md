@@ -78,19 +78,19 @@ Ao longo da sua operação definem-se vários tipos de "eventos" que descrevem o
     Descrição: _O sistema monitora seu próprio desempenho, realiza tarefas dependendo do estado atual e encaminha a informação a uma base de dados._
 
 #### Eventos Não Periódicos:
-1. **Atuação na Linha de Produção:**
+1. **Atuação na Linha de Produção:**  
     Descrição: _O sistema detecta um item de qualidade baixa na linha principal e ativa os atuadores._
 
 2. **Passagem de item defeituoso para a próxima etapa:**  
     Descrição: _Devido a algum fator externo, como excesso de itens na esteira, o OptiSort não é capaz de remover o item defeituoso a tempo e ele passa para a próxima etapa de produção._
 
-3. **Captação de dados do controlador:**
+3. **Captação de dados do controlador:**  
    Descrição: _O sistema detecta que houve uma manipulação ao controlador de configuração._
    
-4. **Registro de dados de operação:**
+4. **Registro de dados de operação:**  
    Descrição: _O sistema armazena os dados de operação da esteira numa base de dados._
 
-5. **Atualizações de Software:**
+5. **Atualizações de Software:**  
     Descrição: _O sistema pode receber atualizações de software para melhorar seu desempenho ou adicionar novas funcionalidades._
 
 ### Tratamento de Eventos
