@@ -56,34 +56,34 @@ Além de contribuir para o avanço da tecnologia renovável, esse sistema oferec
 ### Tratamento de Eventos
 > Qual comportamento o sistema deve ter para tratar corretamente cada evento?
 1. Período útil de geração de energia: 
-  - Iniciar automaticamente os painéis solares e o sistema de geração de energia ao nascer do sol e ajustar a inclinação dos painéis solares ao longo do dia para acompanhar o movimento do sol, de modo a maximizar a captação de energia.
-  - Desativar os painéis solares e o sistema de geração de energia ao pôr do sol para evitar a consumo de energia desnecessária durante a noite.
+    - Iniciar automaticamente os painéis solares e o sistema de geração de energia ao nascer do sol e ajustar a inclinação dos painéis solares ao longo do dia para acompanhar o movimento do sol, de modo a maximizar a captação de energia.
+    - Desativar os painéis solares e o sistema de geração de energia ao pôr do sol para evitar a consumo de energia desnecessária durante a noite.
 2. Mudança da posição do sol:
-  - Ajustar a inclinação dos painéis solares em tempo real para garantir que estejam sempre alinhados da maneira mais eficiente possível com a incidência de luz solar.
-  - Monitorar continuamente a produção de energia e consumo, realizando ajustes automáticos na inclinação ao longo do dia para acompanhar o movimento do sol e otimizar a eficiência energética.
+    - Ajustar a inclinação dos painéis solares em tempo real para garantir que estejam sempre alinhados da maneira mais eficiente possível com a incidência de luz solar.
+    - Monitorar continuamente a produção de energia e consumo, realizando ajustes automáticos na inclinação ao longo do dia para acompanhar o movimento do sol e otimizar a eficiência energética.
 3. Mudança nas estações do ano:
-  - Com base na data e posição do sol, ajustar as configurações de inclinação dos painéis solares e os algoritmos de captação de energia para otimizar o desempenho de acordo com as condições específicas de cada estação.
-  - Adaptar as estratégias de armazenamento e uso de energia para melhor atender às necessidades sazonais de energia.
+    - Com base na data e posição do sol, ajustar as configurações de inclinação dos painéis solares e os algoritmos de captação de energia para otimizar o desempenho de acordo com as condições específicas de cada estação.
+    - Adaptar as estratégias de armazenamento e uso de energia para melhor atender às necessidades sazonais de energia.
 4. Condições adversas:
-  - Monitorar a ocorrência de mudanças na obtenção dos dados, para ajusar as operações dos painéiso solares, lidando com a redução na intensidade da luz solar.
-  - Implementar medidas de economia de energia para preservar a energia disponível durante períodos de baixa produção.
+    - Monitorar a ocorrência de mudanças na obtenção dos dados, para ajusar as operações dos painéiso solares, lidando com a redução na intensidade da luz solar.
+    - Implementar medidas de economia de energia para preservar a energia disponível durante períodos de baixa produção.
 5. Condições extremas:
-  - Identificar ventanias e tempestades por meio de variações bruscas no torque do servomotor. 
-  - Ativar um modo de segurança que retraia os painéis solares e desative temporariamente a geração de energia para proteger os componentes do sistema contra danos.
-  - Emitir alertas aos usuários sobre as condições climáticas extremas.
+    - Identificar ventanias e tempestades por meio de variações bruscas no torque do servomotor. 
+    - Ativar um modo de segurança que retraia os painéis solares e desative temporariamente a geração de energia para proteger os componentes do sistema contra danos.
+    - Emitir alertas aos usuários sobre as condições climáticas extremas.
 6. Manutenção das placas solares ou dos componentes do sistema:
-  - Agendar automaticamente tarefas de manutenção com base em intervalos predefinidos ou em condições específicas do sistema.
-  - Desativar temporariamente os painéis solares e o sistema de geração de energia durante a manutenção para garantir a segurança durante as limpezas e substituições de componentes desgastados.
+    - Agendar automaticamente tarefas de manutenção com base em intervalos predefinidos ou em condições específicas do sistema.
+    - Desativar temporariamente os painéis solares e o sistema de geração de energia durante a manutenção para garantir a segurança durante as limpezas e substituições de componentes desgastados.
 7. Bateria fraca:
-  - Monitorar continuamente o nível de carga da bateria de armazenamento de energia.
-  - Reduzir automaticamente o consumo de energia ou ajustar as operações dos painéis solares para preservar a energia restante da bateria.
-  - Emitir alertas aos usuários sobre a bateria fraca.
+    - Monitorar continuamente o nível de carga da bateria de armazenamento de energia.
+    - Reduzir automaticamente o consumo de energia ou ajustar as operações dos painéis solares para preservar a energia restante da bateria.
+    - Emitir alertas aos usuários sobre a bateria fraca.
 8. Interação do usuário:
-  - Prioridade em relação aos demais eventos, respondendo rapidamente às solicitações.
-  - Interface intuitiva do sistema-usuário
+    - Prioridade em relação aos demais eventos, respondendo rapidamente às solicitações.
+    - Interface intuitiva do sistema-usuário
 9. Falhas no sistema:
-  - Tentar realizar correções automáticas, quando possível, e diagnósticos das falhas.
-  - Se não for possível corrigi-lo, desativar o sistema e emitir alertas ao usuário indicando as falhas.
+    - Tentar realizar correções automáticas, quando possível, e diagnósticos das falhas.
+    - Se não for possível corrigi-lo, desativar o sistema e emitir alertas ao usuário indicando as falhas.
 
 
 ## Descrição Estrutural do Sistema
