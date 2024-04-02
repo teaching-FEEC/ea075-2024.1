@@ -68,13 +68,33 @@ Os eventos de mudança de estado:
   - Ao parar, abertura das portas (evento não-periódico, passa do estado "parado" para "abrindo portas").
   - Fechamento das portas após um tempo para entrada e saída de passageiros (evento não-periódico, passa do estado "abrindo portas" para "fechando portas").
   - Pressionamento do botão de fechada de portas (evento não-periódico, passa do estado "abrindo portas" para "fechando portas").
+  - Pessoa entre a porta (evento não-periódico, passa do estado "fechando porta" para "abrindo porta").
   - Detecção de sobrecarga (evento não-periódico, passa do estado  "subindo" ou "descendo" para "parado").
   - Detecção de falha (evento não-periódico, passa do estado  "subindo" ou "descendo" para "parado").
   - Ausência de funcionamento por um determinado período de tempo (evento não-periódico, passa do estado "parado" para "economia de energia).
   - Entrada no sistema de economia de energia pré-definida (evento periódico,  passa do estado "parado" para "economia de energia).
 
 ### Tratamento de Eventos
-> Qual comportamento o sistema deve ter para tratar corretamente cada evento?
+  - Chamada de um andar 
+    Ao receber uma chamada, o sistema deve organizar as chamadas da melhor maneira, de forma que não fique subindo e descendo várias vezes.
+  - Chegada do elevador a um andar solicitado
+    Ao chegar em um andar, o sistema deve alinhar corretamente o chão do elevador com o andar.
+  - Ao parar, abertura das portas
+    Após o alinhamento correto do chão do elevador e do andar, o sistema deve mandar um sinal para abertura da porta correta.
+  - Fechamento das portas após um tempo para entrada e saída de passageiros
+    Após um tempo previamente definido de abertura das portas, o sistema deve enviar um sinal para o fechamento das portas.
+  - Pressionamento do botão de fechada de portas
+    Caso esteja pressionado o botão, o sistema deve enviar um sinal para fechamento da porta.
+  - Pessoa entre a porta
+    O sistema, ao detectar que há algo no local de fechamento da porta, deve enviar o sinal para manter a porta aberta ou cancelar o fechamento.
+  - Detecção de sobrecarga
+    Ao detectar sobre carga, o sistema deve interromper o movimento e ficar parado.
+  - Detecção de falha
+    Ao detectar falha, o sistema deve interromper o movimento e ficar parado.
+  - Ausência de funcionamento por um determinado período de tempo
+    Ao ficar um tempo determinado previamente sem nenhuma chamada, o sistema deve desligar alguns comandos que não são essenciais.
+  - Entrada no sistema de economia de energia pré-definida
+    Ao chegar uma hora pré determinada, o sistema deve desligar alguns comandos que não são essenciais.
 
 ## Descrição Estrutural do Sistema
 > Junto com a descrição do comportamento do sistema, deve-se especificar, em nível de bloco ou sistema, a estrutura necessária 
