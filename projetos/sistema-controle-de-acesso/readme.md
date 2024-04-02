@@ -1,5 +1,5 @@
-# `<Sistema de Controle e Gerenciamento de Acesso>`
-# `<Access Control and Management System>`
+# `Sistema de Controle e Gerenciamento de Acesso`
+# `Access Control and Management System`
 
 ## Apresentação
 
