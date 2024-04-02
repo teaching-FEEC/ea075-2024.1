@@ -43,7 +43,23 @@ O sistema de controle de elevadores deverá ser capaz de executar as seguintes t
     
 
 ### Configurabilidade
-> Detalhe, se houver, todas as possíveis configurações do circuito e todos os pontos de alteração da configuração.
+O sistema possui os seguintes estados:
+  - Subindo.
+    O elevador está se deslocando para cima, pois recebeu uma chamada de algum andar mais elevado ou algum passageiro solicitou parada em um andar acima.
+  - Descendo.
+    O elevador está se deslocando para baixo, pois recebeu uma chamada de algum andar ou algum passageiro solicitou parada em um andar abaixo de sua posição.
+  - Parado.
+    O elevador está em um andar específico, com as portas fechadas.
+  - Abrindo as portas.
+    O elevador está em um andar específico e está com a porta aberta para entrada e saída de passageiros.
+  - Fechando as portas.
+    O elevador está fechando as portas após um tempo específico para entrada e saída dos passageiros.
+  - Economia de energia.
+    Está parado e alguns sistemas não essenciais estão desligados.
+
+Ao receber chamadas de andares, o elevador muda para o estado "subindo" ou "descendo", assim como quando o passageiro seleciona o andar desejado. Ao chegar no andar, o elevador muda para o modo "parado", e rapidamente muda para o modo "abrindo portas". Após um determinado tempo para entrarem e saírem passageiros, há a mudança de estado para "fechando portas". Assim, novas chamadas ocorrem, reiniciando. 
+Há algumas mudanças de estado fora do funcionamento padrão. Ao verificar problemas mecânicos ou elétricos, sobrecarga ou outras emergências ele passa automaticamente para o modo "parado". Quando está parado por um tempo significativo a ser determinado, ele passa para o modo de "economia de energia". Para sair deste modo, basta receber uma chamada.
+
 
 ### Eventos
 > Quais eventos o sistema deve tratar?
