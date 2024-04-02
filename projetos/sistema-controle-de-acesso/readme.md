@@ -66,7 +66,7 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 > Além disso, deve-se esclarecer também o relacionamento entre estes blocos, incluindo os principais sinais de comunicação entre
 > os blocos de forma a assegurar a execução de todas as tarefas que o sistema deve realizar.
 
-> ![Alt](diagrama1.drawio.svg)
+> ![Alt](images/diagrama1.drawio.svg)
 
 [comment]: # https://app.diagrams.net/#Hthiagomasanori%2Fea075-2024.1%2Fmain%2Fprojetos%2Fsistema-controle-de-acesso%2Fdiagrama1.drawio#%7B%22pageId%22%3A%22LWd8G3btwGpdAu2xx7eU%22%7D
 > Você sabia? Ferramentas como o `draw.io` permitem integração com o Github.
