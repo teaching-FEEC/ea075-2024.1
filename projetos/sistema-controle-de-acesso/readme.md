@@ -65,9 +65,10 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 > Nesse diagrama, devem ser destacados os blocos funcionais que compõem o sistema, incluindo uma síntese das funcionalidades de cada bloco.
 > Além disso, deve-se esclarecer também o relacionamento entre estes blocos, incluindo os principais sinais de comunicação entre
 > os blocos de forma a assegurar a execução de todas as tarefas que o sistema deve realizar.
-> 
+
+> ![Alt](images/someimage.png)
 > Você sabia? Ferramentas como o `draw.io` permitem integração com o Github.
-> 
+>  
 
 ## Referências
 > Seção obrigatória. Inclua aqui referências utilizadas no projeto.
