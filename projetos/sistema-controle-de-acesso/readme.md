@@ -28,7 +28,8 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 > >
 > > 
 > Quem são os potenciais usuários?
-> > Empresas de segurança, pessoas físicas, comércios 
+> > Empresas de segurança, pessoas físicas, comércios
+
 > É possível estabelecer um valor econômico associado?
 > Sim, COLOCAR ESTIMATIVA DE PREÇO COM BASE EM CONCORRENTES
 
@@ -74,7 +75,6 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 
 > ![Alt](images/diagrama1.drawio.svg)
 
-[comment]: # https://app.diagrams.net/#Hthiagomasanori%2Fea075-2024.1%2Fmain%2Fprojetos%2Fsistema-controle-de-acesso%2Fdiagrama1.drawio#%7B%22pageId%22%3A%22LWd8G3btwGpdAu2xx7eU%22%7D
 > Você sabia? Ferramentas como o `draw.io` permitem integração com o Github.
 >  
 
