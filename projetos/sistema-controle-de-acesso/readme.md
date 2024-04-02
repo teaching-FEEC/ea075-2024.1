@@ -66,7 +66,7 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 > Além disso, deve-se esclarecer também o relacionamento entre estes blocos, incluindo os principais sinais de comunicação entre
 > os blocos de forma a assegurar a execução de todas as tarefas que o sistema deve realizar.
 
-> ![Alt](/diagrama1.drawio.png)
+> ![Alt](diagrama1.drawio.png)
 > Você sabia? Ferramentas como o `draw.io` permitem integração com o Github.
 >  
 
