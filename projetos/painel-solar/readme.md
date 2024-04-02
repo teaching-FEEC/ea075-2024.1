@@ -123,3 +123,9 @@ Em resumo, esse sistema integrado oferece um controle preciso e adaptativo da in
 
 ## Referências
 > Seção obrigatória. Inclua aqui referências utilizadas no projeto.
+
+[1] Silva, Marcelo Allan de Melo. Projeto de suporte com inclinação variável para placas solares residenciais. 2023. 70 f. Trabalho de Conclusão de Curso (Graduação em Engenharia Mecânica) - Departamento de Engenharia Mecânica, Centro de Tecnologia e Geociências, Universidade Federal de Pernambuco, Recife, 2023. Disponível em: https://repositorio.ufpe.br/handle/123456789/50687. Acesso em: 30 de março de 2024.
+
+[2] Ferronato, Régis; Severo, Tiago Cassol. Análise do Rendimento de um Módulo Fotovoltaico com Suporte de Inclinação Variável. In: Congresso Internacional de Tecnologias para o Meio Ambiente, 6., Bento Gonçalves, RS, Brasil, 10-12 de abril de 2018. Bento Gonçalves: UCS, 2018. Disponível em: https://siambiental.ucs.br/congresso/getArtigo.php?id=490&ano=_sexto. Acesso em: 30 de março de 2024.
+
+[3] Cravo, E. (s.d.). Servo Motor: o que é um, como funciona e quais as vantagens? Recuperado de: https://blog.kalatec.com.br/o-que-e-servo-motor/?utm_source=google&utm_medium=cpc&utm_campaign=npbr_search_DSA&utm_id=21012797249&utm_term=&gad_source=1&gclid=CjwKCAjwtqmwBhBVEiwAL-WAYQnYY9Xp7LGsU-SsAqGSzuhZBELNIFGqw1FDFUnbnq8aRlu-L0fVyBoC-r4QAvD_BwE
