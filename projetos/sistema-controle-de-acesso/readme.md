@@ -32,8 +32,7 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 > > Empresas, pessoas físicas, comércios e hospitais
 
 > É possível estabelecer um valor econômico associado?
-> 
-> Sim, esses sistemas já existentes no mercado são vendidos entre R$2.500,00 e R$4.000,00 a unidade com catraca.
+> > Sim, esses sistemas já existentes no mercado são vendidos entre R$2.500,00 e R$4.000,00 a unidade com catraca.
 
 
 ## Descrição Funcional
