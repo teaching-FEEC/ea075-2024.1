@@ -19,6 +19,20 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 > Quem são os potenciais usuários?
 > É possível estabelecer um valor econômico associado?
 
+O projeto foi idealizado para a resolução de um problema muito presente na vida dos motoristas atualmente, o congestionamento em rodovias.
+A causa que é frequentemente atribuida a esse problema é a ocorrencia de algum acidente, impedindo o fluxo de veiculos por uma das vias, fazendo com que a outra via tenha que suportar o fluxo dela e o outro que foi impedido. Contudo, em muitos congestionamentos é possível verificar que não houve acidentes e mesmo assim ele ocorreu, o que gera uma grande indagação a motoristas mais perspicazes. Nesse âmbito de indagação, foi encontrado um vídeo que explicava o motivo de muitos congestionamentos, sendo a sua principal causa, a grande diferença de velocidades entre os veículos em uma mesma via e o advento de ultrapassagens entre veículos mais lentos, que faz com que muitos tenham que reduzir a sua velocidade de modo que esse movimento acaba se propagando em uma onda de lentidão para os carros que vêm atrás até que em algum momento algum tenha que freiar completamente para evitar a colisão com o carro da frente. Nesse contexto, o projeto visa reduzir a propagação dessa onda de lentidão, de modo que a extensão do congestionamento, sendo considerado os trechos em que os motoristas tem que parar completamente o carro, seja reduzida e evitado o seu crescimento. 
+
+ A prejudicialidade dos congestionamentos está muito além do atraso que gera para os motoristas em suas trajetórias diárias. Alguns exemplos de consequências são:
+ 
+ - Estresse dos motoristas
+ - Acidentes
+ - Maior consumo de combustível
+ - Maior poluição
+ - Maior prejuízo para a saúde dos motoristas expostos a poluição gerada pelos carros
+   
+ Nesse sentido, o Rodovias Fluídas® visa solucionar todos esses problemas ao monitorar o surgindo desses engarrafamentos e enviar informações aos motoristas que vem atrás para reduzirem a velocidade, de modo ao chegarem ao local do suposto congestionamento, ele ja tenha desaparecido. Com a implementação desse sistema, prevê-se que haja um significativo retorno econômico ao reduzir o consumo de combustível e a prevenção de acidentes. 
+
+
 
 ## Descrição Funcional
 > A descrição funcional do projeto é a principal entrega do E1 e pode ser realizada neste próprio arquivo Markdown,
