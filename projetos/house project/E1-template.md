@@ -41,7 +41,7 @@ Sistema de Alerta de Fumaça: Detector de fumaça na casa com ligação automát
 
 
 ### Configurabilidade
-> Detalhe, se houver, todas as possíveis configurações do circuito e todos os pontos de alteração da configuração.
+
 
 Sistema de Segurança: Sistema ligado ou desligado mediante vontade do usuário.
 
@@ -53,9 +53,7 @@ Sistema de Alerta de Fumaça: Ligado permanentemente
 
 
 ### Eventos
-> Quais eventos o sistema deve tratar?
-> Se aplicável, classifique os eventos que são periódicos (procure especificar a periodicidade) e os que são não-periódicos
-> (qual o tempo mínimo entre dois eventos sucessivos)?
+
 
 Sistema de Segurança: Evento não periodico. Caso o sistema de segurança  esteja ligado, se o sensor de presença for ativado, gera uma interrupção.
 
@@ -71,7 +69,7 @@ Sistema de Alerta de Fumaça: Evento não periodico. Gera interrupção caso dec
 
 
 ### Tratamento de Eventos
-> Qual comportamento o sistema deve ter para tratar corretamente cada evento?
+
 
 Sistema de Segurança: Após a interrupção, será acionado um alarme sonoro na casa e será avisado aos usuários a detecção de presença não desejada.
 
