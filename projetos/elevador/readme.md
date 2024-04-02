@@ -27,8 +27,8 @@ Outro lado positivo do projeto é que seu custo não tende a ser alto, levando e
 > com links para diagramas ou outros arquivos que estejam no próprio repositório.
 
 ### Funcionalidades
-> O sistema de controle de elevadores deverá ser capaz de executar as seguintes tarefas:
->   - 
+O sistema de controle de elevadores deverá ser capaz de executar as seguintes tarefas:
+  - 
 
 ### Configurabilidade
 > Detalhe, se houver, todas as possíveis configurações do circuito e todos os pontos de alteração da configuração.
