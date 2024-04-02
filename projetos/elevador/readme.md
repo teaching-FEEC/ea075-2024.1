@@ -62,9 +62,16 @@ Há algumas mudanças de estado fora do funcionamento padrão. Ao verificar prob
 
 
 ### Eventos
-> Quais eventos o sistema deve tratar?
-> Se aplicável, classifique os eventos que são periódicos (procure especificar a periodicidade) e os que são não-periódicos
-> (qual o tempo mínimo entre dois eventos sucessivos)?
+Os eventos de mudança de estado:
+  - Chamada de um andar (evento não-periódico, passa do estado "parado" para "subindo" ou "descendo").
+  - Chegada do elevador a um andar solicitado (evento não-periódico, passa do estado "subindo" ou "descendo" para "parado").
+  - Ao parar, abertura das portas (evento não-periódico, passa do estado "parado" para "abrindo portas").
+  - Fechamento das portas após um tempo para entrada e saída de passageiros (evento não-periódico, passa do estado "abrindo portas" para "fechando portas").
+  - Pressionamento do botão de fechada de portas (evento não-periódico, passa do estado "abrindo portas" para "fechando portas").
+  - Detecção de sobrecarga (evento não-periódico, passa do estado  "subindo" ou "descendo" para "parado").
+  - Detecção de falha (evento não-periódico, passa do estado  "subindo" ou "descendo" para "parado").
+  - Ausência de funcionamento por um determinado período de tempo (evento não-periódico, passa do estado "parado" para "economia de energia).
+  - Entrada no sistema de economia de energia pré-definida (evento periódico,  passa do estado "parado" para "economia de energia).
 
 ### Tratamento de Eventos
 > Qual comportamento o sistema deve ter para tratar corretamente cada evento?
