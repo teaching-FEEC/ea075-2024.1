@@ -64,22 +64,22 @@ Em resumo, esse sistema integrado oferece um controle preciso e adaptativo da in
 > Se aplicável, classifique os eventos que são periódicos (procure especificar a periodicidade) e os que são não-periódicos
 > (qual o tempo mínimo entre dois eventos sucessivos)?
 - Eventos periódicos:
-1. <span style="text-decoration: underline;">Período útil de geração de energia</span> (diário, a cada 24 horas): o período do dia durante o qual o sistema está ativo para captar energia solar e gerar eletricidade. Começando ao nascer do sol e terminando ao pôr do sol, é o intervalo em que a intensidade da luz solar é suficientemente alta para uma produção eficaz de energia.
-2. Mudança da posição do sol</span> (diário, a cada poucos minutos - constante): ao longo do dia, a posição do sol no céu se desloca gradualmente devido à rotação da Terra. Essa mudança afeta a quantidade de luz solar que atinge os painéis solares. O sistema deve ajustar a inclinação dos painéis para maximizar a absorção de energia solar.
-3. Mudança nas estações do ano</span> (sazonal, a cada três meses, com mudanças graduais entre uma estação e outra): as estações do ano afetam a intensidade e a duração da luz solar incidente devido à inclinação do eixo da Terra. O sistema deve ajustar sua operação e estratégias de captação de energia para otimizar o aproveitamento da luz solar em cada estação.
+1. Período útil de geração de energia (diário, a cada 24 horas): o período do dia durante o qual o sistema está ativo para captar energia solar e gerar eletricidade. Começando ao nascer do sol e terminando ao pôr do sol, é o intervalo em que a intensidade da luz solar é suficientemente alta para uma produção eficaz de energia.
+2. Mudança da posição do sol (diário, a cada poucos minutos - constante): ao longo do dia, a posição do sol no céu se desloca gradualmente devido à rotação da Terra. Essa mudança afeta a quantidade de luz solar que atinge os painéis solares. O sistema deve ajustar a inclinação dos painéis para maximizar a absorção de energia solar, geralmente mantendo-o perpendicular aos raios incidentes.
+3. Mudança nas estações do ano (sazonal, a cada três meses, com mudanças graduais entre uma estação e outra): as estações do ano afetam a intensidade e a duração da luz solar incidente devido à inclinação do eixo da Terra. O sistema deve ajustar sua operação e estratégias de captação de energia para otimizar o aproveitamento da luz solar em cada estação.
 - Eventos não-periódicos:
-4. Condições adversas</span> (variável, depende da frequência e duração das condições): momentos em que as condições climáticas, como nebulosidade, reduzem a intensidade da luz solar disponível para captação. Isso pode resultar em uma diminuição temporária na produção de energia.
-5. Condições extremas</span> (variável, depende da frequência e gravidade das condições): eventos climáticos severos, como tempestades e ventanias, que representam riscos para o sistema solar. Nessas situações, medidas de segurança devem ser ativadas para proteger os componentes.
-6. Manutenção das placas solares ou dos componentes do sistema</span> (variável, depende do cronograma de manutenção de cada componente): eventos planejados para garantir o bom funcionamento e a longevidade do sistema. Isso inclui inspeções regulares, limpeza de painéis solares para melhor obtenção dos dados e substituição de peças desgastadas.
-7. Bateria fraca</span> (variável, condicionada pelo padrão de consumo do sistema): indica que a carga da bateria de armazenamento de energia atingiu um nível baixo. Isso pode ocorrer devido a um consumo excessivo de energia ou a uma incapacidade de recarga adequada das placas solares.
-8. Interação do usuário</span> (variável de acordo com a necessidade do usuário): dedicado quando o usuário interage com o sistema, como ajustar configurações, monitorar o desempenho ou receber notificações sobre o status do sistema.
-9. Falhas no sistema</span> (imprevisível, dependendo da natureza e gravidade da falha): ocorrência de problemas ou mau funcionamento no sistema solar que exigem intervenção técnica. Isso pode incluir falhas de hardware, erros de software ou interrupções na geração de energia.
+4. Condições adversas (variável, depende da frequência e duração das condições): momentos em que as condições climáticas, como nebulosidade, reduzem a intensidade da luz solar disponível para captação. Isso pode resultar em uma diminuição temporária na produção de energia.
+5. Condições extremas (variável, depende da frequência e gravidade das condições): eventos climáticos severos, como tempestades e ventanias, que representam riscos para às placas solares. Nessas situações, medidas de segurança devem ser ativadas para proteger os componentes, levando-o à posição referencial.
+6. Manutenção das placas solares ou dos componentes do sistema (variável, depende do cronograma de manutenção de cada componente): eventos planejados para garantir o bom funcionamento e a longevidade do sistema. Isso inclui inspeções regulares, limpeza de painéis solares para melhor obtenção dos dados e substituição de peças desgastadas.
+7. Bateria fraca (variável, condicionada pelo padrão de consumo do sistema): indica que a carga da bateria de armazenamento de energia atingiu um nível baixo. Isso pode ocorrer devido a um consumo excessivo de energia ou a uma incapacidade de recarga adequada das placas solares.
+8. Interação do usuário (variável de acordo com a necessidade do usuário): dedicado quando o usuário interage com o sistema, como ajustar configurações, monitorar o desempenho ou receber notificações sobre o status do sistema.
+9. Falhas no sistema (imprevisível, dependendo da natureza e gravidade da falha): ocorrência de problemas ou mau funcionamento no sistema solar que exigem intervenção técnica. Isso pode incluir falhas de hardware, erros de software ou interrupções na geração de energia.
 
 ### Tratamento de Eventos
 > Qual comportamento o sistema deve ter para tratar corretamente cada evento?
 1. Período útil de geração de energia: 
     - Iniciar automaticamente os painéis solares e o sistema de geração de energia ao nascer do sol e ajustar a inclinação dos painéis solares ao longo do dia para acompanhar o movimento do sol, de modo a maximizar a captação de energia.
-    - Desativar os painéis solares e o sistema de geração de energia ao pôr do sol para evitar a consumo de energia desnecessária durante a noite.
+    - Desativar o sistema de busca pelo ângulo ótimo no pôr do sol e monitoramente da produção de energia para evitar a consumo de energia desnecessária durante a noite.
 2. Mudança da posição do sol:
     - Ajustar a inclinação dos painéis solares em tempo real para garantir que estejam sempre alinhados da maneira mais eficiente possível com a incidência de luz solar.
     - Monitorar continuamente a produção de energia e consumo, realizando ajustes automáticos na inclinação ao longo do dia para acompanhar o movimento do sol e otimizar a eficiência energética.
@@ -87,7 +87,7 @@ Em resumo, esse sistema integrado oferece um controle preciso e adaptativo da in
     - Com base na data e posição do sol, ajustar as configurações de inclinação dos painéis solares e os algoritmos de captação de energia para otimizar o desempenho de acordo com as condições específicas de cada estação.
     - Adaptar as estratégias de armazenamento e uso de energia para melhor atender às necessidades sazonais de energia.
 4. Condições adversas:
-    - Monitorar a ocorrência de mudanças na obtenção dos dados, para ajusar as operações dos painéiso solares, lidando com a redução na intensidade da luz solar.
+    - Monitorar a ocorrência de mudanças na obtenção dos dados, para ajusar as operações dos painéis solares, lidando com a redução na intensidade da luz solar.
     - Implementar medidas de economia de energia para preservar a energia disponível durante períodos de baixa produção.
 5. Condições extremas:
     - Identificar ventanias e tempestades por meio de variações bruscas no torque do servomotor. 
@@ -95,14 +95,14 @@ Em resumo, esse sistema integrado oferece um controle preciso e adaptativo da in
     - Emitir alertas aos usuários sobre as condições climáticas extremas.
 6. Manutenção das placas solares ou dos componentes do sistema:
     - Agendar automaticamente tarefas de manutenção com base em intervalos predefinidos ou em condições específicas do sistema.
-    - Desativar temporariamente os painéis solares e o sistema de geração de energia durante a manutenção para garantir a segurança durante as limpezas e substituições de componentes desgastados.
+    - Desativar temporariamente os painéis solares e o sistema durante a manutenção para garantir a segurança durante as limpezas e as substituições de componentes desgastados.
 7. Bateria fraca:
     - Monitorar continuamente o nível de carga da bateria de armazenamento de energia.
     - Reduzir automaticamente o consumo de energia ou ajustar as operações dos painéis solares para preservar a energia restante da bateria.
     - Emitir alertas aos usuários sobre a bateria fraca.
 8. Interação do usuário:
     - Prioridade em relação aos demais eventos, respondendo rapidamente às solicitações.
-    - Interface intuitiva do sistema-usuário
+    - Interface intuitiva sistema-usuário
 9. Falhas no sistema:
     - Tentar realizar correções automáticas, quando possível, e diagnósticos das falhas.
     - Se não for possível corrigi-lo, desativar o sistema e emitir alertas ao usuário indicando as falhas.
