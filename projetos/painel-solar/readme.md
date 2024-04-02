@@ -35,6 +35,13 @@ Além de contribuir para o avanço da tecnologia renovável, esse sistema oferec
 
 ### Funcionalidades
 > Detalhe todas as tarefas que o sistema será capaz de executar
+> Sun Tracking: O sistema irá monitorar a posição solar usando sensores e ajustando o ângulo de inclinação dos painéis solares para garantir a maior exposição aos raios incidentes.
+Interface com o usuário: Uma interface que permita o usuário configurar, ajustar o sistema além de apresentar os dados de produção de energia além de informações operacionais do dispositivo.
+Maximização da Energia produzida: Algoritmo de controle que garanta a máxima geração energética com base na adaptação da angulação do painel solar. Os dados serão processados por meio da tensão e corrente recebidas pelos painéis.
+Comunicação Wireless: O sistema deverá possuir comunicação sem fio para enviar informações do sistema e receber dados de controle e configuração de um aplicativo para smartphone.
+Gerenciamento de energia: o sistema será alimentado com a energia solar gerada pelo próprio painel que alimentará uma bateria (usada como backup). A bateria funcionará como um suporte para estabilização da tensão fornecida ao dispositivo. O gerenciamento de energia é essencial para otimizar o consumo de energia e prolongar o tempo de funcionamento do dispositivo.
+Identificação de erro no sistema ou condição extrema: Verificar esforço extra que o motor é submetido
+
 
 ### Configurabilidade
 > Detalhe, se houver, todas as possíveis configurações do circuito e todos os pontos de alteração da configuração.
