@@ -20,7 +20,7 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 
 > Escreva essa seção imaginando que está tentando convencer alguém a investir financeiramente no seu projeto.
 > > A implementação de um sistema de controle de acesso físico melhora a segurança e eficiência de entrada em edifícios comerciais, residenciais, hospitalares e instituições educacionais.
-> > A demanda por controle de acesso seguro está em ascensão, e empresas e organizações buscam soluções confiáveis para garantir quem entra e sai de suas instalações. Nosso sistema oferece uma experiência de acesso mais rápida e conveniente, permitindo que os usuários utilizem biometria facial e Q Code, eliminando a necessidade de chaves físicas. Além disso, a automação do controle de acesso reduz os custos relacionados a gestão de chaves, perdas de chaves e substituição de fechaduras. O mercado de controle de acessos está projetado para crescer significativamente nos próximos anos, tornando esse investimento uma oportunidade com grande potencial.
+> > A demanda por controle de acesso seguro está em ascensão, e empresas e organizações buscam soluções confiáveis para garantir quem entra e sai de suas instalações. Nosso sistema oferece uma experiência de acesso mais rápida e conveniente, permitindo que os usuários utilizem biometria facial e QR Code, eliminando a necessidade de chaves físicas. Além disso, a automação do controle de acesso reduz os custos relacionados a gestão de chaves, perdas de chaves e substituição de fechaduras. O mercado de controle de acessos está projetado para crescer significativamente nos próximos anos, tornando esse investimento uma oportunidade com grande potencial.
 
 > > 
 > Qual problema vocês pretendem solucionar?
