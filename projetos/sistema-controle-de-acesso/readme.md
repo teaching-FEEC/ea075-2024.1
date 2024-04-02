@@ -67,6 +67,7 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 > os blocos de forma a assegurar a execução de todas as tarefas que o sistema deve realizar.
 
 > ![Alt](diagrama1.drawio.png)
+
 > Você sabia? Ferramentas como o `draw.io` permitem integração com o Github.
 >  
 
