@@ -1,4 +1,4 @@
-# `<Título em Português do Projeto>`
+# `<Sistema de Controle e Gerenciamento de Acesso>`
 # `<Project Title in in English>`
 
 ## Apresentação
@@ -19,6 +19,7 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 > Quem são os potenciais usuários?
 > É possível estabelecer um valor econômico associado?
 
+RFID, sigla para “Radio Frequency Identification”, significa “identificação por radiofrequência”
 
 ## Descrição Funcional
 > A descrição funcional do projeto é a principal entrega do E1 e pode ser realizada neste próprio arquivo Markdown,
@@ -52,3 +53,10 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 
 ## Referências
 > Seção obrigatória. Inclua aqui referências utilizadas no projeto.
+> 1) Controle de acesso à rede: saiba tudo sobre essas soluções ... - Varonis. https://www.varonis.com/pt-br/blog/controle-de-acesso-a-rede-saiba-tudo-sobre-essas-solucoes-e-sua-importancia.
+> 2) Kit RFID com Arduino: Sistema de Controle de Acesso. https://blog.eletrogate.com/kit-rfid-com-arduino-sistema-de-controle-de-acesso/.
+> 3) Controle de Acesso com RFID e Arduino - Lobo da Robótica. https://lobodarobotica.com/blog/controle-de-acesso-arduino-rfid/.
+> 4) 5 sistemas grátis e open source de monitoramento de rede. https://www.capterra.com.br/blog/1583/monitoramento-de-rede.
+> 5) 5 programas de acesso remoto para controlar o seu PC a distância. https://www.techtudo.com.br/listas/2023/07/quer-controlar-seu-pc-a-distancia-veja-5-programas-de-acesso-remoto-edsoftwares.ghtml.
+> 6) Acesso remoto: veja o que é e como fazer em outro PC ou celular via app. https://www.techtudo.com.br/noticias/2023/02/o-que-e-acesso-remoto-entenda-tudo-sobre-conexao-distancia-edsoftwares.ghtml.
+> 7) Sistema de Controle e Gerenciamento de Acesso. https://riu.ufam.edu.br/bitstream/prefix/6638/11/TCC_DavidFigueira.pdf.
