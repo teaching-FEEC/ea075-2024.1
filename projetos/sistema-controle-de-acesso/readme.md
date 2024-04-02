@@ -30,6 +30,7 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 > Quem são os potenciais usuários?
 > > Empresas de segurança, pessoas físicas, comércios 
 > É possível estabelecer um valor econômico associado?
+> Sim, COLOCAR ESTIMATIVA DE PREÇO COM BASE EM CONCORRENTES
 
 
 ## Descrição Funcional
@@ -43,14 +44,15 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 > - O sistema deve ser capaz de se comunicar remotamente (bluetooth, wifi,...)
 > - Deve ter acesso à internet
 > - Deve ser capaz de captar e transmitir imagens de vídeo (câmera)
-> - Deve ser capaz de ler cartões/tags RFID?
 > - Deve ser capaz de controlar uma fechadura elétrica ou portão
 > - Deve ser capaz de emitir algum sinal que indique que o acesso foi autorizado com sucesso
+> - Base de dados (pessoas autorizadas e histórico de acessos)
 > 
 > 
 
 ### Configurabilidade
 > Detalhe, se houver, todas as possíveis configurações do circuito e todos os pontos de alteração da configuração.
+> Ler a imagem
 
 ### Eventos
 > Quais eventos o sistema deve tratar?
