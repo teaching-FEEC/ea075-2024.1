@@ -138,7 +138,7 @@ Se a checagem do erro passar sem problemas, o servo motor deve ajustar o eixo a 
 
 Observa-se que o usuário pode interromper a rotina do sistema por seus comandos, podendo inicializar o sistema manualmente, desligar o sistema, suspendê-lo e ainda manter posição de segurança. Após certo tempo, também definido pelo usuário, o sistema se inicializa automaticamente para que ele opere sem a necessidade do usuário ligá-lo sempre no dia-a-dia.
 
-O diagrama das atividades podem ser vistas pela Figura 2. abaixo
+O diagrama das atividades podem ser vistas pela Figura 2. abaixo.
 
 ![Inicializar](https://github.com/nathaliagondo/ea075-2024.1/assets/165518289/fc771e96-53b4-4542-a22a-ef8bc89a5591)
 
