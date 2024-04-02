@@ -68,7 +68,7 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 ### Tratamento de Eventos
 > Qual comportamento o sistema deve ter para tratar corretamente cada evento?
 >
-> A partir dos eventos Acesso Permitido e Acesso Negado, o sistema deve agir de forma distinta. Portanto, se a mensagem for:
+> O sistema terá comportamentos diferentes para o caso da identificação ou não da imagem recebida frente a base de dados
 > - Acesso permitido: se os dados apresentados pelas formas de identificação forem iguais as cópias de segurança, o acesso será liberado e a mensagem "Acesso Permitido" aparecerá na tela.
 > - Acesso negado: se os dados apresentados pelas formas de identificação forem diferentes das cópias de segurança, o acesso será negado e a mensagem "Acesso Negado. Favor procurar a administração" aparecerá na tela.
 
