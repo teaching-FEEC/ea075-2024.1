@@ -40,6 +40,7 @@ Os dados coletados pelo dispositivo Inversor e pelo sensor fotoresistivo são en
 Em resumo, esse sistema integrado oferece um controle preciso e adaptativo da inclinação dos painéis solares, garantindo uma captação máxima de energia solar ao longo do dia. Ao combinar tecnologia de monitoramento, controle e robustez, o sistema é capaz de operar de forma confiável e eficiente, contribuindo significativamente para a eficiência energética da geração fotovoltaica. Um esquema do sistema pode ser visto na imagem a seguir.
 
 ![image](https://github.com/nathaliagondo/ea075-2024.1/assets/165518289/a88782cf-e8c2-4046-9547-955450b393e3)
+
 Figura 1. Representação do sistema embarcado - Painéis solares de inclinação adaptável.
 
 ### Funcionalidades
@@ -140,6 +141,7 @@ Observa-se que o usuário pode interromper a rotina do sistema por seus comandos
 O diagrama das atividades podem ser vistas pela Figura 2. abaixo
 
 ![Inicializar](https://github.com/nathaliagondo/ea075-2024.1/assets/165518289/fc771e96-53b4-4542-a22a-ef8bc89a5591)
+
 Figura 2. Diagrama de blocos dos processos realizados pelo sistema.
 
 ## Referências
