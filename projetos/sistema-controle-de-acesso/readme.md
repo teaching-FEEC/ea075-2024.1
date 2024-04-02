@@ -32,6 +32,7 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 > > Empresas, pessoas físicas, comércios e hospitais
 
 > É possível estabelecer um valor econômico associado?
+> 
 > Sim, esses sistemas já existentes no mercado são vendidos entre R$2.500,00 e R$4.000,00 a unidade com catraca.
 
 
@@ -53,6 +54,7 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 
 ### Configurabilidade
 > Detalhe, se houver, todas as possíveis configurações do circuito e todos os pontos de alteração da configuração.
+>
 > A empresa poderá escolher se os usuários utilizarão identificação por biometria facial ou QR via aplicativo.
 > - Biometria facial: será necessário que o usuário final envie para a empresa uma foto recente com fundo branco, boa iluminação e sem acessórios como óculos e chapeu. A imagem será armazenada no banco de dados e será utilizar como meio de comparação a cada tentativa de acesso
 > - QR Code: o usuário final deverá baixar um aplicativo que será conectado com os dados relacionados a empresa. Após as configurações iniciais, a cada tentativa de login o usuário deverá abrir o aplicativo e apontar o QR Code para a câmera na entrada onde será comparado. O QR code será gerado automaticamente a cada 5 segundos.
