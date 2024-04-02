@@ -25,7 +25,7 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 > > 
 > Qual problema vocês pretendem solucionar?
 > > Com a nossa ferramenta de controle de acessos pretendemos solucionar problemas relacionados a:
-> > - Segurança: a biometria facial é extramamente difícil de ser enganada e o QR code mutável a cada período permite um aumento significativo da segurança de acesso
+> > - Segurança: a biometria facial é extramamente difícil de ser enganada e o QR code mutável a cada 5 segundos permite um aumento significativo da segurança de acesso
 > > - Conveniência: o uso de biometria facial e QR code não exige que o usuário carregue algo além de seu celular para realizar a entrada de forma prática e segura
 > > 
 > Quem são os potenciais usuários?
