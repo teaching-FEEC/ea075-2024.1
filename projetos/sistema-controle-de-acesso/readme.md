@@ -82,8 +82,14 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 > os blocos de forma a assegurar a execução de todas as tarefas que o sistema deve realizar.
 
 > ![Alt](images/Diagrama_acesso.drawio.svg)
-
-> Você sabia? Ferramentas como o `draw.io` permitem integração com o Github.
+>
+> 1. O módulo de entrada com reconhecimento facial ou QR Code é responsável por capturar as imagens e processá-las para identificação
+> 2. O banco de dados armazena as informações sobre os usuários com ID, foto e permissões de entrada. Utilizado para relacionar os resultados o módulo de entrada com cada usuário
+> 3. O controlador de acesso recebe os dados dos módulos 1 e 2 e toma as decisões de liberar ou não o acesso
+> 4. A catraca/porta são os pontos físicos controlados pelo módulo 3
+> 5. A interface com o usuário é um aplicativo móvel ou painel de controle no qual ele pode sozinho ou com auxilio de um administrador inserir as suas informações e solicitar acessos.
+> 
+Você sabia? Ferramentas como o `draw.io` permitem integração com o Github.
 >  
 
 ## Referências
