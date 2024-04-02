@@ -1,5 +1,5 @@
-# `<Projeto de um circuito de controle para elevadores>`
-# `<Elevator control circuit project>`
+# rojeto de um circuito de controle para elevadores
+# Elevator control circuit project
 
 ## Apresentação
 
