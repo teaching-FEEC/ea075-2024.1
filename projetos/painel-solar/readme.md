@@ -20,6 +20,10 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 > Quem são os potenciais usuários?
 > É possível estabelecer um valor econômico associado?
 
+Com o aumento da demanda por energias limpas e renováveis, como a solar, em residências e indústrias, a necessidade de maximizar a captação de energia solar tornou-se fundamental. No entanto, os sistemas de painéis solares fixos muitas vezes não conseguem se adaptar adequadamente às variações na incidência solar ao longo do dia. Para enfrentar esse desafio, propõe-se um sistema embarcado para automatizar o ajuste da inclinação do painel solar, garantindo uma ótima captação de energia solar em todas as horas do dia. Esse ajuste acompanha o movimento do sol, mantendo-o perpendicular com os raios incidentes, maximizando assim a geração de energia.
+O sistema funciona através da detecção da intensidade e direção da luz solar por meio de sensores especializados. Esses sensores fornecem dados da intensidade luminosa, permitindo que uma unidade de controle calcule o ângulo ideal de inclinação do painel solar. Com base nesse cálculo, algoritmos de controle ajustam a inclinação do painel solar em tempo real, garantindo que este esteja sempre posicionado de forma ótima para captar a máxima quantidade de energia solar possível.
+Além de contribuir para o avanço da tecnologia renovável, esse sistema oferece benefícios econômicos significativos. A eficiência na captação de energia está diretamente ligada ao ângulo de incidência dos raios solares na placa, o que resulta em uma maior rentabilidade dos investimentos em energia solar. Assim, ao maximizar a geração de energia solar de forma eficiente e econômica, o sistema não só reduz os custos operacionais, mas também aumenta a viabilidade e sustentabilidade dos sistemas de energia renovável.
+
 
 ## Descrição Funcional
 > A descrição funcional do projeto é a principal entrega do E1 e pode ser realizada neste próprio arquivo Markdown,
@@ -35,9 +39,21 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 > Quais eventos o sistema deve tratar?
 > Se aplicável, classifique os eventos que são periódicos (procure especificar a periodicidade) e os que são não-periódicos
 > (qual o tempo mínimo entre dois eventos sucessivos)?
+- Eventos periódicos: 
+Período útil de geração de energia (diário, a cada 24 horas): o período do dia durante o qual o sistema está ativo para captar energia solar e gerar eletricidade. Começando ao nascer do sol e terminando ao pôr do sol, é o intervalo em que a intensidade da luz solar é suficientemente alta para uma produção eficaz de energia.
+Mudança da posição do sol (diário, a cada poucos minutos - constante): ao longo do dia, a posição do sol no céu se desloca gradualmente devido à rotação da Terra. Essa mudança afeta a quantidade de luz solar que atinge os painéis solares. O sistema deve ajustar a inclinação dos painéis para maximizar a absorção de energia solar.
+Mudança nas estações do ano (sazonal, a cada três meses, com mudanças graduais entre uma estação e outra): as estações do ano afetam a intensidade e a duração da luz solar incidente devido à inclinação do eixo da Terra. O sistema deve ajustar sua operação e estratégias de captação de energia para otimizar o aproveitamento da luz solar em cada estação.
+- Eventos não-periódicos:
+Condições adversas (variável, depende da frequência e duração das condições): momentos em que as condições climáticas, como nebulosidade, reduzem a intensidade da luz solar disponível para captação. Isso pode resultar em uma diminuição temporária na produção de energia.
+Condições extremas (variável, depende da frequência e gravidade das condições): eventos climáticos severos, como tempestades e ventanias, que representam riscos para o sistema solar. Nessas situações, medidas de segurança devem ser ativadas para proteger os componentes.
+Manutenção das placas solares ou dos componentes do sistema (variável, depende do cronograma de manutenção de cada componente): eventos planejados para garantir o bom funcionamento e a longevidade do sistema. Isso inclui inspeções regulares, limpeza de painéis solares para melhor obtenção dos dados e substituição de peças desgastadas.
+Bateria fraca (variável, condicionada pelo padrão de consumo do sistema): indica que a carga da bateria de armazenamento de energia atingiu um nível baixo. Isso pode ocorrer devido a um consumo excessivo de energia ou a uma incapacidade de recarga adequada das placas solares.
+Interação do usuário (variável de acordo com a necessidade do usuário): dedicado quando o usuário interage com o sistema, como ajustar configurações, monitorar o desempenho ou receber notificações sobre o status do sistema.
+Falhas no sistema (imprevisível, dependendo da natureza e gravidade da falha): ocorrência de problemas ou mau funcionamento no sistema solar que exigem intervenção técnica. Isso pode incluir falhas de hardware, erros de software ou interrupções na geração de energia.
 
 ### Tratamento de Eventos
 > Qual comportamento o sistema deve ter para tratar corretamente cada evento?
+
 
 ## Descrição Estrutural do Sistema
 > Junto com a descrição do comportamento do sistema, deve-se especificar, em nível de bloco ou sistema, a estrutura necessária 
