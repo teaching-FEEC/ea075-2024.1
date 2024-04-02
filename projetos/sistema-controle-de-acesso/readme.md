@@ -14,8 +14,6 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 
 ## Descrição do Projeto
 
-
-
 > Descrição do objetivo principal do projeto, incluindo contexto gerador, motivação.
 > > Um sistema de controle de acesso físico tem a função de gerenciar o acesso de pessoas em uma determinada área garantindo a segurança e a gestão eficiente de acesso, utilizando uma combinação de hardware e software especializados. Com o avanço das tecnologias de autenticação digital, os sistemas de controle de acesso físico ganham muita flexibilidade para implementar métodos mais seguros e práticos para garantir a segurança de usuários. Os métodos mais implementados atualmente incluem a sensores biométricos, senhas ou cartões de identificação RFID(sigla para “Radio Frequency Identification”, significa “identificação por radiofrequência”).
 > >
@@ -33,11 +31,11 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 ## Descrição Funcional
 > A descrição funcional do projeto é a principal entrega do E1 e pode ser realizada neste próprio arquivo Markdown,
 > com links para diagramas ou outros arquivos que estejam no próprio repositório.
-> 
+>  
 > 
 
 ### Funcionalidades
-> Detalhe todas as tarefas que o sistema será capaz de executar
+> Tarefas que o sistema será capaz de executar:
 > - O sistema deve ser capaz de se comunicar remotamente (bluetooth, wifi,...)
 > - Deve ter acesso à internet
 > - Deve ser capaz de captar e transmitir imagens de vídeo (câmera)
