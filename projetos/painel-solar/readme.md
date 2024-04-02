@@ -44,11 +44,16 @@ Em resumo, esse sistema integrado oferece um controle preciso e adaptativo da in
 ### Funcionalidades
 > Detalhe todas as tarefas que o sistema será capaz de executar
 1. Sun Tracking: O sistema irá monitorar a posição solar usando sensores e ajustando o ângulo de inclinação dos painéis solares para garantir a maior exposição aos raios incidentes.
-2. Interface com o usuário: Uma interface que permita o usuário configurar, ajustar o sistema além de apresentar os dados de produção de energia além de informações operacionais do dispositivo.
-3. Maximização da Energia produzida: Algoritmo de controle que garanta a máxima geração energética com base na adaptação da angulação do painel solar. Os dados serão processados por meio da tensão e corrente recebidas pelos painéis.
-4. Comunicação Wireless: O sistema deverá possuir comunicação sem fio para enviar informações do sistema e receber dados de controle e configuração de um aplicativo para smartphone.
-5. Gerenciamento de energia: o sistema será alimentado com a energia solar gerada pelo próprio painel que alimentará uma bateria (usada como backup). A bateria funcionará como um suporte para estabilização da tensão fornecida ao dispositivo. O gerenciamento de energia é essencial para otimizar o consumo de energia e prolongar o tempo de funcionamento do dispositivo.
-6. Identificação de erro no sistema ou condição extrema: Verificar esforço extra que o motor é submetido
+2. Controle da angulação dos painéis solares.
+3. Verificação de Luminosidade: Verifica se a luminosidade está acima de um treshold para permitir a operação.
+4. Suspensção do sistema em caso de luminosidade baixa.
+5. Interface com o usuário: Uma interface que permita o usuário configurar, ajustar o sistema além de apresentar os dados de produção de energia além de informações operacionais do dispositivo.
+6. Maximização da Energia produzida: Algoritmo de controle que garanta a máxima geração energética com base na adaptação da angulação do painel solar. Os dados serão processados por meio da tensão e corrente recebidas pelos painéis.
+7. Comunicação Wireless: O sistema deverá possuir comunicação sem fio para enviar informações do sistema e receber dados de controle e configuração de um aplicativo para smartphone.
+8. Gerenciamento de energia: o sistema será alimentado com a energia solar gerada pelo próprio painel que alimentará uma bateria (usada como backup). A bateria funcionará como um suporte para estabilização da tensão fornecida ao dispositivo. O gerenciamento de energia é essencial para otimizar o consumo de energia e prolongar o tempo de funcionamento do dispositivo.
+9. Identificação de erro no sistema ou condição extrema: Verificar esforço extra que o motor é submetido ou falha de energia.
+10. Retornar a uma posição segura em caso de algum erro ou para manutenção.
+11. Sistema de bateria como backup de energia com recarga automática.
 
 
 ### Configurabilidade
