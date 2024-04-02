@@ -27,13 +27,38 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 ### Funcionalidades
 > Detalhe todas as tarefas que o sistema será capaz de executar
 
+- Medir a velocidade do veículo
+- Medir a posição do veículo na rodovia
+- Mostrar mensagens em um display sobre congestionamentos e informar qual velocidade o motorista deve trafegar.
+- Reproduzir avisos sonoros quando novas informações estão disponíveis
+- Detectar a localização e o tamanho de congestionamentos
+- Determinar a velocidade adequada em reação a um congestionamento à frente
+- Capacidade de distribuição das informações sobre congestionamentos para os carros trafegando na rodovia
+- 
+
 ### Configurabilidade
 > Detalhe, se houver, todas as possíveis configurações do circuito e todos os pontos de alteração da configuração.
+
+Como configuração, o usuário que possuir o dispositivo em seu carro pode optar por desabilitar o aviso sonoro e ao invés disso o display de informações deve piscar algumas vezes para chamar a atenção do motorista.
 
 ### Eventos
 > Quais eventos o sistema deve tratar?
 > Se aplicável, classifique os eventos que são periódicos (procure especificar a periodicidade) e os que são não-periódicos
 > (qual o tempo mínimo entre dois eventos sucessivos)?
+
+Eventos esperados em fluxo normal
+
+- Recebimento de informação de posição e velocidade de carro na via (periódico, 30 segundos)
+- Detecção do surgimento de um congestionamento
+- Detecção do fim de um congestionamento, volta do fluxo normal
+- Recebimento de informações sobre congestionamentos na via
+- Entrada/Saída do veículo de uma rodovia com suporte do sistema
+
+Eventos de erro, inesperados
+
+- Falha na obtenção da velocidade do veículo
+- Falha na obtenção da posição do veículo
+- Falha na comunicação com o sistema (envio/recebimento de mensagens) 
 
 ### Tratamento de Eventos
 > Qual comportamento o sistema deve ter para tratar corretamente cada evento?
@@ -49,6 +74,13 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 > 
 > Você sabia? Ferramentas como o `draw.io` permitem integração com o Github.
 > 
+
+O sistema será composto por dois tipos de dispositivos: Módulos móveis, que estão presentes nos carros dos usuários do sistema e módulos fixos, presentes ao longo das rodovias, principalmente em trechos em que é congestionamentos são comuns.
+
+Os módulos móveis tem como objetivo monitorar a velocidade do carro e informar ao motorista quando deve reduzir sua velocidade. Ele baseia essa decisão em sinais recebidos pelo módulos fixo mais próximo. Além disso, tem o papel de informar a velocidade do carro para o módulo fixo mais próximo.
+
+Os dispostivos fixos são torres colocadas ao longo da via, e tem como objetivo detectar congestionamentos, recebendo inforamações de velocidade dos motoristas mais próximos, e repassar a inforamção para torres anteriores na via, que por sua vez avisam sobre as condições ao módulos móveis proxímos a elas.
+
 
 ## Referências
 > Seção obrigatória. Inclua aqui referências utilizadas no projeto.
