@@ -93,6 +93,15 @@ Sistema de Alerta de Fumaça: Gerará um sinal de alerta ao usuário e aos bombe
 
 ![image](https://github.com/EndlessLight9/ea075-2024.1-dolc/assets/165411886/ab8c8509-dfe5-456d-87a2-f8170f2da8da)
 
+Sistema de Segurança: O sistema será composto por sensores de presenças que estarão nos comodos da casa e uma interface fisica na parede para se ligar o sistema, após o sistema ser ativado os sensores estrão ativos, após receber uma interrupção um alerta sonoro será feito por meio de um sistema de som na casa, e uma mensagem via internete será enviada para o usuário da residencia. 
+
+Sistema de Controle de temperatura: O sistema será composto por sensores de temperatura no qual estarão localizados nos comodos, uma faixa de temperatura poderá ser escolhida pelo usuário por uma interface fixa, os sensores iráo ler a temperatura dos comodos e comparar com a faixa escolhida pelo usuário, assim será ligado ou o aquecedor ou o ar-condicionado dependendo da temperatura lida em relação a faixa escolhida, após a temperatura atingir a faixa escolhida pelo usuário o sistema irá desligar o ar-condicionado ou o aquecedor. 
+
+Sistema de Alerta de Gâs: O sistema será instalado de preferéncia na cozinha e estrá sempre ativo, após ser detectado uma quantidade elevada de gás, o sistema atuará enviando um alerta para o usuário e emitindo um pequeno sinal sonoro. 
+
+Sistema de Alerta de Fumaça: O sistema será intalado em todos os comodos e estrá sempre ativo, após ser detectado uma quantidade elevada de fumaça o sistema emitira um sinal sonoro, e irá alertar os bombeiros e o usuário.
+
+Todos os sistemas serão controlados por um microcontrolador sendo a definir se será utilizado o Arduino ou o ESP32.
 
 > Junto com a descrição do comportamento do sistema, deve-se especificar, em nível de bloco ou sistema, a estrutura necessária 
 > para captar os eventos do mundo externo, para alojar e processar o programa de tratamento de eventos, e para atuar sobre o mundo externo.
