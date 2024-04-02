@@ -18,6 +18,7 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 
 ## Descrição Funcional
 ![image](https://github.com/EndlessLight9/ea075-2024.1-dolc/assets/165411886/f6f2a04e-b437-436f-868a-ebb4185268f3)
+
 Sistema de Segurança: Ao ser ativado, os sensores de presença, ao detectar alguma presença, irá alertar os donos via mensagem e tocará um alarme na própia casa.
 
 Sistema de Controle de Temperatura: Pode ser ativado ou desativado conforme desejado pelo usuário, quando ativado o o sistema irá adotar as configurações exigidas pelo usuário e ficará ativo até ser desligado novamente.
@@ -56,40 +57,45 @@ Sistema de Alerta de Fumaça: Ligado permanentemente
 > Se aplicável, classifique os eventos que são periódicos (procure especificar a periodicidade) e os que são não-periódicos
 > (qual o tempo mínimo entre dois eventos sucessivos)?
 
+Sistema de Segurança: Evento não periodico. Caso o sistema de segurança  esteja ligado, se o sensor de presença for ativado, gera uma interrupção.
 
-if sistema de segurança on:
-  case quebraram janela
-  case porta invadida
-  case tem alguma presença sendo que não deveria ter ninguem em casa
-if sensor de temperatura too high
-  if tem alguem em casa
-    liga ar condicionado
-if sensor de temperatura too low
-  if tem alguem em casa
-    liga aquecedor
-if gas level high
-  soa alarme e liga para os bombeiros
-if smoke level high
-  soa alarme, liga water dispenser e liga para os bombeiros
-if sensor de presença detects presence (na vdd acho que a temperatura estaria dentro disto)
-  if luz desligada
-    liga luz
-if sensor de presença no presence 
-  if luz ligada
-    desliga luz
-Talvez isto esteja incluido no sistema de segurança?
-Periodos
-provavelmente poderiamos manter o sensor de presença se atualizar cada 2s já que não é um sistema complicado, nem caro (acredito eu) 
-gas, fumaça e segurança deveria ser prioridade de atualização já que estamos tratando com segurança dos moradores, entre mais rapido agirmos, melhor
-temperatura poderia ser ajustado de acordo ao que os moradores desejam, podendo assim ser ajustado para varios tipos de moradores, casas, sem importar o clima da região onde morem
+Sistema de Controle de temperatura: Evento não periodico. Caso o sistema de controle de temperatura esteja ligado, ele detectará temperaturas estabelecidas pelo usuário e agirá caso a temperatura esteja fora do limiar.
+
+Sistema de Alerta de Gâs: Evento não periodico. Gera interrupção caso decetar um nivel elevado de gâs
+
+Sistema de Alerta de Fumaça: Evento não periodico. Gera interrupção caso decetar um nivel elevado de fumaça
+
+
+
 
 
 
 ### Tratamento de Eventos
 > Qual comportamento o sistema deve ter para tratar corretamente cada evento?
-Tratei um pouco disso acima, depois corrigimos para aqui 
+
+Sistema de Segurança: Após a interrupção, será acionado um alarme sonoro na casa e será avisado aos usuários a detecção de presença não desejada.
+
+Sistema de Controle de temperatura: Após a interrupção, agirá de acordos aos niveis de temperatura desejados, podendo ligar o aquecedor ou ar condicionado até chegar no nivel de temperatura desejado.
+
+Sistema de Alerta de Gâs: Gerará um sinal de alerta ao usuário.
+
+Sistema de Alerta de Fumaça: Gerará um sinal de alerta ao usuário e aos bombeiros.
+
 
 ## Descrição Estrutural do Sistema
+
+![image](https://github.com/EndlessLight9/ea075-2024.1-dolc/assets/165411886/8c178a6c-19a0-4361-89dd-12dc569bd164)
+
+
+![image](https://github.com/EndlessLight9/ea075-2024.1-dolc/assets/165411886/3ab0f4d3-79ff-4416-8ff3-fe9ff33925c7)
+
+
+![image](https://github.com/EndlessLight9/ea075-2024.1-dolc/assets/165411886/823c3a2e-a3e5-49d6-942e-efd07fbb6f29)
+
+
+![image](https://github.com/EndlessLight9/ea075-2024.1-dolc/assets/165411886/ab8c8509-dfe5-456d-87a2-f8170f2da8da)
+
+
 > Junto com a descrição do comportamento do sistema, deve-se especificar, em nível de bloco ou sistema, a estrutura necessária 
 > para captar os eventos do mundo externo, para alojar e processar o programa de tratamento de eventos, e para atuar sobre o mundo externo.
 >
