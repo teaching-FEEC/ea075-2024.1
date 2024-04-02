@@ -62,7 +62,7 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 > Quais eventos o sistema deve tratar?
 > Se aplicável, classifique os eventos que são periódicos (procure especificar a periodicidade) e os que são não-periódicos
 > (qual o tempo mínimo entre dois eventos sucessivos)?
-> O sistema deve ser capaz de permanecer em estado de stand by, pois assim que um movimento for dectado ele deve ser capaz de ler o que for apontado para a sua câmera. Sendo um rosto ou um QR code, o sistema deve capturar a imagem e comparar com o banco de dados em um tempo ágil, não mais do que 30 segundos.
+> > O sistema deve ser capaz de permanecer em estado de stand by, pois assim que um movimento for dectado ele deve ser capaz de ler o que for apontado para a sua câmera. Sendo um rosto ou um QR code, o sistema deve capturar a imagem e comparar com o banco de dados em um tempo ágil, não mais do que 30 segundos.
 
 
 ### Tratamento de Eventos
