@@ -1,5 +1,5 @@
 # `<Sistema de Controle e Gerenciamento de Acesso>`
-# `<Project Title in in English>`
+# `<Access Control and Management System>`
 
 ## Apresentação
 
