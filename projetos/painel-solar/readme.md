@@ -31,16 +31,21 @@ Além de contribuir para o avanço da tecnologia renovável, esse sistema oferec
 > A descrição funcional do projeto é a principal entrega do E1 e pode ser realizada neste próprio arquivo Markdown,
 > com links para diagramas ou outros arquivos que estejam no próprio repositório.
 
+O sistema opera em tempo real, monitorando com precisão a intensidade da luz solar incidente sobre o painel solar em busca da angulação ideal para maximizar a geração de energia. Isso é alcançado por meio do controle de um servo motor, cuidadosamente ajustado para posicionar os painéis de forma a otimizar sua exposição aos raios solares. O servo motor, conectado aos painéis através de um eixo, oferece ajustes dinâmicos e contínuos, garantindo que eles permaneçam sempre na posição mais vantajosa em relação à incidência solar, idealmente perpendicular aos raios solares.
+O monitoramento da incidência solar é centralizado no dispositivo Inversor do sistema, que não só fornece informações em tempo real sobre a geração de energia, mas também atua como o principal ponto de comunicação para o controle do sistema. Além disso, um sensor fotossensível é incorporado como uma camada adicional de segurança e redundância. Esse sensor garante uma confiabilidade ainda maior na medição da intensidade da luz solar, assegurando uma operação robusta e resiliente do sistema mesmo em condições adversas.
+Os dados coletados pelo dispositivo Inversor e pelo sensor fotoresistivo são então processados por um microcontrolador, que implementa um algoritmo de controle inteligente. Este algoritmo é projetado para otimizar continuamente a inclinação dos painéis solares, iniciando com uma angulação inicial de referência e, em seguida, realizando varreduras comparativas. O servo motor é ajustado de forma dinâmica com base nas informações recebidas, parando seu movimento quando a eficiência energética máxima é alcançada. Isso é determinado quando uma redução na eficiência é detectada em relação ao valor anterior, indicando que o ângulo ideal foi encontrado.
+Em resumo, esse sistema integrado oferece um controle preciso e adaptativo da inclinação dos painéis solares, garantindo uma captação máxima de energia solar ao longo do dia. Ao combinar tecnologia de monitoramento, controle e robustez, o sistema é capaz de operar de forma confiável e eficiente, contribuindo significativamente para a eficiência energética da geração fotovoltaica. Um esquema do sistema pode ser visto na imagem a seguir.
+
 ![image](https://github.com/nathaliagondo/ea075-2024.1/assets/165518289/a88782cf-e8c2-4046-9547-955450b393e3)
 
 ### Funcionalidades
 > Detalhe todas as tarefas que o sistema será capaz de executar
-> Sun Tracking: O sistema irá monitorar a posição solar usando sensores e ajustando o ângulo de inclinação dos painéis solares para garantir a maior exposição aos raios incidentes.
-Interface com o usuário: Uma interface que permita o usuário configurar, ajustar o sistema além de apresentar os dados de produção de energia além de informações operacionais do dispositivo.
-Maximização da Energia produzida: Algoritmo de controle que garanta a máxima geração energética com base na adaptação da angulação do painel solar. Os dados serão processados por meio da tensão e corrente recebidas pelos painéis.
-Comunicação Wireless: O sistema deverá possuir comunicação sem fio para enviar informações do sistema e receber dados de controle e configuração de um aplicativo para smartphone.
-Gerenciamento de energia: o sistema será alimentado com a energia solar gerada pelo próprio painel que alimentará uma bateria (usada como backup). A bateria funcionará como um suporte para estabilização da tensão fornecida ao dispositivo. O gerenciamento de energia é essencial para otimizar o consumo de energia e prolongar o tempo de funcionamento do dispositivo.
-Identificação de erro no sistema ou condição extrema: Verificar esforço extra que o motor é submetido
+1. Sun Tracking: O sistema irá monitorar a posição solar usando sensores e ajustando o ângulo de inclinação dos painéis solares para garantir a maior exposição aos raios incidentes.
+2. Interface com o usuário: Uma interface que permita o usuário configurar, ajustar o sistema além de apresentar os dados de produção de energia além de informações operacionais do dispositivo.
+3. Maximização da Energia produzida: Algoritmo de controle que garanta a máxima geração energética com base na adaptação da angulação do painel solar. Os dados serão processados por meio da tensão e corrente recebidas pelos painéis.
+4. Comunicação Wireless: O sistema deverá possuir comunicação sem fio para enviar informações do sistema e receber dados de controle e configuração de um aplicativo para smartphone.
+5. Gerenciamento de energia: o sistema será alimentado com a energia solar gerada pelo próprio painel que alimentará uma bateria (usada como backup). A bateria funcionará como um suporte para estabilização da tensão fornecida ao dispositivo. O gerenciamento de energia é essencial para otimizar o consumo de energia e prolongar o tempo de funcionamento do dispositivo.
+6. Identificação de erro no sistema ou condição extrema: Verificar esforço extra que o motor é submetido
 
 
 ### Configurabilidade
