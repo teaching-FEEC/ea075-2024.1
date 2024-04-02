@@ -31,6 +31,8 @@ Além de contribuir para o avanço da tecnologia renovável, esse sistema oferec
 > A descrição funcional do projeto é a principal entrega do E1 e pode ser realizada neste próprio arquivo Markdown,
 > com links para diagramas ou outros arquivos que estejam no próprio repositório.
 
+![image](https://github.com/nathaliagondo/ea075-2024.1/assets/165518289/a88782cf-e8c2-4046-9547-955450b393e3)
+
 ### Funcionalidades
 > Detalhe todas as tarefas que o sistema será capaz de executar
 
