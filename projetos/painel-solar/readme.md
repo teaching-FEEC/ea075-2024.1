@@ -40,6 +40,7 @@ Os dados coletados pelo dispositivo Inversor e pelo sensor fotoresistivo são en
 Em resumo, esse sistema integrado oferece um controle preciso e adaptativo da inclinação dos painéis solares, garantindo uma captação máxima de energia solar ao longo do dia. Ao combinar tecnologia de monitoramento, controle e robustez, o sistema é capaz de operar de forma confiável e eficiente, contribuindo significativamente para a eficiência energética da geração fotovoltaica. Um esquema do sistema pode ser visto na imagem a seguir.
 
 ![image](https://github.com/nathaliagondo/ea075-2024.1/assets/165518289/a88782cf-e8c2-4046-9547-955450b393e3)
+Figura 1. Representação do sistema embarcado - Painéis solares de inclinação adaptável.
 
 ### Funcionalidades
 > Detalhe todas as tarefas que o sistema será capaz de executar
@@ -59,8 +60,8 @@ Em resumo, esse sistema integrado oferece um controle preciso e adaptativo da in
 ### Configurabilidade
 > Detalhe, se houver, todas as possíveis configurações do circuito e todos os pontos de alteração da configuração.
 
-1. Faixa de ângulo de varredura: Define os valores máximos e mínimos do ângulo que os painéis podem ser inclinados.
-2. Frequência do ajuste da posição: Define de quanto em quanto tempo o sistema irá realizar os ajustes de inclinação.
+1. Faixa de ângulo de varredura: define os valores máximos e mínimos do ângulo que os painéis podem ser inclinados.
+2. Frequência do ajuste da posição: define de quanto em quanto tempo o sistema irá realizar os ajustes de inclinação.
 3. Limite mínimo de luminosidade para o sistema operar  para evitar desperdício de energia.
 4. Posição inicial que o sistema irá começar processo de varredura
 5. Posição segura para caso erro no sistema ou condição climática extrema ou para manutenção.
@@ -130,16 +131,16 @@ Em resumo, esse sistema integrado oferece um controle preciso e adaptativo da in
 
 O sistema possuirá um painel ou grupo de painéis solares ligados a um eixo de rotação conectado a um servo motor industrial responsável por permitir a dinâmica do sistema. Além disso, deve possuir sensores fotossensíveis para interpretar a luminosidade e a luz incidente nos painéis, possuir um microcontrolador com comunicação sem fio para que consiga enviar e receber dados de um usuário além de interpretar o algoritmo de controle do sistema. Precisa-se de uma bateria que garanta que o sistema funcione mesmo com quedas de energia.
 
-Em primeiro lugar haverá a inicialização do sistema onde os componentes de sensoriamento, sensores fotosenssíveis, e do servo motor irão ser ligados e calibrados, assim como os componentes de comunicação. Logo após o sistema irá realizar uma checagem dos componentes verificando algum erro ou condições extremas de clima. Caso haja algum problema o sistema irá se manter em uma posição segura definida pelo usuário, além de comunicá-lo o problema via comunicação wireless. O sistema deve checar também se sua fonte de alimentação é sua bateria interna de backup, caso afirmativo ele também deve comunicar ao usuário a falta de energia.
+Em primeiro lugar haverá a inicialização do sistema onde os componentes de sensoriamento (sensores fotosenssíveis) e do servo motor irão ser ligados e calibrados, assim como os componentes de comunicação. Logo após, o sistema irá realizar uma checagem dos componentes verificando algum erro ou condições extremas de clima. Caso haja algum problema, o sistema irá se manter em uma posição segura definida pelo usuário, além de comunicá-lo via comunicação _wireless_. O sistema deve checar também se sua fonte de alimentação é sua bateria interna de _backup_. Caso afirmativo, ele também deve comunicar ao usuário a falta de energia.
 
-Se a checagem do erro passar sem problemas o servo motor deve ajustar o eixo a uma posição inicial de operação também pré-definida pelo usuário, e verificar se há a necessidade de recarregar a bateria de backup, caso seja preciso faz-se a carga da mesma. Após a máquina na posição correta o sistema verifica a luminosidade do dia por meio dos fotos sensores e de dados recebidos do inversor do painel solar, e caso essa luminosidade não ultrapasse o valor mínimo o sistema é suspendido automaticamente. Caso contrário ele inicia o processo de ajuste de máxima geração de energia, ajustando a posição dos painéis pelo servo motor, checa a incidência solar e novamente pelos sensores e pela energia produzida, se necessário, se ajusta novamente até encontrar a posição ideal. Quando encontrada essa posição permanecerá nela por um tempo definido pelo usuário. Após esse tempo o sistema volta a verificar a luminosidade e repete o processo de ajuste de posição. 
+Se a checagem do erro passar sem problemas, o servo motor deve ajustar o eixo a uma posição inicial de operação também pré-definida pelo usuário, e verificar se há a necessidade de recarregar a bateria de _backup_. Caso seja preciso, faz-se a carga da mesma. Após a máquina na posição correta, o sistema verifica a luminosidade do dia por meio dos fotossensores e de dados recebidos do inversor do painel solar e, caso essa luminosidade não ultrapasse o valor mínimo, o sistema é suspendido automaticamente. Caso contrário, ele inicia o processo de ajuste de máxima geração de energia, ajustando a posição dos painéis pelo servo motor, checa a incidência solar e novamente pelos sensores e pela energia produzida, se necessário, se ajusta novamente até encontrar a posição ideal. Quando encontrada essa posição, permanecerá nela por um tempo definido pelo usuário. Após esse tempo, o sistema volta a verificar a luminosidade e repete o processo de ajuste de posição. 
 
-Observa-se que o usuário pode interromper a rotina do sistema por seus comandos, podendo inicializar o sistema manualmente, desligar o sistema, suspendê-lo e ainda manter posição de segurança. Após certo tempo também definido pelo usuário o sistema se inicializa novamente automaticamente, para que ele opere sem a necessidade do usuário ligá-lo sempre no dia a dia.
+Observa-se que o usuário pode interromper a rotina do sistema por seus comandos, podendo inicializar o sistema manualmente, desligar o sistema, suspendê-lo e ainda manter posição de segurança. Após certo tempo, também definido pelo usuário, o sistema se inicializa automaticamente para que ele opere sem a necessidade do usuário ligá-lo sempre no dia-a-dia.
 
-
+O diagrama das atividades podem ser vistas pela Figura 2. abaixo
 
 ![Inicializar](https://github.com/nathaliagondo/ea075-2024.1/assets/165518289/fc771e96-53b4-4542-a22a-ef8bc89a5591)
-
+Figura 2. Diagrama de blocos dos processos realizados pelo sistema.
 
 ## Referências
 > Seção obrigatória. Inclua aqui referências utilizadas no projeto.
