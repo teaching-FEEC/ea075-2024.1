@@ -28,7 +28,19 @@ Outro lado positivo do projeto é que seu custo não tende a ser alto, levando e
 
 ### Funcionalidades
 O sistema de controle de elevadores deverá ser capaz de executar as seguintes tarefas:
-  - 
+  - Chamadas do elevador: receber e registrar chamadas de todos os andares do prédio.
+  - Registrar as solicitações dentro do elevador.
+  - Organizar as chamadas com base na localização, direção e disponibilidade, para economizar energia.
+  - Movimentar o elevador de forma suave e segura.
+  - Gerenciar a abertura e fechamento das portas.
+  - Controle de sobrecarga. Impedir o movimento do elevador se estiver sobrecarregado.
+  - Detectar quantidade de pessoas dentro do elevador.
+  - Responder imediatamente a situações de emergência.
+  - Diagnosticar problemas mecânicos e elétricos.
+  - Gerenciamento de energia quando está parado. (Entrar em stand-by depois de algum tempo sem chamadas).
+  - Fornecer feedback aos passageiros sobre o andar que está.
+    
+    
 
 ### Configurabilidade
 > Detalhe, se houver, todas as possíveis configurações do circuito e todos os pontos de alteração da configuração.
