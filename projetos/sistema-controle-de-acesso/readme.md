@@ -38,6 +38,13 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 
 ### Funcionalidades
 > Detalhe todas as tarefas que o sistema será capaz de executar
+> O sistema deve ser capaz de se comunicar remotamente (bluetooth, wifi,...)
+> Deve ter acesso à internet
+> Deve ser capaz de captar e transmitir imagens de vídeo (câmera)
+> Deve ser capaz de ler cartões/tags RFID?
+> Deve ser capaz de controlar uma fechadura elétrica ou portão
+> Deve ser capaz de emitir algum sinal que indique que o acesso foi autorizado com sucesso
+> 
 > 
 
 ### Configurabilidade
@@ -47,6 +54,7 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 > Quais eventos o sistema deve tratar?
 > Se aplicável, classifique os eventos que são periódicos (procure especificar a periodicidade) e os que são não-periódicos
 > (qual o tempo mínimo entre dois eventos sucessivos)?
+> 
 
 ### Tratamento de Eventos
 > Qual comportamento o sistema deve ter para tratar corretamente cada evento?
