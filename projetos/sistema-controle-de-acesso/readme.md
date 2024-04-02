@@ -17,21 +17,22 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 > Descrição do objetivo principal do projeto, incluindo contexto gerador, motivação.
 > > Um sistema de controle de acesso físico tem a função de gerenciar o acesso de pessoas em uma determinada área garantindo a segurança e a gestão eficiente de acesso, utilizando uma combinação de hardware e software especializados. Com o avanço das tecnologias de autenticação digital, os sistemas de controle de acesso físico ganham muita flexibilidade para implementar métodos mais seguros e práticos para garantir a segurança de usuários. Os métodos mais implementados atualmente incluem a sensores biométricos, senhas ou cartões de identificação RFID(sigla para “Radio Frequency Identification”, significa “identificação por radiofrequência”).
 > >
-> > Vamos implementar autenticação por aplicativo ou por página web?
 
 > Escreva essa seção imaginando que está tentando convencer alguém a investir financeiramente no seu projeto.
 > > A implementação de um sistema de controle de acesso físico melhora a segurança e eficiência de entrada em edifícios comerciais, residenciais, hospitalares e instituições educacionais.
-> > A demanda por controle de acesso seguro está em ascensão, e empresas e organizações buscam soluções confiáveis para garantir que entra e sai de suas instalações. Nosso sistema oferece uma experiência de acesso mais rápida e conveniente, permitindo que os usuários utilizem XXXXXXX, eliminando a necessidade de chaves físicas. Além disso, a automação do controle de acesso reduz os custos relacionados a gestão de chaves
+> > A demanda por controle de acesso seguro está em ascensão, e empresas e organizações buscam soluções confiáveis para garantir quem entra e sai de suas instalações. Nosso sistema oferece uma experiência de acesso mais rápida e conveniente, permitindo que os usuários utilizem biometria facial e Q Code, eliminando a necessidade de chaves físicas. Além disso, a automação do controle de acesso reduz os custos relacionados a gestão de chaves, perdas de chaves e substituição de fechaduras. O mercado de controle de acessos está projetado para crescer significativamente nos próximos anos, tornando esse investimento uma oportunidade com grande potencial.
 
 > > 
 > Qual problema vocês pretendem solucionar?
-> >
+> > Com a nossa ferramenta de controle de acessos pretendemos solucionar problemas relacionados a:
+> > - Segurança: a biometria facial é extramamente difícil de ser enganada e o QR code mutável a cada período permite um aumento significativo da segurança de acesso
+> > - Conveniência: o uso de biometria facial e QR code não exige que o usuário carregue algo além de seu celular para realizar a entrada de forma prática e segura
 > > 
 > Quem são os potenciais usuários?
-> > Empresas de segurança, pessoas físicas, comércios
+> > Empresas, pessoas físicas, comércios e hospitais
 
 > É possível estabelecer um valor econômico associado?
-> Sim, COLOCAR ESTIMATIVA DE PREÇO COM BASE EM CONCORRENTES
+> Sim, esses sistemas já existentes no mercado são vendidos entre R$2.500,00 e R$4.000,00 a unidade com catraca.
 
 
 ## Descrição Funcional
@@ -48,21 +49,26 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 > - Deve ser capaz de controlar uma fechadura elétrica ou portão
 > - Deve ser capaz de emitir algum sinal que indique que o acesso foi autorizado com sucesso
 > - Base de dados (pessoas autorizadas e histórico de acessos)
-> 
-> 
+> > 
 
 ### Configurabilidade
 > Detalhe, se houver, todas as possíveis configurações do circuito e todos os pontos de alteração da configuração.
-> Ler a imagem
-
+> A empresa poderá escolher se os usuários utilizarão identificação por biometria facial ou QR via aplicativo.
+> - Biometria facial: será necessário que o usuário final envie para a empresa uma foto recente com fundo branco, boa iluminação e sem acessórios como óculos e chapeu. A imagem será armazenada no banco de dados e será utilizar como meio de comparação a cada tentativa de acesso
+> - QR Code: o usuário final deverá baixar um aplicativo que será conectado com os dados relacionados a empresa. Após as configurações iniciais, a cada tentativa de login o usuário deverá abrir o aplicativo e apontar o QR Code para a câmera na entrada onde será comparado. O QR code será gerado automaticamente a cada 5 segundos.
+>   
 ### Eventos
 > Quais eventos o sistema deve tratar?
 > Se aplicável, classifique os eventos que são periódicos (procure especificar a periodicidade) e os que são não-periódicos
 > (qual o tempo mínimo entre dois eventos sucessivos)?
-> 
+> O sistema deve ser capaz de permanecer em estado de stand by, pois assim que um movimento for dectado ele deve ser capaz de ler o que for apontado para a sua câmera. Sendo um rosto ou um QR code, o sistema deve capturar a imagem e comparar com o banco de dados em um tempo ágil, não mais do que 30 segundos.
+
 
 ### Tratamento de Eventos
 > Qual comportamento o sistema deve ter para tratar corretamente cada evento?
+> A partir dos eventos Acesso Permitido e Acesso Negado, o sistema deve agir de forma distinta. Portanto, se a mensagem for:
+> - Acesso permitido: se os dados apresentados pelas formas de identificação forem iguais as cópias de segurança, o acesso será liberado e a mensagem "Acesso Permitido" aparecerá na tela.
+> - Acesso negado: se os dados apresentados pelas formas de identificação forem diferentes das cópias de segurança, o acesso será negado e a mensagem "Acesso Negado. Favor procurar a administração" aparecerá na tela.
 
 ## Descrição Estrutural do Sistema
 > Junto com a descrição do comportamento do sistema, deve-se especificar, em nível de bloco ou sistema, a estrutura necessária 
