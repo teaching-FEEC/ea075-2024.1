@@ -9,7 +9,7 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 > |Nome  | RA | Curso|
 > |--|--|--|
 > | Thiago Masanori Hata | 194345  | Eng. Elétrica|
-> | Nome2  | 123456  | Eng. de Computação|
+> | Victoria Helena Alves Navarro  | 236015  | Eng. Elétrica|
 
 
 ## Descrição do Projeto
@@ -20,8 +20,12 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 > > Vamos implementar autenticação por aplicativo ou por página web?
 
 > Escreva essa seção imaginando que está tentando convencer alguém a investir financeiramente no seu projeto.
-> > A implementação de um sistema de controle de acesso físico é vantajosa pois automatiza o acesso, traz mais segurança na identificação e abre a possibilidade de controlar e monitorar o acesso de maneira remota.
+> > A implementação de um sistema de controle de acesso físico melhora a segurança e eficiência de entrada em edifícios comerciais, residenciais, hospitalares e instituições educacionais.
+> > A demanda por controle de acesso seguro está em ascensão, e empresas e organizações buscam soluções confiáveis para garantir que entra e sai de suas instalações. Nosso sistema oferece uma experiência de acesso mais rápida e conveniente, permitindo que os usuários utilizem XXXXXXX, eliminando a necessidade de chaves físicas. Além disso, a automação do controle de acesso reduz os custos relacionados a gestão de chaves
+
+> > 
 > Qual problema vocês pretendem solucionar?
+> >
 > > 
 > Quem são os potenciais usuários?
 > > Empresas de segurança, pessoas físicas, comércios 
