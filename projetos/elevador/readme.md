@@ -1,4 +1,4 @@
-# rojeto de um circuito de controle para elevadores
+# Projeto de um circuito de controle para elevadores
 # Elevator control circuit project
 
 ## Apresentação
