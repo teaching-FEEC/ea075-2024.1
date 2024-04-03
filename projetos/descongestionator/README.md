@@ -1,5 +1,5 @@
 # `Rodovias Fluidas: Sistema de Redução de Congestionamentos`
-# `Smooth Highway: Trafic Jam Reduction System`
+# `Smooth Highways: Trafic Jam Reduction System`
 
 ## Apresentação
 
@@ -19,20 +19,21 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 > Quem são os potenciais usuários?
 > É possível estabelecer um valor econômico associado?
 
-O projeto foi idealizado para a resolução de um problema muito presente na vida dos motoristas atualmente, o congestionamento em rodovias.
-A causa que é frequentemente atribuida a esse problema é a ocorrencia de algum acidente, impedindo o fluxo de veiculos por uma das vias, fazendo com que a outra via tenha que suportar o fluxo dela e o outro que foi impedido. Contudo, em muitos congestionamentos é possível verificar que não houve acidentes e mesmo assim ele ocorreu, o que gera uma grande indagação a motoristas mais perspicazes. Nesse âmbito de indagação, foi encontrado um vídeo que explicava o motivo de muitos congestionamentos, sendo a sua principal causa, a grande diferença de velocidades entre os veículos em uma mesma via e o advento de ultrapassagens entre veículos mais lentos, que faz com que muitos tenham que reduzir a sua velocidade de modo que esse movimento acaba se propagando em uma onda de lentidão para os carros que vêm atrás até que em algum momento algum tenha que freiar completamente para evitar a colisão com o carro da frente. Nesse contexto, o projeto visa reduzir a propagação dessa onda de lentidão, de modo que a extensão do congestionamento, sendo considerado os trechos em que os motoristas tem que parar completamente o carro, seja reduzida e evitado o seu crescimento. 
+O projeto foi idealizado para abordar um problema comum enfrentado pelos motoristas hoje em dia: congestionamentos em rodovias. Muitas vezes, atribui-se esse problema à ocorrência de acidentes que bloqueiam uma das vias, forçando o tráfego a se concentrar na outra via. No entanto, em muitos casos de congestionamento, não há acidente aparente ou outra explicação clara, o que levanta questões para os motoristas mais perspicazes.
 
- A prejudicialidade dos congestionamentos está muito além do atraso que gera para os motoristas em suas trajetórias diárias. Alguns exemplos de consequências são:
- 
+Durante uma investigação sobre essa questão, foi encontrado um vídeo que explicava a causa de muitos congestionamentos. O principal fator identificado foi a grande disparidade de velocidades entre os veículos na mesma via, juntamente com ultrapassagens realizadas por veículos mais lentos. Isso faz com que outros motoristas tenham que reduzir sua velocidade, criando uma espécie de "onda de lentidão" que se propaga ao longo da rodovia. Eventualmente, essa onda de lentidão pode levar alguns carros a pararem completamente para evitar colisões.
+
+Diante desse contexto, o objetivo do projeto é reduzir a propagação dessa onda de lentidão, diminuindo assim a extensão dos congestionamentos, especialmente nos pontos onde os motoristas são obrigados a parar completamente. O objetivo final é evitar que o congestionamento se agrave.
+
+A prejudicialidade dos congestionamentos está muito além do atraso que gera para os motoristas em suas trajetórias diárias. Alguns exemplos de consequências são:
+
  - Estresse dos motoristas
  - Acidentes
  - Maior consumo de combustível
  - Maior poluição
  - Maior prejuízo para a saúde dos motoristas expostos a poluição gerada pelos carros
-   
- Nesse sentido, o Rodovias Fluídas® visa solucionar todos esses problemas ao monitorar o surgindo desses engarrafamentos e enviar informações aos motoristas que vem atrás para reduzirem a velocidade, de modo ao chegarem ao local do suposto congestionamento, ele ja tenha desaparecido. Com a implementação desse sistema, prevê-se que haja um significativo retorno econômico ao reduzir o consumo de combustível e a prevenção de acidentes. 
 
-
+Nesse sentido, o Rodovias Fluídas® visa solucionar todos esses problemas ao monitorar o surgindo desses engarrafamentos e enviar informações aos motoristas que vem atrás para reduzirem a velocidade, de modo ao chegarem ao local do suposto congestionamento, ele ja tenha desaparecido. Com a implementação desse sistema, prevê-se que haja um significativo retorno econômico ao reduzir o consumo de combustível e a prevenção de acidentes.
 
 ## Descrição Funcional
 > A descrição funcional do projeto é a principal entrega do E1 e pode ser realizada neste próprio arquivo Markdown,
@@ -47,8 +48,7 @@ A causa que é frequentemente atribuida a esse problema é a ocorrencia de algum
 - Reproduzir avisos sonoros quando novas informações estão disponíveis
 - Detectar a localização e o tamanho de congestionamentos
 - Determinar a velocidade adequada em reação a um congestionamento à frente
-- Capacidade de distribuição das informações sobre congestionamentos para os carros trafegando na rodovia
-- 
+- Capacidade de distribuição das informações sobre congestionamentos para os carros trafegando na rodovia 
 
 ### Configurabilidade
 > Detalhe, se houver, todas as possíveis configurações do circuito e todos os pontos de alteração da configuração.
