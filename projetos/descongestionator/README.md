@@ -20,7 +20,7 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 > É possível estabelecer um valor econômico associado?
 
 O projeto foi idealizado para a resolução de um problema muito presente na vida dos motoristas atualmente, o congestionamento em rodovias.
-A causa que é frequentemente atribuida a esse problema é a ocorrencia de algum acidente, impedindo o fluxo de veiculos por uma das vias, fazendo com que a outra via tenha que suportar o fluxo dela e o outro que foi impedido. Contudo, em muitos congestionamentos é possível verificar que não houve acidentes e mesmo assim ele ocorreu, o que gera uma grande indagação a motoristas mais perspicazes. Nesse âmbito de indagação, foi encontrado um vídeo que explicava o motivo de muitos congestionamentos, sendo a sua principal causa, a grande diferença de velocidades entre os veículos em uma mesma via e o advento de ultrapassagens entre veículos mais lentos, que faz com que muitos tenham que reduzir a sua velocidade de modo que esse movimento acaba se propagando em uma onda de lentidão para os carros que vêm atrás até que em algum momento algum tenha que freiar completamente para evitar a colisão com o carro da frente. Nesse contexto, o projeto visa reduzir a propagação dessa onda de lentidão, de modo que a extensão do congestionamento, sendo considerado os trechos em que os motoristas tem que parar completamente o carro, seja reduzida e evitado o seu crescimento. 
+A causa que é frequentemente atribuida a esse problema é a ocorrencia de algum acidente, impedindo o fluxo de veiculos por uma das vias, fazendo com que a outra via tenha que suportar o fluxo dela e o outro que foi impedido. Contudo, em muitos congestionamentos é possível verificar que não houve acidentes e mesmo assim ele ocorreu, o que gera uma grande indagação a motoristas mais perspicazes. Nesse âmbito de indagação, foi encontrado um [vídeo](https://www.youtube.com/watch?v=iHzzSao6ypE) que explicava o motivo de muitos congestionamentos, sendo a sua principal causa, a grande diferença de velocidades entre os veículos em uma mesma via e o advento de ultrapassagens entre veículos mais lentos, que faz com que muitos tenham que reduzir a sua velocidade de modo que esse movimento acaba se propagando em uma onda de lentidão para os carros que vêm atrás até que em algum momento algum tenha que freiar completamente para evitar a colisão com o carro da frente. Nesse contexto, o projeto visa reduzir a propagação dessa onda de lentidão, de modo que a extensão do congestionamento, sendo considerado os trechos em que os motoristas tem que parar completamente o carro, seja reduzida e evitado o seu crescimento. 
 
  A prejudicialidade dos congestionamentos está muito além do atraso que gera para os motoristas em suas trajetórias diárias. Alguns exemplos de consequências são:
  
@@ -37,6 +37,8 @@ A causa que é frequentemente atribuida a esse problema é a ocorrencia de algum
 ## Descrição Funcional
 > A descrição funcional do projeto é a principal entrega do E1 e pode ser realizada neste próprio arquivo Markdown,
 > com links para diagramas ou outros arquivos que estejam no próprio repositório.
+
+O objetivo do projeto é identificar congestionamentos nas rodovias e avisar os motoristas que trafegam na mesma rodovia para reduzirem a velocidade, de modo que ao chegarem ao local em que existia o engarrafamento ele já tenha se resolvido.
 
 ### Funcionalidades
 > Detalhe todas as tarefas que o sistema será capaz de executar
@@ -60,22 +62,35 @@ Como configuração, o usuário que possuir o dispositivo em seu carro pode opta
 > Se aplicável, classifique os eventos que são periódicos (procure especificar a periodicidade) e os que são não-periódicos
 > (qual o tempo mínimo entre dois eventos sucessivos)?
 
-Eventos esperados em fluxo normal
+#### Eventos esperados em fluxo normal
 
-- Recebimento de informação de posição e velocidade de carro na via (periódico, 30 segundos)
-- Detecção do surgimento de um congestionamento
-- Detecção do fim de um congestionamento, volta do fluxo normal
-- Recebimento de informações sobre congestionamentos na via
-- Entrada/Saída do veículo de uma rodovia com suporte do sistema
+1. Recebimento de informação de posição e velocidade de carro na via (periódico, 30 segundos)
+2. Disparo de verificação das informações recebidas (periódico, 30 segundos)
+3. Detecção do surgimento de um congestionamento
+4. Detecção do fim de um congestionamento, volta do fluxo normal
+5. Recebimento de informações sobre congestionamentos na via
 
-Eventos de erro, inesperados
+#### Eventos de erro, inesperados
 
-- Falha na obtenção da velocidade do veículo
-- Falha na obtenção da posição do veículo
-- Falha na comunicação com o sistema (envio/recebimento de mensagens) 
+1. Falha na obtenção da velocidade do veículo
+2. Falha na obtenção da posição do veículo
+3. Falha na comunicação com o sistema (envio/recebimento de mensagens) 
 
 ### Tratamento de Eventos
 > Qual comportamento o sistema deve ter para tratar corretamente cada evento?
+
+#### Eventos esperados em fluxo normal
+
+1. Armazena as informações de velocidade e posição recebidas em uma tabela para futura consulta.
+2. Roda um algoritmo que utiliza as informações na tabela de velocidade e posição e verifica se há congestionamentos.
+3. Envia a informação do surgimento de um engarrafamento e a sua localização para os motoristas que trafegam na rodovia.
+4. Envia a informação da finalização do engarrafamento para os motoristas que trafegam na rodovia.
+5. Calcula a velocidade ideal para o carro trafegar antes de encontrar o congestionamento e informa ao motorista essa velocidade, através de um display luminoso e efeitos sonoros.
+ 
+#### Eventos de erro, inesperados
+
+* Itens 1, 2 e 3: Avisa ao usuário que ocorreu um problema, qual foi e que não terá mais a assistência do sistema até resolver o infortúnio.
+
 
 ## Descrição Estrutural do Sistema
 > Junto com a descrição do comportamento do sistema, deve-se especificar, em nível de bloco ou sistema, a estrutura necessária 
@@ -98,3 +113,5 @@ Os dispostivos fixos são torres colocadas ao longo da via, e tem como objetivo 
 
 ## Referências
 > Seção obrigatória. Inclua aqui referências utilizadas no projeto.
+
+- https://www.youtube.com/watch?v=iHzzSao6ypE
