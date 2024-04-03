@@ -45,17 +45,17 @@ O sistema de controle de elevadores deverá ser capaz de executar as seguintes t
 ### Configurabilidade
 O sistema possui os seguintes estados:
   - Subindo.
-    O elevador está se deslocando para cima, pois recebeu uma chamada de algum andar mais elevado ou algum passageiro solicitou parada em um andar acima.
+    - O elevador está se deslocando para cima, pois recebeu uma chamada de algum andar mais elevado ou algum passageiro solicitou parada em um andar acima.
   - Descendo.
-    O elevador está se deslocando para baixo, pois recebeu uma chamada de algum andar ou algum passageiro solicitou parada em um andar abaixo de sua posição.
+    - O elevador está se deslocando para baixo, pois recebeu uma chamada de algum andar ou algum passageiro solicitou parada em um andar abaixo de sua posição.
   - Parado.
-    O elevador está em um andar específico, com as portas fechadas.
+    - O elevador está em um andar específico, com as portas fechadas.
   - Abrindo as portas.
-    O elevador está em um andar específico e está com a porta aberta para entrada e saída de passageiros.
+    - O elevador está em um andar específico e está com a porta aberta para entrada e saída de passageiros.
   - Fechando as portas.
-    O elevador está fechando as portas após um tempo específico para entrada e saída dos passageiros.
+    - O elevador está fechando as portas após um tempo específico para entrada e saída dos passageiros.
   - Economia de energia.
-    Está parado e alguns sistemas não essenciais estão desligados.
+    - Está parado e alguns sistemas não essenciais estão desligados.
 
 Ao receber chamadas de andares, o elevador muda para o estado "subindo" ou "descendo", assim como quando o passageiro seleciona o andar desejado. Ao chegar no andar, o elevador muda para o modo "parado", e rapidamente muda para o modo "abrindo portas". Após um determinado tempo para entrarem e saírem passageiros, há a mudança de estado para "fechando portas". Assim, novas chamadas ocorrem, reiniciando. 
 Há algumas mudanças de estado fora do funcionamento padrão. Ao verificar problemas mecânicos ou elétricos, sobrecarga ou outras emergências ele passa automaticamente para o modo "parado". Quando está parado por um tempo significativo a ser determinado, ele passa para o modo de "economia de energia". Para sair deste modo, basta receber uma chamada.
@@ -76,25 +76,25 @@ Os eventos de mudança de estado:
 
 ### Tratamento de Eventos
   - Chamada de um andar 
-    Ao receber uma chamada, o sistema deve organizar as chamadas da melhor maneira, de forma que não fique subindo e descendo várias vezes.
+    - Ao receber uma chamada, o sistema deve organizar as chamadas da melhor maneira, de forma que não fique subindo e descendo várias vezes.
   - Chegada do elevador a um andar solicitado
-    Ao chegar em um andar, o sistema deve alinhar corretamente o chão do elevador com o andar.
+    - Ao chegar em um andar, o sistema deve alinhar corretamente o chão do elevador com o andar.
   - Ao parar, abertura das portas
-    Após o alinhamento correto do chão do elevador e do andar, o sistema deve mandar um sinal para abertura da porta correta.
+    - Após o alinhamento correto do chão do elevador e do andar, o sistema deve mandar um sinal para abertura da porta correta.
   - Fechamento das portas após um tempo para entrada e saída de passageiros
-    Após um tempo previamente definido de abertura das portas, o sistema deve enviar um sinal para o fechamento das portas.
+    - Após um tempo previamente definido de abertura das portas, o sistema deve enviar um sinal para o fechamento das portas.
   - Pressionamento do botão de fechada de portas
-    Caso esteja pressionado o botão, o sistema deve enviar um sinal para fechamento da porta.
+    - Caso esteja pressionado o botão, o sistema deve enviar um sinal para fechamento da porta.
   - Pessoa entre a porta
-    O sistema, ao detectar que há algo no local de fechamento da porta, deve enviar o sinal para manter a porta aberta ou cancelar o fechamento.
+    - O sistema, ao detectar que há algo no local de fechamento da porta, deve enviar o sinal para manter a porta aberta ou cancelar o fechamento.
   - Detecção de sobrecarga
-    Ao detectar sobre carga, o sistema deve interromper o movimento e ficar parado.
+    - Ao detectar sobre carga, o sistema deve interromper o movimento e ficar parado.
   - Detecção de falha
-    Ao detectar falha, o sistema deve interromper o movimento e ficar parado.
+    - Ao detectar falha, o sistema deve interromper o movimento e ficar parado.
   - Ausência de funcionamento por um determinado período de tempo
-    Ao ficar um tempo determinado previamente sem nenhuma chamada, o sistema deve desligar alguns comandos que não são essenciais.
+    - Ao ficar um tempo determinado previamente sem nenhuma chamada, o sistema deve desligar alguns comandos que não são essenciais.
   - Entrada no sistema de economia de energia pré-definida
-    Ao chegar uma hora pré determinada, o sistema deve desligar alguns comandos que não são essenciais.
+    - Ao chegar uma hora pré determinada, o sistema deve desligar alguns comandos que não são essenciais.
 
 ## Descrição Estrutural do Sistema
 > Junto com a descrição do comportamento do sistema, deve-se especificar, em nível de bloco ou sistema, a estrutura necessária 
