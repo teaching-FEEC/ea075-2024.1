@@ -91,3 +91,5 @@ Os eventos de mudança de estado:
 
 ## Referências
 > Seção obrigatória. Inclua aqui referências utilizadas no projeto.
+> http://www.electrical-knowhow.com/2012/04/elevator-control-system.html
+> http://fpgaparatodos.com.br/2011/08/04/exemplo-de-exemplo/
