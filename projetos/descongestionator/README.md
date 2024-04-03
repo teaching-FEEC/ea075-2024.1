@@ -13,11 +13,6 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 
 
 ## Descrição do Projeto
-> Descrição do objetivo principal do projeto, incluindo contexto gerador, motivação.
-> Escreva essa seção imaginando que está tentando convencer alguém a investir financeiramente no seu projeto.
-> Qual problema vocês pretendem solucionar?
-> Quem são os potenciais usuários?
-> É possível estabelecer um valor econômico associado?
 
 O projeto foi idealizado para abordar um problema comum enfrentado pelos motoristas hoje em dia: congestionamentos em rodovias. Muitas vezes, atribui-se esse problema à ocorrência de acidentes que bloqueiam uma das vias, forçando o tráfego a se concentrar na outra via. No entanto, em muitos casos de congestionamento, não há acidente aparente ou outra explicação clara, o que levanta questões para os motoristas mais perspicazes.
 
@@ -36,13 +31,10 @@ A prejudicialidade dos congestionamentos está muito além do atraso que gera pa
 Nesse sentido, o Rodovias Fluídas® visa solucionar todos esses problemas ao monitorar o surgindo desses engarrafamentos e enviar informações aos motoristas que vem atrás para reduzirem a velocidade, de modo ao chegarem ao local do suposto congestionamento, ele ja tenha desaparecido. Com a implementação desse sistema, prevê-se que haja um significativo retorno econômico ao reduzir o consumo de combustível e a prevenção de acidentes.
 
 ## Descrição Funcional
-> A descrição funcional do projeto é a principal entrega do E1 e pode ser realizada neste próprio arquivo Markdown,
-> com links para diagramas ou outros arquivos que estejam no próprio repositório.
 
 O objetivo do projeto é identificar congestionamentos nas rodovias e avisar os motoristas que trafegam na mesma rodovia para reduzirem a velocidade, de modo que ao chegarem ao local em que existia o engarrafamento ele já tenha se resolvido.
 
 ### Funcionalidades
-> Detalhe todas as tarefas que o sistema será capaz de executar
 
 - Medir a velocidade do veículo
 - Medir a posição do veículo na rodovia
@@ -53,19 +45,15 @@ O objetivo do projeto é identificar congestionamentos nas rodovias e avisar os 
 - Capacidade de distribuição das informações sobre congestionamentos para os carros trafegando na rodovia 
 
 ### Configurabilidade
-> Detalhe, se houver, todas as possíveis configurações do circuito e todos os pontos de alteração da configuração.
 
 Como configuração, o usuário que possuir o dispositivo em seu carro pode optar por desabilitar o aviso sonoro e ao invés disso o display de informações deve piscar algumas vezes para chamar a atenção do motorista.
 
 ### Eventos
-> Quais eventos o sistema deve tratar?
-> Se aplicável, classifique os eventos que são periódicos (procure especificar a periodicidade) e os que são não-periódicos
-> (qual o tempo mínimo entre dois eventos sucessivos)?
 
 #### Eventos esperados em fluxo normal
 
 1. Recebimento de informação de posição e velocidade de carro na via (periódico, 30 segundos)
-2. Disparo de verificação das informações recebidas (periódico, 30 segundos)
+2. Disparo de verificação das informações recebidas para detecção de congestionamentos (periódico, 30 segundos)
 3. Detecção do surgimento de um congestionamento
 4. Detecção do fim de um congestionamento, volta do fluxo normal
 5. Recebimento de informações sobre congestionamentos na via
@@ -77,7 +65,6 @@ Como configuração, o usuário que possuir o dispositivo em seu carro pode opta
 3. Falha na comunicação com o sistema (envio/recebimento de mensagens) 
 
 ### Tratamento de Eventos
-> Qual comportamento o sistema deve ter para tratar corretamente cada evento?
 
 #### Eventos esperados em fluxo normal
 
@@ -93,25 +80,14 @@ Como configuração, o usuário que possuir o dispositivo em seu carro pode opta
 
 
 ## Descrição Estrutural do Sistema
-> Junto com a descrição do comportamento do sistema, deve-se especificar, em nível de bloco ou sistema, a estrutura necessária 
-> para captar os eventos do mundo externo, para alojar e processar o programa de tratamento de eventos, e para atuar sobre o mundo externo.
->
-> Para essa descrição recomenda-se a criação de diagramas de blocos.
-> Nesse diagrama, devem ser destacados os blocos funcionais que compõem o sistema, incluindo uma síntese das funcionalidades de cada bloco.
-> Além disso, deve-se esclarecer também o relacionamento entre estes blocos, incluindo os principais sinais de comunicação entre
-> os blocos de forma a assegurar a execução de todas as tarefas que o sistema deve realizar.
-> 
-> Você sabia? Ferramentas como o `draw.io` permitem integração com o Github.
-> 
 
-O sistema será composto por dois tipos de dispositivos: Módulos móveis, que estão presentes nos carros dos usuários do sistema e módulos fixos, presentes ao longo das rodovias, principalmente em trechos em que é congestionamentos são comuns.
+O sistema será composto por dois tipos de dispositivos: Módulos móveis, que estão presentes nos carros dos usuários do sistema e módulos fixos, presentes ao longo das rodovias, principalmente em trechos em que congestionamentos são comuns.
 
 Os módulos móveis tem como objetivo monitorar a velocidade do carro e informar ao motorista quando deve reduzir sua velocidade. Ele baseia essa decisão em sinais recebidos pelo módulos fixo mais próximo. Além disso, tem o papel de informar a velocidade do carro para o módulo fixo mais próximo.
 
-Os dispostivos fixos são torres colocadas ao longo da via, e tem como objetivo detectar congestionamentos, recebendo inforamações de velocidade dos motoristas mais próximos, e repassar a inforamção para torres anteriores na via, que por sua vez avisam sobre as condições ao módulos móveis proxímos a elas.
+Os dispostivos fixos são torres colocadas ao longo da via, e tem como objetivo detectar congestionamentos, recebendo informações de velocidade dos motoristas mais próximos, e repassar a informação para torres anteriores na via, que por sua vez avisam sobre as condições ao módulos móveis proxímos a elas.
 
 
 ## Referências
-> Seção obrigatória. Inclua aqui referências utilizadas no projeto.
 
-- https://www.youtube.com/watch?v=iHzzSao6ypE
+- Vídeo motivador do projeto: https://www.youtube.com/watch?v=iHzzSao6ypE
