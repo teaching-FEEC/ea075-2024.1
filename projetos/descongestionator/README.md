@@ -95,6 +95,7 @@ Os módulos móveis tem como objetivo monitorar a velocidade do carro e informar
 
 Os dispostivos fixos são torres colocadas ao longo da via, e tem como objetivo detectar congestionamentos, recebendo inforamações de velocidade dos motoristas mais próximos, e repassar a inforamção para torres anteriores na via, que por sua vez avisam sobre as condições ao módulos móveis proxímos a elas.
 
+![Alt text here](diagramas/diagrama-estrutural.png)
 
 ## Referências
 > Seção obrigatória. Inclua aqui referências utilizadas no projeto.
