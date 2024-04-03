@@ -17,7 +17,7 @@ A ideia do projeto consiste em desenvolver um circuito controlador para elevador
 
 Outro lado positivo do projeto é que seu custo não tende a ser alto, levando em conta que a lógica pode ser desenvolvida sem a necessidade de processamento muito avançado, e os demais dispositivos que podem ser possivelmente usados não tendem a ser caros (alguns sensores e circuitos básicos para mudança de direção do motor). Dessa forma, levando em conta um investimento que requer pouca manutenção (o principal serviço é o software envolvido no controle dos elevadores e o microprocessador do mesmo, que tende a ter boa durabilidade), pouco capital e que proporciona um controle útil e necessário na logística dos elevadores, temos um projeto viável e de custo acessível.
 
-O projeto consiste em um produto já estabelecido no mercado, assim visa garantir um transporte vertical eficiente, seguro e confiável, ao mesmo tempo em que buscamos a redução dos custos. O sistema tende a beneficiar tanto prédios residenciais, ocorrendo uma valorização do imóvel, quanto comerciais, ocorrendo uma melhora da produtividade dos funcionários.
+O projeto consiste em um produto já estabelecido no mercado, que visa garantir um transporte vertical eficiente, seguro e confiável, ao mesmo tempo em que buscamos a redução dos custos. O sistema tende a beneficiar tanto prédios residenciais, ocorrendo uma valorização do imóvel, quanto comerciais, ocorrendo uma melhora da produtividade dos funcionários.
 
 ## Descrição Funcional
 
