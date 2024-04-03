@@ -103,16 +103,8 @@ Sistema de Alerta de Fumaça: O sistema será intalado em todos os comodos e est
 
 Todos os sistemas serão controlados por um microcontrolador sendo a definir se será utilizado o Arduino ou o ESP32.
 
-> Junto com a descrição do comportamento do sistema, deve-se especificar, em nível de bloco ou sistema, a estrutura necessária 
-> para captar os eventos do mundo externo, para alojar e processar o programa de tratamento de eventos, e para atuar sobre o mundo externo.
->
-> Para essa descrição recomenda-se a criação de diagramas de blocos.
-> Nesse diagrama, devem ser destacados os blocos funcionais que compõem o sistema, incluindo uma síntese das funcionalidades de cada bloco.
-> Além disso, deve-se esclarecer também o relacionamento entre estes blocos, incluindo os principais sinais de comunicação entre
-> os blocos de forma a assegurar a execução de todas as tarefas que o sistema deve realizar.
-> 
-> Você sabia? Ferramentas como o `draw.io` permitem integração com o Github.
+
 > 
 
 ## Referências
-> Seção obrigatória. Inclua aqui referências utilizadas no projeto.
+
