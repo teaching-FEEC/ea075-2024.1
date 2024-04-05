@@ -30,11 +30,11 @@ Ele realiza três grandes tarefas:
 * **Atuação na linha de produção:** Controle de atuadores para remover automaticamente os itens defeituosos da esteira principal, direcionando-os para uma linha secundária para reavaliação ou descarte.
 * **Registro:** Monitora o funcionamento do sistema e armazena os dados de qualidade, quantidade e descarte numa base de dados. 
 
-> **Exemplo de aplicação:**  
-> Em uma linha de separação de frutas, o OptiSort:
-> * Detecta frutas estragadas por visão computacional.
-> * Empurra as frutas estragadas para fora da esteira principal.
-> * Direciona as frutas estragadas para uma linha secundária para reavaliação ou descarte.
+**Exemplo de aplicação:**  
+Em uma linha de separação de frutas, o OptiSort:
+* Detecta frutas estragadas por visão computacional.
+* Empurra as frutas estragadas para fora da esteira principal.
+* Direciona as frutas estragadas para uma linha secundária para reavaliação ou descarte.
 
 ### Configurabilidade
 Para atingir a flexibilidade desejada deste sistema, o OptiSort conta com diversas configurações para atender às necessidades específicas de cada aplicação. Podemos agrupar as suas principais configurações em três grandes grupos:
@@ -54,12 +54,12 @@ Para atingir a flexibilidade desejada deste sistema, o OptiSort conta com divers
 
 Os parâmetros mais físicos (como sendo os de atuação e alguns de registro) poderão ser configurados de forma dinâmica enquanto a linha de produção está em operação mediante um controlador.
 
-> **Exemplo de aplicação**
-> Em uma linha de separação de frutas, o sistema OptiSort pode ser configurado para:
-> * Identificar diferentes tipos de frutas (por exemplo, maçãs, laranjas, bananas).
-> * Classificar as frutas por qualidade, considerando estragadas aquelas cuja probabilidade for menor de 50%.
-> * Um segundo depois da fruta estragada ter sido identificada, remover ela da esteira mediante um servomotor.
-> * Gerar um relatório de produção detalhando o número de frutas processadas e separadas da linha principal.
+**Exemplo de aplicação**
+Em uma linha de separação de frutas, o sistema OptiSort pode ser configurado para:
+* Identificar diferentes tipos de frutas (por exemplo, maçãs, laranjas, bananas).
+* Classificar as frutas por qualidade, considerando estragadas aquelas cuja probabilidade for menor de 50%.
+* Um segundo depois da fruta estragada ter sido identificada, remover ela da esteira mediante um servomotor.
+* Gerar um relatório de produção detalhando o número de frutas processadas e separadas da linha principal.
 
 ### Eventos
 Ao longo da sua operação definem-se vários tipos de "eventos" que descrevem o comportamento do sistema num determinado instante de tempo.
