@@ -27,7 +27,7 @@ O game changer desse mercado, estaria nas novas tecnologias de MOSFETs utilizand
 Dessa forma, para o escopo desta disciplina, propõe-se um modelo rudimentar de gate driver. Com o objetivo de criar uma curva de aprendizado e familiarização com o sistema, atuando em um half-bridge com carga indutiva para onda senoidal. Chamamos o modelo de “rudimentar” porque um dispositivo deste, em estado da arte, é um trabalho para um time de vários engenheiros e com anos de experiência, sendo impossível trazer um dispositivo deste para o escopo desta disciplina
 
 
- ### Funcionalidades
+ ## Descrição Funcional
  
 Embora seja fato que diversos gate drivers comerciais já existentes e bem estabelecidos comercialmente propõem inúmeras funções como: operações do MOSFET em regiões de triodo; adaptabilidade de Vgs; e, nos mais avançados, controle ativo. O projeto proposto não visa chegar em tal ponto de adaptabilidade e escalabilidade, mas sim, permitir um modelo base para criar o início de uma curva de aprendizado e, se possível, futuras melhorias.
 
@@ -38,7 +38,7 @@ Também, é muito importante, em dispositivos de tal forma, monitorar alguns par
 Duas configurações de leitrua devem ser feitas: 
 - Ler o potênciometro de frequência
 - Ler o potênciometro de amplitude
-- Detectar se algum dos potenciômetros morrer
+- Detectar se algum dos potenciômetros desconectar
 - Detectar sobrecorrentes
 - Monitoramento da temperatura
 
@@ -50,7 +50,43 @@ Não esperamos que o dispositivo seja inteligente o suficiente para tratar de fa
 - LED verde - Potênciometros desconectados
 - LED Azul - Problemas com a corrente
 
+## Descrição Estrutural do Sistema:
+
+(TRABALHAR EM UM DIAGRAMA SOBRE O ALGORITMO EM C) REFERENCIAS DO RASHID
+
+Explicando o circuito: Temos uma fonte de corrente contúnua, que será estabilizada por dois capacitores. O circuito em verde, mostra a lógica do algoritmo SPWM em hardware. Depois, temos um push-pull. Após isso, temos um filtro.
+
 ![image](https://github.com/jppascon/ea075-2024.1/assets/163413469/6c2f74a3-67c1-4651-83fb-c9299a4416da)
+
+### Simulações
+
+Antes de especificar o que devemos comprar para o projeto, foi proposto uma primeira bateria de simulações. Do próprio circuito mostrado acima, juntamente com o algoritmo de controle SPWM. Nessa primeira simulação, os valores foram ajustados por eurística.
+Validamos as simulacoes da seguinte maneira, em regime permanente:
+
+![image](https://github.com/jppascon/ea075-2024.1/assets/163413469/31154cb5-75fb-454c-b4cd-275f42ed491e)
+
+Observe que, validando com o que era esperado pelo livro do RASHID, temos uma bom modelo por hora.
+
+![image](https://github.com/jppascon/ea075-2024.1/assets/163413469/62213e9e-1e95-45f3-ba51-8c04969d2dce)
+
+Controlando a amplitude e frequência da onda carrier, nós controlamos a amplitude e a frequência da onda de saída. Pretendemos fazer isso via software e utiizar a região de modulação linear.
+
+
+
+## Especificações
+
+### Especificações Estrutruais
+
+Vamos nos interessar bastante em quais seriam as vantagens e desvantagens de cada componente. Dando enfoque nos motivos que acarretaram na escolha final do dispositivo. Para os objetos que serão necessários termos:
+
+- Potênciometros
+- Microcontrolador
+- Capacitores
+- MOSFETs
+- Sensores de Temperatura, Corrente
+  
+
+
 
 
 ## Referencias
