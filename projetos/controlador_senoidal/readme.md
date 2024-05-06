@@ -84,6 +84,11 @@ Vamos nos interessar bastante em quais seriam as vantagens e desvantagens de cad
 - Capacitores
 - MOSFETs
 - Sensores de Temperatura, Corrente
+- LEDs RGB
+
+### Microcontrolador
+
+Nesse caso, temos, juntamento com o MOSFET, o componente mais importante do projeto. Dentre os inúmeros microcontroladores disponíveis, optou-se pelo uso do MKL25Z da freescale. A maior justificativa para essa decisão foi um trade off entre tempo de desenvolvimento somado a eficiencia contra custos. Com certeza poderíamos ter optado por um arduino que pudesse fornecer e tratar os dados que precisamos, mas, como em matérias como EA871 aprendemos a comandar o dispositivo MKL25Z, é nítida sua escolha como microcontrolador ideal, visto que na atual disciplina de EA075, o tempo de projeto e disponibilidade de componentes (ja possuimos um MKL na FEEC) são as variáveis de maior importância em qualquer trade-off que devemos fazer.
 
 ### Sensor de Temperatura
   
