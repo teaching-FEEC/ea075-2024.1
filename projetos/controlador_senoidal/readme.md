@@ -84,8 +84,16 @@ Vamos nos interessar bastante em quais seriam as vantagens e desvantagens de cad
 - Capacitores
 - MOSFETs
 - Sensores de Temperatura, Corrente
-  
 
+### Sensor de Temperatura
+  
+Para a escolha do sensor de temperatura para o circuito que estamos planejando implementar alguns requisitos prévios precisavam ser contemplados, como a contabilidade com o case do MOSFET a ser utilizado, medição precisa e rápida de temperatura, facilidade na medição, ou seja, não necessidade de circuitos externos para mensurar e, por conseguinte, garantir a complexidade e preço necessários para a implementação no projeto.
+
+Destarte, foram analisadas três opções de sensores: Termistor NTC, Termopar e Termorresistência de Platina (PT100). Assim, optou-se pelo Termistor NTC devido a sua compatibilidade com a case do MOSFET, sua conveniência de montagem através de furos (through-hole), simplicidade, custo relativamente baixo, resposta rápida e adequação para medições de temperatura em dispositivos eletrônicos como MOSFETs.
+
+Ademais, a priorização do sensor supracitado em relação aos outros supramencionados está associada a diversos fatores, visto que o Termopar, por exemplo, apesar de ser robusto e capaz de medir temperaturas extremas, necessita de circuitos de amplificação e compensação de junção fria para assegurar a precisão, além de ser mais complexo e, possivelmente, mais caro que o necessário. A Termorresistência de Platina (PT100), por outro lado, embora ofereça alta previsão e estabilidade a longo prazo, seu custo elevado, necessidade de circuitos de excitação mais complexos e resposta mais lenta, a tornaram menos atraente para esta aplicação específica.
+
+Portanto, o Termistor NTC foi a escolha ideal, proporcionando simplicidade, custo relativamente baixo, resposta rápida e adequação para medições de temperatura em dispositivos eletrônicos como MOSFETs. Dito isso, foi optado pelo Termistor NTC..
 
 
 
