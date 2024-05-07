@@ -79,7 +79,7 @@ Controlando a amplitude e frequência da onda carrier, nós controlamos a amplit
 
 Vamos nos interessar bastante em quais seriam as vantagens e desvantagens de cada componente. Dando enfoque nos motivos que acarretaram na escolha final do dispositivo. Para os objetos que serão necessários termos:
 
-- Potênciometros
+- Potenciômetros
 - Microcontrolador
 - Capacitores
 - MOSFETs
@@ -90,6 +90,12 @@ Vamos nos interessar bastante em quais seriam as vantagens e desvantagens de cad
 
 Nesse caso, temos, juntamento com o MOSFET, o componente mais importante do projeto. Dentre os inúmeros microcontroladores disponíveis, optou-se pelo uso do MKL25Z da freescale. A maior justificativa para essa decisão foi um trade off entre tempo de desenvolvimento somado a eficiencia contra custos. Com certeza poderíamos ter optado por um arduino que pudesse fornecer e tratar os dados que precisamos, mas, como em matérias como EA871 aprendemos a comandar o dispositivo MKL25Z, é nítida sua escolha como microcontrolador ideal, visto que na atual disciplina de EA075, o tempo de projeto e disponibilidade de componentes (ja possuimos um MKL na FEEC) são as variáveis de maior importância em qualquer trade-off que devemos fazer.
 
+
+Em relação aos LEDs, como mostra a imagem abaixo, podemos nos embasar nos LEDs imbutidos na própria placa. Usaremos os pinos PTB18, PTB19, PTD1.
+![image](https://github.com/jppascon/ea075-2024.1/assets/163413469/86a1ed5c-e399-4828-b749-14b842f9e5fd)
+
+Para o output, devemos utilizar um pino GPIO ou PWM. A decisão ainda está em aberto, para manter conformidade com o código.
+
 ### Sensor de Temperatura
   
 Para a escolha do sensor de temperatura para o circuito que estamos planejando implementar alguns requisitos prévios precisavam ser contemplados, como a contabilidade com o case do MOSFET a ser utilizado, medição precisa e rápida de temperatura, facilidade na medição, ou seja, não necessidade de circuitos externos para mensurar e, por conseguinte, garantir a complexidade e preço necessários para a implementação no projeto.
@@ -98,7 +104,17 @@ Destarte, foram analisadas três opções de sensores: Termistor NTC, Termopar e
 
 Ademais, a priorização do sensor supracitado em relação aos outros supramencionados está associada a diversos fatores, visto que o Termopar, por exemplo, apesar de ser robusto e capaz de medir temperaturas extremas, necessita de circuitos de amplificação e compensação de junção fria para assegurar a precisão, além de ser mais complexo e, possivelmente, mais caro que o necessário. A Termorresistência de Platina (PT100), por outro lado, embora ofereça alta previsão e estabilidade a longo prazo, seu custo elevado, necessidade de circuitos de excitação mais complexos e resposta mais lenta, a tornaram menos atraente para esta aplicação específica.
 
-Portanto, o Termistor NTC foi a escolha ideal, proporcionando simplicidade, custo relativamente baixo, resposta rápida e adequação para medições de temperatura em dispositivos eletrônicos como MOSFETs. Dito isso, foi optado pelo Termistor NTC..
+Portanto, o Termistor NTC foi a escolha ideal, proporcionando simplicidade, custo relativamente baixo, resposta rápida e adequação para medições de temperatura em dispositivos eletrônicos como MOSFETs. Dito isso, foi optado pelo Termistor NTC. O modelo escolhido, que ainda pode estar sujeito a mudanças, EPCOS B57560G103F.
+
+### Sensor de Corrente
+
+Para os sensores de corrente, vamos optar por um resistor shunt. Acreditamos que ele apresenta como sendo mais simples que um resistor por campo magnético e mais acessível.
+
+### Capacitores
+
+Em relação aos capacitores, para as demandas do projeto foram escolhidos dois capacitores de 100 uF, devido ao fato de apresentarem uma boa estabilidade de tensão, ou seja, são capazes de suportar flutuações de tensão, garantindo uma alimentação estável para o MOSFET, evitando oscilações e garantindo o funcionamento adequado do dispositivo.
+
+ Além disso, são capazes de realizar a filtragem de ruídos e picos de tensão indesejados que possam ser introduzidos na linha de alimentação .E, também são comumente encontrados, relativamente compactos em tamanho e disponíveis em uma ampla variedade de faixas de tensão. Logo, são adequados para a aplicação e facilmente integrados ao projeto eletrônico. O capacitor escolhido, visando uma tensão de 32V iniciais para testes foi ECW-F2105JB, mas ainda podendo estar sujeito a mudanças.
 
 
 
