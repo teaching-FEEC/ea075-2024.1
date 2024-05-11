@@ -91,6 +91,15 @@ Os dispostivos fixos são torres colocadas ao longo da via, e tem como objetivo 
 
 ## Especificações
 
+### Brainstorm
+
+- Mapa nas torres
+- Bússula pra identificar direção
+- Estado de standy by do dispostivo móvel até mensagem de uma torre
+- Tomada de decisão pela torre, de acordo com a posição do móvel, pra saber se o carro está na rodovia ou em uma rua paralela
+- GPS para saber a posição do carro
+- Consulta dos dispositivos móveis para as torres da posição atual em caso de congestionamento
+
 ### Especificação Estrutural
 
 > (Se preferir, adicione um link para o documento de especificação estrutural)
