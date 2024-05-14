@@ -6,7 +6,6 @@
 O presente projeto foi originado no contexto das atividades da disciplina de graduação *EA075 - Introdução ao Projeto de Sistemas Embarcados*, 
 oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dra. Paula Dornhofer Paro Costa, do Departamento de Engenharia de Computação e Automação (DCA) da Faculdade de Engenharia Elétrica e de Computação (FEEC).
 
-> Incluir nome RA e foco de especialização de cada membro do grupo. Os projetos devem ser desenvolvidos em duplas.
 > |Nome  | RA | Curso|
 > |--|--|--|
 > | Mateus Alves Silva | 239856 | Eng. Elétrica |
@@ -14,12 +13,6 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 
 
 ## Descrição do Projeto
-> Descrição do objetivo principal do projeto, incluindo contexto gerador, motivação.
-> Escreva essa seção imaginando que está tentando convencer alguém a investir financeiramente no seu projeto.
-> Qual problema vocês pretendem solucionar?
-> Quem são os potenciais usuários?
-> É possível estabelecer um valor econômico associado?
-
 Com o aumento da demanda por energias limpas e renováveis, como a solar, em residências e indústrias, a necessidade de maximizar a captação de energia solar tornou-se fundamental. No entanto, os sistemas de painéis solares fixos muitas vezes não conseguem se adaptar adequadamente às variações na incidência solar ao longo do dia. Para enfrentar esse desafio, propõe-se um sistema embarcado para automatizar o ajuste da inclinação do painel solar, garantindo uma ótima captação de energia solar em todas as horas do dia. Esse ajuste acompanha o movimento do sol, mantendo-o perpendicular com os raios incidentes, maximizando assim sua geração.
 
 O sistema funciona através da detecção da intensidade e direção da luz solar por meio de sensores especializados. Esses sensores fornecem dados da intensidade luminosa, permitindo que uma unidade de controle calcule o ângulo ideal de inclinação do painel solar. Com base nesse cálculo, algoritmos de controle ajustam a inclinação do painel solar em tempo real, garantindo que este esteja sempre posicionado de forma ótima para captar a máxima quantidade de energia solar possível.
@@ -28,9 +21,6 @@ Além de contribuir para o avanço da tecnologia renovável, esse sistema oferec
 
 
 ## Descrição Funcional
-> A descrição funcional do projeto é a principal entrega do E1 e pode ser realizada neste próprio arquivo Markdown,
-> com links para diagramas ou outros arquivos que estejam no próprio repositório.
-
 O sistema opera em tempo real, monitorando com precisão a intensidade da luz solar incidente sobre o painel solar em busca da angulação ideal para maximizar a geração de energia. Isso é alcançado por meio do controle de um servo motor, cuidadosamente ajustado para posicionar os painéis de forma a otimizar sua exposição aos raios solares. O servo motor, conectado aos painéis através de um eixo, oferece ajustes dinâmicos e contínuos, garantindo que eles permaneçam sempre na posição mais vantajosa em relação à incidência solar, idealmente perpendicular aos raios solares.
 
 O monitoramento da incidência solar é centralizado no dispositivo Inversor do sistema, que não só fornece informações em tempo real sobre a geração de energia, mas também atua como o principal ponto de comunicação para o controle do sistema. Além disso, um sensor fotossensível é incorporado como uma camada adicional de segurança e redundância. Esse sensor garante uma confiabilidade ainda maior na medição da intensidade da luz solar, assegurando uma operação robusta e resiliente do sistema mesmo em condições adversas.
@@ -44,7 +34,6 @@ Em resumo, esse sistema integrado oferece um controle preciso e adaptativo da in
 Figura 1. Representação do sistema embarcado - Painéis solares de inclinação adaptável.
 
 ### Funcionalidades
-> Detalhe todas as tarefas que o sistema será capaz de executar
 1. _Sun tracking_: o sistema irá monitorar a posição solar usando sensores e ajustando o ângulo de inclinação dos painéis solares para garantir a maior exposição aos raios incidentes.
 2. Controle da angulação dos painéis solares.
 3. Verificação de luminosidade: verifica se a luminosidade está acima de um _threshold_ para permitir a operação.
@@ -59,8 +48,6 @@ Figura 1. Representação do sistema embarcado - Painéis solares de inclinaçã
 
 
 ### Configurabilidade
-> Detalhe, se houver, todas as possíveis configurações do circuito e todos os pontos de alteração da configuração.
-
 1. Faixa de ângulo de varredura: define os valores máximos e mínimos do ângulo que os painéis podem ser inclinados.
 2. Frequência do ajuste da posição: define de quanto em quanto tempo o sistema irá realizar os ajustes de inclinação.
 3. Limite mínimo de luminosidade para o sistema operar  para evitar desperdício de energia.
@@ -71,9 +58,6 @@ Figura 1. Representação do sistema embarcado - Painéis solares de inclinaçã
 
 
 ### Eventos
-> Quais eventos o sistema deve tratar?
-> Se aplicável, classifique os eventos que são periódicos (procure especificar a periodicidade) e os que são não-periódicos
-> (qual o tempo mínimo entre dois eventos sucessivos)?
 - Eventos periódicos:
 1. Período útil de geração de energia (diário, a cada 24 horas): o período do dia durante o qual o sistema está ativo para captar energia solar e gerar eletricidade. Começando ao nascer do sol e terminando ao pôr do sol, é o intervalo em que a intensidade da luz solar é suficientemente alta para uma produção eficaz de energia.
 2. Mudança da posição do sol (diário, a cada poucos minutos - constante): ao longo do dia, a posição do sol no céu se desloca gradualmente devido à rotação da Terra. Essa mudança afeta a quantidade de luz solar que atinge os painéis solares. O sistema deve ajustar a inclinação dos painéis para maximizar a absorção de energia solar, geralmente mantendo-o perpendicular aos raios incidentes.
@@ -87,7 +71,6 @@ Figura 1. Representação do sistema embarcado - Painéis solares de inclinaçã
 9. Falhas no sistema (imprevisível, dependendo da natureza e gravidade da falha): ocorrência de problemas ou mau funcionamento no sistema solar que exigem intervenção técnica. Isso pode incluir falhas de hardware, erros de software ou interrupções na geração de energia.
 
 ### Tratamento de Eventos
-> Qual comportamento o sistema deve ter para tratar corretamente cada evento?
 1. Período útil de geração de energia: 
     - Iniciar automaticamente os painéis solares e o sistema de geração de energia ao nascer do sol e ajustar a inclinação dos painéis solares ao longo do dia para acompanhar o movimento do sol, de modo a maximizar a captação de energia.
     - Desativar o sistema de busca pelo ângulo ótimo no pôr do sol e monitoramente da produção de energia para evitar a consumo de energia desnecessária durante a noite.
@@ -120,16 +103,6 @@ Figura 1. Representação do sistema embarcado - Painéis solares de inclinaçã
 
 
 ## Descrição Estrutural do Sistema
-> Junto com a descrição do comportamento do sistema, deve-se especificar, em nível de bloco ou sistema, a estrutura necessária 
-> para captar os eventos do mundo externo, para alojar e processar o programa de tratamento de eventos, e para atuar sobre o mundo externo.
->
-> Para essa descrição recomenda-se a criação de diagramas de blocos.
-> Nesse diagrama, devem ser destacados os blocos funcionais que compõem o sistema, incluindo uma síntese das funcionalidades de cada bloco.
-> Além disso, deve-se esclarecer também o relacionamento entre estes blocos, incluindo os principais sinais de comunicação entre
-> os blocos de forma a assegurar a execução de todas as tarefas que o sistema deve realizar.
-> 
-> Você sabia? Ferramentas como o `draw.io` permitem integração com o Github.
-
 O sistema possuirá um painel ou grupo de painéis solares ligados a um eixo de rotação conectado a um servo motor industrial responsável por permitir a dinâmica do sistema. Além disso, deve possuir sensores fotossensíveis para interpretar a luminosidade e a luz incidente nos painéis, possuir um microcontrolador com comunicação sem fio para que consiga enviar e receber dados de um usuário além de interpretar o algoritmo de controle do sistema. Precisa-se de uma bateria que garanta que o sistema funcione mesmo com quedas de energia.
 
 Em primeiro lugar haverá a inicialização do sistema onde os componentes de sensoriamento (sensores fotosenssíveis) e do servo motor irão ser ligados e calibrados, assim como os componentes de comunicação. Logo após, o sistema irá realizar uma checagem dos componentes verificando algum erro ou condições extremas de clima. Caso haja algum problema, o sistema irá se manter em uma posição segura definida pelo usuário, além de comunicá-lo via comunicação _wireless_. O sistema deve checar também se sua fonte de alimentação é sua bateria interna de _backup_. Caso afirmativo, ele também deve comunicar ao usuário a falta de energia.
@@ -144,9 +117,47 @@ O diagrama das atividades podem ser vistas pela Figura 2. abaixo.
 
 Figura 2. Diagrama de blocos dos processos realizados pelo sistema.
 
-## Referências
-> Seção obrigatória. Inclua aqui referências utilizadas no projeto.
 
+## Especificações (⚠️ NOVO ⚠️)
+
+### Especificação Estrutural
+
+> (Se preferir, adicione um link para o documento de especificação estrutural)
+> 
+> Entende-se por estrutural a descrição tanto das características elétricas e temporais como das restrições físicas de cada bloco funcional.
+> Nessa etapa do projeto, ainda não será solicitado o diagrama elétrico mas espera-se que já estejam identificados os componentes e circuitos integrados propostos
+> para implementação do sistema embarcado proposto.
+> 
+> Como o projeto de um sistema embarcado é centralizado nas tarefas, recomenda-se iniciar com a definição dos periféricos de entrada e saída (atuadores e/ou sensores) apropriados para o
+> sistema. Pode ser necessário definir um endereço distinto para cada um deles. 
+> Este endereço será utilizado pela unidade micro-controladora para acessá-los tanto para leitura como para escrita.
+
+> Nesta etapa do projeto espera-se que a unidade micro-controladora seja definida.
+> Tendo definidos os periféricos e a memória, é possível projetar um decodificador de endereços
+> que converte o endereço referenciado no programa em sinal *Chip Select – CS* do dispositivo
+> correspondente, habilitando-o para realizar um ciclo de leitura ou de escrita.
+> 
+> Nesta etapa do projeto espera-se que sejam identificada também a eventual necessidade do projeto de circuitos de interface para os periféricos do projeto.
+> Assim, devem ser incluídos na especificação, se necessário:
+> - conversores AD e DA;
+> - padrões de comunicação a serem adotados;
+> - circuitos de sincronização de sinais temporais.
+> 
+> Finalmente, deve-se especificar as restrições físicas e ambientais de funcionamento do circuito, tais como limites mecânicos
+> (altura, largura, profundidade) e limites de dissipação térmica.
+
+### Especificação de Algoritmos 
+
+> (Se preferir, adicione um link para o documento de especificação de algoritmos).
+> 
+> Deve ser elaborado para CADA evento o algoritmo de tratamento deste evento. Com base no
+> tamanho de cada algoritmo, estima-se o tamanho de memória necessária para armazenar todos
+> os programas e os dados associados. Isso permitirá especificar a memória a ser utilizada e o
+> espaço onde serão armazenados os programas. O algoritmo de tratamento de evento pode
+> ser representado graficamente por um fluxograma. Recomenda-se usar símbolos gráficos consistentes 
+> com a norma internacional ISO 1028-1973 e IS0 2972-1979.
+
+## Referências
 [1] Silva, Marcelo Allan de Melo. Projeto de suporte com inclinação variável para placas solares residenciais. 2023. 70 f. Trabalho de Conclusão de Curso (Graduação em Engenharia Mecânica) - Departamento de Engenharia Mecânica, Centro de Tecnologia e Geociências, Universidade Federal de Pernambuco, Recife, 2023. Disponível em: https://repositorio.ufpe.br/handle/123456789/50687. Acesso em: 30 de março de 2024.
 
 [2] Ferronato, Régis; Severo, Tiago Cassol. Análise do Rendimento de um Módulo Fotovoltaico com Suporte de Inclinação Variável. In: Congresso Internacional de Tecnologias para o Meio Ambiente, 6., Bento Gonçalves, RS, Brasil, 10-12 de abril de 2018. Bento Gonçalves: UCS, 2018. Disponível em: https://siambiental.ucs.br/congresso/getArtigo.php?id=490&ano=_sexto. Acesso em: 30 de março de 2024.
