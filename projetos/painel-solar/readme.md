@@ -122,7 +122,7 @@ Figura 2. Diagrama de blocos dos processos realizados pelo sistema.
 
 ### Especificação Estrutural
 
-![Design sem nome (1)](https://github.com/nathaliagondo/ea075-2024.1/assets/165518028/c0a803ee-8ad6-4f72-9c39-f937566df611)
+![Design sem nome (2)](https://github.com/nathaliagondo/ea075-2024.1/assets/165518028/4711b7c9-a8d3-4cb1-ba94-69bf80c84103)
 
 Figura 3. Diagrama estrutural do sistema.
 
