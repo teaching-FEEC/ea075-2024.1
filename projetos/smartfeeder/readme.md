@@ -95,7 +95,7 @@ a gente usa só um no reservatório e muda a frequência pra saber quando fechar
 pensar se vamos quere medir sobra:
 
 Sistema dispersor com motor e engrenagem inteligente com reversão automática, que impede a ração de ficar presa.
-Microprocessador: ESP32, completinho, bluettoth, wifi
+Microprocessador: ESP32, completinho, bluetooth, wifi
 ---- 
 
 
