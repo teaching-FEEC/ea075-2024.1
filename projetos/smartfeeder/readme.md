@@ -19,50 +19,50 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 ## Descrição Funcional
 O projeto contempla dois funcionamentos distintos: Comedouro e Bebedouro, assim, cada função foi tratada separadamente, pois independem em funcionamento.
 ### Funcionalidades
-> O projeto tem como principais funcionalidades:
->- Alimentação de pets através do ajuste wireless (pelo usuário - dono) dos horários e quantidades das porções diárias que fazem parte da dieta do mesmo;
->- Medição do nível do reservatório de comida e na tigela de alimentação (cheia vs. vazia)
->- Mecanismo de dispenser da comida, com volume/massa regulável;
->- Aviso ao usuário (via mobile) quando o nível de comida no reservatório estiver baixo;
->- Monitoramento da alimentação do pet a fim de acompanhar o rendimento da ração.
->- Monitoramento da ingestão de água
->- Mecanismo de enchimento da vasilha de água do pet.
+ O projeto tem como principais funcionalidades:
+- Alimentação de pets através do ajuste wireless (pelo usuário - dono) dos horários e quantidades das porções diárias que fazem parte da dieta do mesmo;
+- Medição do nível do reservatório de comida e na tigela de alimentação (cheia vs. vazia)
+- Mecanismo de dispenser da comida, com volume/massa regulável;
+- Aviso ao usuário (via mobile) quando o nível de comida no reservatório estiver baixo;
+- Monitoramento da alimentação do pet a fim de acompanhar o rendimento da ração.
+- Monitoramento da ingestão de água
+- Mecanismo de enchimento da vasilha de água do pet.
 
 ### Configurabilidade
-> Quanto a configurabilidade do sistema, o usuário será responsável pera personalização do sistema de acordo com suas necessidades, definindo, via mobile, quantas porções fazem parte da dieta do pet, definindo tanto horários para acionamento do dispenser quanto a quantidade de cada porção.
+Quanto a configurabilidade do sistema, o usuário será responsável pera personalização do sistema de acordo com suas necessidades, definindo, via mobile, quantas porções fazem parte da dieta do pet, definindo tanto horários para acionamento do dispenser quanto a quantidade de cada porção.
 
 
 ### Eventos
-> Quanto aos eventos, enquanto o sistema estiver em configuração, a alimentação será interrompida. Deverá então ser definido os horários para acionamento do dispenser e as quantidades a serem liberadas em cada uma. A partir disso o sistema irá periodicamente acionar a alimentaçãp do pet.
-> Deverá também acionar avisos distintos ao usuário via mobile quando o reservatório estiver com sua capacidade abaixo do limitdefinido pelo usuário e quando a tigela de alimentação estiver vazia, contabilizando uma refeição do animal.
-> Quando o sensor detectar que o nível do bebedouro estiver abaixo de um determinado nível de BIAS_VAZIO, ele enche o pote com água até um nível BIAS_CHEIO.
+Quanto aos eventos, enquanto o sistema estiver em configuração, a alimentação será interrompida. Deverá então ser definido os horários para acionamento do dispenser e as quantidades a serem liberadas em cada uma. A partir disso o sistema irá periodicamente acionar a alimentaçãp do pet.
+Deverá também acionar avisos distintos ao usuário via mobile quando o reservatório estiver com sua capacidade abaixo do limitdefinido pelo usuário e quando a tigela de alimentação estiver vazia, contabilizando uma refeição do animal.
+Quando o sensor detectar que o nível do bebedouro estiver abaixo de um determinado nível de BIAS_VAZIO, ele enche o pote com água até um nível BIAS_CHEIO.
 
 
 ### Tratamento de Eventos
 Os comportamentos para tratamento dos eventos descritos serão:
-> *COMEDOURO*
-> - Detectou reservatório vazio
-> - Detectou reservatório com cheio após configurações setadas
-> - Relógio comparador chegou ao horário definido para refeição
-> - Detectou prato vazio no horário setado
-> - Detectou prato com sobra no horário setado
-> - Recebeu configuração do horário e de porção: aciona periodicamente a alimentação do animal através do acionamento do dispenser.
+ *COMEDOURO*
+ - Detectou reservatório vazio
+ - Detectou reservatório com cheio após configurações setadas
+ - Relógio comparador chegou ao horário definido para refeição
+ - Detectou prato vazio no horário setado
+ - Detectou prato com sobra no horário setado
+ - Recebeu configuração do horário e de porção: aciona periodicamente a alimentação do animal através do acionamento do dispenser.
 
-> *BEBEDOURO*
-> - Detecta nível de água baixo e enche
-> - Detecta nível alto de água e para de encher
+ *BEBEDOURO*
+ - Detecta nível de água baixo e enche
+ - Detecta nível alto de água e para de encher
 
 ## Descrição Estrutural do Sistema
 Os dois sistemas (bebedouro e comedouro) descritos:
-> - Função de Bebedouro:
+ - Função de Bebedouro:
 <img src="\bebedouro.drawio.png">
 
-> - Função de Comedouro:
+ - Função de Comedouro:
 <img src="\comedouro.drawio.png">
 
 ## Referências
-> MADOG. Comedouro Automático. Disponível em: https://www.madog.com.br/MLB-2161381341-comedouro-automatico-inteligente-madog-com-gravador-voz-_JM
-> 
-> DOGIS. Alimentador Automático. Disponível em: https://www.dogis.com.br/som-e-video/alimentador-automatico-pet-dogis-da010br-com-camera-full-hd-wi-fi-aplicativo-capacidade-de-6-litros?parceiro=4972&gad_source=1&gclid=CjwKCAjwtqmwBhBVEiwAL-WAYek92ZZTHrK0SYdxBEBao9r93Kz1aHOxFH06iLSiU2fGpBTl1r9t4hoCixwQAvD_BwE
->
-> WEASY. Weasy Oasis. Disponível em: https://www.weasy.com.br/products/weasy-oasis?variant=32277452783695&currency=BRL&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&gad_source=1&gclid=Cj0KCQjw2a6wBhCVARIsABPeH1sAXLDyqX-aO8CgqyUsDRRZeY-H1G8rfBFdN8DTA2uM9PdB25bSHzEaAvQEEALw_wcB
+MADOG. Comedouro Automático. Disponível em: https://www.madog.com.br/MLB-2161381341-comedouro-automatico-inteligente-madog-com-gravador-voz-_JM
+ 
+DOGIS. Alimentador Automático. Disponível em: https://www.dogis.com.br/som-e-video/alimentador-automatico-pet-dogis-da010br-com-camera-full-hd-wi-fi-aplicativo-capacidade-de-6-litros?parceiro=4972&gad_source=1&gclid=CjwKCAjwtqmwBhBVEiwAL-WAYek92ZZTHrK0SYdxBEBao9r93Kz1aHOxFH06iLSiU2fGpBTl1r9t4hoCixwQAvD_BwE
+
+WEASY. Weasy Oasis. Disponível em: https://www.weasy.com.br/products/weasy-oasis?variant=32277452783695&currency=BRL&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&gad_source=1&gclid=Cj0KCQjw2a6wBhCVARIsABPeH1sAXLDyqX-aO8CgqyUsDRRZeY-H1G8rfBFdN8DTA2uM9PdB25bSHzEaAvQEEALw_wcB
