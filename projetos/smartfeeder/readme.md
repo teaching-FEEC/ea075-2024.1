@@ -79,9 +79,11 @@ Talvez dupla fonte de energia com pilhas pra se você viajar e ter queda de ener
 ------
 
 #BEBEDOURO
+
 Para garantir que o bebedouro funcione corretamente, vamos implementar um sensor de nível que pode detectar quando o nível da água está abaixo de um valor específico (chamado de BIAS). Isso nos permite monitorar o consumo de água do seu animal de estimação ao longo do tempo, dados que estarão disponíevis no aplicativo que integra o conjunto de funcionalidades do *Smart Feeder*. O controle do enchimento do bebedouro será feito por uma boia de nível, que estará conectada diretamente a uma fonte de água, como uma torneira. Além disso, o sistema incluirá um filtro de carvão ativo para garantir que a água fornecida ao seu animal seja de alta qualidade.
 
-#Comedouro
+#COMEDOURO
+
 Já no esquemático do comedouro, são implementados dois sensores de pressão:
 - 1 sensor localizado no reservatório para aferir a massa de ração disponível.
   
