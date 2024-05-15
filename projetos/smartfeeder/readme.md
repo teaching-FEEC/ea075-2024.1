@@ -69,9 +69,11 @@ Esse produto consiste estruturalmente em um reservatório de comida acoplado a u
 - Diâmetro: 25 cm
 
 Para o armazenamento da ração, contamos com um tanque de 6 L (aproximadamente 3kg de ração), com as dimensões:
-Comprimento: 21,5 cm
-Largura: 21,5 cm
-Altura: 38 cm
+- Comprimento: 21,5 cm
+  
+- Largura: 21,5 cm
+  
+- Altura: 38 cm
 
 Para a alimentação do dispositivo, contamos com um adaptador AC a ser conectado em uma tomada. 
 ----- 
