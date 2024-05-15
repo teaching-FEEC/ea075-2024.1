@@ -63,7 +63,9 @@ Os dois sistemas (bebedouro e comedouro) descritos:
 ## Especificação Estrutural
 O sistema proposto para o *Smart Feeder* é composto por dois módulos paralelos de funcionamento; um da função de bebedouro e outro de comedouro.
 Esse produto consiste estruturalmente em um reservatório de comida acoplado a um filtro d'água dois potes de 1,2 L, em formato circular com as dimensões: 
+
 - Altura: 9 cm
+
 - Diâmetro: 25 cm
 
 Para o armazenamento da ração, contamos com um tanque de 6 L (aproximadamente 3kg de ração), com as dimensões:
@@ -82,7 +84,9 @@ Para garantir que o bebedouro funcione corretamente, vamos implementar um sensor
 #Comedouro
 Já no esquemático do comedouro, são implementados dois sensores de pressão:
 - 1 sensor localizado no reservatório para aferir a massa de ração disponível.
+  
 - 1 sensor localizado no pratinho, de forma a medir a ração que foi liberada
+  
 a gente usa só um no reservatório e muda a frequência pra saber quando fechar a portinha de dispersão, já que: porção = medida anterior - medida atual de massa no reservatório
 pensar se vamos quere medir sobra:
 
