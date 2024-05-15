@@ -122,6 +122,10 @@ Figura 2. Diagrama de blocos dos processos realizados pelo sistema.
 
 ### Especificação Estrutural
 
+![Inicializar (1)](https://github.com/nathaliagondo/ea075-2024.1/assets/165518028/584fe041-8eeb-48d1-8bbb-bab746c7555f)
+
+Figura 3. Diagrama estrutural do sistema.
+
 > (Se preferir, adicione um link para o documento de especificação estrutural)
 > 
 > Entende-se por estrutural a descrição tanto das características elétricas e temporais como das restrições físicas de cada bloco funcional.
