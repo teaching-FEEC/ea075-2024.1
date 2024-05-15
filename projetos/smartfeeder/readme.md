@@ -60,9 +60,45 @@ Os dois sistemas (bebedouro e comedouro) descritos:
  - Função de Comedouro:
 <img src="\comedouro.drawio.png">
 
+## Especificação Estrutural
+O sistema proposto para o *Smart Feeder* é composto por dois módulos paralelos de funcionamento; um da função de bebedouro e outro de comedouro.
+Esse produto consiste estruturalmente em um reservatório de comida acoplado a um filtro d'água dois potes de 1,2 L, em formato circular com as dimensões: 
+- Altura: 9 cm
+- Diâmetro: 25 cm
+
+Para o armazenamento da ração, contamos com um tanque de 6 L (aproximadamente 3kg de ração), com as dimensões:
+Comprimento: 21,5 cm
+Largura: 21,5 cm
+Altura: 38 cm
+
+Para a alimentação do dispositivo, contamos com um adaptador AC a ser conectado em uma tomada. 
+----- 
+Talvez dupla fonte de energia com pilhas pra se você viajar e ter queda de energia o pet ser alimentado
+------
+
+#BEBEDOURO
+Para garantir que o bebedouro funcione corretamente, vamos implementar um sensor de nível que pode detectar quando o nível da água está abaixo de um valor específico (chamado de BIAS). Isso nos permite monitorar o consumo de água do seu animal de estimação ao longo do tempo, dados que estarão disponíevis no aplicativo que integra o conjunto de funcionalidades do *Smart Feeder*. O controle do enchimento do bebedouro será feito por uma boia de nível, que estará conectada diretamente a uma fonte de água, como uma torneira. Além disso, o sistema incluirá um filtro de carvão ativo para garantir que a água fornecida ao seu animal seja de alta qualidade.
+
+#Comedouro
+Já no esquemático do comedouro, são implementados dois sensores de pressão:
+- 1 sensor localizado no reservatório para aferir a massa de ração disponível.
+- 1 sensor localizado no pratinho, de forma a medir a ração que foi liberada
+a gente usa só um no reservatório e muda a frequência pra saber quando fechar a portinha de dispersão, já que: porção = medida anterior - medida atual de massa no reservatório
+pensar se vamos quere medir sobra:
+
+Sistema dispersor com motor e engrenagem inteligente com reversão automática, que impede a ração de ficar presa.
+Microprocessador: ESP32, completinho, bluettoth, wifi
+---- 
+
+
 ## Referências
-MADOG. Comedouro Automático. Disponível em: https://www.madog.com.br/MLB-2161381341-comedouro-automatico-inteligente-madog-com-gravador-voz-_JM
- 
+
+COBASI. Comedouro Alumínio Pesado. Disponível em: https://www.cobasi.com.br/comedouro-aluminio-pesado-nf-pet-3936367/p?idsku=936413&gad_source=1
+
 DOGIS. Alimentador Automático. Disponível em: https://www.dogis.com.br/som-e-video/alimentador-automatico-pet-dogis-da010br-com-camera-full-hd-wi-fi-aplicativo-capacidade-de-6-litros?parceiro=4972&gad_source=1&gclid=CjwKCAjwtqmwBhBVEiwAL-WAYek92ZZTHrK0SYdxBEBao9r93Kz1aHOxFH06iLSiU2fGpBTl1r9t4hoCixwQAvD_BwE
+
+MADOG. Comedouro Automático. Disponível em: https://www.madog.com.br/MLB-2161381341-comedouro-automatico-inteligente-madog-com-gravador-voz-_JM
+
+NINHO DO PET. Comedouro Automático Eletrônico para Cães e Gatos. Disponível em: https://www.ninhodopet.com.br/produtos/comedouro-automatico-eletronico-para-caes-e-gatos/
 
 WEASY. Weasy Oasis. Disponível em: https://www.weasy.com.br/products/weasy-oasis?variant=32277452783695&currency=BRL&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&gad_source=1&gclid=Cj0KCQjw2a6wBhCVARIsABPeH1sAXLDyqX-aO8CgqyUsDRRZeY-H1G8rfBFdN8DTA2uM9PdB25bSHzEaAvQEEALw_wcB
