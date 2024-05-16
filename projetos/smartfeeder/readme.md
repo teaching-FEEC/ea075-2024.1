@@ -16,7 +16,7 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 O SmartFeeder representa uma revolução na forma como cuidamos dos nossos pets. O dispenser de comida para animais de estimação é controlado por um aplicativo intuitivo, proporcionando conveniência e tranquilidade para os donos preocupados com a alimentação de seus amigos peludos. Com o SmartFeeder, é possível programar horários precisos de alimentação, garantindo que o animal receba suas refeições na hora certa, mesmo quando o dono estiver longe de casa. Seja durante o período de trabalho ou  durante uma viagem, pode-se monitorar e controlar a alimentação do seu pet remotamente, garantindo que ele esteja sempre bem alimentado e saudável. Além disso, uma série de recursos inteligentes são pensados para auxiliar no monitoramento do seu pet: como notificações em tempo real sobre alimentação, controle preciso das porções servidas e até mesmo qual a massa específica consumida pelo pet. Além disso, o SmartFeeder possui também um vasilhame d'água, com reposição automática, para que seu pet tenha sempre água para beber.
 
 ## O Produto
-<img src="\logo.png">
+<img src="\logo1.png">
 <img src="\esboco.png">
 
 ## Descrição Funcional
