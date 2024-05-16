@@ -102,7 +102,7 @@ Para a escolha do sensor de temperatura para o circuito que estamos planejando i
 
 Destarte, foram analisadas três opções de sensores: Termistor NTC, Termopar e Termorresistência de Platina (PT100). Assim, optou-se pelo Termistor NTC devido a sua compatibilidade com a case do MOSFET, sua conveniência de montagem através de furos (through-hole), simplicidade, custo relativamente baixo, resposta rápida e adequação para medições de temperatura em dispositivos eletrônicos como MOSFETs.
 
-Ademais, a priorização do sensor supracitado em relação aos outros supramencionados está associada a diversos fatores, visto que o Termopar, por exemplo, apesar de ser robusto e capaz de medir temperaturas extremas, necessita de circuitos de amplificação e compensação de junção fria para assegurar a precisão, além de ser mais complexo e, possivelmente, mais caro que o necessário. A Termorresistência de Platina (PT100), por outro lado, embora ofereça alta previsão e estabilidade a longo prazo, seu custo elevado, necessidade de circuitos de excitação mais complexos e resposta mais lenta, a tornaram menos atraente para esta aplicação específica.
+Ademais, a priorização do sensor supracitado em relação aos outros supramencionados está associada a diversos fatores, visto que o Termopar, por exemplo, apesar de ser robusto e capaz de medir temperaturas extremas, necessita de circuitos de amplificação e compensação de junção fria para assegurar a precisão, além de ser mais complexo e, possivelmente, mais caro que o necessário. A Termorresistência de Platina (PT100), por outro lado, embora ofereça alta precisão e estabilidade a longo prazo, seu custo elevado, necessidade de circuitos de excitação mais complexos e resposta mais lenta, a tornaram menos atraente para esta aplicação específica.
 
 Portanto, o Termistor NTC foi a escolha ideal, proporcionando simplicidade, custo relativamente baixo, resposta rápida e adequação para medições de temperatura em dispositivos eletrônicos como MOSFETs. Dito isso, foi optado pelo Termistor NTC. O modelo escolhido, que ainda pode estar sujeito a mudanças, EPCOS B57560G103F.
 
@@ -116,7 +116,9 @@ Em relação aos capacitores, para as demandas do projeto foram escolhidos dois 
 
  Além disso, são capazes de realizar a filtragem de ruídos e picos de tensão indesejados que possam ser introduzidos na linha de alimentação .E, também são comumente encontrados, relativamente compactos em tamanho e disponíveis em uma ampla variedade de faixas de tensão. Logo, são adequados para a aplicação e facilmente integrados ao projeto eletrônico. O capacitor escolhido, visando uma tensão de 32V iniciais para testes foi ECW-F2105JB, mas ainda podendo estar sujeito a mudanças.
 
+### Potênciometros
 
+Para mensurar a tensão e ajustar a frequência em seu projeto, foi optado pela escolha do potenciômetro Bourns 3296W Series, sua escolha foi motivada por diversos fatores, como 
 
 ## Referencias
 
