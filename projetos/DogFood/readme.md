@@ -61,6 +61,8 @@ O sistema deve tratar sobre os seguintes eventos/inputs:
 - Liberar comida pelo menos 1 vez ao dia - sistema de segurança para caso evento principal não funcionar - EVENTO 2 e EVENTO 5
 - Recolher a ração restante no pote SE passado tempo de recolhimento de restos de ração - EVENTO 6
 
+FLUXOGRAMA ALGORITMO : https://miro.com/app/board/uXjVKGq-ktg=/?share_link_id=880592108948
+
 
 ## Referências
 https://www.google.com/search?sca_esv=7b4f5aad248322ac&sca_upv=1&rlz=1C1GCEB_enBR1053BR1053&q=alimentador+de+pet+automatico&tbm=isch&source=lnms&prmd=isvnbmtz&sa=X&ved=2ahUKEwiAr_nVmZqFAxUZppUCHSt9C3cQ0pQJegQIGBAB&biw=1280&bih=559&dpr=3
