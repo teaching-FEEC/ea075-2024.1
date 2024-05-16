@@ -93,16 +93,17 @@ Sistema de Alerta de Fumaça: Gerará um sinal de alerta ao usuário e aos bombe
 
 ![image](https://github.com/EndlessLight9/ea075-2024.1-dolc/assets/165411886/ab8c8509-dfe5-456d-87a2-f8170f2da8da)
 
-Sistema de Segurança: O sistema será composto por sensores de presenças que estarão nos comodos da casa e uma interface fisica na parede para se ligar o sistema, após o sistema ser ativado os sensores estrão ativos, após receber uma interrupção um alerta sonoro será feito por meio de um sistema de som na casa, e uma mensagem via internete será enviada para o usuário da residencia. 
+Sistema de Segurança: Este sistema é composto por sensores de presença distribuídos pelos cômodos da casa, acompanhados por uma interface física na parede para a ativação. Após a ativação, os sensores entram em modo de vigilância. Quando uma interrupção é detectada, um alerta sonoro é ativado por meio do sistema de som da residência, e uma notificação é enviada via internet para o usuário.
 
-Sistema de Controle de temperatura: O sistema será composto por sensores de temperatura no qual estarão localizados nos comodos, uma faixa de temperatura poderá ser escolhida pelo usuário por uma interface fixa, os sensores iráo ler a temperatura dos comodos e comparar com a faixa escolhida pelo usuário, assim será ligado ou o aquecedor ou o ar-condicionado dependendo da temperatura lida em relação a faixa escolhida, após a temperatura atingir a faixa escolhida pelo usuário o sistema irá desligar o ar-condicionado ou o aquecedor. 
+Sistema de Controle de Temperatura: Este sistema é composto por sensores de temperatura localizados nos diferentes cômodos da casa. O usuário pode definir uma faixa de temperatura desejada através de uma interface fixa. Os sensores monitoram constantemente a temperatura ambiente e, ao detectarem uma variação em relação à faixa definida, ativam o aquecedor ou o ar-condicionado conforme necessário. Uma vez que a temperatura atinge a faixa desejada, o sistema desliga automaticamente o dispositivo de climatização.
 
-Sistema de Alerta de Gâs: O sistema será instalado de preferéncia na cozinha e estrá sempre ativo, após ser detectado uma quantidade elevada de gás, o sistema atuará enviando um alerta para o usuário e emitindo um pequeno sinal sonoro. 
 
-Sistema de Alerta de Fumaça: O sistema será intalado em todos os comodos e estrá sempre ativo, após ser detectado uma quantidade elevada de fumaça o sistema emitira um sinal sonoro, e irá alertar os bombeiros e o usuário.
+Sistema de Alerta de Gás: Este sistema é preferencialmente instalado na cozinha e permanece sempre ativo. Quando uma concentração elevada de gás é detectada, o sistema emite um alerta para o usuário e aciona um sinal sonoro discreto.
 
-Todos os sistemas serão controlados por um microcontrolador sendo a definir se será utilizado o Arduino ou o ESP32.
+Sistema de Alerta de Fumaça: Este sistema é instalado em todos os cômodos e permanece permanentemente ativo. Após detectar uma quantidade elevada de fumaça, o sistema emite um sinal sonoro audível e simultaneamente alerta os bombeiros e o usuário.
 
+
+Todos esses sistemas são controlados por um microcontrolador, com a escolha entre Arduino ou ESP32 a ser determinada.
 
 > 
 
