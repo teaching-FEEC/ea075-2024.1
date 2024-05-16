@@ -43,25 +43,25 @@ Sistema de Alerta de Fumaça: Detector de fumaça na casa com ligação automát
 ### Configurabilidade
 
 
-Sistema de Segurança: Sistema ligado ou desligado mediante vontade do usuário.
+Sistema de Segurança: O usuário tem controle total sobre a ativação ou desativação do sistema conforme sua vontade.
 
-Sistema de Controle de temperatura: Sistema ligado ou desligado com especificações estabelecidas pelo usuário (Por exemplo, limiares de temperatura, horário).
+Sistema de Controle de Temperatura: O usuário pode definir as especificações de ligar ou desligar o sistema, como limiares de temperatura ou horários específicos.
 
-Sistema de Alerta de Gâs: Ligado permanentemente
+Sistema de Alerta de Gás: Este sistema permanece permanentemente ligado para detectar qualquer presença de gás.
 
-Sistema de Alerta de Fumaça: Ligado permanentemente
+Sistema de Alerta de Fumaça: Da mesma forma, este sistema também permanece permanentemente ligado para detectar qualquer indício de fumaça.
 
 
 ### Eventos
 
 
-Sistema de Segurança: Evento não periodico. Caso o sistema de segurança  esteja ligado, se o sensor de presença for ativado, gera uma interrupção.
+Sistema de Segurança : Em eventos não periódicos, caso o sistema de segurança esteja ativado, a ativação do sensor de presença gera uma interrupção.
 
-Sistema de Controle de temperatura: Evento não periodico. Caso o sistema de controle de temperatura esteja ligado, ele detectará temperaturas estabelecidas pelo usuário e agirá caso a temperatura esteja fora do limiar.
+Sistema de Controle de Temperatura : Em eventos não periódicos, se o sistema de controle de temperatura estiver ativo, ele monitora as temperaturas definidas pelo usuário e toma medidas se a temperatura estiver fora dos limites estabelecidos.
 
-Sistema de Alerta de Gâs: Evento não periodico. Gera interrupção caso decetar um nivel elevado de gâs
+Sistema de Alerta de Gás : Em eventos não periódicos, uma interrupção é gerada se for detectado um nível elevado de gás pelo sistema de alerta de gás.
 
-Sistema de Alerta de Fumaça: Evento não periodico. Gera interrupção caso decetar um nivel elevado de fumaça
+Sistema de Alerta de Fumaça : Em eventos não periódicos, uma interrupção é gerada se for detectado um nível elevado de fumaça pelo sistema de alerta de fumaça.
 
 
 
@@ -71,13 +71,13 @@ Sistema de Alerta de Fumaça: Evento não periodico. Gera interrupção caso dec
 ### Tratamento de Eventos
 
 
-Sistema de Segurança: Após a interrupção, será acionado um alarme sonoro na casa e será avisado aos usuários a detecção de presença não desejada.
+Sistema de Segurança (Prioridade Nível 1): Após a detecção de uma intrusão, um alarme sonoro será ativado na residência e os usuários serão notificados sobre a presença não autorizada.
 
-Sistema de Controle de temperatura: Após a interrupção, agirá de acordos aos niveis de temperatura desejados, podendo ligar o aquecedor ou ar condicionado até chegar no nivel de temperatura desejado.
+Sistema de Controle de Temperatura (Prioridade Nível 4): Após a detecção de uma variação fora dos níveis de temperatura desejados, o sistema ajustará o ambiente conforme necessário, ligando o aquecedor ou o ar condicionado até que a temperatura desejada seja alcançada.
 
-Sistema de Alerta de Gâs: Gerará um sinal de alerta ao usuário.
+Sistema de Alerta de Gás (Prioridade Nível 2): Emitirá um sinal de alerta para os usuários ao detectar a presença de gás.
 
-Sistema de Alerta de Fumaça: Gerará um sinal de alerta ao usuário e aos bombeiros.
+Sistema de Alerta de Fumaça (Prioridade Nível 3): Emitirá um sinal de alerta para os usuários e para os bombeiros ao detectar a presença de fumaça.
 
 
 ## Descrição Estrutural do Sistema
@@ -108,4 +108,7 @@ Todos esses sistemas são controlados por um microcontrolador, com a escolha ent
 > 
 
 ## Referências
+
+https://components101.com/sensors/hc-sr501-pir-sensor (Sensor movimento hc-Sr 501)
+Ideias, pesquisa e depois alteração: indicativo de presença via LED (dois tipos de alarmes), pensar em uma casa para se fazer o projeto ( 2 quartos 1 sala 1 cozinha 1 banheiro e 1 quintal), pesquisar sensores faltantes ( gaz e fumaça, temperatura e microcontrolador), atualizar diagramas de blocos e fazer diagrama funcional, Alterar todo as descrições  
 
