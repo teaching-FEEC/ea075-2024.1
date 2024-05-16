@@ -95,6 +95,13 @@ Comunicação:
 
 [![diagrama.svg editável](/projetos/tennistracker/diagrama.svg)](https://app.diagrams.net/#Hshen-n%2Fea075-2024.1%2Fmain%2Fprojetos%2Ftennistracker%2Fdiagrama.svg#%7B%22pageId%22%3A%2242789a77-a242-8287-6e28-9cd8cfd52e62%22%7D)
 
+| Estado  | Função | 
+|--|--|
+| Desligado  | Neste estado, o produto está totalmente inativo: o LED fica apagado, o sensor fica desabilitado e o microcontrolador entra em modo de baixa potência. A saída deste estado pode se dar em dois casos: (i) se o botão for pressionado, indicando que deseja-se ativar o produto para aquisição de dados; (ii) caso um cabo USB seja conectado, para carregamento ou transferência de dados |
+| Aquisição  | Neste modo, o dispositivo está fazendo sua atividade-fim: adquirindo dados do sensor de movimento e salvando em uma unidade de memória. Para indicar que está ativo, o LED RGB fica verde. E, para mostrar o nível de bateria, o indicador de bateria também fica ligado. Para sair do estado de aquisição, o botão deve ser pressionado, o que leva o produto para o estado 'desligado'  |
+| Carregamento  | Neste estado, um cabo USB está conectado ao produto e a carga da bateria é realizada. Para indicar isto, o led RGB fica em vermelho e o indicador de bateria é atualizado conforme a carga aumenta. |
+| Carregamento + transferência de dados | Neste estado, um cabo USB de dados deve estar conectado ao dispositivo. Nele, os dados da unidade da memória são transmitidos pelo canal USB. Para sinalizar a comunicação, o led RGB fica em azul e, para indicar o carregamento, o indicador de bateria é atualizado conforme a carga aumenta. |
+
 
 ## Referências
 > Seção obrigatória. Inclua aqui referências utilizadas no projeto.
