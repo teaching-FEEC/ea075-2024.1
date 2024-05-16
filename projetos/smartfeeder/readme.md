@@ -75,17 +75,16 @@ Para o armazenamento da ração, contamos com um tanque de 6 L (aproximadamente 
   
 - Altura: 38 cm
 
-Para a alimentação do dispositivo, contamos com um adaptador AC a ser conectado em uma tomada. 
------ 
-Talvez dupla fonte de energia com pilhas pra se você viajar e ter queda de energia o pet ser alimentado
-------
+Alimentação:
+Para garantir a alimentação ininterrupta do dispositivo, oferecemos duas opções. Primeiramente, a fonte principal é um adaptador AC que pode ser facilmente conectado a uma tomada padrão, garantindo uma fonte de energia estável e confiável. Além disso, o dispositivo foi projetado com uma funcionalidade de dupla fonte de energia, permitindo que seja alimentado por pilhas. Esta característica é especialmente útil para situações em que você está quer utilizar o dispositivo em um ambiente sem tomadas, ou em caso de queda de energia, garantindo que seu pet seja alimentado mesmo em circunstâncias adversas.
+Quando o dispositivo está operando com alimentação por pilhas, a capacidade de configuração é desativada, e o último *setup* utilizado é mantido. Essa medida visa preservar a vida útil das pilhas no sistema e assegurar o funcionamento contínuo, mesmo em situações de queda de energia ou falta de conexão Wi-Fi na residência.
+
+Microcontrolador
 
 #BEBEDOURO
-
 Para garantir que o bebedouro funcione corretamente, vamos implementar um sensor de nível que pode detectar quando o nível da água está abaixo de um valor específico (chamado de BIAS). Isso nos permite monitorar o consumo de água do seu animal de estimação ao longo do tempo, dados que estarão disponíevis no aplicativo que integra o conjunto de funcionalidades do *Smart Feeder*. O controle do enchimento do bebedouro será feito por uma boia de nível, que estará conectada diretamente a uma fonte de água, como uma torneira. Além disso, o sistema incluirá um filtro de carvão ativo para garantir que a água fornecida ao seu animal seja de alta qualidade.
 
 #COMEDOURO
-
 Já no esquemático do comedouro, são implementados dois sensores de pressão:
 - 1 sensor localizado no reservatório para aferir a massa de ração disponível.
   
@@ -93,9 +92,9 @@ Já no esquemático do comedouro, são implementados dois sensores de pressão:
   
 a gente usa só um no reservatório e muda a frequência pra saber quando fechar a portinha de dispersão, já que: porção = medida anterior - medida atual de massa no reservatório
 pensar se vamos quere medir sobra:
-
-Sistema dispersor com motor e engrenagem inteligente com reversão automática, que impede a ração de ficar presa.
-Microprocessador: ESP32, completinho, bluetooth, wifi
+-----
+Sistema dispersor com motor.
+Microcontrolador: ESP32, completinho, bluetooth, wifi
 ---- 
 
 
