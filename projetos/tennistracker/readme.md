@@ -104,4 +104,5 @@ Comunicação:
 
 
 ## Referências
-> Seção obrigatória. Inclua aqui referências utilizadas no projeto.
+> Motion Processing Unit – MPU9250 for RTPT https://paulplusx.wordpress.com/2016/03/04/rtpts_mpu/
+> Arduino and MPU6050 Accelerometer and Gyroscope Tutorial https://howtomechatronics.com/tutorials/arduino/arduino-and-mpu6050-accelerometer-and-gyroscope-tutorial/
