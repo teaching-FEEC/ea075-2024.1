@@ -137,6 +137,34 @@ Os dispostivos fixos são torres colocadas ao longo da via, e tem como objetivo 
 > ser representado graficamente por um fluxograma. Recomenda-se usar símbolos gráficos consistentes 
 > com a norma internacional ISO 1028-1973 e IS0 2972-1979.
 
+#### API Comunicação do Módulo Móvel
+
+```
+// Aguarda conexão com alguma torre
+function connect();
+
+// Verifica se a comunicação esta ativa
+function isConnected();
+
+// Envia dados à torre e retorna a resposta dela se existir
+function sendData();
+```
+
+#### API de Comunicação do Módulo Fixo
+
+```
+// Se disponibiliza a receber conexões.
+// Quando uma conexão é estabelecida, a função de callback configurada é
+// chamada pela API, que passa como parâmetro o socket da conexão
+function onConnection(callback);
+
+// 
+function receiveData(callback);
+
+// 
+function onDisconnect(callback);
+```
+
 ## Referências
 
 - Vídeo motivador do projeto: https://www.youtube.com/watch?v=iHzzSao6ypE
