@@ -165,6 +165,71 @@ function receiveData(callback);
 function onDisconnect(callback);
 ```
 
+#### Algoritmos do módulo móvel
+
+```
+function setup() {
+  status = testLCD();
+  if(status == ERROR) {
+    errorBeep();
+    stop();
+  }
+  
+  status = testGPS();
+  if(status == ERROR) {
+    showMessageLCD(INTERNAL_ERROR);
+    errorBeep();
+    stop();
+  }
+
+  status = testCompass();
+  if(status == ERROR) {
+    showMessageLCD(INTERNAL_ERROR);
+    errorBeep();
+    stop();
+  }
+
+  status = testCarCommunication();
+  if(status == ERROR) {
+    showMessageLCD(CAR_COMM_ERROR);
+    errorBeep();
+    stop();
+  }
+}
+
+function main() {
+  setup();
+
+  while(true) {
+    connect();
+
+    showMessageLCD(CONNECTED);
+  
+    while(isConnected()) {
+      velocity = getCarVelocity();
+      gpsData = readGPS();
+      compassData = readCompass();
+   
+      response = sendData(velocity, gpsData, compassData);
+
+      if(response != NONE) {
+        showMessageLCD(TRAFFIC_JAM, response.maxVelocity);
+      }
+      if(response.trafficJam == True) {
+        showMessageLCD(TRAFFIC_JAM, response.maxVelocity);
+        alertBeep();
+      }
+   
+      delay(PERIOD);
+    }
+
+    showMessageLCD(DISCONNECTED);
+  }
+
+  
+}
+```
+
 ## Referências
 
 - Vídeo motivador do projeto: https://www.youtube.com/watch?v=iHzzSao6ypE
