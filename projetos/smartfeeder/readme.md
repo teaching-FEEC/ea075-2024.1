@@ -18,6 +18,9 @@ O SmartFeeder representa uma revolução na forma como cuidamos dos nossos pets.
 ## O Produto
 <div style="text-align: center;">
  <img src="\logo1.png">
+
+
+
  
  <img src="\Smart feeder.png" width="65%" height="65%">
 </div>
