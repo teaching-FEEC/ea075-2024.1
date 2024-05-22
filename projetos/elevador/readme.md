@@ -114,6 +114,8 @@ A fila também necessita ser desenvolvida, para saber se o elevador sobe ou desc
 > (altura, largura, profundidade) e limites de dissipação térmica.
 
 ### Especificação de Algoritmos 
+Para a gestão de fila dos andares, o projeto se baseia no seguinte fluxograma:
+![Fila Elevador](https://github.com/andreglz/ea075-2024.2/assets/106714171/826400fe-9c3d-46b8-b4a3-8262b10adffc)
 
 > (Se preferir, adicione um link para o documento de especificação de algoritmos).
 > 
