@@ -17,7 +17,7 @@ O SmartFeeder representa uma revolução na forma como cuidamos dos nossos pets.
 
 ## O Produto
 <img src="\logo1.png">
-<img src="\Smart feeder.png  width="50%" height="50%"">
+<img src="\Smart feeder.png width="50%"">
 
 ## Descrição Funcional
 O projeto contempla dois funcionamentos distintos: Comedouro e Bebedouro, assim, cada função foi tratada separadamente, pois independem em funcionamento.
