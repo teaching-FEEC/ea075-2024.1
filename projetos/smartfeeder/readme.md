@@ -111,7 +111,7 @@ Já no esquemático do comedouro, são implementados dois sensores de pressão:
 
 <img src="\E2 - algoritmo - água.drawio.png">
 
-*Função Bebedouro*
+*Função Comedouro*
 
 ## Referências
 
