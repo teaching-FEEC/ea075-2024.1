@@ -113,6 +113,8 @@ Já no esquemático do comedouro, são implementados dois sensores de pressão:
 
 *Função Comedouro*
 
+<img src="\E2 - algoritmo - comida.drawio.png">
+
 ## Referências
 
 ALIEXPRESS. ESP32-WROOM-32D. Disponível em: https://pt.aliexpress.com/item/1005001627605230.html?src=google&albch=shopping&acnt=768-202-3196&slnk=&plac=&mtctp=&albbt=Google_7_shopping&isSmbAutoCall=false&needSmbHouyi=false&albcp=19505955113&albag=&trgt=&crea=pt1005001627605230&netw=x&device=c&albpg=&albpd=pt1005001627605230&gad_source=1&aff_fcid=10ff2be7156b4d3e9c7d2f4fb1933b0f-1716399480646-09717-UneMJZVf&aff_fsk=UneMJZVf&aff_platform=aaf&sk=UneMJZVf&aff_trace_key=10ff2be7156b4d3e9c7d2f4fb1933b0f-1716399480646-09717-UneMJZVf&terminal_id=57b0948c82b44f7685bed38bf9809434&afSmartRedirect=y
