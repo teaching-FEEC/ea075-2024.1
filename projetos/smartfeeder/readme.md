@@ -114,6 +114,8 @@ Já no esquemático do comedouro, são implementados dois sensores de pressão:
 
 ## Referências
 
+ALIEXPRESS. ESP32-WROOM-32D. Disponível em: https://pt.aliexpress.com/item/1005001627605230.html?src=google&albch=shopping&acnt=768-202-3196&slnk=&plac=&mtctp=&albbt=Google_7_shopping&isSmbAutoCall=false&needSmbHouyi=false&albcp=19505955113&albag=&trgt=&crea=pt1005001627605230&netw=x&device=c&albpg=&albpd=pt1005001627605230&gad_source=1&aff_fcid=10ff2be7156b4d3e9c7d2f4fb1933b0f-1716399480646-09717-UneMJZVf&aff_fsk=UneMJZVf&aff_platform=aaf&sk=UneMJZVf&aff_trace_key=10ff2be7156b4d3e9c7d2f4fb1933b0f-1716399480646-09717-UneMJZVf&terminal_id=57b0948c82b44f7685bed38bf9809434&afSmartRedirect=y
+
 COBASI. Comedouro Alumínio Pesado. Disponível em: https://www.cobasi.com.br/comedouro-aluminio-pesado-nf-pet-3936367/p?idsku=936413&gad_source=1
 
 DOGIS. Alimentador Automático. Disponível em: https://www.dogis.com.br/som-e-video/alimentador-automatico-pet-dogis-da010br-com-camera-full-hd-wi-fi-aplicativo-capacidade-de-6-litros?parceiro=4972&gad_source=1&gclid=CjwKCAjwtqmwBhBVEiwAL-WAYek92ZZTHrK0SYdxBEBao9r93Kz1aHOxFH06iLSiU2fGpBTl1r9t4hoCixwQAvD_BwE
@@ -125,3 +127,4 @@ NINHO DO PET. Comedouro Automático Eletrônico para Cães e Gatos. Disponível 
 ROBOCORE. ESP32 - WiFi + Bluetooth. Disponível em: https://www.robocore.net/wifi/esp32-wifi-bluetooth
 
 WEASY. Weasy Oasis. Disponível em: https://www.weasy.com.br/products/weasy-oasis?variant=32277452783695&currency=BRL&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&gad_source=1&gclid=Cj0KCQjw2a6wBhCVARIsABPeH1sAXLDyqX-aO8CgqyUsDRRZeY-H1G8rfBFdN8DTA2uM9PdB25bSHzEaAvQEEALw_wcB
+
