@@ -117,6 +117,11 @@ A fila também necessita ser desenvolvida, para saber se o elevador sobe ou desc
 Para a gestão de fila dos andares, o projeto se baseia no seguinte fluxograma:
 ![Fila Elevador](https://github.com/andreglz/ea075-2024.2/assets/106714171/826400fe-9c3d-46b8-b4a3-8262b10adffc)
 
+Os eventos relacionados à abertura e ao fechamento de portas, bem como detecção de falha, sobrecarga e pessoa entre as portas são tratados no fluxograma da seção "_Descrição Estrutural do Sistema_", e tais eventos se relacionam diretamente com este acima no que resumimos pela tomada de decisão "Verificações de segurança ok?". Dessa forma, o algoritmo como um todo deve tratar dos dois fluxogramas, sendo que o primeiro diagrama se encaixa dentro do segundo para simplificarmos a visualização.
+
+Com isso podemos estimar que seria necessário **...............................**
+
+
 > (Se preferir, adicione um link para o documento de especificação de algoritmos).
 > 
 > Deve ser elaborado para CADA evento o algoritmo de tratamento deste evento. Com base no
