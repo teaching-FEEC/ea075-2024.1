@@ -122,4 +122,6 @@ MADOG. Comedouro Automático. Disponível em: https://www.madog.com.br/MLB-21613
 
 NINHO DO PET. Comedouro Automático Eletrônico para Cães e Gatos. Disponível em: https://www.ninhodopet.com.br/produtos/comedouro-automatico-eletronico-para-caes-e-gatos/
 
+ROBOCORE. ESP32 - WiFi + Bluetooth. Disponível em: https://www.robocore.net/wifi/esp32-wifi-bluetooth
+
 WEASY. Weasy Oasis. Disponível em: https://www.weasy.com.br/products/weasy-oasis?variant=32277452783695&currency=BRL&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&gad_source=1&gclid=Cj0KCQjw2a6wBhCVARIsABPeH1sAXLDyqX-aO8CgqyUsDRRZeY-H1G8rfBFdN8DTA2uM9PdB25bSHzEaAvQEEALw_wcB
