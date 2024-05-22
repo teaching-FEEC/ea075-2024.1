@@ -64,7 +64,7 @@ Os dois sistemas (bebedouro e comedouro) descritos:
 <img src="\bebedouro.drawio.png">
 
  - Função de Comedouro:
-<img src="\comedouro.drawio.png">
+<img src="\comedouro1.drawio.png">
 
 ## Especificação Estrutural
 O sistema proposto para o *Smart Feeder* é composto por dois módulos paralelos de funcionamento; um da função de bebedouro e outro de comedouro.
