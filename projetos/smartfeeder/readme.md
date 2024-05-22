@@ -82,13 +82,16 @@ Alimentação:
 Para garantir a alimentação ininterrupta do dispositivo, oferecemos duas opções. Primeiramente, a fonte principal é um adaptador AC que pode ser facilmente conectado a uma tomada padrão, garantindo uma fonte de energia estável e confiável. Além disso, o dispositivo foi projetado com uma funcionalidade de dupla fonte de energia, permitindo que seja alimentado por pilhas. Esta característica é especialmente útil para situações em que você está quer utilizar o dispositivo em um ambiente sem tomadas, ou em caso de queda de energia, garantindo que seu pet seja alimentado mesmo em circunstâncias adversas.
 Quando o dispositivo está operando com alimentação por pilhas, a capacidade de configuração é desativada, e o último *setup* utilizado é mantido. Essa medida visa preservar a vida útil das pilhas no sistema e assegurar o funcionamento contínuo, mesmo em situações de queda de energia ou falta de conexão Wi-Fi na residência.
 
-#MICROCONTROLADOR
+*MICROCONTROLADOR*
+
 O microcontrolador escolhido foi o ESP32, uma vez uqe possui as funcionalidades desejadas de conectividade bluetooth, Wi-fi, diversidade de antenas e fácil integração com apps já exixtentes, como o Tasmota, ESPEasy e ESPHome.
 
-#BEBEDOURO
+*BEBEDOURO*
+
 Para garantir que o bebedouro funcione corretamente, vamos implementar um sensor de nível que pode detectar quando o nível da água está abaixo de um valor específico (chamado de BIAS). Isso nos permite monitorar o consumo de água do seu animal de estimação ao longo do tempo, dados que estarão disponíevis no aplicativo que integra o conjunto de funcionalidades do *Smart Feeder*. O controle do enchimento do bebedouro será feito por uma boia de nível, que estará conectada diretamente a uma fonte de água, como uma torneira. Além disso, o sistema incluirá um filtro de carvão ativo para garantir que a água fornecida ao seu animal seja de alta qualidade.
 
-#COMEDOURO
+*COMEDOURO*
+
 Já no esquemático do comedouro, são implementados dois sensores de pressão:
 - 1 sensor de pressão (função de balança) localizado no reservatório para aferir a massa de ração disponível.
   
@@ -96,6 +99,12 @@ Já no esquemático do comedouro, são implementados dois sensores de pressão:
   
 - Sistema dispersor com motor.
 
+## Especificação de Algoritmos
+
+*Função Bebedouro*
+<img src="\E2 - algoritmo - água.drawio.png">
+
+*Função Bebedouro*
 
 ## Referências
 
