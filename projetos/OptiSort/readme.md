@@ -117,7 +117,18 @@ Abaixo, detalhamos mais sobre o comportamento do sistema para cada tipo de event
 ## Descrição Estrutural do Sistema
 ![Diagrama de blocos do sistema](./DiagramaBlocos.jpeg)
 
+## Especificações
+### Especificação Estrutural
+Primeiramente, estabelecemos o microcontrolador STM32H747AII6 como nossa unidade de computação básica. Como nossa aplicação envolve visão computacional, precisamos de um nível alto de memória e processamento comparado com uma aplicação de software embarcado tradicional. Com custo de $18.74 por unidade [3], ele é competitivo com outras plataformas que seriam usadas para aplicações de IA, como o Raspberry Pi 4 (35$) [5], e está no estado da arte do processamento em baixo consumo de energia, com apenas 2.95 μA de corrente utilizados em Standby, 1 Mbyte de RAM e 240 MHz em uma unidade de processamento 32 bits. [4] O alg
+
+
 ## Referências
 [1] United Nations Environment Programme, Food Waste Index Report 2024. Think Eat Save: Tracking Progress to Halve Global Food Waste. [online]. Available: https://wedocs.unep.org/20.500.11822/45230. [Accessed: Mar. 31, 2024]. 
 
 [2] Brancoli P, Makishi F, Lima PG, Rousta K. Compositional Analysis of Street Market Food Waste in Brazil. Sustainability. 2022; 14(12):7014. [online]. Available: https://doi.org/10.3390/su14127014 . [Accessed: Mar. 31, 2024].
+
+[3] Página de venda do microcontrolador STM32H747AII6. https://br.mouser.com/ProductDetail/STMicroelectronics/STM32H747AII6?qs=vLWxofP3U2xKTIBLp63b7g%3D%3D
+
+[4] Datasheet do microcontrolador STM32H747AII6. https://br.mouser.com/datasheet/2/389/stm32h747ag-1851233.pdf 
+
+[5] Raspberry Pi, para comparação de preço. https://www.raspberrypi.com/products/raspberry-pi-4-model-b/
