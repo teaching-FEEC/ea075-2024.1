@@ -239,8 +239,10 @@ function onDisconnect() {
 
 ```
 function setup() {
-  initTable();
-  connectNeighborTowers();
+  initCarsInfoTable();
+  initTowersInfoTable();
+
+  connectNeighboringTowers();
 }
 
 function onCarConnect(car) {
@@ -256,17 +258,13 @@ function onCarDisconnect(car) {
   removeEntryFromTable(car);
 }
 
-function onTrafficJamDetection(trafficJamPosition, trafficJamSize) {
+function onTrafficConditionUpdate(trafficCondition) {
   for(car in table) {
-    maxVelocity = calculateMaxVelocity(car.position, trafficJamPosition, trafficJamSize);
+    maxVelocity = calculateMaxVelocity(car.position, car.direction, trafficCondition);
     car.sendData(TRAFFIC_JAM, maxVelocity);
   }
 
-  sendToBackTower(trafficJamPosition, trafficJamSize);
-}
-
-function onTrafficJamClear(trafficJamPosition, trafficJamSize) {
-  // pensar nisso
+  sendNeighboringTowers(trafficCondition);
 }
 ```
 
