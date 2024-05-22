@@ -169,27 +169,27 @@ function onDisconnect(callback);
 
 ```
 function setup() {
-  status = testLCD();
+  status = initLCD();
   if(status == ERROR) {
     errorBeep();
     stop();
   }
   
-  status = testGPS();
+  status = initGPS();
   if(status == ERROR) {
     showMessageLCD(INTERNAL_ERROR);
     errorBeep();
     stop();
   }
 
-  status = testCompass();
+  status = initCompass();
   if(status == ERROR) {
     showMessageLCD(INTERNAL_ERROR);
     errorBeep();
     stop();
   }
 
-  status = testCarCommunication();
+  status = initCarCommunication();
   if(status == ERROR) {
     showMessageLCD(CAR_COMM_ERROR);
     errorBeep();
@@ -197,36 +197,76 @@ function setup() {
   }
 }
 
-function main() {
-  setup();
+function onConnect() {
+  showMessageLCD(CONNECTED);
 
-  while(true) {
-    connect();
+  startTimer();
+}
 
-    showMessageLCD(CONNECTED);
-  
-    while(isConnected()) {
-      velocity = getCarVelocity();
-      gpsData = readGPS();
-      compassData = readCompass();
-   
-      response = sendData(velocity, gpsData, compassData);
+function timerInterrupt() {
+  velocity = getCarVelocity();
 
-      if(response != NONE) {
-        showMessageLCD(TRAFFIC_JAM, response.maxVelocity);
-      }
-      if(response.trafficJam == True) {
-        showMessageLCD(TRAFFIC_JAM, response.maxVelocity);
-        alertBeep();
-      }
-   
-      delay(PERIOD);
-    }
+  if(abs(velocity - lastSentVelocity) > TRESHOLD * velocity  or  currentTime - lastSentTime > MAX_PERIOD) {
+    lastSentVelocity = velocity;
+    gpsData = readGPS();
+    compassData = readCompass();
 
-    showMessageLCD(DISCONNECTED);
+    sendData(velocity, gpsData, compassData);
+  }
+}
+
+function receiveData(reponse) {
+  if(response.trafficJam == True) {
+    showMessageLCD(TRAFFIC_JAM, response.maxVelocity);
+  }
+  else {
+    showMessageLCD(CONNECTED, response.maxVelocity);
   }
 
-  
+  if(lastMaxVelocity != response.maxVelocity) {
+    alertBeep();
+  }
+}
+
+function onDisconnect() {
+  showMessageLCD(DISCONNECTED);
+
+  stopTimer();
+}
+```
+
+#### Algoritmos do módulo fixo
+
+```
+function setup() {
+  initTable();
+  connectNeighborTowers();
+}
+
+function onCarConnect(car) {
+  addEntryOnTable(car);
+  car.sendData(ROAD_MAX_VELOCITY);
+}
+
+function receiveCarData(data) {
+  updateEntryOnTable(data);
+}
+
+function onCarDisconnect(car) {
+  removeEntryFromTable(car);
+}
+
+function onTrafficJamDetection(trafficJamPosition, trafficJamSize) {
+  for(car in table) {
+    maxVelocity = calculateMaxVelocity(car.position, trafficJamPosition, trafficJamSize);
+    car.sendData(TRAFFIC_JAM, maxVelocity);
+  }
+
+  sendToBackTower(trafficJamPosition, trafficJamSize);
+}
+
+function onTrafficJamClear(trafficJamPosition, trafficJamSize) {
+  // pensar nisso
 }
 ```
 
