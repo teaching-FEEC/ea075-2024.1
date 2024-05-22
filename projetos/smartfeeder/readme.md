@@ -90,7 +90,7 @@ Quando o dispositivo está operando com alimentação por pilhas, a capacidade d
 O microcontrolador escolhido foi o ESP32, uma vez uqe possui as funcionalidades desejadas de conectividade bluetooth, Wi-fi, diversidade de antenas e fácil integração com apps já exixtentes, como o Tasmota, ESPEasy e ESPHome.
 Desta forma, escolhemos um módulo ESP32, que conta com uma memória Flash suficiente para os arquivos de programa e configurações. Tal módulo conta com a pinagem descrita no diagrama abaixo:
 
-<img src="\ESP32-Pinout.png">
+<img src="\ESP32-Pinout.jpg">
 
 *BEBEDOURO*
 
