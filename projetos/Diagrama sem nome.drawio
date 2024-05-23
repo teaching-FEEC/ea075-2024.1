@@ -1,9 +1,64 @@
-<mxfile host="app.diagrams.net" modified="2024-05-23T17:17:42.259Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.0" version="24.2.1" etag="1E_Vf1M_QHWNl1n-6MgK" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-23T18:09:11.100Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.0" etag="q-OcEEPxeE6bd0EIEmyh" version="24.2.1" type="github">
   <diagram name="Página-1" id="UUgHAN6CEkDBom1A3qvH">
-    <mxGraphModel>
+    <mxGraphModel dx="822" dy="482" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="y4ywzZxdvwQCOYZI5h31-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="y4ywzZxdvwQCOYZI5h31-1" target="y4ywzZxdvwQCOYZI5h31-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="y4ywzZxdvwQCOYZI5h31-1" value="&lt;div&gt;Sensor de Presença&lt;/div&gt;&lt;div&gt;(AM312)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="80" y="200" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="y4ywzZxdvwQCOYZI5h31-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="y4ywzZxdvwQCOYZI5h31-3" target="y4ywzZxdvwQCOYZI5h31-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="y4ywzZxdvwQCOYZI5h31-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="y4ywzZxdvwQCOYZI5h31-3" target="y4ywzZxdvwQCOYZI5h31-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="y4ywzZxdvwQCOYZI5h31-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="y4ywzZxdvwQCOYZI5h31-3" target="y4ywzZxdvwQCOYZI5h31-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="360" y="250" />
+              <mxPoint x="360" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="y4ywzZxdvwQCOYZI5h31-3" value="ESP32" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="240" y="200" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="y4ywzZxdvwQCOYZI5h31-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="y4ywzZxdvwQCOYZI5h31-5" target="y4ywzZxdvwQCOYZI5h31-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="340" y="230" />
+              <mxPoint x="340" y="230" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="y4ywzZxdvwQCOYZI5h31-5" value="&lt;div&gt;Base de Dados&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="400" y="200" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="y4ywzZxdvwQCOYZI5h31-7" value="Portão/Trava" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="240" y="440" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="y4ywzZxdvwQCOYZI5h31-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="y4ywzZxdvwQCOYZI5h31-13" target="y4ywzZxdvwQCOYZI5h31-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="y4ywzZxdvwQCOYZI5h31-13" value="Relé/Chave" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="240" y="320" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="y4ywzZxdvwQCOYZI5h31-16" value="&lt;div&gt;Câmera/Autenticação&lt;/div&gt;&lt;div&gt;por Imagem&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="360" y="80" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="y4ywzZxdvwQCOYZI5h31-17" value="&lt;div&gt;Tela/Display&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="240" y="80" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="y4ywzZxdvwQCOYZI5h31-18" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="y4ywzZxdvwQCOYZI5h31-16">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="320" y="200" as="sourcePoint" />
+            <mxPoint x="370" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
