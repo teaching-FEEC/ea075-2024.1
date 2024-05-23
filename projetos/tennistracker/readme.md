@@ -53,7 +53,7 @@ Uma vez que o dados forem aquisitados, via software poderemos executar:
 ### Configurabilidade
 - Aquisição
 - Carregamento
-- Carregamento + Transferência de Dados
+- Transferência de Dados
 
 ### Eventos
 |Eventos  | 
