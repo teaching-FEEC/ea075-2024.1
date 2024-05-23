@@ -27,7 +27,6 @@ O sistema de controle de elevadores deverá ser capaz de executar as seguintes t
   - Registrar as solicitações dentro do elevador.
   - Organizar as chamadas com base na localização, direção e disponibilidade.
   - Gerenciar a abertura e fechamento das portas.
-  - Controle de sobrecarga: impedir o movimento do elevador se estiver sobrecarregado.
   - Responder imediatamente a situações de emergência.
   - Diagnosticar problemas mecânicos e elétricos.
   - Fornecer feedback aos passageiros sobre o andar que está.    
@@ -46,7 +45,7 @@ O sistema possui os seguintes estados:
       O elevador está fechada as portas após um tempo específico para entrada e saída dos passageiros e verificação de que não há passageiros se locomovendo pra dentro ou pra fora, bem como verificação de que não há possíveis falhas mecânicas e elétricas.
 
 Ao receber chamadas de andares, o elevador (com portas fechadas) muda para o estado "subindo" ou "descendo", assim como quando o passageiro seleciona o andar desejado. Ao chegar no andar, o elevador muda para o modo "parado", inicialmente de portas fechadas, e rapidamente muda para o modo "portas abertas". Após um determinado tempo para entrarem e saírem passageiros, há a mudança de estado para "portas fechadas" novamente, se as condições de segurança forem satisfeitas. Assim, novas chamadas ocorrem, reiniciando. 
-Há algumas mudanças de estado fora do funcionamento padrão. Ao verificar problemas mecânicos ou elétricos, sobrecarga ou outras emergências, ele passa automaticamente para o modo "parado". Se está parado devido a problemas de segurança, suas portas podem permanecer abertas ou fechadas de acordo com a ocasião.
+Há algumas mudanças de estado fora do funcionamento padrão. Ao verificar problemas mecânicos ou elétricos ou outras emergências, ele passa automaticamente para o modo "parado". Se está parado devido a problemas de segurança, suas portas podem permanecer abertas ou fechadas de acordo com a ocasião.
 
 ### Eventos
 Os eventos de mudança de estado:
@@ -56,7 +55,6 @@ Os eventos de mudança de estado:
   - Fechamento das portas após um tempo para entrada e saída de passageiros, bem como garantia de segurança (evento não-periódico, passa do sub estado "portas abertas" para "portas fechadas").
   - Pressionamento do botão de fechada de portas (evento não-periódico, passa do estado "portas abertas" para "portas fechadas").
   - Pessoa entre a porta (evento não-periódico, mantém-se no sub estado "portas abertas").
-  - Detecção de sobrecarga (evento não-periódico, mantém-se no sub estado "portas abertas").
   - Detecção de falha (evento não-periódico, passa do estado  "subindo" ou "descendo" para "parado").
 
 ### Tratamento de Eventos
@@ -72,8 +70,6 @@ Os eventos de mudança de estado:
     Caso esteja pressionado o botão, o sistema deve enviar um sinal para fechamento da porta.
   - Pessoa entre a porta:
     O sistema, ao detectar que há algo no local de fechamento da porta, deve enviar o sinal para manter a porta aberta ou cancelar o fechamento.
-  - Detecção de sobrecarga:
-    Ao detectar sobre carga, o sistema deve manter-se parado.
   - Detecção de falha:
     Ao detectar falha, o sistema deve interromper o movimento e ficar parado.
 
