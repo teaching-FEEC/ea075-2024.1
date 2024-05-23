@@ -143,8 +143,11 @@ A realização do projeto completo só é possível com a definição da forma d
 
 #### Módulo fixo
 
-// Componentes e especificoes de operação do módulo fixo OU não especificar componentes
+Para simplificação do projeto, optou-se por focar na especificação do módulo móvel, e portanto não foram escolhidos precisamente os componentes e placa micro controladora para o módulo fixo. 
 
+No entanto, foi percebido que a especificação dos algoritmos de tratamento de eventos neste módulo seria importante para um bom entendimento da dinâmica do projeto e do fluxo de informações, então eles foram feitos e podem ser vistos abaixo.
+
+Além disso, algumas restrições de memória e de processamento foram comentadas, o que guiaria a escolha de componentes para este módulo: Processador, memória RAM, memória de programa e memória de dados.
 
 ### Especificação de Algoritmos 
 
