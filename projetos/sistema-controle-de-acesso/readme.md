@@ -90,7 +90,11 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 > 5. A interface com o usuário é um aplicativo móvel ou painel de controle no qual ele pode sozinho ou com auxilio de um administrador inserir as suas informações e solicitar acessos.
 > 
 Você sabia? Ferramentas como o `draw.io` permitem integração com o Github.
->  
+
+
+## Especificações
+### Especificações Estruturais
+> ![Alt](images/Diagrama_Funcional.drawio.svg)
 
 ## Referências
 > Seção obrigatória. Inclua aqui referências utilizadas no projeto.
