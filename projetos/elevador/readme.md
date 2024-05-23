@@ -89,6 +89,14 @@ A fila também necessita ser desenvolvida, para saber se o elevador sobe ou desc
 
 ### Especificação Estrutural
 
+O projeto possuirá dois atuadores, sendo ambos motores CC, para controle de abertura e fechamento das portas do elevador e para subir e descer a cabine. O motor utilizado para o deslocamento vertical da cabine necessita possuir bastante torque, portanto a potência dele será maior. Com isso, a alimentação precisará ser feita utilizando um retificador controlado com tiristores. Para controle do sentido e velocidade do motor será utilizado na saída do retificador uma ponte H utilizando transistores MOSFET. Já o motor CC da porta, pode ser utilizada uma fonte de menor potência, e seu controle é feito por uma ponte H.
+
+Para o controle da parada correta da cabine do elevador, serão usados sensores magnéticos, ainda não definido o modelo exato para o projeto, em cada andar. Assim, ao passar pelo sensor, o sistema saberá o andar que está e o momento correto para iniciar a frenagem. Esse sensor será importante para a cabine estacionar exatamente no local, alinhando o piso do elevador com o andar.
+
+A porta possuirá quatro sensores de infra vermelho, sendo utilizados dois em cada nível, um em cada lado da porta, que dectará caso haja algum objeto entre as portas. O sensor utilizado será E18-D80NK-N, que possui um alcance de 6 a 80 cm. Quando um objeto for dectado, o sensor envia ao microcontrolador um sinal de nível lógico baixo. Com a leitura do nível lógico, o microcontrolador envia comando para o motor da porta mantê-la aberta.
+
+
+
 > (Se preferir, adicione um link para o documento de especificação estrutural)
 > 
 > Entende-se por estrutural a descrição tanto das características elétricas e temporais como das restrições físicas de cada bloco funcional.
