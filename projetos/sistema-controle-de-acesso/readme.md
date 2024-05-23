@@ -146,53 +146,28 @@ Você sabia? Ferramentas como o `draw.io` permitem integração com o Github.
 ### Especificação de Algoritmos
 > Dado o diagrama de blocos do sistema apresentado abaixo, para cada evento do sistema temos
 > ![Alt](images/Diagrama_Funcional.drawio.svg)
+> 
 > Evento: Inicialização do Sistema
->> [Início]
-   |
-[Configurações Iniciais] --> [Configura ESP32-CAM] --> [Configura Periféricos]
-   |
-[Espera por Evento]
+>> [Alt](images/Inicializacao_do_Sistema.drawio.svg)
 
 > Evento: Captura de Imagem
->> [Captura de Imagem]
-   |
-[Imagem Capturada?] --> (Não) --> [Tenta Novamente]
-   | Sim
-[Processa Imagem]
+>> [Alt](images/Captura_de_Imagem.drawio.svg)
 
 > Evento: Processamento de Imagem
->> [Processa Imagem]
-   |
-[Reconhecimento Facial] --> [Usuário Reconhecido?] --> (Não) --> [Acesso Negado]
-   | Sim
-[Verifica Autorização] --> [Acesso Autorizado?] --> (Não) --> [Acesso Negado]
-   | Sim
-[Acesso Permitido]
-
+>> [Alt](images/Processamento_de_Imagem.drawio.svg)
+>> 
 > Evento: Leitura de QR Code
->> [Captura de Imagem]
-   |
-[Imagem Capturada?] --> (Não) --> [Tenta Novamente]
-   | Sim
-[Processa QR Code]
-
+>> [Alt](images/Leitura_de_QR_Code.drawio.svg)
+>> 
 > Evento: Processamento de QR Code
->> [Processa QR Code]
-   |
-[QR Code Válido?] --> (Não) --> [Acesso Negado]
-   | Sim
-[Verifica Autorização] --> [Acesso Autorizado?] --> (Não) --> [Acesso Negado]
-   | Sim
-[Acesso Permitido]
-
+>> [Alt](images/Processamento_de_QR_Code.drawio.svg)
+>> 
 > Evento: Feedback Sonoro
->> [Acesso Permitido]
-   |
-[Aciona Buzzer]
+>> [Alt](images/Feedback_Sonoro.drawio.svg)
 
 > A estimativa da memória necessária é baseada nas informações encontradas nos datasheets dos componentes e outras encontradas na internet. Com isso, temos que
 >> Código do Programa:
->>>     Inicialização do sistema: 15 KB
+>>>          Inicialização do sistema: 15 KB
 >>>          Captura e processamento de imagem: 70 KB
 >>>          Captura e leitura de QR Code:  50 KB
 >>>          Interação com o usuário (buzzer): 5 KB
