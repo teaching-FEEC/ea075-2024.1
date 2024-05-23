@@ -95,7 +95,9 @@ Para o controle da parada correta da cabine do elevador, serão usados sensores 
 
 A porta possuirá quatro sensores de infra vermelho, sendo utilizados dois em cada nível, um em cada lado da porta, que dectará caso haja algum objeto entre as portas. O sensor utilizado será E18-D80NK-N, que possui um alcance de 6 a 80 cm. Quando um objeto for dectado, o sensor envia ao microcontrolador um sinal de nível lógico baixo. Com a leitura do nível lógico, o microcontrolador envia comando para o motor da porta mantê-la aberta.
 
+O elevador irá se locomover por quatro andares, portanto teremos quatro push buttons dentro do elevador, para o passageiro indicar o andar desejado. Cada andar possuíra um push button para chamar o elevador. Portanto, teremos oito push buttons no sistema, que ao serem pressionados entram em uma memória em estrutura de pilha, para o microcontrolador definir os andares para parar. Na seção de especificação de algorítmo, o modo de funcionamento dos chamados é explicado.
 
+O microcontrolador utilizado ainda não foi definido. A ideia é utilizar comunicação I2C no sistema.
 
 > (Se preferir, adicione um link para o documento de especificação estrutural)
 > 
