@@ -106,17 +106,21 @@ Comunicação:
     - Descrição: é um microcontrolador de baixa potência (48P é a versão mais econômica) de 8 bits, com arquitetura Harvard e instruções RISC. O interesse nesse microcontrolador para este projeto é a presença de módulos para comunicação I2C e SPI, necessários para interface com sensores e memória externa, além de sua ampla disponibilidade. Além disso, também possui um módulo de timer que pode ser configurado como RTC (real time counter, configurável no módulo Timer/Counter2), que é útil para medição do tempo nas partidas de tênis. 
     - **Interfaces necessárias:** SPI (pinos PORTB: PB2 = SS, PB3 = MOSI, PB4 = MISO, PB5 = SCK) e _ 2-wire Serial Interface_, que é compatível com o protocolo I2C (pinos PORTC: PC4 = SDA, PC5 = SCL)
     - **Outros módulos úteis:** Timer/Counter2 configurável como RTC (real time counter), para registro de tempo.
-    - **Alimentação:** 1.8 - 5.5V (pretende-se usar alimentação em 2 V - segundo o datasheet, nessa tensão, a corrente máxima necessária é: 0,3 mA (funcionando) ou 0,06 mA (idle))
+    - **Alimentação:** 1.8 - 5.5V (pretende-se usar alimentação em 2 V - segundo o datasheet, nesta tensão, a corrente típica necessária é: 0,3 mA (funcionando) ou 0,06 mA (idle))
 - [Acelerômetro e Giroscópio MPU-6050](projetos/tennistracker/datasheets/MPU-6000-Datasheet1.pdf)
     - **Descrição:** sensor de movimento de 6 eixos (acelerômetro de 3-eixos + giroscópio de 3 eixos) com processamento embutido. A interface de comunicação do disposito é a I2C e a velocidade máxima do barramento de comunicação é 400kHz, atendendo os requisitos do projeto (taxa de amostragem: 1kHz). Cada sensor (acelerômetro/giroscópio) tem um conversor AD dedicado de 16 bits, de forma que 32 bits são necessários por amostra.
     - **Interface:** I2C
-    - **Alimentação:** 2.375V-3.46V
+    - **Alimentação:** 2.375V-3.46V / 3,8 mA típico
 - [**Leitor de cartão micro SD**](https://produto.mercadolivre.com.br/MLB-3647392309-modulo-leitor-de-carto-tf-micro-sd-_JM) + [**cartão micro SD**](https://www.mercadolivre.com.br/carto-de-memoria-sandisk-ultra-com-adaptador-sd-64gb-modelo-sdsquns-064g/p/MLB8859356?pdp_filters=category:MLB7475#searchVariation=MLB8859356&position=11&search_layout=stack&type=product&tracking_id=fca81df3-afef-41e0-8763-50f8cef294a5)
     - **Descrição**: o cartão micro SD é uma memória FLASH e será destinado ao armazenamento dos dados coletados no acelerômetro e giroscópio. Sua velocidade de escrita é maior que o a taxa de amostragem dos sensores (32bits X 1kHz = 32kb/s) e a maioria dos cartões disponíveis tem espaço suficietne para armazenar dados de várias horas de treino (necessário: aproximadamente 100Mb/h). Para conexão com o microcontrolador, é utilizado um módulo leitor de cartão micro SD. Nele, há os pinos da interface SPI (CLK, MOSI, MISO, CS) e dois pinos de alimentação (no módulo escolhido: 3.3V). Assim, para cada treinho, um arquivo com os dados pode ser criado e editado pelo microcontrolador e, depois, o usuário pode simplesmente remover o cartão micro SD para leitura dos dados no computador. Sua vantagem em relação a uma EEPROM é a capacidade de armazenamento (FLASH: mais densa e mais barata) e facilidade de remoção e troca pelo usuário. 
     - **Interface**: SPI
     - **Alimentação:**: 3.3V
     - **Armazenamento mínimo**: ~100Mb por hora de treino
     - **Velocidade mínima de escrita**: ~32kb/s
+- [**Bateria moeda CR2032**](projetos/tennistracker/datasheets/bateria-CR2032.pdf) + [**Suporte para Bataria**](projetos/tennistracker/datasheets/bateria-CR2032.pdf)
+    - **Descrição**: A bateria CR2032 é uma bateria do tipo moeda com dimesões de 20mm(d)/3,2mm e seu suporte pode ser instalado paralelo a PCB e tem diâmetro de 23mm.
+    - **Alimentação:**: 2.9 V
+    - **Capacidade**: 225 mAh
 
 #### Circuitos de Interface
   A bateria deve alimentar todo o dispositivo atravez de um power rail de onde podem derivar se necessário reguladores de tensão para nivelar a tensão de acordo com cada dispositivo. O LED não será conectado a bateria e sim diretamente a uma das saídas digitais do microcontrolador. O conversor AD interno do microcontrolador será utilizado para monitorar a tensão de alimentação de forma que com uma lógica programada o LED começe a piscar quando a tensão abaixar de um certo valor, indicando que a bateria está com baixa capacidade remanescente.
