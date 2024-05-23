@@ -97,12 +97,11 @@ Comunicação:
 | Desligado  | Neste estado, o produto está em modo dormente: o LED fica apagado, o sensor fica desabilitado e o microcontrolador entra em modo de baixa potência. A saída deste estado ocorre quando a chave é posicinada em On, passando para o estado de Aquisição |
 | Aquisição  | Neste modo, o dispositivo está fazendo sua atividade-fim: adquirindo dados do sensor de movimento e salvando no cartão SD. Para indicar que está ativo, o LED fica aceso continuo. Para sair do estado de aquisição, a chave deve ser posicionada em Off, o que leva o dispositivo ao estado 'desligado'  |
 
-## Especificações (⚠️ NOVO ⚠️)
+## Especificações
 
 ### Especificação Estrutural
 
-> (Se preferir, adicione um link para o documento de especificação estrutural)
-
+#### Elementos do Sistema
 - [Microcontrolador Atmega48P](https://github.com/shen-n/ea075-2024.1/blob/main/projetos/tennistracker/datasheets/ATmega48P_datasheet.pdf)
     - **Descrição:** O microcontrolador ATMega48P é um microcontrolador da amplamente adotada família ATMega, sendo a versão 48P a mais econômica em termos de consumo de energia.
     - **Interfaces necessárias: SPI** Com uma porta SPI é possível estabelecer a comunicação serial com o cartão SD e com o sensor. 
@@ -118,7 +117,11 @@ Comunicação:
     - **Armazenamento mínimo**: ~100Mb por hora de treino
     - **Velocidade mínima de escrita**: ~32kb/s
 
-A bateria deve alimentar todo o dispositivo atravez de um power rail de onde podem derivar se necessário reguladores de tensão para nivelar a tensão de acordo com cada dispositivo. O LED não será conectado a bateria e sim diretamente a uma das saídas digitais do microcontrolador. O conversor AD interno do microcontrolador será utilizado para monitorar a tensão de alimentação de forma que com uma lógica programada o LED começe a piscar quando a tensão abaixar de um certo valor, indicando que a bateria está com baixa capacidade remanescente.
+#### Circuitos de Interface
+  A bateria deve alimentar todo o dispositivo atravez de um power rail de onde podem derivar se necessário reguladores de tensão para nivelar a tensão de acordo com cada dispositivo. O LED não será conectado a bateria e sim diretamente a uma das saídas digitais do microcontrolador. O conversor AD interno do microcontrolador será utilizado para monitorar a tensão de alimentação de forma que com uma lógica programada o LED começe a piscar quando a tensão abaixar de um certo valor, indicando que a bateria está com baixa capacidade remanescente.
+
+#### Restrições Físicas
+  O dispositivo deve ter dimensões de no máximo 4cmX4cmX0,5cm para que sua fixação na raquete não comprometa as caracteristicas da raquete. Sua fixação deve ser firme o suficiente para suportar impactos a altas velocidades, por isso seu pedo também deve ser reduzido, idealmente por volta de 5 a 10g. Considerando que o disitivo não vai operar com altas correntes justamente pela sua caracteristica de paixa potência, a dissipação térmica não será um problema.
 
 > Entende-se por estrutural a descrição tanto das características elétricas e temporais como das restrições físicas de cada bloco funcional.
 > Nessa etapa do projeto, ainda não será solicitado o diagrama elétrico mas espera-se que já estejam identificados os componentes e circuitos integrados propostos
