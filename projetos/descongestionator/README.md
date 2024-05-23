@@ -137,37 +137,11 @@ Os dispostivos fixos são torres colocadas ao longo da via, e tem como objetivo 
 > ser representado graficamente por um fluxograma. Recomenda-se usar símbolos gráficos consistentes 
 > com a norma internacional ISO 1028-1973 e IS0 2972-1979.
 
-#### API Comunicação do Módulo Móvel
-
-```
-// Aguarda conexão com alguma torre
-function connect();
-
-// Verifica se a comunicação esta ativa
-function isConnected();
-
-// Envia dados à torre e retorna a resposta dela se existir
-function sendData();
-```
-
-#### API de Comunicação do Módulo Fixo
-
-```
-// Se disponibiliza a receber conexões.
-// Quando uma conexão é estabelecida, a função de callback configurada é
-// chamada pela API, que passa como parâmetro o socket da conexão
-function onConnection(callback);
-
-// 
-function receiveData(callback);
-
-// 
-function onDisconnect(callback);
-```
 
 #### Algoritmos do módulo móvel
 
 ```
+// Ao inicializar
 function setup() {
   status = initLCD();
   if(status == ERROR) {
@@ -197,12 +171,13 @@ function setup() {
   }
 }
 
+// Quando entra no alcance de uma torre, e se conecta a ela
 function onConnect() {
   showMessageLCD(CONNECTED);
-
   startTimer();
 }
 
+// Quando o timer reinicia, curto período para detectar grandes variações na velocidade e notificar a torre
 function timerInterrupt() {
   velocity = getCarVelocity();
 
@@ -215,6 +190,7 @@ function timerInterrupt() {
   }
 }
 
+// Ao receber um dado da torre. Informação sobre a velocidade máxima a se andar e se há congestionamento à frente
 function receiveData(reponse) {
   if(response.trafficJam == True) {
     showMessageLCD(TRAFFIC_JAM, response.maxVelocity);
@@ -228,9 +204,9 @@ function receiveData(reponse) {
   }
 }
 
+// Ao sair do alcance da torre
 function onDisconnect() {
   showMessageLCD(DISCONNECTED);
-
   stopTimer();
 }
 ```
@@ -238,6 +214,7 @@ function onDisconnect() {
 #### Algoritmos do módulo fixo
 
 ```
+// Ao inicializar
 function setup() {
   initCarsInfoTable();
   initTowersInfoTable();
@@ -245,26 +222,37 @@ function setup() {
   connectNeighboringTowers();
 }
 
+// Carro se conecta à torre ao entrar em seu alcance
 function onCarConnect(car) {
-  addEntryOnTable(car);
+  addEntryOnCarTable(car);
   car.sendData(ROAD_MAX_VELOCITY);
 }
 
+// Recebimento de dados (posição, direção e velocidade) de um carro
 function receiveCarData(data) {
-  updateEntryOnTable(data);
+  roadPosition = calculateCarPositionOnRoad(data.position);
+  updateEntryOnCarTable(roadPosition, data.direction, data.speed);
 }
 
+// Carro se desconecta da torre (fora do range)
 function onCarDisconnect(car) {
-  removeEntryFromTable(car);
+  removeEntryFromCarTable(car);
 }
 
+// Ao receber mensagens de outras torres com atualizações
+function onTrafficConditionNotification(trafficCondition) {
+  updateTowerTable(trafficCondition);
+  propagateNotification();
+}
+
+// Ao detectar internamente uma atualização nas condições de tráfego
 function onTrafficConditionUpdate(trafficCondition) {
   for(car in table) {
     maxVelocity = calculateMaxVelocity(car.position, car.direction, trafficCondition);
     car.sendData(TRAFFIC_JAM, maxVelocity);
   }
 
-  sendNeighboringTowers(trafficCondition);
+  notifyNeighboringTowers(trafficCondition);
 }
 ```
 
