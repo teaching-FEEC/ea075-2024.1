@@ -137,8 +137,8 @@ Você sabia? Ferramentas como o `draw.io` permitem integração com o Github.
 >     3. Decisão: Verificar se o rosto identificado está na base de dados de usuários autorizados.
 >    - Identificação por QR Code:
 >     1. Leitura de QR Code: Capturar imagem e processar para leitura do QR Code utilizando bibliotecas como ZXing.
-      2. Processamento: Decodificar o QR Code para obter informações do usuário.
-      3. Decisão: Verificar se a informação obtida está na base de dados de usuários autorizados.
+>     2. Processamento: Decodificar o QR Code para obter informações do usuário.
+>     3. Decisão: Verificar se a informação obtida está na base de dados de usuários autorizados.
 >    - Interação com o Usuário
 >     1. Feedback Sonoro: Utilizar buzzers para indicar sucesso ou falha na identificação.
 >     2. Display: Mostrar feedback da imagem que o usuário está gerando na câmera e apontar o local correto para enquadramento do QR code.
