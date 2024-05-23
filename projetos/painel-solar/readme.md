@@ -138,11 +138,14 @@ A bateria, por sua vez, deve ser capaz de alimentar o microcontrolador por no m�
 
 Esta configuração de alimentação, utilizando reguladores de tensão e uma bateria robusta, garante que o microcontrolador ESP32 e o sistema de controle de angulação dos painéis solares operem de forma eficiente e confiável, mesmo durante períodos de baixa incidência solar ou à noite.
 
-#### Sensor para controle na angulação dos painéis solares
+#### Sensor para controle na angulação dos painéis solares, Unidade processadora (microcontrolador) e comunicação com o usuário
+Uma vez que a tensão fornecida pelo painel solar pode ser a mesma sob diferentes condições de radiação solar, conforme ilustrado na Figura XX, torna-se impraticável usar a saída do painel para verificar continuamente a variação de tensão gerada. A solução mais precisa é utilizar um sensor fotossensível. O sensor de radiação VEML6075 mede a intensidade da radiação UVA e UVB e envia esses dados ao microcontrolador por meio da interface I2C (Inter-Integrated Circuit). A I2C, sendo um barramento de comunicação serial, permite a conexão de múltiplos dispositivos usando apenas dois fios: um para o clock (SCL) e outro para os dados (SDA). Com base nas leituras dos sensores, o microcontrolador calcula a inclinação ideal dos painéis solares para maximizar a eficiência energética.
 
+O microcontrolador utilizado no projeto é o ESP32-S3-WROOM-1, devido às suas capacidades avançadas de comunicação, processamento e eficiência energética. A interface I2C facilita a integração com sensores de radiação UV, e uma ampla gama de periféricos, como GPIOs, SPI, UART, ADC e PWM, permite conectar e controlar diversos componentes do sistema, possibilitando maior integração e expansão conforme necessário.
 
-#### Unidade processadora (microcontrolador) e comunicação com o usuário:
+O ESP32-S3-WROOM-1 possui um processador dual-core de 32 bits, operando a até 240 MHz, essencial para realizar tarefas em tempo real, como leitura de sensores, processamento de dados e controle de atuadores. Isso garante que o sistema responda rapidamente às mudanças nas condições ambientais, ajustando a inclinação dos painéis solares conforme necessário para otimizar a captação de energia. Com até 16 MB de Flash e 8 MB de PSRAM, o ESP32 oferece ampla capacidade de memória, suficiente para gerenciar grandes volumes de dados de sensores e executar programas complexos de controle e monitoramento.
 
+Além disso, o suporte integrado para Wi-Fi 802.11 b/g/n e Bluetooth 5 (LE) permite uma comunicação sem fio eficiente e estável. A conectividade Wi-Fi é crucial para o monitoramento remoto do sistema, permitindo que dados como a posição dos painéis solares, a intensidade da radiação solar e o estado da bateria sejam enviados para uma interface de usuário remota. O Bluetooth LE oferece opções adicionais de conectividade para configuração e manutenção locais. A variante ESP32-S3-WROOM-1U, que inclui um conector para antena externa, melhora significativamente a recepção e transmissão de sinais Wi-Fi, garantindo uma comunicação estável em ambientes desafiadores.
 
 #### Atuador de controle da angulação dos painéis solares:
 
