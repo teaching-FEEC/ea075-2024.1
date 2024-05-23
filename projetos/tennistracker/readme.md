@@ -117,7 +117,7 @@ Comunicação:
     - **Alimentação:**: 3.3V
     - **Armazenamento mínimo**: ~100Mb por hora de treino
     - **Velocidade mínima de escrita**: ~32kb/s
-- [**Bateria moeda CR2032**](projetos/tennistracker/datasheets/bateria-CR2032.pdf) + [**Suporte para Bataria**](projetos/tennistracker/datasheets/bateria-CR2032.pdf)
+- [**Bateria moeda CR2032**](projetos/tennistracker/datasheets/bateria-CR2032.pdf) + [**Suporte para Bataria**]([projetos/tennistracker/datasheets/bateria-CR2032.pdf](https://br.mouser.com/ProductDetail/TE-Connectivity-Linx-Technologies/BAT-HLD-011-THM?qs=4ASt3YYao0WKtc10bmWNSw%3D%3D&mgh=1&utm_id=17633168520&gad_source=1&gclid=Cj0KCQjw0ruyBhDuARIsANSZ3woK8IEvQmS6peeeEQRn4wNmX4v5xKLucU6E8l-pq9uxHL3q0Zxz6iAaAnUpEALw_wcB))
     - **Descrição**: A bateria CR2032 é uma bateria do tipo moeda com dimesões de 20mm(d)/3,2mm e seu suporte pode ser instalado paralelo a PCB e tem diâmetro de 23mm.
     - **Alimentação:**: 2.9 V
     - **Capacidade**: 225 mAh
