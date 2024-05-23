@@ -192,10 +192,10 @@ Você sabia? Ferramentas como o `draw.io` permitem integração com o Github.
 
 > A estimativa da memória necessária é baseada nas informações encontradas nos datasheets dos componentes e outras encontradas na internet. Com isso, temos que
 >> Código do Programa:
->>     Inicialização do sistema: 15 KB
->>          Captura e processamento de imagem: 70 KB
->>          Captura e leitura de QR Code:  50 KB
->>          Interação com o usuário (buzzer): 5 KB
+>     Inicialização do sistema: 15 KB
+>          Captura e processamento de imagem: 70 KB
+>          Captura e leitura de QR Code:  50 KB
+          Interação com o usuário (buzzer): 5 KB
      Bibliotecas:
           Reconhecimento facial (ESP-WHO): 150 KB
           Leitura de QR Code (ZXing): 100 KB
