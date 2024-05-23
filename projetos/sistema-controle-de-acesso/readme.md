@@ -148,22 +148,22 @@ Você sabia? Ferramentas como o `draw.io` permitem integração com o Github.
 > ![Alt](images/Diagrama_Funcional.drawio.svg)
 > 
 > Evento: Inicialização do Sistema
->> [Alt](images/Inicializacao_do_Sistema.drawio.svg)
+>> ![Alt](images/Inicializacao_do_Sistema.drawio.svg)
 
 > Evento: Captura de Imagem
->> [Alt](images/Captura_de_Imagem.drawio.svg)
+>> ![Alt](images/Captura_de_Imagem.drawio.svg)
 
 > Evento: Processamento de Imagem
->> [Alt](images/Processamento_de_Imagem.drawio.svg)
+>> ![Alt](images/Processamento_de_Imagem.drawio.svg)
 >> 
 > Evento: Leitura de QR Code
->> [Alt](images/Leitura_de_QR_Code.drawio.svg)
+>> ![Alt](images/Leitura_de_QR_Code.drawio.svg)
 >> 
 > Evento: Processamento de QR Code
->> [Alt](images/Processamento_de_QR_Code.drawio.svg)
+>> ![Alt](images/Processamento_de_QR_Code.drawio.svg)
 >> 
 > Evento: Feedback Sonoro
->> [Alt](images/Feedback_Sonoro.drawio.svg)
+>> ![Alt](images/Feedback_Sonoro.drawio.svg)
 
 > A estimativa da memória necessária é baseada nas informações encontradas nos datasheets dos componentes e outras encontradas na internet. Com isso, temos que
 >> Código do Programa:
