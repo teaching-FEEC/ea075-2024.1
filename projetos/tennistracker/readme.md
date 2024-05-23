@@ -130,7 +130,7 @@ Comunicação:
 
 ### Especificação de Algoritmos 
 
-[![fluxograma_2.svg editável](/projetos/tennistracker/fluxograma_2.svg)](https://app.diagrams.net/?libs=general;#Hshen-n%2Fea075-2024.1%2Fmain%2Fprojetos%2Ftennistracker%2Fdiagrama_estrutural.svg#%7B%22pageId%22%3A%2290a13364-a465-7bf4-72fc-28e22215d7a0%22%7D)
+[![fluxograma_2.svg editável](/projetos/tennistracker/fluxograma_2.svg)](https://app.diagrams.net/#Hshen-n%2Fea075-2024.1%2Fmain%2Fprojetos%2Ftennistracker%2Ffluxograma_2.svg#%7B%22pageId%22%3A%22C5RBs43oDa-KdzZeNtuy%22%7D)
 
 ## Referências
 [1] Motion Processing Unit – MPU9250 for RTPT https://paulplusx.wordpress.com/2016/03/04/rtpts_mpu/
