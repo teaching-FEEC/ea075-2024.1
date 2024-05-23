@@ -45,7 +45,7 @@ Sensor de Presença:
  para alertar os moradores. Esta função é essencial para prevenir incidentes graves, como explosões ou intoxicações, garantindo a segurança dos habitantes da casa. O sensor é calibrado para identificar 
  concentrações de gás que ultrapassem limites seguros, proporcionando uma resposta rápida e segura em situações de risco.
 
- Sensor de Fumaça:
+* Sensor de Fumaça:
  O sensor de fumaça é fundamental para a detecção precoce de incêndios. Este sensor monitora continuamente os níveis de fumaça no ambiente e, ao identificar concentrações elevadas, aciona um alarme sonoro. A 
  rápida detecção de fumaça permite que os moradores tomem medidas imediatas para evacuar a área e chamar os serviços de emergência ou até mesmo ser conectado junto com um sprinkler (porém o sprinkler não está 
  incluido no projeto ainda), minimizando danos e salvaguardando vidas. O sensor é sensível a variações súbitas na quantidade de fumaça, garantindo que qualquer início de incêndio seja rapidamente percebido.
@@ -63,6 +63,15 @@ Sistema de Alerta de Gâs: Principalmente na cozinha, caso detectado vazamento d
 
 Sistema de Alerta de Fumaça: Detector de fumaça na casa com ligação automática aos bombeiros caso necessário
 
+TEXTO NOVO:
+
+Detecção de Presença: Utilizando sensores de movimento, o sistema pode identificar a presença de indivíduos em áreas específicas da casa. Isso permite a ativação de alertas visuais (LEDs) e sonoros para notificar os moradores sobre atividades suspeitas.
+
+Detecção de Gás: O sistema possui sensores que monitoram continuamente a presença de gases potencialmente perigosos. Ao detectar níveis elevados, um alarme sonoro é acionado para alertar os moradores, permitindo uma resposta rápida para evitar acidentes.
+
+*Detecção de Fumaça: Sensores de fumaça instalados em pontos estratégicos da residência detectam a presença de fumaça, acionando imediatamente um alarme sonoro. Esta funcionalidade é crucial para a detecção de incêndios, possibilitando a evacuação e a chamada dos serviços de emergência (ou sprinkler?).
+
+Monitoramento em Tempo Real: Todos os sensores são integrados a um sistema central que permite o monitoramento em tempo real. Os moradores podem visualizar o status dos sensores e receber notificações instantâneas em caso de anomalias.
 
 ### Configurabilidade
 
@@ -75,6 +84,15 @@ Sistema de Alerta de Gás: Este sistema permanece permanentemente ligado para de
 
 Sistema de Alerta de Fumaça: Da mesma forma, este sistema também permanece permanentemente ligado para detectar qualquer indício de fumaça.
 
+TEXTO NOVO:
+
+*Ajuste de Sensibilidade dos Sensores: Os usuários podem ajustar a sensibilidade dos sensores de presença, (explicar como? ou nao?) gás e fumaça para evitar falsos alarmes e garantir uma detecção precisa.
+
+Configuração de Alarmes: É possível definir quando os alarmes sonoros devem ser ativados, como por exemplo, apenas quando a casa está vazia ou durante determinados horários.
+
+Notificações Personalizadas: Os moradores podem configurar o sistema para receber notificações alerta via LED ou alarme sonoro.
+
+*Integração com Outros Sistemas: O sistema pode ser integrado com outros dispositivos de automação residencial, como câmeras de segurança, sistemas de iluminação, sprinklers e controles de acesso, permitindo uma gestão centralizada da segurança da casa.
 
 ### Eventos
 
@@ -87,8 +105,17 @@ Sistema de Alerta de Gás : Em eventos não periódicos, uma interrupção é ge
 
 Sistema de Alerta de Fumaça : Em eventos não periódicos, uma interrupção é gerada se for detectado um nível elevado de fumaça pelo sistema de alerta de fumaça.
 
+TEXTO NOVO:
 
+Eventos Periódicos:
 
+Verificação de Níveis de Gás e Fumaça: Monitoramento contínuo dos níveis de gás e fumaça no ambiente.
+
+Eventos Não Periódicos:
+
+Detecção de Presença: Ativado quando um movimento é detectado.
+Alerta de Gás: Ativado ao detectar níveis perigosos de gás.
+Alerta de Fumaça: Ativado ao detectar níveis elevados de fumaça.
 
 
 
@@ -102,6 +129,21 @@ Sistema de Controle de Temperatura (Prioridade Nível 4): Após a detecção de 
 Sistema de Alerta de Gás (Prioridade Nível 2): Emitirá um sinal de alerta para os usuários ao detectar a presença de gás.
 
 Sistema de Alerta de Fumaça (Prioridade Nível 3): Emitirá um sinal de alerta para os usuários e para os bombeiros ao detectar a presença de fumaça.
+
+TEXTO NOVO:
+
+Detecção e Notificação:
+
+Quando um sensor detecta um evento (presença, gás ou fumaça), ele envia imediatamente um sinal ao sistema central.
+O sistema central processa o sinal e ativa os alarmes sonoros e visuais correspondentes.
+
+Ação Imediata:
+
+Para Detecção de Presença: O LED é aceso e o alarme sonoro é ativado (se configurado). Os moradores são notificados para verificar a situação. Prioridade 1
+Para Detecção de Gás: O alarme sonoro é ativado e uma notificação de emergência é enviada. Os moradores devem ventilar a área e evacuar se necessário. Prioridade 2
+Para Detecção de Fumaça: O alarme sonoro é ativado e uma notificação de emergência é enviada. Os moradores devem evacuar imediatamente e chamar os bombeiros. Prioridade 3
+
+
 
 
 ## Descrição Estrutural do Sistema
