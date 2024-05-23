@@ -140,11 +140,56 @@ Você sabia? Ferramentas como o `draw.io` permitem integração com o Github.
       2. Processamento: Decodificar o QR Code para obter informações do usuário.
       3. Decisão: Verificar se a informação obtida está na base de dados de usuários autorizados.
 >    - Interação com o Usuário
-      1. Feedback Sonoro: Utilizar buzzers para indicar sucesso ou falha na identificação.
-      2. Display: Mostrar feedback da imagem que o usuário está gerando na câmera e apontar o local correto para enquadramento do QR code.
+>     1. Feedback Sonoro: Utilizar buzzers para indicar sucesso ou falha na identificação.
+>     2. Display: Mostrar feedback da imagem que o usuário está gerando na câmera e apontar o local correto para enquadramento do QR code.
 
 ### Especificação de Algoritmos
+> Dado o diagrama de blocos do sistema apresentado abaixo, para cada evento do sistema temos
 > ![Alt](images/Diagrama_Funcional.drawio.svg)
+> Evento: Inicialização do Sistema
+>> [Início]
+   |
+[Configurações Iniciais] --> [Configura ESP32-CAM] --> [Configura Periféricos]
+   |
+[Espera por Evento]
+
+> Evento: Captura de Imagem
+>> [Captura de Imagem]
+   |
+[Imagem Capturada?] --> (Não) --> [Tenta Novamente]
+   | Sim
+[Processa Imagem]
+
+> Evento: Processamento de Imagem
+>> [Processa Imagem]
+   |
+[Reconhecimento Facial] --> [Usuário Reconhecido?] --> (Não) --> [Acesso Negado]
+   | Sim
+[Verifica Autorização] --> [Acesso Autorizado?] --> (Não) --> [Acesso Negado]
+   | Sim
+[Acesso Permitido]
+
+> Evento: Leitura de QR Code
+>> [Captura de Imagem]
+   |
+[Imagem Capturada?] --> (Não) --> [Tenta Novamente]
+   | Sim
+[Processa QR Code]
+
+> Evento: Processamento de QR Code
+>> [Processa QR Code]
+   |
+[QR Code Válido?] --> (Não) --> [Acesso Negado]
+   | Sim
+[Verifica Autorização] --> [Acesso Autorizado?] --> (Não) --> [Acesso Negado]
+   | Sim
+[Acesso Permitido]
+
+> Evento: Feedback Sonoro
+>> [Acesso Permitido]
+   |
+[Aciona Buzzer]
+
 
 ## Referências
 > Seção obrigatória. Inclua aqui referências utilizadas no projeto.
@@ -155,3 +200,6 @@ Você sabia? Ferramentas como o `draw.io` permitem integração com o Github.
 > 5) 5 programas de acesso remoto para controlar o seu PC a distância. https://www.techtudo.com.br/listas/2023/07/quer-controlar-seu-pc-a-distancia-veja-5-programas-de-acesso-remoto-edsoftwares.ghtml.
 > 6) Acesso remoto: veja o que é e como fazer em outro PC ou celular via app. https://www.techtudo.com.br/noticias/2023/02/o-que-e-acesso-remoto-entenda-tudo-sobre-conexao-distancia-edsoftwares.ghtml.
 > 7) Sistema de Controle e Gerenciamento de Acesso. https://riu.ufam.edu.br/bitstream/prefix/6638/11/TCC_DavidFigueira.pdf.
+> 8) ESP32 com Câmera e Reconhecimento Facial. YouTube, 13 mar. 2023. Disponível em: https://www.youtube.com/watch?v=915jxGwLxxI. Acesso em: 19 maio 2024.
+> 9) ESP32 e RFID - Liberando acessos e Travas #MaratonaMaker. YouTube, 23 maio 2024. Disponível em: https://youtu.be/L4vh95aklPc?feature=shared. Acesso em: 19 maio 2024.
+
