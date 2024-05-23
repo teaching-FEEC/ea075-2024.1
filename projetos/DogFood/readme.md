@@ -90,7 +90,7 @@ O sistema deve tratar sobre os seguintes eventos/inputs:
 > (altura, largura, profundidade) e limites de dissipação térmica.
 
 ### Especificação de Algoritmos 
-#### Diagrama de tratamento de eventos do algoritmo (desenvolvido como _board_ Miro):
+#### Diagrama de tratamento de eventos do algoritmo (desenvolvido com o _board_ Miro):
 https://miro.com/app/board/uXjVKGq-ktg=/?share_link_id=296110568841
 
 #### Estimativa de memória necessária para especificação de algoritmos
