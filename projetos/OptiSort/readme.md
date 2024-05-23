@@ -128,7 +128,7 @@ O microcontrolador estará conectado via uma interface MIPI com uma tela LCD par
 (Inserir dados do motor aqui)
 
 ### Especificação de Algoritmos
-![Fluxograma do algoritmo de acionamento de atuadores de ar comprimido](./)
+![Fluxograma do algoritmo de acionamento de atuadores de ar comprimido](./Algo1.pdf)
 ## Referências
 [1] United Nations Environment Programme, Food Waste Index Report 2024. Think Eat Save: Tracking Progress to Halve Global Food Waste. [online]. Available: https://wedocs.unep.org/20.500.11822/45230. [Accessed: Mar. 31, 2024]. 
 
