@@ -194,23 +194,23 @@ Você sabia? Ferramentas como o `draw.io` permitem integração com o Github.
 >> Código do Programa:
 >>>     Inicialização do sistema: 15 KB
 >>>          Captura e processamento de imagem: 70 KB
-          Captura e leitura de QR Code:  50 KB
-          Interação com o usuário (buzzer): 5 KB
-     Bibliotecas:
-          Reconhecimento facial (ESP-WHO): 150 KB
-          Leitura de QR Code (ZXing): 100 KB
-          Periféricos (display, buzzer): 20 KB
-     Dados:
-          Base de dados de usuários: 100 KB
-          Dados temporários (buffers): 100 KB
-     Sistema Operacional e Overhead:
-          Overhead: 50 KB
-     Total:
-          Código do Programa: 140 KB
-          Bibliotecas: 270 KB
-          Dados: 200 KB
-          Sistema Operacional e Overhead: 50 KB
-     Logo: 660KB
+>>>          Captura e leitura de QR Code:  50 KB
+>>>          Interação com o usuário (buzzer): 5 KB
+>> Bibliotecas:
+>>>          Reconhecimento facial (ESP-WHO): 150 KB
+>>>          Leitura de QR Code (ZXing): 100 KB
+>>>          Periféricos (display, buzzer): 20 KB
+>> Dados:
+>>>          Base de dados de usuários: 100 KB
+>>>          Dados temporários (buffers): 100 KB
+>> Sistema Operacional e Overhead:
+>>>          Overhead: 50 KB
+>> Total:
+>>>          Código do Programa: 140 KB
+>>>          Bibliotecas: 270 KB
+>>>          Dados: 200 KB
+>>>          Sistema Operacional e Overhead: 50 KB
+>> Logo: 660KB
 
 ## Referências
 > Seção obrigatória. Inclua aqui referências utilizadas no projeto.
