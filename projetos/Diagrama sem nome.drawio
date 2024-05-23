@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-05-23T18:19:44.343Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.0" etag="_22aSiEfhpPvi2DY7QTk" version="24.2.1" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-23T19:02:12.450Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.0" etag="85QS3el93QXLizxYA9h7" version="24.2.1" type="github">
   <diagram name="Página-1" id="UUgHAN6CEkDBom1A3qvH">
     <mxGraphModel dx="822" dy="482" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -40,7 +40,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="y4ywzZxdvwQCOYZI5h31-23" value="&lt;div&gt;Wi -fi /Bluetooth&lt;br&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="y4ywzZxdvwQCOYZI5h31-21">
+        <mxCell id="y4ywzZxdvwQCOYZI5h31-23" value="&lt;div&gt;Wi -fi&lt;br&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="y4ywzZxdvwQCOYZI5h31-21">
           <mxGeometry x="-0.2513" y="1" relative="1" as="geometry">
             <mxPoint x="-12" y="19" as="offset" />
           </mxGeometry>
