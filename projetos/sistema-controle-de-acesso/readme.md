@@ -129,19 +129,19 @@ Você sabia? Ferramentas como o `draw.io` permitem integração com o Github.
 >      
 > 8. Implementação do Sistema
 >    - Configuração Inicial:
->>     - Configurar o ESP32-CAM para capturar imagens e processá-las utilizando bibliotecas de reconhecimento facial ou de QR Code.
->>     - Implementar um sistema de seleção de modo de operação (imagem ou QR Code) via interface web.
+>     1. Configurar o ESP32-CAM para capturar imagens e processá-las utilizando bibliotecas de reconhecimento facial ou de QR Code.
+>     2. Implementar um sistema de seleção de modo de operação (imagem ou QR Code) via interface web.
 >    - Identificação por Imagem:
->>     - Captura de Imagem: Utilizar a câmera OV2640 para capturar a imagem do usuário.
->>     - Processamento: Implementar algoritmo de reconhecimento facial (utilizando bibliotecas como ESP-WHO da Espressif).
->>     - Decisão: Verificar se o rosto identificado está na base de dados de usuários autorizados.
+>     1. Captura de Imagem: Utilizar a câmera OV2640 para capturar a imagem do usuário.
+>     2. Processamento: Implementar algoritmo de reconhecimento facial (utilizando bibliotecas como ESP-WHO da Espressif).
+>     3. Decisão: Verificar se o rosto identificado está na base de dados de usuários autorizados.
 >    - Identificação por QR Code:
->>     - Leitura de QR Code: Capturar imagem e processar para leitura do QR Code utilizando bibliotecas como ZXing.
-        -- Processamento: Decodificar o QR Code para obter informações do usuário.
-        -- Decisão: Verificar se a informação obtida está na base de dados de usuários autorizados.
+>     1. Leitura de QR Code: Capturar imagem e processar para leitura do QR Code utilizando bibliotecas como ZXing.
+      2. Processamento: Decodificar o QR Code para obter informações do usuário.
+      3. Decisão: Verificar se a informação obtida está na base de dados de usuários autorizados.
 >    - Interação com o Usuário
-        -- Feedback Sonoro: Utilizar buzzers para indicar sucesso ou falha na identificação.
-        -- Display: Mostrar feedback da imagem que o usuário está gerando na câmera e apontar o local correto para enquadramento do QR code.
+      1. Feedback Sonoro: Utilizar buzzers para indicar sucesso ou falha na identificação.
+      2. Display: Mostrar feedback da imagem que o usuário está gerando na câmera e apontar o local correto para enquadramento do QR code.
 
 ### Especificação de Algoritmos
 > ![Alt](images/Diagrama_Funcional.drawio.svg)
