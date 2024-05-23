@@ -266,6 +266,32 @@ function onTrafficConditionUpdate(trafficCondition) {
 }
 ```
 
+Do algoritmo, temos duas tabelas armazenadas em memória RAM, o tamanho potencial de cada uma delas depende da quantidade de carros suportada por cada torre e da quantidade de informações relativas à outras torres que cada uma armazenará.
+
+Supondo que 
+
+- Cada torre tenha um alcance de 1 km
+- Para o algoritmo de prevenção de congestionamento seja necessário ter as informações de tráfego de 21 km à frente
+- Cada torre suporte atender 100 carros
+
+A tabela de informações das torres terá portanto conhecimento de um total de 21 km * 2 = 42 km (bidirecional) e então cada torre precisa se comunicar e armazenar informações de outras 20.
+Supondo que o pacote de informações de cada uma seja de 10 bytes, detalhando bem o estado do tráfego precisariamos de 20 * 10 = 200 bytes de memória RAM para essa tabela.
+
+Sobre cada carro conectado, a torre deve armazenar informações sobre sua posição, velocidade e direção e portanto a quantidade de bits para cada carro é dada por
+
+- Posição: especificar em um espaço de 2 km, com precisão de 100m, temos 20 possibilidades, necessitando de 5 bits.
+- Velocidade: de 0 - 120 km/h com precisão de 5 km/h, temos 24 possibilidades, que necessita de 5 bits.
+- Direção: O carro pode estar andando apenas em um dos dois sentidos na via, portanto é apenas necessário um bit.
+
+Isso totaliza 11 bits por carro, e portanto 1100 bits ~ 138 bytes.
+
+Além disso, cada torre precisa armazenar um mapa para conseguir associar a posição dada pelo GPS de cada módulo móvel à uma posição na pista (o kilômetro da posição, por exemplo).
+O mapa das torres pode ser representado como uma lista de coordenadas e o kilômetro equivalente para a coordenada em questão. Considerando 4 bytes para longitude e latitude, mais 5 bits para especificação da posição relativa ao alcance da torre. Temos então 69 bits por linha, o que totaliza aproximadamente 173 bytes.
+
+Considerando memória para o programa em si e processamento, a lógica mais complexa está na função de análise das variáveis coletadas dos carros e outras torres, a ideia é que isso seja feito continuamente em segundo plano por algum algoritmo potencialmente sofisticado de análise desses dados. Uma ideia é que isso poderia até ser feito por algum algoritmo de inteligência artificial, mas vem com o custo da necessidade de um processador mais poderoso.
+
+Este é a parte do código que ocupa provavelmente a maior parte de memória de programa, estima-se algo na ordem de alguns quilo bytes.
+
 
 
 ## Referências
