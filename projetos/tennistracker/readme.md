@@ -60,32 +60,29 @@ Uma vez que o dados forem aquisitados, via software poderemos executar:
 |--|
 | Ligar (botão on/off)  | 
 | Desligar (botão on/off)  |
-| USB com interface de dados conectado |
-| USB de alimentação conectado | 
 
 ### Tratamento de Eventos
 
 |Eventos  | Tratamento  | 
 |--|--|
-|Ligar (botão on/off)  | Iniciar medições de grandezas (posição, velocidade, aceleração, etc.) (periódico com taxa de amostragem) + ativar LED RGB em verde  |
-| Desligar (botão on/off)  | Interromper as medições e o fornecimento de energia + apagar LED RGB  |
-| USB com interface de dados conectado  |  Desligar os sensores, carregar a bateria e ligar o modo de comunicação de dados + LED RGB em azul |
-| USB de alimentação conectado |  Desligar os sensores e carregar a bateria + LED RGB em vermelho|
+| Ligar (Chave On/Off)  | Iniciar medições de grandezas (posição, velocidade, aceleração, etc.) (periódico com taxa de amostragem de 1kHz) + Ativar LED (aceso continuo)  |
+| Desligar (Chave On/Off)  | Interromper as medições e o fornecimento de energia + apagar LED |
+| Baixa Bateria  |  Ativar LED (piscante) para sinalizar baixa bateria. O dispositivo continua funcionando se estiver ligado. |
+| Bateria Desconectada |  Com a bateria desligada a alimentação do circuito é desconectada, sendo assim todo o dispositivo fica desenergizado. |
 
 ## Descrição Estrutural do Sistema
 
 Atuadores:
-- Display indicador de bateria
-- LED RGB
+- LED
 
 Sensores:
 - Acelerômetro e Giroscópio [MPU-6050](https://www.makerhero.com/produto/acelerometro-e-giroscopio-3-eixos-6-dof-mpu-6050/?utm_source=google&utm_medium=organic&utm_campaign=shopping&utm_content=surfaces_across_google&gad_source=1&gclid=CjwKCAjwtqmwBhBVEiwAL-WAYQ2EM5FQUUMtuxIyKFbXBxsoUhK2dI_2Ud5VmFDbftmgO3FnrXPz_hoCWkoQAvD_BwE#tab-blogrelacionados)
 
 Botões:
-- Botão ON/OFF
+- Chave On/Off
 
 Comunicação:
-- Comunicação via cabo USB
+- Comunicação dos dados coletados é feita atravez de cartão SD que, uma vez preenchido, pode ser retirado do dispositivo para passar os dados para um computador.
 
 ### Diagrama Estrutural:
 
@@ -97,10 +94,9 @@ Comunicação:
 
 | Estado  | Função | 
 |--|--|
-| Desligado  | Neste estado, o produto está totalmente inativo: o LED fica apagado, o sensor fica desabilitado e o microcontrolador entra em modo de baixa potência. A saída deste estado pode se dar em dois casos: (i) se o botão for pressionado, indicando que deseja-se ativar o produto para aquisição de dados; (ii) caso um cabo USB seja conectado, para carregamento ou transferência de dados |
-| Aquisição  | Neste modo, o dispositivo está fazendo sua atividade-fim: adquirindo dados do sensor de movimento e salvando em uma unidade de memória. Para indicar que está ativo, o LED RGB fica verde. E, para mostrar o nível de bateria, o indicador de bateria também fica ligado. Para sair do estado de aquisição, o botão deve ser pressionado, o que leva o produto para o estado 'desligado'  |
-| Carregamento  | Neste estado, um cabo USB está conectado ao produto e a carga da bateria é realizada. Para indicar isto, o led RGB fica em vermelho e o indicador de bateria é atualizado conforme a carga aumenta. |
-| Carregamento + transferência de dados | Neste estado, um cabo USB de dados deve estar conectado ao dispositivo. Nele, os dados da unidade da memória são transmitidos pelo canal USB. Para sinalizar a comunicação, o led RGB fica em azul e, para indicar o carregamento, o indicador de bateria é atualizado conforme a carga aumenta. |
+| Desligado  | Neste estado, o produto está em modo dormente: o LED fica apagado, o sensor fica desabilitado e o microcontrolador entra em modo de baixa potência. A saída deste estado ocorre quando a chave é posicinada em On, passando para o estado de Aquisição |
+| Aquisição  | Neste modo, o dispositivo está fazendo sua atividade-fim: adquirindo dados do sensor de movimento e salvando no cartão SD. Para indicar que está ativo, o LED fica aceso continuo. Para sair do estado de aquisição, a chave deve ser posicionada em Off, o que leva o dispositivo ao estado 'desligado'  |
+
 ## Especificações (⚠️ NOVO ⚠️)
 
 ### Especificação Estrutural
@@ -108,9 +104,9 @@ Comunicação:
 > (Se preferir, adicione um link para o documento de especificação estrutural)
 
 - [Microcontrolador Atmega48P](https://github.com/shen-n/ea075-2024.1/blob/main/projetos/tennistracker/datasheets/ATmega48P_datasheet.pdf)
-    - **Descrição:**
-    - **Interfaces necessárias:** SPI (pinos PORTB: PB2 = SS, PB3 = MOSI, PB4 = MISO, PB5 = SCK) e _ 2-wire Serial Interface_, que é compatível com o protocolo I2C 
-    - **Alimentação:** 2.7 - 5.5V
+    - **Descrição:** O microcontrolador ATMega48P é um microcontrolador da amplamente adotada família ATMega, sendo a versão 48P a mais econômica em termos de consumo de energia.
+    - **Interfaces necessárias: SPI** Com uma porta SPI é possível estabelecer a comunicação serial com o cartão SD e com o sensor. 
+    - **Alimentação:** 2 V / 0,3 mA (funcionando) ou 0,06 mA (idle)
 - [Acelerômetro e Giroscópio MPU-6050](projetos/tennistracker/datasheets/MPU-6000-Datasheet1.pdf)
     - **Descrição:** sensor de movimento de 6 eixos (acelerômetro de 3-eixos + giroscópio de 3 eixos) com processamento embutido. A interface de comunicação do disposito é a I2C e a velocidade máxima do barramento de comunicação é 400kHz, atendendo os requisitos do projeto (taxa de amostragem: 1kHz). Cada sensor (acelerômetro/giroscópio) tem um conversor AD dedicado de 16 bits, de forma que 32 bits são necessários por amostra.
     - **Interface:** I2C
@@ -122,7 +118,7 @@ Comunicação:
     - **Armazenamento mínimo**: ~100Mb por hora de treino
     - **Velocidade mínima de escrita**: ~32kb/s
 
-
+A bateria deve alimentar todo o dispositivo atravez de um power rail de onde podem derivar se necessário reguladores de tensão para nivelar a tensão de acordo com cada dispositivo. O LED não será conectado a bateria e sim diretamente a uma das saídas digitais do microcontrolador. O conversor AD interno do microcontrolador será utilizado para monitorar a tensão de alimentação de forma que com uma lógica programada o LED começe a piscar quando a tensão abaixar de um certo valor, indicando que a bateria está com baixa capacidade remanescente.
 
 > Entende-se por estrutural a descrição tanto das características elétricas e temporais como das restrições físicas de cada bloco funcional.
 > Nessa etapa do projeto, ainda não será solicitado o diagrama elétrico mas espera-se que já estejam identificados os componentes e circuitos integrados propostos
