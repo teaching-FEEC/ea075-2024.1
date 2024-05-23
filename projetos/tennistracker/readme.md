@@ -109,8 +109,8 @@ Comunicação:
 
 - [Microcontrolador Atmega48P](https://github.com/shen-n/ea075-2024.1/blob/main/projetos/tennistracker/datasheets/ATmega48P_datasheet.pdf)
     - **Descrição:**
-    - **Interfaces necessárias: I2C e SPI**
-    - **Alimentação:**
+    - **Interfaces necessárias:** SPI (pinos PORTB: PB2 = SS, PB3 = MOSI, PB4 = MISO, PB5 = SCK) e _ 2-wire Serial Interface_, que é compatível com o protocolo I2C 
+    - **Alimentação:** 2.7 - 5.5V
 - [Acelerômetro e Giroscópio MPU-6050](projetos/tennistracker/datasheets/MPU-6000-Datasheet1.pdf)
     - **Descrição:** sensor de movimento de 6 eixos (acelerômetro de 3-eixos + giroscópio de 3 eixos) com processamento embutido. A interface de comunicação do disposito é a I2C e a velocidade máxima do barramento de comunicação é 400kHz, atendendo os requisitos do projeto (taxa de amostragem: 1kHz). Cada sensor (acelerômetro/giroscópio) tem um conversor AD dedicado de 16 bits, de forma que 32 bits são necessários por amostra.
     - **Interface:** I2C
