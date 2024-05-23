@@ -121,44 +121,36 @@ Figura 2. Diagrama de blocos dos processos realizados pelo sistema.
 ## Especificações (⚠️ NOVO ⚠️)
 
 ### Especificação Estrutural
+Para facilitar o entendimento, o projeto foi dividido em cinco grandes partes, que serão detalhadas ao longo da descrição estrutural e podem ser visualizadas na Figura 3. O diagrama apresentado ilustra o funcionamento de um sistema de controle de angulação de painéis solares, utilizando um microcontrolador alimentado por um painel solar com backup de bateria e regulador de tensão.
 
 ![especificação](https://github.com/nathaliagondo/ea075-2024.1/assets/165518028/a15c2f9f-70f6-43b7-8b9a-68c649dca67d)
 Figura 3. Diagrama estrutural do sistema.
 
-> (Se preferir, adicione um link para o documento de especificação estrutural)
-> 
-> Entende-se por estrutural a descrição tanto das características elétricas e temporais como das restrições físicas de cada bloco funcional.
-> Nessa etapa do projeto, ainda não será solicitado o diagrama elétrico mas espera-se que já estejam identificados os componentes e circuitos integrados propostos
-> para implementação do sistema embarcado proposto.
-> 
-> Como o projeto de um sistema embarcado é centralizado nas tarefas, recomenda-se iniciar com a definição dos periféricos de entrada e saída (atuadores e/ou sensores) apropriados para o
-> sistema. Pode ser necessário definir um endereço distinto para cada um deles. 
-> Este endereço será utilizado pela unidade micro-controladora para acessá-los tanto para leitura como para escrita.
+Em resumo, o painel solar fornece energia ao sistema e carrega a bateria de backup, enquanto o regulador de tensão garante uma alimentação estável. O sensor de radiação mede a intensidade da radiação UV e envia os dados ao microcontrolador. Este, por sua vez, calcula a inclinação ideal dos painéis solares e envia comandos ao driver do servomotor para ajustar a posição dos painéis. A antena externa permite a comunicação com o usuário para monitoramento e ajustes remotos.
+Este sistema integrado assegura que os painéis solares estejam sempre na melhor posição para capturar a máxima quantidade de energia solar, otimizando a eficiência e o desempenho geral do sistema.
 
-> Nesta etapa do projeto espera-se que a unidade micro-controladora seja definida.
-> Tendo definidos os periféricos e a memória, é possível projetar um decodificador de endereços
-> que converte o endereço referenciado no programa em sinal *Chip Select – CS* do dispositivo
-> correspondente, habilitando-o para realizar um ciclo de leitura ou de escrita.
-> 
-> Nesta etapa do projeto espera-se que sejam identificada também a eventual necessidade do projeto de circuitos de interface para os periféricos do projeto.
-> Assim, devem ser incluídos na especificação, se necessário:
-> - conversores AD e DA;
-> - padrões de comunicação a serem adotados;
-> - circuitos de sincronização de sinais temporais.
-> 
-> Finalmente, deve-se especificar as restrições físicas e ambientais de funcionamento do circuito, tais como limites mecânicos
-> (altura, largura, profundidade) e limites de dissipação térmica.
+#### Alimentação do microcontrolador
+Para que o microcontrolador funcione de maneira autônoma, sem depender da rede elétrica, sua alimentação será feita por meio de um painel solar. O painel solar capta a energia solar e a converte em energia elétrica, que é utilizada para alimentar o sistema e carregar uma bateria de backup. Devido à instabilidade na tensão de saída dos painéis solares, é necessário um regulador de tensão entre o painel solar e a bateria de backup. Esta bateria armazena energia para garantir que o sistema continue funcionando mesmo quando a intensidade da luz solar é baixa ou durante períodos sem incidência solar, como à noite. Um segundo regulador de tensão recebe a energia da bateria e a converte para uma tensão estável adequada para alimentar o microcontrolador e outros componentes eletrônicos, garantindo uma alimentação constante e confiável.
+
+O painel solar considerado para a análise é da marca Risen Energy, amplamente utilizado em projetos residenciais, comerciais e industriais. Ele possui uma massa em torno de 25 kg e dimensões de 2108 x 1048 x 35 mm, com uma potência fornecida de 445W. A tensão de circuito aberto do painel é aproximadamente 50V e, em potência máxima, a tensão é reduzida para 41,7V. Portanto, é necessário um regulador de tensão que suporte essa tensão de entrada. No projeto, será utilizado o regulador LM2576, que suporta uma tensão de entrada de até 60Vdc e fornece uma saída de até 26Vdc, ajustada para 12V, a mesma tensão da bateria. Também será necessário um segundo regulador para converter a tensão de 12V para os 3,3V necessários para alimentar o microcontrolador. O LM2576 cumpre os requisitos para ambos os casos.
+
+A bateria, por sua vez, deve ser capaz de alimentar o microcontrolador por no mínimo 12 horas, uma vez que este é o tempo mínimo em que os painéis solares não estarão gerando energia. Entretanto, para considerar períodos desfavoráveis para a captação de energia solar, será utilizada uma bateria mais robusta. A bateria estacionária utilizada terá uma capacidade de 36 Ah a 12V. Considerando um consumo máximo do ESP32 de 500mA, com uma margem de segurança, seria possível manter o sistema ligado por no mínimo 72 horas, ou 3 dias completos, considerando um consumo máximo, o que raramente ocorrerá.
+
+Esta configuração de alimentação, utilizando reguladores de tensão e uma bateria robusta, garante que o microcontrolador ESP32 e o sistema de controle de angulação dos painéis solares operem de forma eficiente e confiável, mesmo durante períodos de baixa incidência solar ou à noite.
+
+#### Sensor para controle na angulação dos painéis solares
+
+
+#### Unidade processadora (microcontrolador) e comunicação com o usuário:
+
+
+#### Atuador de controle da angulação dos painéis solares:
+
+
 
 ### Especificação de Algoritmos 
 
-> (Se preferir, adicione um link para o documento de especificação de algoritmos).
-> 
-> Deve ser elaborado para CADA evento o algoritmo de tratamento deste evento. Com base no
-> tamanho de cada algoritmo, estima-se o tamanho de memória necessária para armazenar todos
-> os programas e os dados associados. Isso permitirá especificar a memória a ser utilizada e o
-> espaço onde serão armazenados os programas. O algoritmo de tratamento de evento pode
-> ser representado graficamente por um fluxograma. Recomenda-se usar símbolos gráficos consistentes 
-> com a norma internacional ISO 1028-1973 e IS0 2972-1979.
+
 
 ## Referências
 [1] Silva, Marcelo Allan de Melo. Projeto de suporte com inclinação variável para placas solares residenciais. 2023. 70 f. Trabalho de Conclusão de Curso (Graduação em Engenharia Mecânica) - Departamento de Engenharia Mecânica, Centro de Tecnologia e Geociências, Universidade Federal de Pernambuco, Recife, 2023. Disponível em: https://repositorio.ufpe.br/handle/123456789/50687. Acesso em: 30 de março de 2024.
