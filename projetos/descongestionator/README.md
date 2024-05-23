@@ -201,6 +201,7 @@ function receiveData(reponse) {
 
   if(lastMaxVelocity != response.maxVelocity) {
     alertBeep();
+    lastMaxVelocity = response.maxVelocity;
   }
 }
 
