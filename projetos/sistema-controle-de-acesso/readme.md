@@ -129,14 +129,14 @@ Você sabia? Ferramentas como o `draw.io` permitem integração com o Github.
 >      
 > 8. Implementação do Sistema
 >    - Configuração Inicial:
-        -- Configurar o ESP32-CAM para capturar imagens e processá-las utilizando bibliotecas de reconhecimento facial ou de QR Code.
-        -- Implementar um sistema de seleção de modo de operação (imagem ou QR Code) via interface web.
+>>     - Configurar o ESP32-CAM para capturar imagens e processá-las utilizando bibliotecas de reconhecimento facial ou de QR Code.
+>>     - Implementar um sistema de seleção de modo de operação (imagem ou QR Code) via interface web.
 >    - Identificação por Imagem:
-        -- Captura de Imagem: Utilizar a câmera OV2640 para capturar a imagem do usuário.
-        -- Processamento: Implementar algoritmo de reconhecimento facial (utilizando bibliotecas como ESP-WHO da Espressif).
-        -- Decisão: Verificar se o rosto identificado está na base de dados de usuários autorizados.
+>>     - Captura de Imagem: Utilizar a câmera OV2640 para capturar a imagem do usuário.
+>>     - Processamento: Implementar algoritmo de reconhecimento facial (utilizando bibliotecas como ESP-WHO da Espressif).
+>>     - Decisão: Verificar se o rosto identificado está na base de dados de usuários autorizados.
 >    - Identificação por QR Code:
-        -- Leitura de QR Code: Capturar imagem e processar para leitura do QR Code utilizando bibliotecas como ZXing.
+>>     - Leitura de QR Code: Capturar imagem e processar para leitura do QR Code utilizando bibliotecas como ZXing.
         -- Processamento: Decodificar o QR Code para obter informações do usuário.
         -- Decisão: Verificar se a informação obtida está na base de dados de usuários autorizados.
 >    - Interação com o Usuário
