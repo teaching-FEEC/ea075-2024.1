@@ -106,9 +106,9 @@ Você sabia? Ferramentas como o `draw.io` permitem integração com o Github.
 
 > 3. Definição dos Periféricos
 >    - Câmera OV2640: Entrada para captura de imagens.
-     - Display LCD/OLED: Saída para que o usuário veja a imagem que ele está gerando na câmera, podendo posicionar o QR no local indicado para melhor leitura pela câmera
+     - Display LCD/OLED: Saída para que o usuário veja a imagem que ele está gerando na câmera, podendo posicionar o QR no local indicado para melhor leitura pela câmera.
      - Buzzer: Indicação sonora de sucesso ou falha na identificação.
->    - Sensor de presença: detectar a presença do usuário para acionar a câmera
+>    - Sensor de presença: detectar a presença do usuário para acionar a câmera.
 
 > 4. Endereçamento
 >    - Câmera: Integrada no ESP32-CAM, acessada via GPIOs específicos do módulo
