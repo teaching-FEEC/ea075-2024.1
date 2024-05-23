@@ -169,11 +169,14 @@ Tabela 1. Principais componentes utilizados no projeto
 | Código | Nome | Quantidade | Preço |
 |-----| ----- | ------- | ---------- |
 | VEML6075 | Sensor de radiação solar | 4 | R$ 14,15 |
-| | Motor de passo + controlador | 1 | 1130 |
-|TMA-FC500W-48V-10A|Fonte Chaveada 500W|1|129,90|
+| | Motor de passo + controlador | 1 | R$ 1130,00 |
+|TMA-FC500W-48V-10A|Fonte Chaveada 500W|1|R$ 129,90|
+|ESP32-S3-WROOM-1-N4|Módulo ESP|1|R$ 15,22|
+|LM2576|Regulador de Tensão 60V|2|R$ 36,96|
+||Bateria Estacionária|1|R$ 272,86|
+|NEMA 17| Redutor de torque| 1|R$ 192,98|
 
-O preço total do projeto, desconsiderando componentes auxiliares, como resistores e capacitores, é de R$ 1838,30
-
+O preço total do projeto, desconsiderando componentes auxiliares, como resistores e capacitores, é de R$ 1792,07.
 
 ### Especificação de Algoritmos 
 
