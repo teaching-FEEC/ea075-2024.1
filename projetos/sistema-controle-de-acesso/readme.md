@@ -94,6 +94,56 @@ Você sabia? Ferramentas como o `draw.io` permitem integração com o Github.
 
 ## Especificações
 ### Especificações Estruturais
+> 1. Objetivo do Projeto
+>    Desenvolver um sistema de controle e gerenciamento de acesso utilizando ESP32-CAM para identificação de usuários via imagem ou leitura de QR Code. O administrador terá a opção de escolher o método de identificação
+> 
+> 2. Componentes Principais
+>    - ESP32-CAM: Módulo principal para captura de imagens e processamento.
+     - Câmera OV2640: Integrada ao ESP32-CAM para captura de imagens.
+     - Leitor de QR Code: Pode ser implementado via software utilizando a câmera do ESP32-CAM.
+     - Microcontrolador ESP32: Para controle do sistema, processamento de imagens e leitura de QR Codes.
+>    - Sensor de presença: detectar a presença do usuário para acionar a câmera
+
+> 3. Definição dos Periféricos
+>    - Câmera OV2640: Entrada para captura de imagens.
+     - Display LCD/OLED: Saída para que o usuário veja a imagem que ele está gerando na câmera, podendo posicionar o QR no local indicado para melhor leitura pela câmera
+     - Buzzer: Indicação sonora de sucesso ou falha na identificação.
+>    - Sensor de presença: detectar a presença do usuário para acionar a câmera
+
+> 4. Endereçamento
+>    - Câmera: Integrada no ESP32-CAM, acessada via GPIOs específicos do módulo
+>    - Banco de dados via WI-FI
+>    - Sensor de presença via SPI
+>    - Display via I2C
+>      
+> 5. Unidade Microcontroladora
+>    - Microcontrolador ESP32: Central do sistema, responsável pelo controle, captura de imagens, processamento e leitura de QR Codes. Não é necessário decodificador de endereços, pois a unidade microcontroladora possui GPIOs e interfaces de comunicação suficientes para conectar diretamente aos periféricos
+>      
+> 6. Circuitos de Interface
+>    - Conversores AD/DA: Não necessários, pois os sensores e atuadores são digitais.
+>    - Circuitos de Sincronização de Sinais Temporais: Não necessários para este projeto
+>    - Padrões de Comunicação: I2C/SPI
+>      
+> 7. Restrições Físicas e Ambientais
+>    - Dissipação Térmica: Monitorar a temperatura do módulo, garantindo ventilação adequada para evitar superaquecimento.
+>      
+> 8. Implementação do Sistema
+>    - Configuração Inicial:
+        - Configurar o ESP32-CAM para capturar imagens e processá-las utilizando bibliotecas de reconhecimento facial ou de QR Code.
+        - Implementar um sistema de seleção de modo de operação (imagem ou QR Code) via interface web.
+>    - Identificação por Imagem:
+        - Captura de Imagem: Utilizar a câmera OV2640 para capturar a imagem do usuário.
+        - Processamento: Implementar algoritmo de reconhecimento facial (utilizando bibliotecas como ESP-WHO da Espressif).
+        - Decisão: Verificar se o rosto identificado está na base de dados de usuários autorizados.
+>    - Identificação por QR Code:
+        - Leitura de QR Code: Capturar imagem e processar para leitura do QR Code utilizando bibliotecas como ZXing.
+        - Processamento: Decodificar o QR Code para obter informações do usuário.
+        - Decisão: Verificar se a informação obtida está na base de dados de usuários autorizados.
+>    - Interação com o Usuário
+        - Feedback Sonoro: Utilizar buzzers para indicar sucesso ou falha na identificação.
+        - Display: Mostrar feedback da imagem que o usuário está gerando na câmera e apontar o local correto para enquadramento do QR code.
+
+### Especificação de Algoritmos
 > ![Alt](images/Diagrama_Funcional.drawio.svg)
 
 ## Referências
