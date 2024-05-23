@@ -50,34 +50,25 @@ Como configuração, o usuário que possuir o dispositivo em seu carro pode opta
 
 ### Eventos
 
-#### Eventos esperados em fluxo normal
+#### Módulo Fixo (Torre)
 
-1. Recebimento de informação de posição e velocidade de carro na via (periódico, 30 segundos)
-2. Disparo de verificação das informações recebidas para detecção de congestionamentos (periódico, 30 segundos)
-3. Detecção do surgimento de um congestionamento
-4. Detecção do fim de um congestionamento, volta do fluxo normal
-5. Recebimento de informações sobre congestionamentos na via
-
-#### Eventos de erro, inesperados
-
-1. Falha na obtenção da velocidade do veículo
-2. Falha na obtenção da posição do veículo
-3. Falha na comunicação com o sistema (envio/recebimento de mensagens) 
+1. Inicialização do sistema
+2. Nova conexão com um carro
+3. Fim de uma conexão com um carro
+4. Recebimento de dados (posição, direção e velocidade) de um carro
+5. Notificação de condição de tráfego por outras torres
+6. Atualização nas condições de tráfego da via (por algoritmo interno)
 
 ### Tratamento de Eventos
 
-#### Eventos esperados em fluxo normal
+#### Módulo Fixo (Torre)
 
-1. Armazena as informações de velocidade e posição recebidas em uma tabela para futura consulta.
-2. Roda um algoritmo que utiliza as informações na tabela de velocidade e posição e verifica se há congestionamentos.
-3. Envia a informação do surgimento de um engarrafamento e a sua localização para os motoristas que trafegam na rodovia.
-4. Envia a informação da finalização do engarrafamento para os motoristas que trafegam na rodovia.
-5. Calcula a velocidade ideal para o carro trafegar antes de encontrar o congestionamento e informa ao motorista essa velocidade, através de um display luminoso e efeitos sonoros.
- 
-#### Eventos de erro, inesperados
-
-* Itens 1, 2 e 3: Avisa ao usuário que ocorreu um problema, qual foi e que não terá mais a assistência do sistema até resolver o infortúnio.
-
+1. Cria estruturas de dados para armazenamento das informações recebidas pelos carros e outras torres. Além disso, se conecta com as outras torres.
+2. Informa a velocidade máxima da via, e cria entrada na tabela para armazenar dados enviados pelo carro.
+3. Remove a entrada na tabela do carro desconectado.
+4. Calcula a posição em que o carro se encontra na rodovia (o kilômetro) e atualiza os dados na tabela na posição relativa ao carro que gerou o evento.
+5. Atualiza tabela de informações enviadas por outras torres. E propaga as informações recebidas para a torre vizinha.
+6. Envia cada carro a velocidade que ele deve trafegar, avisando também se um congestionamento foi detectado. Além dos carros, avisa também torres vizinhas sobre as novas condições.
 
 ## Descrição Estrutural do Sistema
 
@@ -215,7 +206,7 @@ function onDisconnect() {
 #### Algoritmos do módulo fixo
 
 ```
-// Ao inicializar
+// Evento 1: Ao inicializar
 function setup() {
   initCarsInfoTable();
   initTowersInfoTable();
@@ -223,30 +214,30 @@ function setup() {
   connectNeighboringTowers();
 }
 
-// Carro se conecta à torre ao entrar em seu alcance
+// Evento 2: Carro se conecta à torre ao entrar em seu alcance
 function onCarConnect(car) {
   addEntryOnCarTable(car);
   car.sendData(ROAD_MAX_VELOCITY);
 }
 
-// Recebimento de dados (posição, direção e velocidade) de um carro
+// Evento 3: Recebimento de dados (posição, direção e velocidade) de um carro
 function receiveCarData(data) {
   roadPosition = calculateCarPositionOnRoad(data.position);
   updateEntryOnCarTable(roadPosition, data.direction, data.speed);
 }
 
-// Carro se desconecta da torre (fora do range)
+// Evento 4: Carro se desconecta da torre (fora do range)
 function onCarDisconnect(car) {
   removeEntryFromCarTable(car);
 }
 
-// Ao receber mensagens de outras torres com atualizações
+// Evento 5: Ao receber mensagens de outras torres com atualizações
 function onTrafficConditionNotification(trafficCondition) {
   updateTowerTable(trafficCondition);
   propagateNotification();
 }
 
-// Ao detectar internamente uma atualização nas condições de tráfego
+// Evento 6: Ao detectar internamente uma atualização nas condições de tráfego
 function onTrafficConditionUpdate(trafficCondition) {
   for(car in table) {
     maxVelocity = calculateMaxVelocity(car.position, car.direction, trafficCondition);
@@ -256,6 +247,8 @@ function onTrafficConditionUpdate(trafficCondition) {
   notifyNeighboringTowers(trafficCondition);
 }
 ```
+
+
 
 ## Referências
 
