@@ -1,9 +1,36 @@
-<mxfile host="app.diagrams.net" modified="2024-05-23T20:30:28.112Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36 Edg/124.0.0.0" version="24.2.1" etag="cT_vjI_e7DbnTgc8EwNc" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-23T20:36:14.029Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36 Edg/124.0.0.0" etag="vgadTxMZLmw0QHdvBJbz" version="24.2.1" type="github">
   <diagram name="Page-1" id="gbcMGxQb3vcf81WNWsG6">
-    <mxGraphModel>
+    <mxGraphModel dx="691" dy="462" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="NkSQmawUuY54EQso83X4-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="NkSQmawUuY54EQso83X4-1" target="NkSQmawUuY54EQso83X4-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NkSQmawUuY54EQso83X4-1" value="Início" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="262.5" y="130" width="82.5" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="NkSQmawUuY54EQso83X4-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="NkSQmawUuY54EQso83X4-2" target="NkSQmawUuY54EQso83X4-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NkSQmawUuY54EQso83X4-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="NkSQmawUuY54EQso83X4-2" target="NkSQmawUuY54EQso83X4-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NkSQmawUuY54EQso83X4-2" value="Configurações&lt;div&gt;Iniciais&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="247.5" y="175" width="115" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NkSQmawUuY54EQso83X4-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="NkSQmawUuY54EQso83X4-4" target="NkSQmawUuY54EQso83X4-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NkSQmawUuY54EQso83X4-4" value="Configura&amp;nbsp;&lt;div&gt;ESP32-CAM&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="165" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="NkSQmawUuY54EQso83X4-5" value="Configura&lt;div&gt;Periféricos&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="530" y="170" width="85" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="NkSQmawUuY54EQso83X4-8" value="Espera por Evento" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="262.5" y="230" width="85" height="40" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
