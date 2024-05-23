@@ -75,7 +75,7 @@ Como configuração, o usuário que possuir o dispositivo em seu carro pode opta
 1. Inicializa todos os periféricos e verifica por erros
 2. Mostra a mensagem de conectado no visor lcd e inicializa um timer
 3. Coleta a velocidade do veículo e compara com a última velocidade enviada a torre, se essa diferença for maior que um limite, envia as informações atuais de velocidade, direção e posição para a torre, e atualiza a última velocidade enviada para a atual
-4. Para o timer, encerra a conexão com a torre se houver e mostra uma mensagem de erro no visor lcd
+4. Para o timer, encerra a conexão com a torre se houver e mostra uma mensagem de erro no visor lcd se o erro não for no visor
 5. Verifica a mensagem recebida, se for de congestionamento, mostra no visor a mensagem de cosgestionamento e a velocidade maxima fornecida pela torre, se não for de congestionamento apenas mostra a velocidade máxima recebida. Além disso, se a velocidade máxima recebida for diferente da última recebida, emite um alerta sonoro
 6. Mostra a mensagem de disconectado no visor e para o timer 
 
@@ -150,7 +150,7 @@ Os dispostivos fixos são torres colocadas ao longo da via, e tem como objetivo 
 #### Algoritmos do módulo móvel
 
 ```
-// Ao inicializar
+// Evento 1: Ao inicializar
 function setup() {
   status = initLCD();
   if(status == ERROR) {
@@ -180,13 +180,13 @@ function setup() {
   }
 }
 
-// Quando entra no alcance de uma torre, e se conecta a ela
+// Evento 2: Quando entra no alcance de uma torre, e se conecta a ela
 function onConnect() {
   showMessageLCD(CONNECTED);
   startTimer();
 }
 
-// Quando o timer reinicia, curto período para detectar grandes variações na velocidade e notificar a torre
+// Evento 3: Quando o timer reinicia, curto período para detectar grandes variações na velocidade e notificar a torre
 function timerInterrupt() {
   velocity = getCarVelocity();
 
@@ -199,7 +199,19 @@ function timerInterrupt() {
   }
 }
 
-// Ao receber um dado da torre. Informação sobre a velocidade máxima a se andar e se há congestionamento à frente
+// Evento 4: Ao ocorrer um erro de conexão com algum periferico, mostra mensagem de erro, se possível, e finaliza conexao com torre se necessário
+function peripheralError(errorMessage){
+  if(errorMessage != commTower){
+     stopConnection();
+  }
+  if(errorMessage != commLCD) {
+     showMessageLCD(DISCONNECTED);
+  }
+  errorBeep();
+  stop();
+}
+
+// Evento 5: Ao receber um dado da torre. Informação sobre a velocidade máxima a se andar e se há congestionamento à frente
 function receiveData(reponse) {
   if(response.trafficJam == True) {
     showMessageLCD(TRAFFIC_JAM, response.maxVelocity);
@@ -214,12 +226,15 @@ function receiveData(reponse) {
   }
 }
 
-// Ao sair do alcance da torre
+// Evento 6: Ao sair do alcance da torre
 function onDisconnect() {
   showMessageLCD(DISCONNECTED);
   stopTimer();
 }
 ```
+Para este módulo não há grande necessidade de memória raaaaaaaaam,será preciso armazenar temporariamente as informações de velocidade atual, velocidade enviada anteriormente, posição atual do veículo e direção. Além de pequenas informações informações de status e retornos de funções, porém tais variáveis serão apenas alguns bytes e por hora não serão contabilizadas, só serão levadas em consideração durante a estimativa final, a qual considerará uma quantidade a mais de armazenamento para tais variáveis.
+
+mensagens na flash 
 
 #### Algoritmos do módulo fixo
 
