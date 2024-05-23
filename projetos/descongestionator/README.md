@@ -50,34 +50,25 @@ Como configuração, o usuário que possuir o dispositivo em seu carro pode opta
 
 ### Eventos
 
-#### Eventos esperados em fluxo normal
+#### Módulo Móvel
 
-1. Recebimento de informação de posição e velocidade de carro na via (periódico, 30 segundos)
-2. Disparo de verificação das informações recebidas para detecção de congestionamentos (periódico, 30 segundos)
-3. Detecção do surgimento de um congestionamento
-4. Detecção do fim de um congestionamento, volta do fluxo normal
-5. Recebimento de informações sobre congestionamentos na via
-
-#### Eventos de erro, inesperados
-
-1. Falha na obtenção da velocidade do veículo
-2. Falha na obtenção da posição do veículo
-3. Falha na comunicação com o sistema (envio/recebimento de mensagens) 
-
+1. Inicialização do sistema
+2. Conexão do Módulo com uma torre dentro do seu alcance
+3. Monitoramento da velocidade do veículo (periódico, 3 segundos)
+4. Falha na comunicação com os periféricos
+5. Recebimento de informações da torre
+6. Perda de conexão com a torre
+   
 ### Tratamento de Eventos
 
-#### Eventos esperados em fluxo normal
+#### Módulo Móvel
 
-1. Armazena as informações de velocidade e posição recebidas em uma tabela para futura consulta.
-2. Roda um algoritmo que utiliza as informações na tabela de velocidade e posição e verifica se há congestionamentos.
-3. Envia a informação do surgimento de um engarrafamento e a sua localização para os motoristas que trafegam na rodovia.
-4. Envia a informação da finalização do engarrafamento para os motoristas que trafegam na rodovia.
-5. Calcula a velocidade ideal para o carro trafegar antes de encontrar o congestionamento e informa ao motorista essa velocidade, através de um display luminoso e efeitos sonoros.
- 
-#### Eventos de erro, inesperados
-
-* Itens 1, 2 e 3: Avisa ao usuário que ocorreu um problema, qual foi e que não terá mais a assistência do sistema até resolver o infortúnio.
-
+1. Inicializa todos os periféricos e verifica por erros
+2. Mostra a mensagem de conectado no visor lcd e inicializa um timer
+3. Coleta a velocidade do veículo e compara com a última velocidade enviada a torre, se essa diferença for maior que um limite, envia as informações atuais de velocidade, direção e posição para a torre, e atualiza a última velocidade enviada para a atual
+4. Para o timer, encerra a conexão com a torre se houver e mostra uma mensagem de erro no visor lcd
+5. Verifica a mensagem recebida, se for de congestionamento, mostra no visor a mensagem de cosgestionamento e a velocidade maxima fornecida pela torre, se não for de congestionamento apenas mostra a velocidade máxima recebida. Além disso, se a velocidade máxima recebida for diferente da última recebida, emite um alerta sonoro
+6. Mostra a mensagem de disconectado no visor e para o timer 
 
 ## Descrição Estrutural do Sistema
 
