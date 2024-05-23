@@ -119,16 +119,23 @@ Abaixo, detalhamos mais sobre o comportamento do sistema para cada tipo de event
 
 ## Especificações
 ### Especificação Estrutural
-Primeiramente, estabelecemos o microcontrolador STM32H747AII6 como nossa unidade de computação básica. Como nossa aplicação envolve visão computacional, precisamos de um nível alto de memória e processamento comparado com uma aplicação de software embarcado tradicional. Com custo de &#36;18.74 por unidade [3], ele é competitivo com outras plataformas que seriam usadas para aplicações de IA, como o Raspberry Pi 4 (&#36;35) [5], e está no estado da arte do processamento em baixo consumo de energia, com apenas 2.95 μA de corrente utilizados em Standby, 1 Mbyte de RAM e 240 MHz em uma unidade de processamento 32 bits. A MCU possui sensor de temperatura embutido. [4] 
+Primeiramente, estabelecemos o microcontrolador STM32H747AII6 (configuração de packaging UFBGA-169) como nossa unidade de computação básica. Como nossa aplicação envolve visão computacional, precisamos de um nível alto de memória e processamento comparado com uma aplicação de software embarcado tradicional. Com custo de &#36;18.74 por unidade [3], ele é competitivo com outras plataformas que seriam usadas para aplicações de IA, como o Raspberry Pi 4 (&#36;35) [5], e está no estado da arte do processamento em baixo consumo de energia, com apenas 2.95 μA de corrente utilizados em Standby, 1 Mbyte de RAM e 480 MHz em uma unidade de processamento 32 bits. A MCU possui sensor de temperatura embutido. [4] 
 
-O microcontrolador tem suporte à interface de comunicação paralela (DCMI), que iremos utilizar para conectar com a câmera que irá monitorar as frutas. Essa interface precisa de 8-14 bits, dependendo do formato de compressão digital de imagens usado pelo sistema. No caso, vamos usar 10 bits de barramento com o formato YCbCr 4:2:2 para a primeira câmera (GC2145 [6]), consumindo 10 entradas digitais de dados, uma de pixel clock (PIXCLK) e duas de sincronização vertical e horizontal da câmera (HSYNC e VSYNC). Também é possível integrar uma câmera infravermelho ao circuito, utilizando uma entrada monocromática DCMI 8-bits com o mesmo PIXCLK e HSYNC/VSYNC da câmera YCbCr. O framerate de ambas as câmeras é controlado pelos parâmetros do protocolo DCMI. A câmera irá utilizar 7.5 fps para que haja tempo suficiente para que a inferência do modelo quantizado ocorra. Há maneiras de otimizar modelos de IA para que a inferência deles dure menos que 100 ms em um controlador STM32H7. [8], tal que seja possível que o processo algoritmico descrito na seção seguinte seja executado na velocidade especificada. O artigo [8] executou um modelo de reconhecimento visual em um controlador STM32H7 com menos de 512kB de uso de SRAM e 10fps de velocidade. 
+O microcontrolador tem suporte à interface de comunicação paralela (DCMI), que iremos utilizar para conectar com a câmera que irá monitorar as frutas. Essa interface precisa de 8-14 bits, dependendo do formato de compressão digital de imagens usado pelo sistema. No caso, vamos usar 10 bits de barramento com o formato YCbCr 4:2:2 para a primeira câmera (GC2145 [6]), consumindo 10 entradas digitais de dados, uma de pixel clock (PIXCLK) e duas de sincronização vertical e horizontal da câmera (HSYNC e VSYNC). Também é possível integrar uma câmera infravermelho ao circuito, utilizando uma entrada monocromática DCMI 8-bits e outros pinos para PIXCLK e HSYNC/VSYNC.
 
-O microcontrolador estará conectado via uma interface MIPI com uma tela LCD para exibir os parâmetros de funcionamento do sistema como velocidade da esteira e temperatura. A tela escolhida foi o modelo WF121ETWAMLNN0 [7], pois é compatível com o protocolo de comunicação TFT e tem a resolução máxima suportada pelo TFT do microcontrolador (1024x768)
+O microcontrolador estará conectado via uma interface TFT com uma tela LCD para exibir os parâmetros de funcionamento do sistema como velocidade da esteira e temperatura. A tela escolhida foi o modelo WF121ETWAMLNN0 [7], pois é compatível com o protocolo de comunicação TFT e tem a resolução máxima suportada pelo TFT do microcontrolador (1024x768). Para a conexão com a LCD, é necessário 8 bits de pinos para cada canal de cor (R, G, B) e 3 pinos de clock e sincronização (LCD_CLK, LCD_VSYNC e LCD_HSYNC), diferentes dos usados nas câmeras. 
 
-(Inserir dados do motor aqui)
+Embora as conexões com as câmeras (8 + 10 + 3 + 3), atuadores (n) e LCD (24 + 3) ocupem uma quantidade considerável de pinos, o modelo de packaging possui 169, mais do que o suficiente para todos os sistemas de sensoreamento e atuação. 
+
+### PARA MELVIN (Inserir dados do motor aqui. Colocar a quantidade de pinos na atuação dos motores onde está escrito n pinos. editar os parâmetros da esteira lá em cima para encaixar na sua ideia de atuador). -de henrique
 
 ### Especificação de Algoritmos
 ![Fluxograma do algoritmo de acionamento de atuadores de ar comprimido](./Algo1.pdf)
+
+ O framerate de ambas as câmeras é controlado pelos parâmetros do protocolo DCMI. As imagens serão inseridas na RAM pelo controlados de DMA, o que economiza o tempo do processador principal para executar o modelo de aprendizado de máquina
+
+A câmera irá utilizar 7.5 fps para que haja tempo suficiente para que a inferência do modelo quantizado ocorra. Há maneiras de otimizar modelos de IA para que a inferência deles dure menos que 100 ms em um controlador STM32H7. [8], tal que seja possível que o processo algoritmico descrito na seção seguinte seja executado na velocidade especificada. O artigo [8] executou um modelo de detecção de objetos (MCUNet) em um controlador STM32H7 com 466kB de uso de SRAM e 10fps de velocidade. Vamos utilizar a mesma arquitetura, devido às restrições de hardware similares.
+
 ## Referências
 [1] United Nations Environment Programme, Food Waste Index Report 2024. Think Eat Save: Tracking Progress to Halve Global Food Waste. [online]. Available: https://wedocs.unep.org/20.500.11822/45230. [Accessed: Mar. 31, 2024]. 
 
@@ -136,7 +143,7 @@ O microcontrolador estará conectado via uma interface MIPI com uma tela LCD par
 
 [3] Página de venda do microcontrolador STM32H747AII6. https://br.mouser.com/ProductDetail/STMicroelectronics/STM32H747AII6?qs=vLWxofP3U2xKTIBLp63b7g%3D%3D
 
-[4] Datasheet do microcontrolador STM32H747AII6. https://br.mouser.com/datasheet/2/389/stm32h747ag-1851233.pdf 
+[4] Datasheet do microcontrolador STM32H747AII6. https://www.st.com/resource/en/datasheet/stm32h747xi.pdf
 
 [5] Raspberry Pi, para comparação de preço. https://www.raspberrypi.com/products/raspberry-pi-4-model-b/
 
