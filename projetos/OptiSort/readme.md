@@ -121,9 +121,9 @@ Abaixo, detalhamos mais sobre o comportamento do sistema para cada tipo de event
 ### Especificação Estrutural
 Primeiramente, estabelecemos o microcontrolador STM32H747AII6 como nossa unidade de computação básica. Como nossa aplicação envolve visão computacional, precisamos de um nível alto de memória e processamento comparado com uma aplicação de software embarcado tradicional. Com custo de $18.74 por unidade [3], ele é competitivo com outras plataformas que seriam usadas para aplicações de IA, como o Raspberry Pi 4 (35$) [5], e está no estado da arte do processamento em baixo consumo de energia, com apenas 2.95 μA de corrente utilizados em Standby, 1 Mbyte de RAM e 240 MHz em uma unidade de processamento 32 bits. A MCU possui sensor de temperatura embutido. [4] 
 
-O microcontrolador possui suporte à interface de comunicação paralela (DCMI), que iremos utilizar para conectar com a câmera que irá monitorar as frutas. Essa interface precisa de 8-14 bits, dependendo do formato de compressão digital de imagens usado pelo sistema. No caso, vamos usar 10 bits de barramento com o formato YCbCr 4:2:2 para a primeira câmera (GC2145 [6]), consumindo 10 entradas digitais de dados, uma de pixel clock (PIXCLK) e duas de sincronização vertical e horizontal da câmera (HSYNC e VSYNC). Também é possível integrar uma câmera infravermelho ao circuito, utilizando uma entrada monocromática DCMI 8-bits com o mesmo PIXCLK e HSYNC/VSYNC da câmera YCbCr. O framerate de ambas as câmeras é controlado pelos parâmetros do protocolo DCMI 
+O microcontrolador possui suporte à interface de comunicação paralela (DCMI), que iremos utilizar para conectar com a câmera que irá monitorar as frutas. Essa interface precisa de 8-14 bits, dependendo do formato de compressão digital de imagens usado pelo sistema. No caso, vamos usar 10 bits de barramento com o formato YCbCr 4:2:2 para a primeira câmera (GC2145 [6]), consumindo 10 entradas digitais de dados, uma de pixel clock (PIXCLK) e duas de sincronização vertical e horizontal da câmera (HSYNC e VSYNC). Também é possível integrar uma câmera infravermelho ao circuito, utilizando uma entrada monocromática DCMI 8-bits com o mesmo PIXCLK e HSYNC/VSYNC da câmera YCbCr. O framerate de ambas as câmeras é controlado pelos parâmetros do protocolo DCMI
 
-O microcontrolador estará conectado via uma interface MIPI com uma tela LCD para exibir os parâmetros de funcionamento do sistema como velocidade da esteira e temperatura. 
+O microcontrolador estará conectado via uma interface MIPI com uma tela LCD para exibir os parâmetros de funcionamento do sistema como velocidade da esteira e temperatura. A tela escolhida foi o modelo WF121ETWAMLNN0 [7], pois é compatível com o protocolo de comunicação TFT e tem a resolução máxima suportada pelo TFT do microcontrolador (1024x768)
 
 (Inserir dados do motor aqui)
 
@@ -141,3 +141,5 @@ O microcontrolador estará conectado via uma interface MIPI com uma tela LCD par
 [5] Raspberry Pi, para comparação de preço. https://www.raspberrypi.com/products/raspberry-pi-4-model-b/
 
 [6] Datasheet da câmera GC2145. https://e2e.ti.com/cfs-file/__key/communityserver-discussions-components-files/968/GC2145-CSP-DataSheet-release-V1.0_5F00_20131201.pdf
+
+[7] Datasheet da tela LCD WF121ETWAMLNN0. https://www.winstar.com.tw/uploads/files/04170fa78caf6e36d3dcec06f7f1042b.pdf
