@@ -293,7 +293,7 @@ function onTrafficConditionUpdate(trafficCondition) {
 }
 ```
 
-A lógica mais complexa do programa está na função de análise dos dados coletados dos carros e informações recebidas das outras torres, a ideia é que essa análise seja feita continuamente em segundo plano por algum algoritmo potencialmente sofisticado. Uma ideia é que isso poderia até ser feito por algum algoritmo de inteligência artificial, mas ela vem com o custo da necessidade de um processador mais poderoso. Também poderia ser interessante utilizar um processador com mais de um núcleo, para que as tarefas de comunicação com os veículos e com as outras torres (e outras tarefas acopladas à estas) possam ser feitas de forma independente da análise dos dados em tempo real.
+A lógica mais complexa do programa está na função de análise dos dados coletados dos carros e informações recebidas das outras torres, a ideia é que essa análise seja feita continuamente em segundo plano por algum algoritmo potencialmente sofisticado. Uma possibilidade é que isso fosse feito por algum algoritmo de inteligência artificial, mas isso traz a necessidade de um processador mais poderoso. Também poderia ser interessante utilizar um processador com mais de um núcleo, para que as tarefas de comunicação com os veículos e com as outras torres (e outras tarefas acopladas à estas) possam ser feitas de forma independente da análise dos dados em tempo real, sem interromper o algoritmo de análise.
 
 Uma análise de memória que pode ser feita a partir dos algoritmos mostrados é a seguinte. Temos duas tabelas de dados que devem ser armazenadas na memória RAM, o tamanho máximo de cada uma delas depende da quantidade de carros suportada por cada torre e da quantidade de informações relativas à outras torres que cada uma armazenará.
 
@@ -301,7 +301,7 @@ Supondo que
 
 - Cada torre tenha um alcance de 1 km
 - Para o algoritmo de prevenção de congestionamento seja necessário ter as informações de tráfego de 21 km à frente
-- Cada torre suporte atender 100 carros
+- Cada torre suporte atender 250 carros
 
 A tabela de informações das torres terá portanto conhecimento de um total de 21 km * 2 = 42 km (bidirecional) e então cada torre precisa se comunicar e armazenar informações de outras 20.
 Supondo que o pacote de informações de cada uma seja de 10 bytes, detalhando bem o estado do tráfego precisariamos de 20 * 10 = 200 bytes de memória RAM para essa tabela.
@@ -312,13 +312,19 @@ Sobre cada carro conectado, a torre deve armazenar informações sobre sua posi�
 - Velocidade: de 0 - 120 km/h com precisão de 5 km/h, temos 24 possibilidades, que necessita de 5 bits.
 - Direção: O carro pode estar andando apenas em um dos dois sentidos na via, portanto é apenas necessário um bit.
 
-Isso totaliza 11 bits por carro, e portanto 1100 bits ~ 138 bytes.
+Isso totaliza 11 bits por carro, e portanto 2750 bits ~ 344 bytes.
 
 Além disso, cada torre precisa armazenar um mapa para conseguir associar a posição dada pelo GPS de cada módulo móvel à uma posição na pista (o kilômetro da posição, por exemplo).
+
 O mapa das torres pode ser representado como uma lista de coordenadas e o kilômetro equivalente para a coordenada em questão. Considerando 4 bytes para longitude e latitude, mais 5 bits para especificação da posição relativa ao alcance da torre. Temos então 69 bits por linha, o que totaliza aproximadamente 173 bytes.
 
-Temos então os requisitos de memória...
+Sobre memória de programa, temos algo muito maior do que o caso do módulo móvel. O algoritmo de análise de dados e a função de determinação da posição do carro na rodovia são provavelmente os maiores ocupantes deste tipo de memória, por serem lógicas mais complexas. Estima-se que seja necessário uma memória de programa na ordem de kilo bytes ou dezenas de kilo bytes.
 
+Um resumo dos requisitos de memória do sistema são então
+
+- Memória RAM: 600 B
+- Memória de dados (mapa, ROM): 200 B
+- Memória de programa (ROM ou Flash): ~ 10 kB
 
 ## Referências
 
