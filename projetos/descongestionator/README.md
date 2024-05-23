@@ -58,7 +58,16 @@ Como configuração, o usuário que possuir o dispositivo em seu carro pode opta
 4. Falha na comunicação com os periféricos
 5. Recebimento de informações da torre
 6. Perda de conexão com a torre
-   
+
+#### Módulo Fixo (Torre)
+
+1. Inicialização do sistema
+2. Nova conexão com um carro
+3. Fim de uma conexão com um carro
+4. Recebimento de dados (posição, direção e velocidade) de um carro
+5. Notificação de condição de tráfego por outras torres
+6. Atualização nas condições de tráfego da via (por algoritmo interno)
+
 ### Tratamento de Eventos
 
 #### Módulo Móvel
@@ -69,6 +78,15 @@ Como configuração, o usuário que possuir o dispositivo em seu carro pode opta
 4. Para o timer, encerra a conexão com a torre se houver e mostra uma mensagem de erro no visor lcd
 5. Verifica a mensagem recebida, se for de congestionamento, mostra no visor a mensagem de cosgestionamento e a velocidade maxima fornecida pela torre, se não for de congestionamento apenas mostra a velocidade máxima recebida. Além disso, se a velocidade máxima recebida for diferente da última recebida, emite um alerta sonoro
 6. Mostra a mensagem de disconectado no visor e para o timer 
+
+#### Módulo Fixo (Torre)
+
+1. Cria estruturas de dados para armazenamento das informações recebidas pelos carros e outras torres. Além disso, se conecta com as outras torres.
+2. Informa a velocidade máxima da via, e cria entrada na tabela para armazenar dados enviados pelo carro.
+3. Remove a entrada na tabela do carro desconectado.
+4. Calcula a posição em que o carro se encontra na rodovia (o kilômetro) e atualiza os dados na tabela na posição relativa ao carro que gerou o evento.
+5. Atualiza tabela de informações enviadas por outras torres. E propaga as informações recebidas para a torre vizinha.
+6. Envia cada carro a velocidade que ele deve trafegar, avisando também se um congestionamento foi detectado. Além dos carros, avisa também torres vizinhas sobre as novas condições.
 
 ## Descrição Estrutural do Sistema
 
@@ -206,7 +224,7 @@ function onDisconnect() {
 #### Algoritmos do módulo fixo
 
 ```
-// Ao inicializar
+// Evento 1: Ao inicializar
 function setup() {
   initCarsInfoTable();
   initTowersInfoTable();
@@ -214,30 +232,30 @@ function setup() {
   connectNeighboringTowers();
 }
 
-// Carro se conecta à torre ao entrar em seu alcance
+// Evento 2: Carro se conecta à torre ao entrar em seu alcance
 function onCarConnect(car) {
   addEntryOnCarTable(car);
   car.sendData(ROAD_MAX_VELOCITY);
 }
 
-// Recebimento de dados (posição, direção e velocidade) de um carro
+// Evento 3: Recebimento de dados (posição, direção e velocidade) de um carro
 function receiveCarData(data) {
   roadPosition = calculateCarPositionOnRoad(data.position);
   updateEntryOnCarTable(roadPosition, data.direction, data.speed);
 }
 
-// Carro se desconecta da torre (fora do range)
+// Evento 4: Carro se desconecta da torre (fora do range)
 function onCarDisconnect(car) {
   removeEntryFromCarTable(car);
 }
 
-// Ao receber mensagens de outras torres com atualizações
+// Evento 5: Ao receber mensagens de outras torres com atualizações
 function onTrafficConditionNotification(trafficCondition) {
   updateTowerTable(trafficCondition);
   propagateNotification();
 }
 
-// Ao detectar internamente uma atualização nas condições de tráfego
+// Evento 6: Ao detectar internamente uma atualização nas condições de tráfego
 function onTrafficConditionUpdate(trafficCondition) {
   for(car in table) {
     maxVelocity = calculateMaxVelocity(car.position, car.direction, trafficCondition);
@@ -247,6 +265,8 @@ function onTrafficConditionUpdate(trafficCondition) {
   notifyNeighboringTowers(trafficCondition);
 }
 ```
+
+
 
 ## Referências
 
