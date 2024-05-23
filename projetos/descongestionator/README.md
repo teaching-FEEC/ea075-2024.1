@@ -50,6 +50,15 @@ Como configuração, o usuário que possuir o dispositivo em seu carro pode opta
 
 ### Eventos
 
+#### Módulo Móvel
+
+1. Inicialização do sistema
+2. Conexão do Módulo com uma torre dentro do seu alcance
+3. Monitoramento da velocidade do veículo (periódico, 3 segundos)
+4. Falha na comunicação com os periféricos
+5. Recebimento de informações da torre
+6. Perda de conexão com a torre
+
 #### Módulo Fixo (Torre)
 
 1. Inicialização do sistema
@@ -60,6 +69,15 @@ Como configuração, o usuário que possuir o dispositivo em seu carro pode opta
 6. Atualização nas condições de tráfego da via (por algoritmo interno)
 
 ### Tratamento de Eventos
+
+#### Módulo Móvel
+
+1. Inicializa todos os periféricos e verifica por erros
+2. Mostra a mensagem de conectado no visor lcd e inicializa um timer
+3. Coleta a velocidade do veículo e compara com a última velocidade enviada a torre, se essa diferença for maior que um limite, envia as informações atuais de velocidade, direção e posição para a torre, e atualiza a última velocidade enviada para a atual
+4. Para o timer, encerra a conexão com a torre se houver e mostra uma mensagem de erro no visor lcd
+5. Verifica a mensagem recebida, se for de congestionamento, mostra no visor a mensagem de cosgestionamento e a velocidade maxima fornecida pela torre, se não for de congestionamento apenas mostra a velocidade máxima recebida. Além disso, se a velocidade máxima recebida for diferente da última recebida, emite um alerta sonoro
+6. Mostra a mensagem de disconectado no visor e para o timer 
 
 #### Módulo Fixo (Torre)
 
