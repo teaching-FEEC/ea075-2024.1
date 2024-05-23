@@ -171,8 +171,64 @@ Sistema de Alerta de Fumaça: Este sistema é instalado em todos os cômodos e p
 
 Todos esses sistemas são controlados por um microcontrolador, com a escolha entre Arduino ou ESP32 a ser determinada.
 
-> 
+*NOVA DESCRIÇÃO: To fazendo sem temperatura mas acredito que estrtuturalmente nao iria mudar muito
 
+# Blocos Funcionais
+Sensores:
+
+Sensor de Presença: Detecta movimento e envia sinais ao controlador central.
+Sensor de Gás: Monitora a concentração de gás no ambiente e envia um sinal ao controlador quando níveis perigosos são detectados.
+Sensor de Fumaça: Detecta a presença de fumaça e envia um sinal ao controlador ao identificar concentrações elevadas.
+
+# Controlador Central
+
+*Microcontrolador: O núcleo do sistema, responsável por receber sinais dos sensores, processar esses sinais e tomar decisões com base na programação interna. (adicionar qual)
+
+# Unidades de Alerta
+
+LED de Indicação: Acende para indicar a detecção de presença.
+Alarmes Sonoros: Ativados pelo controlador central em resposta a sinais dos sensores de gás e fumaça, ou conforme configurado pelo usuário para o sensor de presença.
+
+* # Fonte de Alimentação (Temos que pensar em qual fonte mas acho que não precisamos disso agora)
+
+Unidade de Alimentação: Fornece energia para todos os componentes do sistema, garantindo operação contínua.
+
+# Relacionamento entre Blocos e Sinais de Comunicação
+*Sinais dos Sensores para o Controlador Central (Dependendo do sensor que escolhemos podemos precisar ou não de DAC então a gente modifica aqui quando tivermos certeza qual usaremos)
+
+Sensor de Presença para Microcontrolador: Envia um sinal digital quando detecta movimento.
+Sensor de Gás para Microcontrolador: Envia um sinal analógico ou digital quando os níveis de gás são perigosos.
+Sensor de Fumaça para Microcontrolador: Envia um sinal digital quando a fumaça é detectada.
+
+Sinais do Controlador Central para Unidades de Alerta
+
+Microcontrolador para LED de Indicação: Envia um sinal para acender o LED.
+Microcontrolador para Alarmes Sonoros: Envia sinais para ativar os alarmes em resposta à detecção de gás ou fumaça, ou conforme configuração para presença.
+
+*Em questão de blocos vou fazer um rascunho por enquanto, vê se concorda:
+
+                | SENSORES |
+                | PRESENÇA |
+                | GAS      |
+                | FUMAÇA   |
+                    | 
+                    |
+                |CONTROLADOR|
+                |ARDUINDO   |
+                |EVENTOS    |
+                    |
+                    |
+           ---------------------
+           |                   |
+           |                   |
+           |                   |
+    |ALERTAS|           |CONFIGURAÇÃO|
+    |LED    |           |STATUS TALVEZ?|
+    |ALARME |
+           --------------------
+                    |
+                    |
+                    FONTE 
 ## Referências
 
 https://components101.com/sensors/hc-sr501-pir-sensor (Sensor movimento hc-Sr 501)
