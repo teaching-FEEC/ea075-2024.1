@@ -76,7 +76,7 @@ Os eventos de mudança de estado:
 ## Descrição Estrutural do Sistema
 O sistema se baseia em um fluxo de estados onde definimos se um elevador sobe, desce ou se mantém parado com base nas solicitações internas e externas do elevador, bem como nas condições de segurança que devem ser satisfeitas. O diagrama abaixo retrata melhor os o fluxo de decisões:
 
-![Diagrama Elevador](https://github.com/gaserra/ea075-2024.1/assets/106714171/aa069ecc-fe73-4d3b-894f-7fdff017ff25)
+![Diagrama Elevador drawio](https://github.com/andreglz/ea075-2024.2/assets/106714171/39f5be4c-cc7e-47d6-ad00-41ed6804440f)
 
 Note que o mesmo funciona tanto para uma pessoa que solicita o elevador pelo lado de fora, quanto para alguém que aperta o botão de um andar já dentro do elevador. O diagrama mostra a situação em condições típicas e síncronas de funcionamento, mas haverá também a necessidade de uma verificação assíncrona em casos de falhas durante o trajeto do elevador, onde o mesmo deve parar e acionar suporte/segurança.
 A fila também necessita ser desenvolvida, para saber se o elevador sobe ou desce de acordo com a ordem apertada, mas também pode levar a conta a distância, caso o prédio tenha muitos andares e haja necessidade de definir prioridades. De qualquer forma, de forma resumida, após alguma solicitação que entra em uma fila com uma determinada prioridade, a ideia é que o elevador se movimente baseado nessa fila para atender aos chamados.
