@@ -126,7 +126,7 @@ Comunicação:
 
 ### Especificação de Algoritmos 
 
-[![fluxograma.drawio editável](/projetos/tennistracker/fluxograma.svg)](https://app.diagrams.net/?libs=general;#Hshen-n%2Fea075-2024.1%2Fmain%2Fprojetos%2Ftennistracker%2Fdiagrama_estrutural.svg#%7B%22pageId%22%3A%2290a13364-a465-7bf4-72fc-28e22215d7a0%22%7D)
+[![fluxograma_2.svg editável](/projetos/tennistracker/fluxograma_2.svg)](https://app.diagrams.net/?libs=general;#Hshen-n%2Fea075-2024.1%2Fmain%2Fprojetos%2Ftennistracker%2Fdiagrama_estrutural.svg#%7B%22pageId%22%3A%2290a13364-a465-7bf4-72fc-28e22215d7a0%22%7D)
 
 > (Se preferir, adicione um link para o documento de especificação de algoritmos).
 > 
