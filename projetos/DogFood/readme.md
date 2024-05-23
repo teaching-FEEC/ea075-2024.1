@@ -90,16 +90,15 @@ O sistema deve tratar sobre os seguintes eventos/inputs:
 > (altura, largura, profundidade) e limites de dissipação térmica.
 
 ### Especificação de Algoritmos 
+#### Diagrama de tratamento de eventos do algoritmo (desenvolvido como _board_ Miro):
+https://miro.com/app/board/uXjVKGq-ktg=/?share_link_id=296110568841
 
-> (Se preferir, adicione um link para o documento de especificação de algoritmos).
-> 
-> Deve ser elaborado para CADA evento o algoritmo de tratamento deste evento. Com base no
-> tamanho de cada algoritmo, estima-se o tamanho de memória necessária para armazenar todos
-> os programas e os dados associados. Isso permitirá especificar a memória a ser utilizada e o
-> espaço onde serão armazenados os programas. O algoritmo de tratamento de evento pode
-> ser representado graficamente por um fluxograma. Recomenda-se usar símbolos gráficos consistentes 
-> com a norma internacional ISO 1028-1973 e IS0 2972-1979.
-
+#### Estimativa de memória necessária para especificação de algoritmos
+Total de memória necessária estimada para armazenamento de todo o algorítmo 170kB. Composição:
+- Arquivo de audio : 125kB
+- Display de led: 6 bytes
+- Variáveis usadas no algoritmo e armazenamento de leituras dos sensores:  ~ 116 bytes
+- Armazenamento do programa (estipulado para 150 linhas de código, compilado): ~50kB
 
 ## Referências
 https://www.google.com/search?sca_esv=7b4f5aad248322ac&sca_upv=1&rlz=1C1GCEB_enBR1053BR1053&q=alimentador+de+pet+automatico&tbm=isch&source=lnms&prmd=isvnbmtz&sa=X&ved=2ahUKEwiAr_nVmZqFAxUZppUCHSt9C3cQ0pQJegQIGBAB&biw=1280&bih=559&dpr=3
