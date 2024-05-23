@@ -135,6 +135,17 @@ Os dispostivos fixos são torres colocadas ao longo da via, e tem como objetivo 
 > Finalmente, deve-se especificar as restrições físicas e ambientais de funcionamento do circuito, tais como limites mecânicos
 > (altura, largura, profundidade) e limites de dissipação térmica.
 
+A realização do projeto completo só é possível com a definição da forma de comunicação entre os dispositivos, as torres (módulo fixo) precisam ser capazes de realizar conexão com todos os carros em seu alcance e também com torres vizinhas. Para simplificar o projeto, nos limitamos a pesquisar algumas tecnlogias existentes ou em desenvolvimento que possam ser utilizadas para realizar essa comunicação, e portanto não especificamos aqui componentes nem os algoritmos necessários para tornar essa comunicação possível.
+
+#### Módulo móvel
+
+// Componentes e especificoes de operação do módulo móvel
+
+#### Módulo fixo
+
+// Componentes e especificoes de operação do módulo fixo OU não especificar componentes
+
+
 ### Especificação de Algoritmos 
 
 > (Se preferir, adicione um link para o documento de especificação de algoritmos).
@@ -146,6 +157,7 @@ Os dispostivos fixos são torres colocadas ao longo da via, e tem como objetivo 
 > ser representado graficamente por um fluxograma. Recomenda-se usar símbolos gráficos consistentes 
 > com a norma internacional ISO 1028-1973 e IS0 2972-1979.
 
+Como já explicado, não realizamos a especificação do circuito utilizado para possibilitar a comunicação entre os módulos, mas supomos aqui que qualquer tecnologia utilizada seja capaz de gerar os seguintes eventos: conexão de um novo dispositivo, perca da conexão, recebimento de dados e envio de dados. Apenas supondo estes princípios de inter-comunicação foram gerados os algoritmos mostrados a seguir. 
 
 #### Algoritmos do módulo móvel
 
@@ -281,7 +293,9 @@ function onTrafficConditionUpdate(trafficCondition) {
 }
 ```
 
-Do algoritmo, temos duas tabelas armazenadas em memória RAM, o tamanho potencial de cada uma delas depende da quantidade de carros suportada por cada torre e da quantidade de informações relativas à outras torres que cada uma armazenará.
+A lógica mais complexa do programa está na função de análise dos dados coletados dos carros e informações recebidas das outras torres, a ideia é que essa análise seja feita continuamente em segundo plano por algum algoritmo potencialmente sofisticado. Uma ideia é que isso poderia até ser feito por algum algoritmo de inteligência artificial, mas ela vem com o custo da necessidade de um processador mais poderoso. Também poderia ser interessante utilizar um processador com mais de um núcleo, para que as tarefas de comunicação com os veículos e com as outras torres (e outras tarefas acopladas à estas) possam ser feitas de forma independente da análise dos dados em tempo real.
+
+Uma análise de memória que pode ser feita a partir dos algoritmos mostrados é a seguinte. Temos duas tabelas de dados que devem ser armazenadas na memória RAM, o tamanho máximo de cada uma delas depende da quantidade de carros suportada por cada torre e da quantidade de informações relativas à outras torres que cada uma armazenará.
 
 Supondo que 
 
@@ -303,10 +317,7 @@ Isso totaliza 11 bits por carro, e portanto 1100 bits ~ 138 bytes.
 Além disso, cada torre precisa armazenar um mapa para conseguir associar a posição dada pelo GPS de cada módulo móvel à uma posição na pista (o kilômetro da posição, por exemplo).
 O mapa das torres pode ser representado como uma lista de coordenadas e o kilômetro equivalente para a coordenada em questão. Considerando 4 bytes para longitude e latitude, mais 5 bits para especificação da posição relativa ao alcance da torre. Temos então 69 bits por linha, o que totaliza aproximadamente 173 bytes.
 
-Considerando memória para o programa em si e processamento, a lógica mais complexa está na função de análise das variáveis coletadas dos carros e outras torres, a ideia é que isso seja feito continuamente em segundo plano por algum algoritmo potencialmente sofisticado de análise desses dados. Uma ideia é que isso poderia até ser feito por algum algoritmo de inteligência artificial, mas vem com o custo da necessidade de um processador mais poderoso.
-
-Este é a parte do código que ocupa provavelmente a maior parte de memória de programa, estima-se algo na ordem de alguns quilo bytes.
-
+Temos então os requisitos de memória...
 
 
 ## Referências
