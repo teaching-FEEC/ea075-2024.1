@@ -220,10 +220,12 @@ O preço total do projeto, desconsiderando componentes auxiliares, como resistor
 	2. Se tensão baixa por tempo definido: Comunicar usuário;
 
 - Interação com usuário (Dois possíveis triggers)
-	1.1. Comando do usuário para ajuste dos parâmetros;
-	2.1. Atribui novos valores para os parâmetros.
-	1.2. Comando do usuário de controle manual;
-	2.2. Ajuste da posição do painel para a definida pelo usuário.
+  	Situação 1:
+	1. Comando do usuário para ajuste dos parâmetros;
+	2. Atribui novos valores para os parâmetros.
+ 	Situação 2:
+	1. Comando do usuário de controle manual;
+	2. Ajuste da posição do painel para a definida pelo usuário.
 	
 - Falhas no sistema
 	1. Identificação de erros do microcontrolador;
