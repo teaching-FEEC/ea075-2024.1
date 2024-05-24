@@ -91,6 +91,10 @@ https://pt.aliexpress.com/item/1005004685830211.html?src=google&src=google&albch
 - Arduino nano:
 https://pt.aliexpress.com/item/1005002197241012.html?src=google&src=google&albch=shopping&acnt=768-202-3196&slnk=&plac=&mtctp=&albbt=Google_7_shopping&isSmbAutoCall=false&needSmbHouyi=false&albcp=19505955113&albag=&trgt=&crea=pt1005002197241012&netw=x&device=c&albpg=&albpd=pt1005002197241012&gad_source=1&gclid=Cj0KCQjw0ruyBhDuARIsANSZ3wqTbNoTqbXYXB13uq3B4xDzB8ZSmqupx1SxVXr3UkpXwHsQbzIFYqgaAgyAEALw_wcB&gclsrc=aw.ds&aff_fcid=631af40bd8d842b08ae06513d1c34077-1716513627600-09798-UneMJZVf&aff_fsk=UneMJZVf&aff_platform=aaf&sk=UneMJZVf&aff_trace_key=631af40bd8d842b08ae06513d1c34077-1716513627600-09798-UneMJZVf&terminal_id=74fd28b9fc36469bb5d951ec78224d83&afSmartRedirect=y
 
+#### Restrições físicas:
+- Área de trabalho do produto: Em torno de 60cm x 50cm x 40cm (teste em protótipos necessário para chegar nas dimensões exatas)
+- Peso máximo suportado pelo dispenser de ração: 10Kg
+- Temperatura de trabalho: Temperatura suportada por animais domésticos (-10°C à 30°C)
 
 ### Especificação de Algoritmos 
 #### Diagrama de tratamento de eventos do algoritmo (desenvolvido com o _board_ Miro):
