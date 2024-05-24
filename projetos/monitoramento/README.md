@@ -160,7 +160,6 @@ Servidor e Interface Web/Móvel:
 > Resistência a Vibração e Impacto: Seguindo normas automotivas relevantes
 
 
-> (Se preferir, adicione um link para o documento de especificação estrutural)
 
 ### Especificação de Algoritmos 
 
