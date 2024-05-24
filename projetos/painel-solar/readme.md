@@ -154,9 +154,9 @@ Além disso, o suporte integrado para Wi-Fi e Bluetooth 5 permite uma comunicaç
 Para o atuador de controle da angulação dos painéis solares, o sistema utiliza um motor de passo junto com um driver de controle. O driver do motor recebe comandos do microcontrolador ESP32 e controla o motor de passo com base nesses comandos, ajustando a inclinação dos painéis solares conforme necessário. O motor de passo atua como o elemento físico que realiza o ajuste da inclinação dos painéis solares, movendo-os conforme os sinais recebidos do driver, que, por sua vez, são baseados nos cálculos do microcontrolador a partir dos dados dos sensores de radiação.
 
 ![motor](https://github.com/nathaliagondo/ea075-2024.1/assets/165518028/136879f8-1e85-441e-99c1-7029adbbec70)
-Figura 5. Lógica de funcionamento do dip switch do servomotor.
+Figura 5. Lógica de funcionamento dos pinos de controle do servomotor.
 
-O motor de passo utilizado é o EasyServo, que possui um encoder acoplado, permitindo obter automaticamente a posição do seu eixo com alta precisão. A conexão de controle e alimentação do motor é feita através do driver, enquanto as conexões de controle do driver são feitas no microcontrolador ESP32. A tabela da Figura 5 ilustra as posições possíveis do eixo do motor. Para garantir a comunicação correta entre o driver e o microcontrolador, é necessário um circuito amplificador de tensão, uma vez que os sinais do ESP32 são de 3.3V e o driver requer sinais de pelo menos 5V.
+O motor de passo utilizado é do tipo EasyServo, que possui um encoder acoplado, permitindo obter automaticamente a posição do seu eixo com alta precisão. A conexão de controle e alimentação do motor é feita através do driver, enquanto as conexões de controle do driver são feitas no microcontrolador ESP32. A tabela da Figura 5 ilustra as posições possíveis do eixo do motor. Para garantir a comunicação correta entre o driver e o microcontrolador, é necessário um circuito amplificador de tensão, uma vez que os sinais do ESP32 são de 3.3V e o driver requer sinais de pelo menos 5V. Para esse circuito será utilizado o Transistor bipolar de junção PNP 2N54N01.
 
 O torque necessário para sustentar e mover a placa solar, considerando suas especificações, é de aproximadamente 128Nm. No entanto, o motor EasyServo fornece um torque de apenas 12Nm. Para que esse motor possa ser utilizado de forma eficaz, é necessário acoplar um redutor de torque. A solução ideal é utilizar um redutor com uma relação de 1:15, aumentando o torque fornecido pelo motor para 180Nm, o que garante uma margem de segurança adequada.
 
@@ -173,11 +173,12 @@ Tabela 1. Principais componentes utilizados no projeto
 |TMA-FC500W-48V-10A|Fonte Chaveada 500W|1|R$ 129,90|
 |ESP32-S3-WROOM-1-N4|Módulo ESP|1|R$ 15,22|
 |LM2576|Regulador de Tensão 60V|2|R$ 36,96|
-||Bateria Estacionária|1|R$ 272,86|
+|12MN36 - 36AH|Bateria Estacionária|1|R$ 272,86|
 |NEMA 17| Redutor de torque| 1|R$ 192,98|
+|2N5401| TBJ NPN| 4|R$ 1,36|
 
 
-O preço total do projeto, desconsiderando componentes auxiliares, como resistores e capacitores, é de R$ 1896,80.
+O preço total do projeto, desconsiderando componentes auxiliares, como resistores e capacitores, é de R$ 1.872,84.
 
 ### Especificação de Algoritmos 
 
