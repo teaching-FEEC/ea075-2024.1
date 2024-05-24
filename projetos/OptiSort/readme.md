@@ -26,12 +26,12 @@ Atualmente não conseguimos levantar o valor econômico associado ao projeto por
 O OptiSort, como dito anteriormente, é um sistema de classificação automática para linhas de produção com foco na indústria alimentícia, mas tendo aplicações nas industrias farmacêuticas, automobilísticas e outras. Sua função principal é garantir a qualidade dos produtos através da identificação, classificação e remoção de itens que não atendam aos padrões de qualidade estabelecidos pelo usuario.
 
 Ele realiza três grandes tarefas:
-* **Identificação e classificação:** Reconhece diferentes tipos de itens e os separa em categorias, utilizando técnicas de visão computacional e aprendizado de máquina para identificar a qualidade associada a cada item.
-* **Atuação na linha de produção:** Controle de atuadores para remover automaticamente os itens defeituosos da esteira principal, direcionando-os para uma linha secundária para reavaliação ou descarte.
+* **Identificação e classificação:** Reconhece os tipos de frutas que temos inserido na esteira e as separa em categorias, utilizando técnicas de visão computacional e aprendizado de máquina para identificar a qualidade associada a cada uma.
+* **Atuação na linha de produção:** Controle de atuadores para remover automaticamente as frutas estragas da esteira principal, direcionando-as para uma linha secundária para reavaliação ou descarte.
 * **Registro:** Monitora o funcionamento do sistema e armazena os dados de qualidade, quantidade e descarte numa base de dados. 
 
 **Exemplo de aplicação:**  
-Em uma linha de separação de frutas, o OptiSort:
+No linha de separação de frutas, o OptiSort:
 * Detecta frutas estragadas por visão computacional.
 * Empurra as frutas estragadas para fora da esteira principal.
 * Direciona as frutas estragadas para uma linha secundária para reavaliação ou descarte.
@@ -40,14 +40,13 @@ Em uma linha de separação de frutas, o OptiSort:
 Para atingir a flexibilidade desejada deste sistema, o OptiSort conta com diversas configurações para atender às necessidades específicas de cada aplicação. Podemos agrupar as suas principais configurações em três grandes grupos:
 
 #### Parâmetros de Identificação:
-   - **Tipos de itens:** Definição dos tipos de itens que o sistema deve identificar e classificar. O usuário precisará capturar imagens de itens de diferentes níveis de qualidade para treinar o classificador com visão computacional. O processo de treinamento deve ser simples e intuitivo e não requerer o uso de programação.
+   - **Tipos de itens:** Definição dos tipos de itens que o sistema deve identificar e classificar. O usuário precisará capturar imagens das frutas que ele precisa Optisort consiga classifcar, colocando imagens de diferentes níveis de qualidade para treinar o classificador com visão computacional. O processo de treinamento deve ser simples e intuitivo e não requerer o uso de programação.
    - **Probabilidade de rejeição:** A saída do classificador visual é um número correspondente à probabilidade de um item ser da categoria rejeitada. O limite de rejeição é a probabilidade a partir da qual o item deve ser identificado e retirado da linha de separação. Por exemplo, se o limite de rejeição for de 0.7, apenas produtos atribuídos com mais de 70% de probabilidade pelo sistema de visão computacional são removidos da esteira.
    - **Número máximo de itens rejeitados abandonados:** No caso de um item rejeitado não ser removido da esteira por fatores externos, o sistema registra esse evento. Se o número de itens rejeitados que passarem pela inspeção passar de uma determinada taxa, a esteira é interrompida
 
 #### Parâmetros de Atuação
    - **Velocidade da esteira:** Ajuste da velocidade da esteira de acordo com o fluxo de produção.
-   - **Velocidade do atuador:** Velocidade com que o atuador reage para retirar os itens defeituosos da linha principal.
-   - **Ação do servomotor:** Distância em que o servomotor atua para remover os itens defeituosos da esteira. Pode ser regulada de acordo com os parâmetros da linha de separação.
+   - **Velocidade do atuador:** Velocidade com que o atuador reage para retirar os itens defeituosos da linha principal. Depende da velocidade da esteira.
 
 #### Parâmetros de Registro
    - **Regularidade do Monitoramento:** Intervalo de tempo entre cada "monitoramento" do estado atual do dispositivo.
@@ -55,7 +54,7 @@ Para atingir a flexibilidade desejada deste sistema, o OptiSort conta com divers
 Os parâmetros mais físicos (como sendo os de atuação e alguns de registro) poderão ser configurados de forma dinâmica enquanto a linha de produção está em operação mediante um controlador.
 
 **Exemplo de aplicação**
-Em uma linha de separação de frutas, o sistema OptiSort pode ser configurado para:
+Na linha de separação de frutas, o sistema OptiSort pode ser configurado para:
 * Identificar diferentes tipos de frutas (por exemplo, maçãs, laranjas, bananas).
 * Classificar as frutas por qualidade, considerando estragadas aquelas cuja probabilidade for menor de 50%.
 * Um segundo depois da fruta estragada ter sido identificada, remover ela da esteira mediante um servomotor.
@@ -125,7 +124,7 @@ O microcontrolador tem suporte à interface de comunicação paralela (DCMI), qu
 
 O microcontrolador estará conectado via uma interface TFT com uma tela LCD para exibir os parâmetros de funcionamento do sistema como velocidade da esteira e temperatura. A tela escolhida foi o modelo WF121ETWAMLNN0 [7], pois é compatível com o protocolo de comunicação TFT e tem a resolução máxima suportada pelo TFT do microcontrolador (1024x768). Para a conexão com a LCD, é necessário 8 bits de pinos para cada canal de cor (R, G, B) e 3 pinos de clock e sincronização (LCD_CLK, LCD_VSYNC e LCD_HSYNC), diferentes dos usados nas câmeras. 
 
-Embora as conexões com as câmeras (8 + 10 + 3 + 3), atuadores (n) e LCD (24 + 3) ocupem uma quantidade considerável de pinos, o modelo de packaging possui 169, mais do que o suficiente para todos os sistemas de sensoreamento e atuação. 
+Embora as conexões com as câmeras (8 + 10 + 3 + 3), atuadores (2+2) e LCD (24 + 3) ocupem uma quantidade considerável de pinos, o modelo de packaging possui 169, mais do que o suficiente para todos os sistemas de sensoreamento e atuação. 
 
 ### PARA MELVIN (Inserir dados do motor aqui. Colocar a quantidade de pinos na atuação dos motores onde está escrito n pinos. editar os parâmetros da esteira lá em cima para encaixar na sua ideia de atuador). -de henrique
 
@@ -139,7 +138,11 @@ Na imagem apresentada anteriormente, retirada de [14], podemos visualizar o diag
 
 Ela será adquirida de uma das empresas de produção de esteiras dentro do estado de São Paulo (como sendo [9] e [10]), favorecendo o modelo módular pela simplicidade da limpeza das suas peças. Estima-se a esteira seja de uns 3 m de extensão, possuindo dessa forma espaço suficiente para a câmera aplicar o algoritmo. O CLP da esteira solicitada precisa ter acesso ao padrão EIA485 (RS485) de comunicação serial, que será utilizado para interconectar o controlador lógico com o STM32H7. Por conta dos níveis de tensão associados ao padrão serial (-7V até +12V) iremos usar um conversor TTL a RS485 montado com o chip MAX485 (visível neste link [11]), seguindo a montagem utilizada em módulos comerciais (como [12]). No projeto deste circuito conectaremos um conjunto de pinos RX e TX do USART do STM32H7 no MAX485, ligando ele no nosso CLP mediante um cabo de Ethernet CAT5, atendendo as especificações de cabo para o EIA422 (padrão anterior) [13]. Mediante esta conexão serão controlados e supervisionados aspectos da esteira, como a velocidade. A correia transportadora precisa ser modular (como aquela apresentada em [9]) para permitir funilamento e espaçamento dos elementos colocados no "stream" de entrada. 
 
-A câmera precisa estar com uma angulação de 45 com relação à esteira, de forma que consiga enxergar os componentes em cima da esteira desde um plano superior. Feito o reconhecimento conforme apresentado na seção anterior, dois dos pinos PWM do STM32H7 serão utilizados para o acionamento de dois cilindros pneumáticos [], que serão utilizados como o nosso atuador separador da fruta estragada. Por conta da alta corrente de acionamento 
+A câmera precisa estar com uma angulação de 45 com relação à esteira, de forma que consiga enxergar os componentes em cima da esteira desde um plano superior. Feito o reconhecimento conforme apresentado na seção anterior, dois dos GPIOS do STM32H7 (pinos digitais) serão utilizados para o acionamento de dois cilindros pneumáticos [16], que, por conta da sua velocidade e força de acionamento, vão servir como o nosso atuador separador de fruta estragada. Assim, para acionar os cilindros iremos utilizar uma válvula pneumática 5/2 com solenoide [15], que, por conta á alta tensão de operação (12V) será acionada mediante um Mosfet FQP30N06L conectado ao pino digital escolhido. 
+
+https://www.expper.com.br/produtos/cilindro-pneumatico-mini-iso-ma-20mm-x-100mm/
+
+
 
 Estima-se
 
@@ -184,3 +187,7 @@ A câmera irá utilizar 7.5 fps para que haja tempo suficiente para que a infer�
 [14] MB Correias Campinas. url: https://www.mbcorreiascampinas.com.br/ [Acessado: 23. Maio. 2024]
 
 [14] Maier, Georg & Gruna, Robin & Längle, Thomas & Beyerer, Jürgen. (2024). A Survey of the State of the Art in Sensor-Based Sorting Technology and Research. IEEE Access. PP. 1-1. 10.1109/ACCESS.2024.3350987. 
+
+[15] Mercado Livre, "Válvula Pneumática Solenoide/mola 5/2v 1/4 Com Conexões 8mm". url: https://produto.mercadolivre.com.br/MLB-3355213923-valvula-pneumatica-solenoidemola-52v-14-com-conexoes-8mm-_JM?attributes=Vm9sdGFnZW0%3D%3AMTJW&quantity=1 [Acessado: 23. Maio. 2024]
+
+[16] url: https://www.expper.com.br/produtos/cilindro-pneumatico-mini-iso-ma-20mm-x-100mm/
