@@ -1,0 +1,37 @@
+<mxfile host="app.diagrams.net" modified="2024-04-02T22:26:37.594Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0" etag="ZpwXbRIivxnnf8SPrawm" version="24.2.1" type="github">
+  <diagram name="Page-1" id="IaB7p9G07RdtcvoD76Kl">
+    <mxGraphModel dx="691" dy="1562" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="KhLi116X54OpdkXT-Y02-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="KhLi116X54OpdkXT-Y02-2" target="KhLi116X54OpdkXT-Y02-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KhLi116X54OpdkXT-Y02-2" value="&lt;div&gt;&lt;b&gt;2. Banco de Dados&lt;/b&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="263" y="-350" width="129" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="KhLi116X54OpdkXT-Y02-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="KhLi116X54OpdkXT-Y02-4" target="KhLi116X54OpdkXT-Y02-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KhLi116X54OpdkXT-Y02-4" value="&lt;div&gt;&lt;b&gt;1. Módulo de Entrada&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;(Câmera, Autenticador)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="-350" width="129" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="KhLi116X54OpdkXT-Y02-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="KhLi116X54OpdkXT-Y02-6" target="KhLi116X54OpdkXT-Y02-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KhLi116X54OpdkXT-Y02-6" value="&lt;div&gt;&lt;b&gt;3. Controlador de Acesso&lt;/b&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="436" y="-350" width="129" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="KhLi116X54OpdkXT-Y02-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="KhLi116X54OpdkXT-Y02-8" target="KhLi116X54OpdkXT-Y02-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KhLi116X54OpdkXT-Y02-8" value="&lt;div&gt;&lt;b&gt;4. Catrataca/Porta&lt;/b&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="609" y="-350" width="129" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="KhLi116X54OpdkXT-Y02-9" value="&lt;div&gt;&lt;b&gt;5. Interface do Usuário&lt;/b&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="609" y="-207" width="129" height="104" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
