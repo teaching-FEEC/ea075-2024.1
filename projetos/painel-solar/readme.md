@@ -181,7 +181,6 @@ Tabela 1. Principais componentes utilizados no projeto
 O preço total do projeto, desconsiderando componentes auxiliares, como resistores e capacitores, é de R$ 1.872,84.
 
 ### Especificação de Algoritmos 
-
 - Período útil de geração de energia
 	1. Identifica se a mínima claridade foi atingida por tempo mínimo
  	2. Inicializa sistema de inclinação variável;
@@ -191,72 +190,45 @@ O preço total do projeto, desconsiderando componentes auxiliares, como resistor
 	6. Identifica que a mínima claridade não é mais satisfeita por tempo mínimo;
 	7. Suspensão do Sistema.
 
-
-- Mudança da posição do Sol
-(Sistema já inicializado pelo algoritmo anterior)
-
-Loop
-
-1 - Verifica que a claridade atual é menor que a claridade anterior;
-
-2 - Se maior ou igual: Mantém posição;
-
-3 - Se menor: Ajuste de posição;
-
-4 - Após tempo definido retorna para 1.
+- Mudança da posição do Sol (Sistema já inicializado pelo algoritmo anterior)
+	Loop
+	1.  Verifica que a claridade atual é menor que a claridade anterior;
+	2. Se maior ou igual: Mantém posição;
+	3. Se menor: Ajuste de posição;
+	4. Após tempo definido retorna para 1.
 
 - Estações do ano
-
-1 - Verifica dia e mês do ano;
-
-2 - Ajusta parâmetros de funcionamento para cada estação;
-
+	1. Verifica dia e mês do ano;
+	2. Ajusta parâmetros de funcionamento para cada estação.
 
 - Condições adversas
-
-1 - Identifica que luminosidade é baixa por tempo mínimo;
-
-2 - Se luminosidade muito baixa: Suspende sistema;
-
-3 - Funcionamento normal caso contrário.
+	1. Identifica que luminosidade é baixa por tempo mínimo;
+	2. Se luminosidade muito baixa: Suspende sistema;
+	3. Funcionamento normal caso contrário.
 
 - Condições extremas
-1 - Sinal do driver de esforço excessivo do motor ou sensores sem resposta;
-
-2 - Mantém painel em posição segura pré-definida;
-
-3 - Comunicar ao usuário.
+	1. Sinal do driver de esforço excessivo do motor ou sensores sem resposta;
+	2. Mantém painel em posição segura pré-definida;
+	3. Comunicar ao usuário.
 
 - Manutenção das placas ou do sistema
-  
-1 - Comando do usuário para posição pré-definida de manutenção;
-
-2 - Mantém painel em posição pré-definida;
+	1. Comando do usuário para posição pré-definida de manutenção;
+	2. Mantém painel em posição pré-definida;
 
 - Bateria fraca (bateria fica sempre carregada a menos que haja falta de energia)
-
-1 - Verifica tensão na bateria;
-
-2 - Se tensão baixa por tempo definido: Comunicar usuário;
+	1. Verifica tensão na bateria;
+	2. Se tensão baixa por tempo definido: Comunicar usuário;
 
 - Interação com usuário (Dois possíveis triggers)
-
-1.1 - Comando do usuário para ajuste dos parâmetros;
-
-2.1 - Atribui novos valores para os parâmetros.
-
-
-1.2 - Comando do usuário de controle manual;
-
-2.2 - Ajuste da posição do painel para a definida pelo usuário.
+	1.1. Comando do usuário para ajuste dos parâmetros;
+	2.1. Atribui novos valores para os parâmetros.
+	1.2. Comando do usuário de controle manual;
+	2.2. Ajuste da posição do painel para a definida pelo usuário.
 	
 - Falhas no sistema
-
-1 - Identificação de erros do microcontrolador;
-
-2 - Mantém painel em posição segura pré-definida;
-
-3 - Comunicar ao usuário.
+	1. Identificação de erros do microcontrolador;
+	2. Mantém painel em posição segura pré-definida;
+	3. Comunicar ao usuário.
 
 
 
