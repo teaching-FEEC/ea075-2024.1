@@ -51,6 +51,7 @@ O princípio de funcionamento do sensor ultrassônico é simples, ele envia um p
 #### Atuadores
 
 Precisa-se de um atuador para mostrar a quantidade de vagas na entrada do estacionamento. Diferente dos sensores, não há uma pluralidade de opções. Foram escolhidos dois displays de 7 segmentos para reportar um número de 00 a 99, possuem baixo custo, facilidade de uso e dispõem de boa visibilidade.
+
 ![Display de 7 segmentos](https://www.msseletronica.com.br/imagens/976_203.gif)
 
 #### Comunicação sensor - MCU
@@ -76,3 +77,10 @@ Como é possível verificar na seção de Especificação de Algoritmos, estima-
   Notas de aula de EA075 \
   https://www.sofit4.com.br/blog/controle-de-entrada-e-saida-de-veiculos/ \
   https://autopark.com.br/tecnologia-e-automatizacao-para-estacionamentos/
+  https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf
+  https://www.handsontec.com/dataspecs/HC-SR04-Ultrasonic.pdf
+  https://cdn.standards.iteh.ai/samples/5500/6b28378512604ff7bdaace506be7dc0c/ISO-1028-1973.pdf
+  https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf
+  https://www.microchip.com/en-us/products/microcontrollers-and-microprocessors/8-bit-mcus/pic-mcus
+  https://en.wikipedia.org/wiki/ATmega328
+  
