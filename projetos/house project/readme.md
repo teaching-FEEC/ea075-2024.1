@@ -20,7 +20,6 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
  de fumaça e sensor de temperatura, utilizado para vizualização da temperatura dos cômodos.
  
 ## Descrição Funcional
-![image](https://github.com/EndlessLight9/ea075-2024.1-dolc/assets/165411886/f6f2a04e-b437-436f-868a-ebb4185268f3)
 
 Sensor de Presença:
  O sensor de presença é responsável por detectar movimento em áreas específicas da casa. Este sensor está conectado a um LED, que indica visualmente a detecção de movimento. Quando o sensor capta a presença de 
