@@ -183,20 +183,13 @@ O preço total do projeto, desconsiderando componentes auxiliares, como resistor
 ### Especificação de Algoritmos 
 
 - Período útil de geração de energia
-
-1 - Identifica se a mínima claridade foi atingida por tempo mínimo
-
-2 - Inicializa sistema de inclinação variável;
-
-3 - Conferência de segurança se há erro ou condição extrema;
-
-4 - Sem problemas: Posiciona placa para posição inicial;
-
-5 - Rotina de funcionamento;
-
-6 - Identifica que a mínima claridade não é mais satisfeita por tempo mínimo;
-
-7 - Suspensão do Sistema.
+	1. Identifica se a mínima claridade foi atingida por tempo mínimo
+ 	2. Inicializa sistema de inclinação variável;
+	3. Conferência de segurança se há erro ou condição extrema;
+	4. Sem problemas: Posiciona placa para posição inicial;
+	5. Rotina de funcionamento;
+	6. Identifica que a mínima claridade não é mais satisfeita por tempo mínimo;
+	7. Suspensão do Sistema.
 
 - Mudança da posição do Sol
 (Sistema já inicializado pelo algoritmo anterior)
