@@ -96,7 +96,7 @@ Os módulos móveis tem como objetivo monitorar a velocidade do carro e informar
 
 Os dispostivos fixos são torres colocadas ao longo da via, e tem como objetivo detectar congestionamentos, recebendo informações de velocidade dos motoristas mais próximos, e repassar a informação para torres anteriores na via, que por sua vez avisam sobre as condições ao módulos móveis proxímos a elas.
 
-![Alt text here](diagramas/diagrama-estrutural.png)
+![Diagrama estrutural](diagramas/diagrama-estrutural.png)
 
 ## Especificações
 
@@ -152,6 +152,22 @@ Tabela de periféricos escolhidos
 Ainda é necessário definir um circuito integrado para realizar a conversão de USB para UART
 
 Escolha da MCU:
+
+Dos algoritmos especificados, vemos que este módulo exige baixa memória e pouca capacidade de processamento, porque a MCU é apenas responsável por intermediar os periféricos com as torres. Desta forma, encontramos a família de microcontroladoras de 8 bits ATtinyXXX.
+
+link do datasheet: https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/ATtiny202-04-402-04-06-Auto-DataSheet-DS40002159A.pdf
+
+Analisando entre as variações, a escolha deve ser feita com base no número de pinos e da quantidade de memória Flash/RAM. A versão com menos (8) pinos não disponibiliza nenhum pino multiplexável para I2C, e portanto não pode ser utilizada. Isto pode ser visto nas imagens abaixo, os pinos SDA e SCL são multiplexáveis apenas nos pinos PB0 e PB1, que não estão disponíveis nessa versão.
+
+Pinagem das versões com 8 e 14 pinos
+
+![Pinos ATtiny](imgs/pinout-attiny.png)
+
+Tabela de multiplexação dos pinos
+
+![Multiplexao de pinos ATtiny](imgs/io-multiplex-attiny.png)
+
+Já a versão de 14 pinos possibilita que sejam acessados os módulos USART, I2C e GPIO, que completa as interfaces necessárias. Quanto à memória, de acordo com nossas estimativas, a versão com 128 B de RAM e 2 kB de memória Flash deve ser suficiente. Portanto, definimos a microcontroladora ATtiny204, que tem um custo de apenas R$ 3. 
 
 #### Módulo fixo
 
