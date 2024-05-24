@@ -248,16 +248,20 @@ O valor de bytes foi arredondado para cima, de modo a englobar aquelas outras va
 Além disso, será necessário armazenar as mensagens que serão mostradas no display lcd, tais mensagens serão armazenadas em uma memória flash, pois toda vez que ligar o sistema as mensagens que podem ser exibidas serão as mesmas, portanto necessitam ser armazenada em uma memória não volátil. Segue abaixo as frases e os cálculos de tamnanhos de armazenamento:
 
 Mensagens mostradas em operação normal:
+
 Primeira Linha do display:
   - "Conectado": temos 9 caracteres, mais 1 caractere do '\0' no final da string, cada caractere de 1 byte, totalizando 10 bytes.  
   - "Desconectado": temos 12 caracteres, mais 1 caractere do '\0' no final da string, cada caractere de 1 byte, totalizando 13 bytes.   
-  - "Congestionamento": temos 16 caracteres, mais 1 caractere do '\0' no final da string, cada caractere de 1 byte, totalizando 17 bytes.  
+  - "Congestionamento": temos 16 caracteres, mais 1 caractere do '\0' no final da string, cada caractere de 1 byte, totalizando 17 bytes.
+    
 Segunda Linha:
 	- "Vmax: xxx km/h": temos 14 caracteres, mais 1 caractere do '\0' no final da string, cada caractere de 1 byte, totalizando 15 bytes.  
 Mensagens mostradas em eventos de erros:
+
 Primeira Linha:
   - "Erro": temos 4 caracteres, mais 1 caractere do '\0' no final da string, cada caractere de 1 byte, totalizando 5 bytes.  
-  - "Erro Interno": temos 12 caracteres, mais 1 caractere do '\0' no final da string, cada caractere de 1 byte, totalizando 13 bytes.  
+  - "Erro Interno": temos 12 caracteres, mais 1 caractere do '\0' no final da string, cada caractere de 1 byte, totalizando 13 bytes.
+    
 Segunda Linha:
   - "conexão carro": temos 13 caracteres, cada caractere de 1 byte, totalizando 14 bytes.  
   - "tente reiniciar": temos 15 caracteres, cada caractere de 1 byte, totalizando 16 bytes.  
