@@ -254,15 +254,16 @@ Primeira Linha do display:
   - "Desconectado": temos 12 caracteres, mais 1 caractere do '\0' no final da string, cada caractere de 1 byte, totalizando 13 bytes.   
   - "Congestionamento": temos 16 caracteres, mais 1 caractere do '\0' no final da string, cada caractere de 1 byte, totalizando 17 bytes.
     
-Segunda Linha:
-	- "Vmax: xxx km/h": temos 14 caracteres, mais 1 caractere do '\0' no final da string, cada caractere de 1 byte, totalizando 15 bytes.  
+Segunda Linha do display:	
+  - "Vmax: xxx km/h": temos 14 caracteres, mais 1 caractere do '\0' no final da string, cada caractere de 1 byte, totalizando 15 bytes.
+    
 Mensagens mostradas em eventos de erros:
 
-Primeira Linha:
+Primeira Linha do display:
   - "Erro": temos 4 caracteres, mais 1 caractere do '\0' no final da string, cada caractere de 1 byte, totalizando 5 bytes.  
   - "Erro Interno": temos 12 caracteres, mais 1 caractere do '\0' no final da string, cada caractere de 1 byte, totalizando 13 bytes.
     
-Segunda Linha:
+Segunda Linha do display:
   - "conexão carro": temos 13 caracteres, cada caractere de 1 byte, totalizando 14 bytes.  
   - "tente reiniciar": temos 15 caracteres, cada caractere de 1 byte, totalizando 16 bytes.  
 
