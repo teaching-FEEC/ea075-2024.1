@@ -58,6 +58,7 @@ Precisa-se de um atuador para mostrar a quantidade de vagas na entrada do estaci
 
 É possível fazer a comunicação dos sensores ultrassônicos com o microcontrolador principal por fio, porém, a depender do tamanho do estacionamento seria caro, os fios podem se romper mais facilmente com o tempo, entre outros problemas.
 Portanto, dentre outras possibilidades foi escolhido o módulo de comunicação LoRa da empresa EBYTE, que possui uma tecnologia de comunicação sem fio que funciona através de rádio frequência e um software de configuração próprio, além de bibliotecas para seu uso com a IDE do arduino. Esse módulo utiliza comunicação serial UART para comunicação com microcontrolador e possui dois pinos de configuração de quatro estados: normal; apenas recepção; economia de energia e sleep mode/configuração.
+
 ![Módulo LoRa](https://github.com/EduardoTejada/ea075-2024.1/blob/main/projetos/monitor_de_vagas/imagens/Screenshot%20from%202024-05-23%2020-29-21.png?raw=true)
 ![LoRa Dimensões](https://github.com/EduardoTejada/ea075-2024.1/blob/main/projetos/monitor_de_vagas/imagens/dimensoes_LoRa.png?raw=true)
 ![Exemplo código transmissor](https://github.com/EduardoTejada/ea075-2024.1/blob/main/projetos/monitor_de_vagas/imagens/transmissor.png?raw=true)
