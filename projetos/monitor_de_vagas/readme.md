@@ -41,40 +41,36 @@ Evento 4: reportar a liberação de vagas na entrada.
 
 ### Especificação Estrutural
 
-> (Se preferir, adicione um link para o documento de especificação estrutural)
-> 
-> Entende-se por estrutural a descrição tanto das características elétricas e temporais como das restrições físicas de cada bloco funcional.
-> Nessa etapa do projeto, ainda não será solicitado o diagrama elétrico mas espera-se que já estejam identificados os componentes e circuitos integrados propostos
-> para implementação do sistema embarcado proposto.
-> 
-> Como o projeto de um sistema embarcado é centralizado nas tarefas, recomenda-se iniciar com a definição dos periféricos de entrada e saída (atuadores e/ou sensores) apropriados para o
-> sistema. Pode ser necessário definir um endereço distinto para cada um deles. 
-> Este endereço será utilizado pela unidade micro-controladora para acessá-los tanto para leitura como para escrita.
+#### Sensores detectores de vaga
 
-> Nesta etapa do projeto espera-se que a unidade micro-controladora seja definida.
-> Tendo definidos os periféricos e a memória, é possível projetar um decodificador de endereços
-> que converte o endereço referenciado no programa em sinal *Chip Select – CS* do dispositivo
-> correspondente, habilitando-o para realizar um ciclo de leitura ou de escrita.
-> 
-> Nesta etapa do projeto espera-se que sejam identificada também a eventual necessidade do projeto de circuitos de interface para os periféricos do projeto.
-> Assim, devem ser incluídos na especificação, se necessário:
-> - conversores AD e DA;
-> - padrões de comunicação a serem adotados;
-> - circuitos de sincronização de sinais temporais.
-> 
-> Finalmente, deve-se especificar as restrições físicas e ambientais de funcionamento do circuito, tais como limites mecânicos
-> (altura, largura, profundidade) e limites de dissipação térmica.
+Existem diversas maneiras de fazer a verificação acerca de quais vagas estão ou não disponíveis no estacionamento em um determinado momento, tais como: sensor ultrassônico, infravermelho, magnético, entre outros. O projeto visa atuar principalmente em ambientes externos, portanto lida com variações de luz, temperatura e umidade. Com isso, acredita-se que o candidato que melhor se adequa aos requisitos é o sensor ultrassônico, que lida bem com as variações citadas possuindo um baixo custo.
+O modelo escolhido de sensor ultrassônico escolhido foi o HC-SR04 dado sua alta disponibilidade no mercado, confiabilidade, precisão, facilidade na programação e o seu preço. É importante ressaltar, contudo, que o sensor não possui uma resistência mecânica suficiente para ser usado em ambiente externo, é necessário envolvê-lo com uma caixa.
+O princípio de funcionamento do sensor ultrassônico é simples, ele envia um pulso ultrassônico que bate em um determinado objeto a uma distância D e volta para o receptor. Sabendo a velocidade do som V e o tempo T que leva para o pulso ir e voltar até o receptor é possível estimar a distância do objeto encontrado por D = V / (T/2).
+![Sensor Ultrassônico](https://media.licdn.com/dms/image/D4D12AQGhwpQId1yhpg/article-cover_image-shrink_600_2000/0/1706248069214?e=2147483647&v=beta&t=YJ0ueeT47Rg0cfao_EjJd3f4r_5b5WtO8TMQzZQesyY)
+
+#### Atuadores
+
+Precisa-se de um atuador para mostrar a quantidade de vagas na entrada do estacionamento. Diferente dos sensores, não há uma pluralidade de opções. Foram escolhidos dois displays de 7 segmentos para reportar um número de 00 a 99, possuem baixo custo, facilidade de uso e dispõem de boa visibilidade.
+![Display de 7 segmentos](https://www.msseletronica.com.br/imagens/976_203.gif)
+
+#### Comunicação sensor - MCU
+
+É possível fazer a comunicação dos sensores ultrassônicos com o microcontrolador principal por fio, porém, a depender do tamanho do estacionamento seria caro, os fios podem se romper mais facilmente com o tempo, entre outros problemas.
+Portanto, dentre outras possibilidades foi escolhido o módulo de comunicação LoRa da empresa EBYTE, que possui uma tecnologia de comunicação sem fio que funciona através de rádio frequência e um software de configuração próprio, além de bibliotecas para seu uso com a IDE do arduino. Esse módulo utiliza comunicação serial UART para comunicação com microcontrolador e possui dois pinos de configuração de quatro estados: normal; apenas recepção; economia de energia e sleep mode/configuração.
+
+
+
+
+#### Microcontrolador
+
+Como é possível verificar na seção de Especificação de Algoritmos, estima-se que o código em questão não precisa de grandes memórias tanto de programa quanto de dados. Além disso, o sistema em questão não é crítico, precisa ser capaz de enviar e receber os pulsos de TRIG e ECHO de múltiplos sensores ultrassônicos (no mínimo 10 μS) e também de enviar e receber dados através dos módulos LoRa. Compilamos na IDE do Arduino um código de transmissão de dados e outro de recepção, com uma biblioteca otimizada para o módulo e uma biblioteca de configuração de portas seriais e o resultado foi códigos que ocupam em média 8300 bytes de memória. Como o sistema não precisa lidar com armazenamento de um grande número de dados, é possível utilizar microcontroladores mais simples. Dados os requisitos do projeto, a família de MCU’s que melhor se adequa são processadores de entrada de famílias como a Intel 8051 ou os PIC’s produzidos pela Microchip Technology, por serem simples e efetivos. Porém, como tais placas de desenvolvimento não se encontram disponíveis, a solução adotada será o ATmega328P, produzido pela Atmel (comprada pela Microchip Technology em 2016), que também atende bem as propostas colocadas.
+
+
+#### Diagrama
+![Diagrama da Especificação Estrutural](https://github.com/EduardoTejada/ea075-2024.1/blob/main/projetos/monitor_de_vagas/imagens/Especifica%C3%A7%C3%A3o%20Estrutural.jpg?raw=true)
 
 ### Especificação de Algoritmos 
-
-> (Se preferir, adicione um link para o documento de especificação de algoritmos).
-> 
-> Deve ser elaborado para CADA evento o algoritmo de tratamento deste evento. Com base no
-> tamanho de cada algoritmo, estima-se o tamanho de memória necessária para armazenar todos
-> os programas e os dados associados. Isso permitirá especificar a memória a ser utilizada e o
-> espaço onde serão armazenados os programas. O algoritmo de tratamento de evento pode
-> ser representado graficamente por um fluxograma. Recomenda-se usar símbolos gráficos consistentes 
-> com a norma internacional ISO 1028-1973 e IS0 2972-1979.
+![Fluxograma](https://github.com/EduardoTejada/ea075-2024.1/blob/main/projetos/monitor_de_vagas/imagens/Especifica%C3%A7%C3%A3o%20do%20Algoritmo.jpg?raw=true)
 
 ## Referências
   Notas de aula de EA075 \
