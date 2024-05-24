@@ -14,26 +14,13 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 
 
 ## Descrição do Projeto
-  O objetivo principal desse projeto é poder criar um sistema de segurança eficiente, podendo assim ajudar desde casas menores de poucas pessoas até casas com uma familia grande, trazendo confiança, segurança e eficiência ao lar de cada individuo. O projeto inclui algumas coisas como sistema de segurança para evitar roubos ou até alertar algum vazamento de gâs na casa, sensor de temperatura para poder agir conforme os moradores escolham melhor, sensores de presença para evitar coisas simples como deixar a luz acessa do quarto sem ninguém estar usando ele entre outras funcionalidades.
-
- DESCRIÇÃO NOVA
  O objetivo principal deste projeto é criar um sistema de segurança eficiente, focado em casas de menor porte, mas que também possa ser otimizado para residências maiores. O sistema de segurança proporciona 
  eficiência energética e conforto aos moradores. Ele inclui funcionalidades como: sensor de presença conectado a um LED, permitindo monitoramento conforme desejado pelo usuário e podendo também acionar um alarme 
- sonoro, se desejado (por exemplo, ao sair de casa); sensor de gás com alarme sonoro, ativado ao detectar níveis potencialmente perigosos; e sensor de fumaça, que aciona um alarme sonoro ao detectar altos níveis 
- de fumaça.
+ sonoro, se desejado (por exemplo, ao sair de casa); sensor de gás com alarme sonoro, ativado ao detectar níveis potencialmente perigosos, sensor de fumaça, que aciona um alarme sonoro ao detectar altos níveis 
+ de fumaça e sensor de temperatura, utilizado para vizualização da temperatura dos cômodos.
  
 ## Descrição Funcional
 ![image](https://github.com/EndlessLight9/ea075-2024.1-dolc/assets/165411886/f6f2a04e-b437-436f-868a-ebb4185268f3)
-
-Sistema de Segurança: Ao ser ativado, os sensores de presença, ao detectar alguma presença, irá alertar os donos via mensagem e tocará um alarme na própia casa.
-
-Sistema de Controle de Temperatura: Pode ser ativado ou desativado conforme desejado pelo usuário, quando ativado o o sistema irá adotar as configurações exigidas pelo usuário e ficará ativo até ser desligado novamente.
-
-Sistema de Alerta de Gâs: Ligado constantemente, enviará um sinal de alerta aos donos ao ser detectado um nivel elevado de gâs na cozinha. 
-
-Sistema de Alerta de Fumaça: Ligado constantemente, enviará um sinal de alerta aos donos ao ser detectado um nivel elevado de fumaça e ligação aos bombeiros caso necessário.
-
-DESCRIÇÃO NOVA:
 
 Sensor de Presença:
  O sensor de presença é responsável por detectar movimento em áreas específicas da casa. Este sensor está conectado a um LED, que indica visualmente a detecção de movimento. Quando o sensor capta a presença de 
@@ -45,73 +32,48 @@ Sensor de Presença:
  para alertar os moradores. Esta função é essencial para prevenir incidentes graves, como explosões ou intoxicações, garantindo a segurança dos habitantes da casa. O sensor é calibrado para identificar 
  concentrações de gás que ultrapassem limites seguros, proporcionando uma resposta rápida e segura em situações de risco.
 
-* Sensor de Fumaça:
+Sensor de Fumaça:
  O sensor de fumaça é fundamental para a detecção precoce de incêndios. Este sensor monitora continuamente os níveis de fumaça no ambiente e, ao identificar concentrações elevadas, aciona um alarme sonoro. A 
- rápida detecção de fumaça permite que os moradores tomem medidas imediatas para evacuar a área e chamar os serviços de emergência ou até mesmo ser conectado junto com um sprinkler (porém o sprinkler não está 
- incluido no projeto ainda), minimizando danos e salvaguardando vidas. O sensor é sensível a variações súbitas na quantidade de fumaça, garantindo que qualquer início de incêndio seja rapidamente percebido.
+ rápida detecção de fumaça permite que os moradores tomem medidas imediatas para evacuar a área e chamar os serviços de emergência , minimizando danos e salvaguardando vidas. O sensor é sensível a variações súbitas na quantidade de fumaça, garantindo que qualquer início de incêndio seja rapidamente percebido.
+
+ Sensor de Temperatura :
+   O sensor de temperatura desempenha um papel crucial ao fornecer informações essenciais aos moradores. Ele monitora atentamente a temperatura de cada cômodo e apresenta, de forma clara e precisa, os resultados em um display digital.
 
 
 
 ### Funcionalidades
 
 
-Sistema de Segurança: Alertar ao sentir uma presença não desejada com uso do sensor de presença ou mediante quebra de porta/janela.
-
-Sistema de Controle de Temperatura: Caso a casa chegar a uma temperatura indesejada, ligar o aquecedor ou ar condicionado de acordo ao que o operador deseja 
-
-Sistema de Alerta de Gâs: Principalmente na cozinha, caso detectado vazamento de gás, fazer um alerta para os donos da casa.
-
-Sistema de Alerta de Fumaça: Detector de fumaça na casa com ligação automática aos bombeiros caso necessário
-
-TEXTO NOVO:
 
 Detecção de Presença: Utilizando sensores de movimento, o sistema pode identificar a presença de indivíduos em áreas específicas da casa. Isso permite a ativação de alertas visuais (LEDs) e sonoros para notificar os moradores sobre atividades suspeitas.
 
 Detecção de Gás: O sistema possui sensores que monitoram continuamente a presença de gases potencialmente perigosos. Ao detectar níveis elevados, um alarme sonoro é acionado para alertar os moradores, permitindo uma resposta rápida para evitar acidentes.
 
-*Detecção de Fumaça: Sensores de fumaça instalados em pontos estratégicos da residência detectam a presença de fumaça, acionando imediatamente um alarme sonoro. Esta funcionalidade é crucial para a detecção de incêndios, possibilitando a evacuação e a chamada dos serviços de emergência (ou sprinkler?).
+Detecção de Fumaça: Sensores de fumaça instalados em pontos estratégicos da residência detectam a presença de fumaça, acionando imediatamente um alarme sonoro. Esta funcionalidade é crucial para a detecção de incêndios, possibilitando a evacuação e a chamada dos serviços de emergência.
+
+Detecção de Temperatura: Sensores de temperatura instalados em cada cômodo, com exceção do banheiro e quintal, captam as variações térmicas do ambiente e as apresentam aos moradores por meio de um display digital intuitivo a atualização de dados é feita a cada 2 segundos. Essa funcionalidade essencial mantém os residentes constantemente informados sobre as condições climáticas internas, capacitando-os a realizar ajustes imediatos e precisos para assegurar um ambiente confortável e acolhedor em casa.
 
 Monitoramento em Tempo Real: Todos os sensores são integrados a um sistema central que permite o monitoramento em tempo real. Os moradores podem visualizar o status dos sensores e receber notificações instantâneas em caso de anomalias.
 
 ### Configurabilidade
 
-
-Sistema de Segurança: O usuário tem controle total sobre a ativação ou desativação do sistema conforme sua vontade.
-
-Sistema de Controle de Temperatura: O usuário pode definir as especificações de ligar ou desligar o sistema, como limiares de temperatura ou horários específicos.
-
-Sistema de Alerta de Gás: Este sistema permanece permanentemente ligado para detectar qualquer presença de gás.
-
-Sistema de Alerta de Fumaça: Da mesma forma, este sistema também permanece permanentemente ligado para detectar qualquer indício de fumaça.
-
-TEXTO NOVO:
-
-*Ajuste de Sensibilidade dos Sensores: Os usuários podem ajustar a sensibilidade dos sensores de presença, (explicar como? ou nao?) gás e fumaça para evitar falsos alarmes e garantir uma detecção precisa.
-
 Configuração de Alarmes: É possível definir quando os alarmes sonoros devem ser ativados, como por exemplo, apenas quando a casa está vazia ou durante determinados horários.
 
 Notificações Personalizadas: Os moradores podem configurar o sistema para receber notificações alerta via LED ou alarme sonoro.
 
-*Integração com Outros Sistemas: O sistema pode ser integrado com outros dispositivos de automação residencial, como câmeras de segurança, sistemas de iluminação, sprinklers e controles de acesso, permitindo uma gestão centralizada da segurança da casa.
+Unidades de Medida: Permite a configuração para exibir a temperatura em graus Celsius ou Fahrenheit. 
+
+Integração com Outros Sistemas: O sistema pode ser integrado com outros dispositivos de automação residencial, como câmeras de segurança, sistemas de iluminação, sprinklers e controles de acesso, permitindo uma gestão centralizada da segurança da casa.
 
 ### Eventos
 
+#### Eventos Periódicos:
 
-Sistema de Segurança : Em eventos não periódicos, caso o sistema de segurança esteja ativado, a ativação do sensor de presença gera uma interrupção.
+Verificação de Níveis de Gás e Fumaça : Monitoramento contínuo dos níveis de gás e fumaça no ambiente.
 
-Sistema de Controle de Temperatura : Em eventos não periódicos, se o sistema de controle de temperatura estiver ativo, ele monitora as temperaturas definidas pelo usuário e toma medidas se a temperatura estiver fora dos limites estabelecidos.
+Leitura de Temperatura: O sensor realiza leituras de temperatura em intervalos regulares de 2 segundos.
 
-Sistema de Alerta de Gás : Em eventos não periódicos, uma interrupção é gerada se for detectado um nível elevado de gás pelo sistema de alerta de gás.
-
-Sistema de Alerta de Fumaça : Em eventos não periódicos, uma interrupção é gerada se for detectado um nível elevado de fumaça pelo sistema de alerta de fumaça.
-
-TEXTO NOVO:
-
-Eventos Periódicos:
-
-Verificação de Níveis de Gás e Fumaça: Monitoramento contínuo dos níveis de gás e fumaça no ambiente.
-
-Eventos Não Periódicos:
+#### Eventos Não Periódicos:
 
 Detecção de Presença: Ativado quando um movimento é detectado.
 Alerta de Gás: Ativado ao detectar níveis perigosos de gás.
@@ -122,26 +84,21 @@ Alerta de Fumaça: Ativado ao detectar níveis elevados de fumaça.
 ### Tratamento de Eventos
 
 
-Sistema de Segurança (Prioridade Nível 1): Após a detecção de uma intrusão, um alarme sonoro será ativado na residência e os usuários serão notificados sobre a presença não autorizada.
+#### Detecção e Notificação:
 
-Sistema de Controle de Temperatura (Prioridade Nível 4): Após a detecção de uma variação fora dos níveis de temperatura desejados, o sistema ajustará o ambiente conforme necessário, ligando o aquecedor ou o ar condicionado até que a temperatura desejada seja alcançada.
-
-Sistema de Alerta de Gás (Prioridade Nível 2): Emitirá um sinal de alerta para os usuários ao detectar a presença de gás.
-
-Sistema de Alerta de Fumaça (Prioridade Nível 3): Emitirá um sinal de alerta para os usuários e para os bombeiros ao detectar a presença de fumaça.
-
-TEXTO NOVO:
-
-Detecção e Notificação:
-
-Quando um sensor detecta um evento (presença, gás ou fumaça), ele envia imediatamente um sinal ao sistema central.
+Quando um sensor detecta um evento (presença, gás, fumaça ou temperatura), ele envia imediatamente um sinal ao sistema central.
 O sistema central processa o sinal e ativa os alarmes sonoros e visuais correspondentes.
 
-Ação Imediata:
 
-Para Detecção de Presença: O LED é aceso e o alarme sonoro é ativado (se configurado). Os moradores são notificados para verificar a situação. Prioridade 1
-Para Detecção de Gás: O alarme sonoro é ativado e uma notificação de emergência é enviada. Os moradores devem ventilar a área e evacuar se necessário. Prioridade 2
-Para Detecção de Fumaça: O alarme sonoro é ativado e uma notificação de emergência é enviada. Os moradores devem evacuar imediatamente e chamar os bombeiros. Prioridade 3
+##### Ação Imediata:
+
+Para Detecção de Presença: O LED é aceso e o alarme sonoro é ativado (se configurado). Os moradores são notificados para verificar a situação. Prioridade 3
+
+Para Detecção de Gás: O alarme sonoro é ativado e uma notificação de emergência é enviada. Os moradores devem ventilar a área e evacuar se necessário. Prioridade 1
+
+Para Detecção de Fumaça: O alarme sonoro é ativado e uma notificação de emergência é enviada. Os moradores devem evacuar imediatamente e chamar os bombeiros. Prioridade 2
+
+Para Detecção de Temperatura: As informações lidas pelo sensor são atualizadas no display digital. Prioridade 4
 
 
 
@@ -173,36 +130,45 @@ Todos esses sistemas são controlados por um microcontrolador, com a escolha ent
 
 *NOVA DESCRIÇÃO: To fazendo sem temperatura mas acredito que estrtuturalmente nao iria mudar muito
 
-# Blocos Funcionais
-Sensores:
+#### Blocos Funcionais
+##### Sensores:
 
 Sensor de Presença: Detecta movimento e envia sinais ao controlador central.
+
 Sensor de Gás: Monitora a concentração de gás no ambiente e envia um sinal ao controlador quando níveis perigosos são detectados.
+
 Sensor de Fumaça: Detecta a presença de fumaça e envia um sinal ao controlador ao identificar concentrações elevadas.
 
-# Controlador Central
+Sensor de Temperatura: Monitora a Temperatura do ambiente e envia um sinal para controlador da informação lida.
+
+#### Controlador Central
 
 *Microcontrolador: O núcleo do sistema, responsável por receber sinais dos sensores, processar esses sinais e tomar decisões com base na programação interna. (adicionar qual)
 
-# Unidades de Alerta
+#### Unidades de Alerta
 
 LED de Indicação: Acende para indicar a detecção de presença.
+
 Alarmes Sonoros: Ativados pelo controlador central em resposta a sinais dos sensores de gás e fumaça, ou conforme configurado pelo usuário para o sensor de presença.
 
-* # Fonte de Alimentação (Temos que pensar em qual fonte mas acho que não precisamos disso agora)
+Display Digital: Apresenta de forma clara e instantânea a temperatura ambiente aos moradores.
+
+#### Fonte de Alimentação (Temos que pensar em qual fonte mas acho que não precisamos disso agora)
 
 Unidade de Alimentação: Fornece energia para todos os componentes do sistema, garantindo operação contínua.
 
-# Relacionamento entre Blocos e Sinais de Comunicação
+#### Relacionamento entre Blocos e Sinais de Comunicação
+
 *Sinais dos Sensores para o Controlador Central (Dependendo do sensor que escolhemos podemos precisar ou não de DAC então a gente modifica aqui quando tivermos certeza qual usaremos)
 
 Sensor de Presença para Microcontrolador: Envia um sinal digital quando detecta movimento.
 Sensor de Gás para Microcontrolador: Envia um sinal analógico ou digital quando os níveis de gás são perigosos.
 Sensor de Fumaça para Microcontrolador: Envia um sinal digital quando a fumaça é detectada.
 
-Sinais do Controlador Central para Unidades de Alerta
+#### Sinais do Controlador Central para Unidades de Alerta
 
 Microcontrolador para LED de Indicação: Envia um sinal para acender o LED.
+
 Microcontrolador para Alarmes Sonoros: Envia sinais para ativar os alarmes em resposta à detecção de gás ou fumaça, ou conforme configuração para presença.
 
 *Em questão de blocos vou fazer um rascunho por enquanto, vê se concorda:
@@ -229,8 +195,72 @@ Microcontrolador para Alarmes Sonoros: Envia sinais para ativar os alarmes em re
                     |
                     |
                     FONTE 
+
+## Especificações 
+
+### Especificação Estrutural
+
+#### Sensores 
+
+Sensores de Presença:
+O sensor escolhido é o HC-SR501, um sensor infravermelho com alimentação recomendada de 5V DC. Sua saída é um pulso digital: 1 (3,3V) quando detecta movimento e 0 (0V) quando não há movimento. A sensibilidade do sensor é configurável, permitindo distinguir entre a movimentação de objetos e de pessoas. O principal motivo para sua escolha é o alcance, que chega a 7 metros, com um ângulo de 120 graus, permitindo cobrir todo o cômodo e uma parte principal do quintal ou da entrada da casa. O sensor possui um baixo consumo de energia, aproximadamente 65mA, e funciona em uma faixa de temperatura de -20 a 80 graus Celsius, sendo adequado para uso no Brasil e em outras regiões com condições climáticas variadas.
+
+Sensor de Gás e Fumaça:
+O sensor escolhido é o MQ-2 possui alimentação recomendada de 5V DC, ele monitora ocorrências de vazamento de gás e de fumaça, sendo especialmente benéfico para nosso projeto em áreas como a cozinha. O ajuste de sensibilidade é feito via potenciômetro, facilitando seu uso. Possui analógica baseada na variação de resistencia sendo necessário um conversor ADC dependendo do microcontrolador utilizado, permitindo uma comunicação mais simples com a unidade de controle. Consome pouca energia, contribuindo para a eficiência energética do sistema. É um sensor de baixo custo, o que é vantajoso para a viabilidade econômica do projeto.
+
+Sensor de Temperatura
+
+O sensor escolhido é o DHT22 (AM2302), um sensor de temperatura e umidade. Ele possui uma alimentação recomendada de 5V DC e sua saída é digital serial, com um total de 40 bits. Esses 40 bits são divididos em 8 bits para o valor integral da temperatura, 8 bits para o valor decimal da temperatura, 8 bits para o valor integral da umidade, 8 bits para o valor decimal da umidade e 8 bits de checksum para validar os dados. O tempo médio de comunicação com o MCU é de 5 ms.
+O DHT22 tem uma faixa de medição que vai de -40 a 125 graus Celsius e um tempo de leitura de 2 segundos. O principal motivo para a escolha deste sensor é sua precisão de ±5 graus, que atende aos requisitos do nosso projeto.
+
+
+
+
+
+
+
+
+> (Se preferir, adicione um link para o documento de especificação estrutural)
+> 
+> Entende-se por estrutural a descrição tanto das características elétricas e temporais como das restrições físicas de cada bloco funcional.
+> Nessa etapa do projeto, ainda não será solicitado o diagrama elétrico mas espera-se que já estejam identificados os componentes e circuitos integrados propostos
+> para implementação do sistema embarcado proposto.
+> 
+> Como o projeto de um sistema embarcado é centralizado nas tarefas, recomenda-se iniciar com a definição dos periféricos de entrada e saída (atuadores e/ou sensores) apropriados para o
+> sistema. Pode ser necessário definir um endereço distinto para cada um deles. 
+> Este endereço será utilizado pela unidade micro-controladora para acessá-los tanto para leitura como para escrita.
+
+> Nesta etapa do projeto espera-se que a unidade micro-controladora seja definida.
+> Tendo definidos os periféricos e a memória, é possível projetar um decodificador de endereços
+> que converte o endereço referenciado no programa em sinal *Chip Select – CS* do dispositivo
+> correspondente, habilitando-o para realizar um ciclo de leitura ou de escrita.
+> 
+> Nesta etapa do projeto espera-se que sejam identificada também a eventual necessidade do projeto de circuitos de interface para os periféricos do projeto.
+> Assim, devem ser incluídos na especificação, se necessário:
+> - conversores AD e DA;
+> - padrões de comunicação a serem adotados;
+> - circuitos de sincronização de sinais temporais.
+> 
+> Finalmente, deve-se especificar as restrições físicas e ambientais de funcionamento do circuito, tais como limites mecânicos
+> (altura, largura, profundidade) e limites de dissipação térmica.
+
+### Especificação de Algoritmos 
+
+> (Se preferir, adicione um link para o documento de especificação de algoritmos).
+> 
+> Deve ser elaborado para CADA evento o algoritmo de tratamento deste evento. Com base no
+> tamanho de cada algoritmo, estima-se o tamanho de memória necessária para armazenar todos
+> os programas e os dados associados. Isso permitirá especificar a memória a ser utilizada e o
+> espaço onde serão armazenados os programas. O algoritmo de tratamento de evento pode
+> ser representado graficamente por um fluxograma. Recomenda-se usar símbolos gráficos consistentes 
+> com a norma internacional ISO 1028-1973 e IS0 2972-1979.
 ## Referências
 
 https://components101.com/sensors/hc-sr501-pir-sensor (Sensor movimento hc-Sr 501)
-Ideias, pesquisa e depois alteração: indicativo de presença via LED (dois tipos de alarmes), pensar em uma casa para se fazer o projeto ( 2 quartos 1 sala 1 cozinha 1 banheiro e 1 quintal), pesquisar sensores faltantes ( gaz e fumaça, temperatura e microcontrolador), atualizar diagramas de blocos e fazer diagrama funcional, Alterar todo as descrições  
+
+https://www.mouser.com/datasheet/2/321/605-00008-MQ-2-Datasheet-370464.pdf (Sensor de Gás e Fumaça)
+
+https://www.sparkfun.com/datasheets/Sensors/Temperature/DHT22.pdf (Sensor de Temperatura)
+
+
 
