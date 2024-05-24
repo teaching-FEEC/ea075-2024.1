@@ -129,6 +129,24 @@ Embora as conexões com as câmeras (8 + 10 + 3 + 3), atuadores (n) e LCD (24 + 
 
 ### PARA MELVIN (Inserir dados do motor aqui. Colocar a quantidade de pinos na atuação dos motores onde está escrito n pinos. editar os parâmetros da esteira lá em cima para encaixar na sua ideia de atuador). -de henrique
 
+#### Controle da Esteira
+
+![image](https://github.com/hsrocha-source/optisort/assets/113446522/1b8594bb-99cb-41f0-8a70-abda2bdf7aa9)
+
+Na imagem apresentada anteriormente, retirada de [14], podemos visualizar o diagrama de blocos correspondente à esteira transportadora que o projeto vai utilizar. O "stream" de entrada será um conjunto de frutas colocados, em grandes números, pelo usuario. Estas frutas passarão, depois, por um fúnil que irá limitar a quantidade que vai entrar na esteira motorizada. O diagrama da esteira está apresentado na imagem abaixo, também retirada de [14].
+
+![DiagramaEstimado](https://github.com/hsrocha-source/optisort/assets/113446522/a6dfcc02-1946-4f32-9df1-2aa4caf2072d)
+
+Ela será adquirida de uma das empresas de produção de esteiras dentro do estado de São Paulo (como sendo [9] e [10]), favorecendo o modelo módular pela simplicidade da limpeza das suas peças. Estima-se a esteira seja de uns 3 m de extensão, possuindo dessa forma espaço suficiente para a câmera aplicar o algoritmo. O CLP da esteira solicitada precisa ter acesso ao padrão EIA485 (RS485) de comunicação serial, que será utilizado para interconectar o controlador lógico com o STM32H7. Por conta dos níveis de tensão associados ao padrão serial (-7V até +12V) iremos usar um conversor TTL a RS485 montado com o chip MAX485 (visível neste link [11]), seguindo a montagem utilizada em módulos comerciais (como [12]). No projeto deste circuito conectaremos um conjunto de pinos RX e TX do USART do STM32H7 no MAX485, ligando ele no nosso CLP mediante um cabo de Ethernet CAT5, atendendo as especificações de cabo para o EIA422 (padrão anterior) [13]. Mediante esta conexão serão controlados e supervisionados aspectos da esteira, como a velocidade. A correia transportadora precisa ser modular (como aquela apresentada em [9]) para permitir funilamento e espaçamento dos elementos colocados no "stream" de entrada. 
+
+A câmera precisa estar com uma angulação de 45 com relação à esteira, de forma que consiga enxergar os componentes em cima da esteira desde um plano superior. Feito o reconhecimento conforme apresentado na seção anterior, dois dos pinos PWM do STM32H7 serão utilizados para o acionamento de dois cilindros pneumáticos [], que serão utilizados como o nosso atuador separador da fruta estragada. Por conta da alta corrente de acionamento 
+
+Estima-se
+
+
+USART (Universal Synchronous-Assynchronous Receiver and Transmitter) do STM32H7. Por conta das altas tensões
+
+
 ### Especificação de Algoritmos
 ![Fluxograma do algoritmo de acionamento de atuadores de ar comprimido](./Algo1.pdf)
 
@@ -152,3 +170,17 @@ A câmera irá utilizar 7.5 fps para que haja tempo suficiente para que a infer�
 [7] Datasheet da tela LCD WF121ETWAMLNN0. https://www.winstar.com.tw/uploads/files/04170fa78caf6e36d3dcec06f7f1042b.pdf
 
 [8] Lin, Ji, et al. "Mcunet: Tiny deep learning on iot devices." Advances in Neural Information Processing Systems 33 (2020): 11711-11722.
+
+[9] STE Equipamentos: Esteiras Transportadoras. Site de compra para a esteira transportadora modular. url:https://www.steequipamentos.com.br/produto/esteira-transportadora-modular/ [Acessado: 23. Maio. 2024]
+
+[10] TEC: Linhas completas para automação. Site de compra para a esteira transportadora palana. url: https://tecdobrasil.com.br/esteira-transportadora-plana/ [Acessado: 23. Maio. 2024]
+
+[11] Datasheet do MAX485. url: https://www.analog.com/media/en/technical-documentation/data-sheets/MAX1487-MAX491.pdf?ADICID=SYND_WW_P682800_PF-spglobal [Acessado: 23. Maio. 2024]
+
+[12] Conversor TTL a RS485 Comercial. url: https://www.eletrogate.com/conversor-de-dados-ttl-para-rs485 [Acessado: 23. Maio. 2024]
+
+[13] Advantech, "Cable Selection for RS-422 & RS-485 Systems". url: https://www.advantech.com/en/resources/white-papers/2fa5d163-b82f-4f3d-b19a-4cd8dac0b9b0 [Acessado: 23. Maio. 2024]
+
+[14] MB Correias Campinas. url: https://www.mbcorreiascampinas.com.br/ [Acessado: 23. Maio. 2024]
+
+[14] Maier, Georg & Gruna, Robin & Längle, Thomas & Beyerer, Jürgen. (2024). A Survey of the State of the Art in Sensor-Based Sorting Technology and Research. IEEE Access. PP. 1-1. 10.1109/ACCESS.2024.3350987. 
