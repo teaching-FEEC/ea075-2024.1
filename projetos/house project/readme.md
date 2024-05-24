@@ -37,7 +37,7 @@ Sensor de Fumaça:
  rápida detecção de fumaça permite que os moradores tomem medidas imediatas para evacuar a área e chamar os serviços de emergência , minimizando danos e salvaguardando vidas. O sensor é sensível a variações súbitas na quantidade de fumaça, garantindo que qualquer início de incêndio seja rapidamente percebido.
 
  Sensor de Temperatura :
-   O sensor de temperatura desempenha um papel crucial ao fornecer informações essenciais aos moradores. Ele monitora atentamente a temperatura de cada cômodo e apresenta, de forma clara e precisa, os resultados em um display digital.
+   O sensor de temperatura desempenha um papel crucial ao fornecer informações essenciais aos moradores. Ele monitora atentamente a temperatura de cada cômodo e apresenta, de forma clara e precisa, os resultados em um display LCD.
 
 
 
@@ -51,7 +51,7 @@ Detecção de Gás: O sistema possui sensores que monitoram continuamente a pres
 
 Detecção de Fumaça: Sensores de fumaça instalados em pontos estratégicos da residência detectam a presença de fumaça, acionando imediatamente um alarme sonoro. Esta funcionalidade é crucial para a detecção de incêndios, possibilitando a evacuação e a chamada dos serviços de emergência.
 
-Detecção de Temperatura: Sensores de temperatura instalados em cada cômodo, com exceção do banheiro e quintal, captam as variações térmicas do ambiente e as apresentam aos moradores por meio de um display digital intuitivo a atualização de dados é feita a cada 2 segundos. Essa funcionalidade essencial mantém os residentes constantemente informados sobre as condições climáticas internas, capacitando-os a realizar ajustes imediatos e precisos para assegurar um ambiente confortável e acolhedor em casa.
+Detecção de Temperatura: Sensores de temperatura instalados em cada cômodo, com exceção do banheiro e quintal, captam as variações térmicas do ambiente e as apresentam aos moradores por meio de um display LCD intuitivo a atualização de dados é feita a cada 2 segundos. Essa funcionalidade essencial mantém os residentes constantemente informados sobre as condições climáticas internas, capacitando-os a realizar ajustes imediatos e precisos para assegurar um ambiente confortável e acolhedor em casa.
 
 Monitoramento em Tempo Real: Todos os sensores são integrados a um sistema central que permite o monitoramento em tempo real. Os moradores podem visualizar o status dos sensores e receber notificações instantâneas em caso de anomalias.
 
@@ -73,10 +73,14 @@ Verificação de Níveis de Gás e Fumaça : Monitoramento contínuo dos níveis
 
 Leitura de Temperatura: O sensor realiza leituras de temperatura em intervalos regulares de 2 segundos.
 
+Atualização da temperatura mostrada no display LCD
+
 #### Eventos Não Periódicos:
 
 Detecção de Presença: Ativado quando um movimento é detectado.
+
 Alerta de Gás: Ativado ao detectar níveis perigosos de gás.
+
 Alerta de Fumaça: Ativado ao detectar níveis elevados de fumaça.
 
 
@@ -98,37 +102,15 @@ Para Detecção de Gás: O alarme sonoro é ativado e uma notificação de emerg
 
 Para Detecção de Fumaça: O alarme sonoro é ativado e uma notificação de emergência é enviada. Os moradores devem evacuar imediatamente e chamar os bombeiros. Prioridade 2
 
-Para Detecção de Temperatura: As informações lidas pelo sensor são atualizadas no display digital. Prioridade 4
+Para Detecção de Temperatura: As informações lidas pelo sensor são atualizadas no display de LCD. Prioridade 4
 
 
 
 
 ## Descrição Estrutural do Sistema
 
-![image](https://github.com/EndlessLight9/ea075-2024.1-dolc/assets/165411886/8c178a6c-19a0-4361-89dd-12dc569bd164)
+![image](https://github.com/EndlessLight9/ea075-2024.1-dolc/assets/165414259/cd5ead5f-4a14-476b-9c84-77e12367fa5d)
 
-
-![image](https://github.com/EndlessLight9/ea075-2024.1-dolc/assets/165411886/3ab0f4d3-79ff-4416-8ff3-fe9ff33925c7)
-
-
-![image](https://github.com/EndlessLight9/ea075-2024.1-dolc/assets/165411886/823c3a2e-a3e5-49d6-942e-efd07fbb6f29)
-
-
-![image](https://github.com/EndlessLight9/ea075-2024.1-dolc/assets/165411886/ab8c8509-dfe5-456d-87a2-f8170f2da8da)
-
-Sistema de Segurança: Este sistema é composto por sensores de presença distribuídos pelos cômodos da casa, acompanhados por uma interface física na parede para a ativação. Após a ativação, os sensores entram em modo de vigilância. Quando uma interrupção é detectada, um alerta sonoro é ativado por meio do sistema de som da residência, e uma notificação é enviada via internet para o usuário.
-
-Sistema de Controle de Temperatura: Este sistema é composto por sensores de temperatura localizados nos diferentes cômodos da casa. O usuário pode definir uma faixa de temperatura desejada através de uma interface fixa. Os sensores monitoram constantemente a temperatura ambiente e, ao detectarem uma variação em relação à faixa definida, ativam o aquecedor ou o ar-condicionado conforme necessário. Uma vez que a temperatura atinge a faixa desejada, o sistema desliga automaticamente o dispositivo de climatização.
-
-
-Sistema de Alerta de Gás: Este sistema é preferencialmente instalado na cozinha e permanece sempre ativo. Quando uma concentração elevada de gás é detectada, o sistema emite um alerta para o usuário e aciona um sinal sonoro discreto.
-
-Sistema de Alerta de Fumaça: Este sistema é instalado em todos os cômodos e permanece permanentemente ativo. Após detectar uma quantidade elevada de fumaça, o sistema emite um sinal sonoro audível e simultaneamente alerta os bombeiros e o usuário.
-
-
-Todos esses sistemas são controlados por um microcontrolador, com a escolha entre Arduino ou ESP32 a ser determinada.
-
-*NOVA DESCRIÇÃO: To fazendo sem temperatura mas acredito que estrtuturalmente nao iria mudar muito
 
 #### Blocos Funcionais
 ##### Sensores:
@@ -143,7 +125,7 @@ Sensor de Temperatura: Monitora a Temperatura do ambiente e envia um sinal para 
 
 #### Controlador Central
 
-*Microcontrolador: O núcleo do sistema, responsável por receber sinais dos sensores, processar esses sinais e tomar decisões com base na programação interna. (adicionar qual)
+Microcontrolador: O núcleo do sistema, responsável por receber sinais dos sensores, processar esses sinais e tomar decisões com base na programação interna. 
 
 #### Unidades de Alerta
 
@@ -151,19 +133,17 @@ LED de Indicação: Acende para indicar a detecção de presença.
 
 Alarmes Sonoros: Ativados pelo controlador central em resposta a sinais dos sensores de gás e fumaça, ou conforme configurado pelo usuário para o sensor de presença.
 
-Display Digital: Apresenta de forma clara e instantânea a temperatura ambiente aos moradores.
-
-#### Fonte de Alimentação (Temos que pensar em qual fonte mas acho que não precisamos disso agora)
-
-Unidade de Alimentação: Fornece energia para todos os componentes do sistema, garantindo operação contínua.
+Display de LCD: Apresenta de forma clara e instantânea a temperatura ambiente aos moradores.
 
 #### Relacionamento entre Blocos e Sinais de Comunicação
 
-*Sinais dos Sensores para o Controlador Central (Dependendo do sensor que escolhemos podemos precisar ou não de DAC então a gente modifica aqui quando tivermos certeza qual usaremos)
-
 Sensor de Presença para Microcontrolador: Envia um sinal digital quando detecta movimento.
-Sensor de Gás para Microcontrolador: Envia um sinal analógico ou digital quando os níveis de gás são perigosos.
-Sensor de Fumaça para Microcontrolador: Envia um sinal digital quando a fumaça é detectada.
+
+Sensor de Gás para Microcontrolador: Envia um sinal analógico  quando os níveis de gás são perigosos.
+
+Sensor de Fumaça para Microcontrolador: Envia um sinal Analógico quando a fumaça é detectada.
+
+Sensor de Temperatura para Microcontrolador: Envia um sinal digital da temperatura lida.
 
 #### Sinais do Controlador Central para Unidades de Alerta
 
@@ -171,30 +151,9 @@ Microcontrolador para LED de Indicação: Envia um sinal para acender o LED.
 
 Microcontrolador para Alarmes Sonoros: Envia sinais para ativar os alarmes em resposta à detecção de gás ou fumaça, ou conforme configuração para presença.
 
-*Em questão de blocos vou fazer um rascunho por enquanto, vê se concorda:
+Microcontrolador para Display: Atualiza os valores medidos pelo sensor de temperatura no display.
 
-                | SENSORES |
-                | PRESENÇA |
-                | GAS      |
-                | FUMAÇA   |
-                    | 
-                    |
-                |CONTROLADOR|
-                |ARDUINDO   |
-                |EVENTOS    |
-                    |
-                    |
-           ---------------------
-           |                   |
-           |                   |
-           |                   |
-    |ALERTAS|           |CONFIGURAÇÃO|
-    |LED    |           |STATUS TALVEZ?|
-    |ALARME |
-           --------------------
-                    |
-                    |
-                    FONTE 
+
 
 ## Especificações 
 
@@ -206,13 +165,20 @@ Sensores de Presença:
 O sensor escolhido é o HC-SR501, um sensor infravermelho com alimentação recomendada de 5V DC. Sua saída é um pulso digital: 1 (3,3V) quando detecta movimento e 0 (0V) quando não há movimento. A sensibilidade do sensor é configurável, permitindo distinguir entre a movimentação de objetos e de pessoas. O principal motivo para sua escolha é o alcance, que chega a 7 metros, com um ângulo de 120 graus, permitindo cobrir todo o cômodo e uma parte principal do quintal ou da entrada da casa. O sensor possui um baixo consumo de energia, aproximadamente 65mA, e funciona em uma faixa de temperatura de -20 a 80 graus Celsius, sendo adequado para uso no Brasil e em outras regiões com condições climáticas variadas.
 
 Sensor de Gás e Fumaça:
-O sensor escolhido é o MQ-2 possui alimentação recomendada de 5V DC, ele monitora ocorrências de vazamento de gás e de fumaça, sendo especialmente benéfico para nosso projeto em áreas como a cozinha. O ajuste de sensibilidade é feito via potenciômetro, facilitando seu uso. Possui analógica baseada na variação de resistencia sendo necessário um conversor ADC dependendo do microcontrolador utilizado, permitindo uma comunicação mais simples com a unidade de controle. Consome pouca energia, contribuindo para a eficiência energética do sistema. É um sensor de baixo custo, o que é vantajoso para a viabilidade econômica do projeto.
+O sensor escolhido é o MQ-2 possui alimentação recomendada de 5V DC, ele monitora ocorrências de vazamento de gás e de fumaça, sendo especialmente benéfico para nosso projeto em áreas como a cozinha. O ajuste de sensibilidade é feito via potenciômetro, facilitando seu uso. Possui analógica baseada na variação de resistencia sendo necessário um conversor ADC, permitindo uma comunicação mais simples com a unidade de controle. Consome pouca energia, contribuindo para a eficiência energética do sistema. É um sensor de baixo custo, o que é vantajoso para a viabilidade econômica do projeto.
 
 Sensor de Temperatura
 
 O sensor escolhido é o DHT22 (AM2302), um sensor de temperatura e umidade. Ele possui uma alimentação recomendada de 5V DC e sua saída é digital serial, com um total de 40 bits. Esses 40 bits são divididos em 8 bits para o valor integral da temperatura, 8 bits para o valor decimal da temperatura, 8 bits para o valor integral da umidade, 8 bits para o valor decimal da umidade e 8 bits de checksum para validar os dados. O tempo médio de comunicação com o MCU é de 5 ms.
 O DHT22 tem uma faixa de medição que vai de -40 a 125 graus Celsius e um tempo de leitura de 2 segundos. O principal motivo para a escolha deste sensor é sua precisão de ±5 graus, que atende aos requisitos do nosso projeto.
 
+#### Atuadores
+
+Painel de LEDs: O sistema proposto consiste em um Painel de LEDs para identificação visual de movimentação em cada cômodo da casa, com base nas informações dos sensores de presença. Quando movimento é detectado em um determinado cômodo, os LEDs correspondentes a esse cômodo são acionados, permitindo uma visualização rápida da atividade em diferentes áreas da casa.
+
+Alarme Sonoro: um Alarme Sonoro será ativado em caso de possíveis invasões quando os donos não estiverem na residência, ou se for identificada uma alta concentração de fumaça ou gás de cozinha. Isso fornecerá um alerta audível para os ocupantes da casa ou para vizinhos, indicando uma situação de emergência.
+
+Display LCD: um Display será utilizado para exibir a temperatura medida pelos sensores de temperatura. Isso permitirá que os ocupantes monitorem a temperatura em diferentes áreas da casa em tempo real, o que pode ser útil para garantir o conforto e a segurança, especialmente em situações como controle de temperatura ambiente ou detecção de superaquecimento em determinadas áreas.
 
 
 
@@ -245,6 +211,26 @@ O DHT22 tem uma faixa de medição que vai de -40 a 125 graus Celsius e um tempo
 > (altura, largura, profundidade) e limites de dissipação térmica.
 
 ### Especificação de Algoritmos 
+
+![image](https://github.com/EndlessLight9/ea075-2024.1-dolc/assets/165414259/e3c52f2f-ec1e-4222-b857-c56fa12b6fc0)
+
+Para o sensor de presença, é necessário apenas 1 bit para identificar a movimentação. Considerando que serão utilizados 6 sensores distribuídos pela casa (2 quartos, 1 banheiro, 1 sala de estar, 1 cozinha e 1 quintal), serão necessários 6 bits de memória para registrar os dados desses sensores.
+Além disso, será necessário 1 bit adicional de memória para o alarme sonoro e mais 6 bits para a ativação do painel de LEDs.
+Portanto, no total, serão necessários 13 bits de memória para armazenar o estado dos sensores de presença, ativar o alarme sonoro e controlar o painel de LEDs.
+
+![image](https://github.com/EndlessLight9/ea075-2024.1-dolc/assets/165414259/9875c154-cf96-4b50-a5e2-d5c835bcde4e)
+
+Para o sensor de gás e fumaça, juntamente com um conversor ADC, precisaremos de 1 bit para identificar se há alta concentração de gás/fumaça ou não. Considerando que serão utilizados 5 sensores distribuídos pela casa (2 quartos, 1 cozinha, 1 sala de estar e 1 banheiro), será necessário 5 bits de armazenamento para registrar os dados desses sensores. Além disso, será necessário 1 bit adicional para ativar o alarme sonoro.
+Portanto, no total, precisaremos de 6 bits de memória para armazenar o estado dos sensores de gás e fumaça, bem como para ativar o alarme sonoro.
+
+![image](https://github.com/EndlessLight9/ea075-2024.1-dolc/assets/165414259/1a6b275f-ee80-4e4d-a321-b54577b86b2a)
+
+Os sensores de temperatura comunicam-se utilizando 40 bits de dados. Considerando que planejamos utilizar 3 sensores - distribuídos nos 2 quartos e 1 sala de estar - necessitaremos de 120 bits de armazenamento para registrar as leituras desses sensores.
+Além disso, contamos com 3 displays LCD em nosso sistema. Cada um desses displays requer 32 bits para armazenar os dados a serem exibidos. Portanto, o total de bits necessários, incluindo os dados dos sensores e os dados a serem exibidos nos displays, será de 216 bits.
+
+Se somarmos as necessidades de memória para todos os sistemas mencionados, incluindo os sensores e atuadores, teríamos aproximadamente necessidade de 235 bits de memória
+
+
 
 > (Se preferir, adicione um link para o documento de especificação de algoritmos).
 > 
