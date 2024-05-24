@@ -191,7 +191,7 @@ O preço total do projeto, desconsiderando componentes auxiliares, como resistor
 	7. Suspensão do Sistema.
 
 - Mudança da posição do Sol (Sistema já inicializado pelo algoritmo anterior)
-	Loop
+	- Loop
 	1.  Verifica que a claridade atual é menor que a claridade anterior;
 	2. Se maior ou igual: Mantém posição;
 	3. Se menor: Ajuste de posição;
@@ -220,10 +220,10 @@ O preço total do projeto, desconsiderando componentes auxiliares, como resistor
 	2. Se tensão baixa por tempo definido: Comunicar usuário;
 
 - Interação com usuário (Dois possíveis triggers)
-  	Situação 1:
+  	- Situação 1:
 	1. Comando do usuário para ajuste dos parâmetros;
 	2. Atribui novos valores para os parâmetros.
- 	Situação 2:
+ 	- Situação 2:
 	1. Comando do usuário de controle manual;
 	2. Ajuste da posição do painel para a definida pelo usuário.
 	
