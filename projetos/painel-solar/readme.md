@@ -191,6 +191,7 @@ O preço total do projeto, desconsiderando componentes auxiliares, como resistor
 	6. Identifica que a mínima claridade não é mais satisfeita por tempo mínimo;
 	7. Suspensão do Sistema.
 
+
 - Mudança da posição do Sol
 (Sistema já inicializado pelo algoritmo anterior)
 
@@ -209,6 +210,7 @@ Loop
 1 - Verifica dia e mês do ano;
 
 2 - Ajusta parâmetros de funcionamento para cada estação;
+
 
 - Condições adversas
 
