@@ -100,40 +100,7 @@ Os dispostivos fixos são torres colocadas ao longo da via, e tem como objetivo 
 
 ## Especificações
 
-### Brainstorm
-
-- Mapa nas torres
-- Bússula pra identificar direção
-- Estado de standy by do dispostivo móvel até mensagem de uma torre
-- Tomada de decisão pela torre, de acordo com a posição do móvel, pra saber se o carro está na rodovia ou em uma rua paralela
-- GPS para saber a posição do carro
-- Consulta dos dispositivos móveis para as torres da posição atual em caso de congestionamento
-
 ### Especificação Estrutural
-
-> (Se preferir, adicione um link para o documento de especificação estrutural)
-> 
-> Entende-se por estrutural a descrição tanto das características elétricas e temporais como das restrições físicas de cada bloco funcional.
-> Nessa etapa do projeto, ainda não será solicitado o diagrama elétrico mas espera-se que já estejam identificados os componentes e circuitos integrados propostos
-> para implementação do sistema embarcado proposto.
-> 
-> Como o projeto de um sistema embarcado é centralizado nas tarefas, recomenda-se iniciar com a definição dos periféricos de entrada e saída (atuadores e/ou sensores) apropriados para o
-> sistema. Pode ser necessário definir um endereço distinto para cada um deles. 
-> Este endereço será utilizado pela unidade micro-controladora para acessá-los tanto para leitura como para escrita.
-
-> Nesta etapa do projeto espera-se que a unidade micro-controladora seja definida.
-> Tendo definidos os periféricos e a memória, é possível projetar um decodificador de endereços
-> que converte o endereço referenciado no programa em sinal *Chip Select – CS* do dispositivo
-> correspondente, habilitando-o para realizar um ciclo de leitura ou de escrita.
-> 
-> Nesta etapa do projeto espera-se que sejam identificada também a eventual necessidade do projeto de circuitos de interface para os periféricos do projeto.
-> Assim, devem ser incluídos na especificação, se necessário:
-> - conversores AD e DA;
-> - padrões de comunicação a serem adotados;
-> - circuitos de sincronização de sinais temporais.
-> 
-> Finalmente, deve-se especificar as restrições físicas e ambientais de funcionamento do circuito, tais como limites mecânicos
-> (altura, largura, profundidade) e limites de dissipação térmica.
 
 A realização do projeto completo só é possível com a definição da forma de comunicação entre os dispositivos, as torres (módulo fixo) precisam ser capazes de realizar conexão com todos os carros em seu alcance e também com torres vizinhas. Para simplificar o projeto, nos limitamos a pesquisar algumas tecnlogias existentes ou em desenvolvimento que possam ser utilizadas para realizar essa comunicação, e portanto não especificamos aqui componentes nem os algoritmos necessários para tornar essa comunicação possível.
 
@@ -178,15 +145,6 @@ No entanto, foi percebido que a especificação dos algoritmos de tratamento de 
 Além disso, algumas restrições de memória e de processamento foram comentadas, o que guiaria a escolha de componentes para este módulo: Processador, memória RAM, memória de programa e memória de dados.
 
 ### Especificação de Algoritmos 
-
-> (Se preferir, adicione um link para o documento de especificação de algoritmos).
-> 
-> Deve ser elaborado para CADA evento o algoritmo de tratamento deste evento. Com base no
-> tamanho de cada algoritmo, estima-se o tamanho de memória necessária para armazenar todos
-> os programas e os dados associados. Isso permitirá especificar a memória a ser utilizada e o
-> espaço onde serão armazenados os programas. O algoritmo de tratamento de evento pode
-> ser representado graficamente por um fluxograma. Recomenda-se usar símbolos gráficos consistentes 
-> com a norma internacional ISO 1028-1973 e IS0 2972-1979.
 
 Como já explicado, não realizamos a especificação do circuito utilizado para possibilitar a comunicação entre os módulos, mas supomos aqui que qualquer tecnologia utilizada seja capaz de gerar os seguintes eventos: conexão de um novo dispositivo, perca da conexão, recebimento de dados e envio de dados. Apenas supondo estes princípios de inter-comunicação foram gerados os algoritmos mostrados a seguir. 
 
