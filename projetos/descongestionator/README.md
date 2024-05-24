@@ -139,7 +139,13 @@ A realização do projeto completo só é possível com a definição da forma d
 
 #### Módulo móvel
 
-// Componentes e especificoes de operação do módulo móvel
+Tabela de componentes escolhidos
+
+| Nome | Interface | Links | Motivo | Custo |
+|--|--|--|--|--|
+| Display | I2C | [produto](https://curtocircuito.com.br/display-lcd-16x2-backlight-azul-i2c.html?srsltid=AfmBOorUBvmO1sjFAtLiMtKyeGpYR1-XtbEsuhcUkG65ZfNAgPfHhxg7naQ) [datasheet](https://www.handsontec.com/dataspecs/module/I2C_1602_LCD.pdf) | Menor display que atende as mensagens que deseja-se mostrar e com menor custo, quando comparado a displays OLED, por exemplo. | R$ 25 |
+| Buzzer ativo | GPIO | [produto](https://www.mercadolivre.com.br/3x-buzzer-ativo-5v-sinal-beep-arduino-raspberry-som/p/MLB32625316?matt_tool=18956390&utm_source=google_shopping&utm_medium=organic&item_id=MLB4440875150&from=gshop) | Apenas para realizar um aviso simples, buzzer ativo para não precisar gerar uma onda como entrada | R$ 3 |
+
 
 #### Módulo fixo
 
