@@ -35,9 +35,9 @@ Evento 3: na entrada, reportar que o estacionamento está lotado direcionando pa
 Evento 4: reportar a liberação de vagas na entrada.
 
 ## Descrição Estrutural do Sistema
-![Diagrama de blocos do sistema](https://raw.githubusercontent.com/Gabriel-Diasss/ea075-2024.1/main/projetos/monitor_de_vagas/diagrama_monitor_estacionamento.drawio.svg)
+![Diagrama de blocos do sistema](https://github.com/EduardoTejada/ea075-2024.1/blob/main/projetos/monitor_de_vagas/imagens/Descri%C3%A7%C3%A3o%20Estrutural%20do%20Sistema%20(1).jpg?raw=true)
 
-## Especificações (⚠️ NOVO ⚠️)
+## Especificações
 
 ### Especificação Estrutural
 
@@ -58,9 +58,9 @@ Precisa-se de um atuador para mostrar a quantidade de vagas na entrada do estaci
 
 É possível fazer a comunicação dos sensores ultrassônicos com o microcontrolador principal por fio, porém, a depender do tamanho do estacionamento seria caro, os fios podem se romper mais facilmente com o tempo, entre outros problemas.
 Portanto, dentre outras possibilidades foi escolhido o módulo de comunicação LoRa da empresa EBYTE, que possui uma tecnologia de comunicação sem fio que funciona através de rádio frequência e um software de configuração próprio, além de bibliotecas para seu uso com a IDE do arduino. Esse módulo utiliza comunicação serial UART para comunicação com microcontrolador e possui dois pinos de configuração de quatro estados: normal; apenas recepção; economia de energia e sleep mode/configuração.
-
-
-
+![Módulo LoRa](https://github.com/EduardoTejada/ea075-2024.1/blob/main/projetos/monitor_de_vagas/imagens/Screenshot%20from%202024-05-23%2020-29-21.png?raw=true)
+![LoRa Dimensões](https://github.com/EduardoTejada/ea075-2024.1/blob/main/projetos/monitor_de_vagas/imagens/dimensoes_LoRa.png?raw=true)
+![Exemplo código transmissor](https://github.com/EduardoTejada/ea075-2024.1/blob/main/projetos/monitor_de_vagas/imagens/transmissor.png?raw=true)
 
 #### Microcontrolador
 
@@ -85,4 +85,5 @@ Como é possível verificar na seção de Especificação de Algoritmos, estima-
   https://en.wikipedia.org/wiki/ATmega328
   https://robocraze.com/blogs/post/what-is-ultrasonic-sensor
   https://www.msseletronica.com.br/detalhes/display-de-7-segmentos-0-56-catodo-comum-vermelho-gnd-comum_pid976.html
+  https://www.cdebyte.com/pdf-down.aspx?id=3044
   
