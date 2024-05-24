@@ -109,7 +109,7 @@ Abaixo, detalhamos mais sobre o comportamento do sistema para cada tipo de event
 5. **Atualizações de Software:** Reprogramação do controlador principal acrescentando ou modificando features dentro do funcionamento dele.
 
 ## Descrição Estrutural do Sistema
-![Diagrama de blocos do sistema](./EA075_Diagram.png)
+![Diagrama de blocos do sistema](./EA075_Diagram.jpg)
 
 ## Especificações
 ### Especificação Estrutural
