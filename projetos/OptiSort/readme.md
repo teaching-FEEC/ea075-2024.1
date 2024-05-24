@@ -66,11 +66,11 @@ Ao longo da sua operação definem-se vários tipos de "eventos" que descrevem o
 
 #### Eventos Periódicos
 1. **Aquisição de Imagens:**  
-    Periodicidade: _Contínua (cada X millisegundos)._  
+    Periodicidade: _Contínua (7.5 vezes por segundo)._  
     Descrição: _O sistema captura imagens da esteira transportadora prévio a realizar a identificação e classificação dos itens._
 
 2. **Processamento de Imagens:**  
-    Periodicidade: _Contínua (cada X millisegundos)._  
+    Periodicidade: _Contínua (7.5 vezes por segundo)._  
     Descrição: _O sistema aplica algoritmos de visão computacional e aprendizado de máquina para identificar os itens de interesse e realizar a análise da sua qualidade._
 
 3. **Monitoramento do Sistema:**  
