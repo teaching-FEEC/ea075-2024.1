@@ -1,5 +1,5 @@
 # `Painéis Solares de Inclinação Adaptável`
-# `Adaptive Slope Solar Panels`
+# `Adaptive Tilt Solar Panels`
 
 ## Apresentação
 
