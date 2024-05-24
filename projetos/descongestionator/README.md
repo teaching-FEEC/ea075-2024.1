@@ -247,9 +247,37 @@ function onDisconnect() {
   stopTimer();
 }
 ```
-Para este módulo não há grande necessidade de memória raaaaaaaaam,será preciso armazenar temporariamente as informações de velocidade atual, velocidade enviada anteriormente, posição atual do veículo e direção. Além de pequenas informações informações de status e retornos de funções, porém tais variáveis serão apenas alguns bytes e por hora não serão contabilizadas, só serão levadas em consideração durante a estimativa final, a qual considerará uma quantidade a mais de armazenamento para tais variáveis.
+Para este módulo não há grande necessidade de memória ram, será preciso armazenar temporariamente as informações de velocidade atual, velocidade enviada anteriormente, posição atual do veículo, direção de movimento, tempo de máquina atual e último tempo de máquina de envio. Além de pequenas informações informações de status e retornos de funções, porém tais variáveis serão apenas alguns bytes e por hora não serão contabilizadas, só serão levadas em consideração durante a estimativa final, a qual considerará uma quantidade a mais de armazenamento para englobar tais variáveis. Para as informações maiores, segue abaixo a análise de tamanho para cada variável:
 
-mensagens na flash 
+- Velocidade atual: de 0 - 120 km/h com precisão de 5 km/h, temos 24 possibilidades, que necessita de 5 bits.
+- Velocidade enviada anteriormente: de 0 - 120 km/h com precisão de 5 km/h, temos 24 possibilidades, que necessita de 5 bits.
+- Posição: informações de latitudade e longitude recebidas pelo módulo de gps, ambas variáveis float, de 32 bits cada, 64 bits no total. 
+- Direção: recebida pela bússola, informações de magnetude nos eixos x, y e z, a serem usadas para cálculos posteriores, todas essas informações possuem tamanho de 2 bytes cada, totalizando 48 bits.
+- Tempo de máquina atual: fornecido pelo timer interno de execução do programa na MCU, variável de tipo int, 32 bits.
+- Último tempo de máquina de envio: fornecido pelo timer interno de execução do programa na MCU, variável de tipo int, 32 bits. 
+
+Realizando a soma de todos esses tamanhos, temos que o total de bits necessários para armazenar tais variáveis na memória ram é de: 5 + 5 + 64 + 48 + 32 + 32 = 186 bits ~ 25 bytes
+O valor de bytes foi arredondado para cima, de modo a englobar aquelas outras variáveis comentadas anteriormente.
+
+Além disso, será necessário armazenar as mensagens que serão mostradas no display lcd, tais mensagens serão armazenadas em uma memória flash, pois toda vez que ligar o sistema as mensagens que podem ser exibidas serão as mesmas, portanto necessitam ser armazenada em uma memória não volátil. Segue abaixo as frases e os cálculos de tamnanhos de armazenamento:
+
+Mensagens mostradas em operação normal:
+Primeira Linha do display:
+  - "Conectado": temos 9 caracteres, mais 1 caractere do '\0' no final da string, cada caractere de 1 byte, totalizando 10 bytes.  
+  - "Desconectado": temos 12 caracteres, mais 1 caractere do '\0' no final da string, cada caractere de 1 byte, totalizando 13 bytes.   
+  - "Congestionamento": temos 16 caracteres, mais 1 caractere do '\0' no final da string, cada caractere de 1 byte, totalizando 17 bytes.  
+Segunda Linha:
+	- "Vmax: xxx km/h": temos 14 caracteres, mais 1 caractere do '\0' no final da string, cada caractere de 1 byte, totalizando 15 bytes.  
+Mensagens mostradas em eventos de erros:
+Primeira Linha:
+  - "Erro": temos 4 caracteres, mais 1 caractere do '\0' no final da string, cada caractere de 1 byte, totalizando 5 bytes.  
+  - "Erro Interno": temos 12 caracteres, mais 1 caractere do '\0' no final da string, cada caractere de 1 byte, totalizando 13 bytes.  
+Segunda Linha:
+  - "conexão carro": temos 13 caracteres, cada caractere de 1 byte, totalizando 14 bytes.  
+  - "tente reiniciar": temos 15 caracteres, cada caractere de 1 byte, totalizando 16 bytes.  
+
+Somando todos esses valores, temos que o total de bytes necessários para armazenar essas mensagens é de 103 bytes. 
+Para o cálculo do tamanho da memória flash, temos que ela precisa ser de no mínimo 103 bytes, para armazenar pelo menos todas as mensagens a serem exibidas. Para armazenar todo o programa estima-se que necessitará na ordem de centenas de bytes. 
 
 #### Algoritmos do módulo fixo
 
