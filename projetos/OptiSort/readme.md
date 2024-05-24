@@ -138,17 +138,9 @@ Na imagem apresentada anteriormente, retirada de [14], podemos visualizar o diag
 
 Ela será adquirida de uma das empresas de produção de esteiras dentro do estado de São Paulo (como sendo [9] e [10]), favorecendo o modelo módular pela simplicidade da limpeza das suas peças. Estima-se a esteira seja de uns 3 m de extensão, possuindo dessa forma espaço suficiente para a câmera aplicar o algoritmo. O CLP da esteira solicitada precisa ter acesso ao padrão EIA485 (RS485) de comunicação serial, que será utilizado para interconectar o controlador lógico com o STM32H7. Por conta dos níveis de tensão associados ao padrão serial (-7V até +12V) iremos usar um conversor TTL a RS485 montado com o chip MAX485 (visível neste link [11]), seguindo a montagem utilizada em módulos comerciais (como [12]). No projeto deste circuito conectaremos um conjunto de pinos RX e TX do USART do STM32H7 no MAX485, ligando ele no nosso CLP mediante um cabo de Ethernet CAT5, atendendo as especificações de cabo para o EIA422 (padrão anterior) [13]. Mediante esta conexão serão controlados e supervisionados aspectos da esteira, como a velocidade. A correia transportadora precisa ser modular (como aquela apresentada em [9]) para permitir funilamento e espaçamento dos elementos colocados no "stream" de entrada. 
 
-A câmera precisa estar com uma angulação de 45 com relação à esteira, de forma que consiga enxergar os componentes em cima da esteira desde um plano superior. Feito o reconhecimento conforme apresentado na seção anterior, dois dos GPIOS do STM32H7 (pinos digitais) serão utilizados para o acionamento de dois cilindros pneumáticos [16], que, por conta da sua velocidade e força de acionamento, vão servir como o nosso atuador separador de fruta estragada. Assim, para acionar os cilindros iremos utilizar uma válvula pneumática 5/2 com solenoide [15], que, por conta á alta tensão de operação (12V) será acionada mediante um Mosfet FQP30N06L conectado ao pino digital escolhido. 
+A câmera precisa estar com uma angulação de 45° com relação à esteira, de forma que consiga enxergar os componentes em cima da esteira desde um plano superior. Feito o reconhecimento conforme apresentado na seção anterior, dois dos GPIOS do STM32H7 (pinos digitais) serão utilizados para o acionamento de dois cilindros pneumáticos [16], que, por conta da sua velocidade e força de acionamento, vão servir como o nosso atuador separador de fruta estragada. Assim, para acionar os cilindros iremos utilizar duas válvulas pneumática 5/2 com solenoide [15], que, por conta á alta tensão de operação (12V) serão acionadas mediante Mosfets FQP30N06L conectados aos pinos digitais escolhidos. Cada válvula estará conectada à fonte de gas presurizado, cuja pressão depende da velocidade desejada para o cilindro, que pode ser escolhida olhando na tabela em [16]. Finalmente, os cilindros terão uma impressão 3D cobrindo a sua ponta, tal que a área em contato com a fruta seja plana e não pontual, de forma a distribuir melhor a força na superficie da fruta impactada.
 
-https://www.expper.com.br/produtos/cilindro-pneumatico-mini-iso-ma-20mm-x-100mm/
-
-
-
-Estima-se
-
-
-USART (Universal Synchronous-Assynchronous Receiver and Transmitter) do STM32H7. Por conta das altas tensões
-
+Note-se que a montagem requer bastante espaço, estimando-se uns 3m^3 (3x1x1) para ela. A sala precisa contar com acesso à rede elétrica para utilizar uma fonte de alimentação [17], com o objetivo de obter as tensões de alimentação para os circuitos e o acionamento dos dois cilindros. Abaixo da esteira pode-se colocar um cesto grande coletor de fruta estraga, ou pode-se colocar um sistema de funilamento que coloca a fruta estraga numa outra esteira transportadora.
 
 ### Especificação de Algoritmos
 ![Fluxograma do algoritmo de acionamento de atuadores de ar comprimido](./Algo1.pdf)
@@ -190,4 +182,6 @@ A câmera irá utilizar 7.5 fps para que haja tempo suficiente para que a infer�
 
 [15] Mercado Livre, "Válvula Pneumática Solenoide/mola 5/2v 1/4 Com Conexões 8mm". url: https://produto.mercadolivre.com.br/MLB-3355213923-valvula-pneumatica-solenoidemola-52v-14-com-conexoes-8mm-_JM?attributes=Vm9sdGFnZW0%3D%3AMTJW&quantity=1 [Acessado: 23. Maio. 2024]
 
-[16] url: https://www.expper.com.br/produtos/cilindro-pneumatico-mini-iso-ma-20mm-x-100mm/
+[16] LIDA Automação, "CILINDRO MINI ISO DUPLA AÇÃO DIÂMETRO 20 MM COM AMORTECIMENTO". url: https://www.lidaautomacao.com.br/produtos/cilindro-mini-iso-dupla-acao-diametro-20-mm-com-amortecimento1/ [Acessado: 23. Maio. 2024]
+
+[17] Mercado Livre, "Brazil PC BPC-230 Fonte de alimentação para PC 230W prata 115V/230V" url: https://www.mercadolivre.com.br/brazil-pc-bpc-230-fonte-de-alimentaco-para-pc-230w-prata-115v230v/p/MLB15734602 [Acessado: 23. Maio. 2024]
