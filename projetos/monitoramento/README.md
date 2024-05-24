@@ -61,10 +61,6 @@ oferecida no orimeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 > Personalização dos intervalos de acordo com as recomendações do fabricante e as condições reais de operação, garantindo o bom funcionamento dos veículos e otimizando custos.
 
 ### Eventos
-> Quais eventos o sistema deve tratar?
-> Se aplicável, classifique os eventos que são periódicos (procure especificar a periodicidade) e os que são não-periódicos
-> (qual o tempo mínimo entre dois eventos sucessivos)?
-> O sistema é projetado para tratar diversos tipos de eventos, categorizados em periódicos e não periódicos:
 
 > Eventos Periódicos:
 
@@ -117,8 +113,6 @@ Observações:
 > A frequência de envio de dados e os limites de velocidade podem ser personalizados de acordo com as necessidades de cada empresa.
 O sistema oferece opções flexíveis para configurar alertas e notificações, garantindo que o gestor da frota receba as informações relevantes no momento certo.
 
-> Qual comportamento o sistema deve ter para tratar corretamente cada evento?
-
 ## Descrição Estrutural do Sistema (ATUALIZAR SE NECESSÁRIO)
 > Junto com a descrição do comportamento do sistema, deve-se especificar, em nível de bloco ou sistema, a estrutura necessária 
 > para captar os eventos do mundo externo, para alojar e processar o programa de tratamento de eventos, e para atuar sobre o mundo externo.
@@ -134,40 +128,94 @@ O sistema oferece opções flexíveis para configurar alertas e notificações, 
 
 ### Especificação Estrutural
 
-> (Se preferir, adicione um link para o documento de especificação estrutural)
-> 
-> Entende-se por estrutural a descrição tanto das características elétricas e temporais como das restrições físicas de cada bloco funcional.
-> Nessa etapa do projeto, ainda não será solicitado o diagrama elétrico mas espera-se que já estejam identificados os componentes e circuitos integrados propostos
-> para implementação do sistema embarcado proposto.
-> 
-> Como o projeto de um sistema embarcado é centralizado nas tarefas, recomenda-se iniciar com a definição dos periféricos de entrada e saída (atuadores e/ou sensores) apropriados para o
-> sistema. Pode ser necessário definir um endereço distinto para cada um deles. 
-> Este endereço será utilizado pela unidade micro-controladora para acessá-los tanto para leitura como para escrita.
+> A especificação estrutural do sistema de rastreamento e monitoramento de veículos de frota inclui a descrição das características elétricas e temporais, bem como as restrições físicas de cada bloco funcional. Esta etapa do projeto identifica os componentes e circuitos integrados propostos para a implementação do sistema embarcado.
 
-> Nesta etapa do projeto espera-se que a unidade micro-controladora seja definida.
-> Tendo definidos os periféricos e a memória, é possível projetar um decodificador de endereços
-> que converte o endereço referenciado no programa em sinal *Chip Select – CS* do dispositivo
-> correspondente, habilitando-o para realizar um ciclo de leitura ou de escrita.
-> 
-> Nesta etapa do projeto espera-se que sejam identificada também a eventual necessidade do projeto de circuitos de interface para os periféricos do projeto.
-> Assim, devem ser incluídos na especificação, se necessário:
-> - conversores AD e DA;
-> - padrões de comunicação a serem adotados;
-> - circuitos de sincronização de sinais temporais.
-> 
-> Finalmente, deve-se especificar as restrições físicas e ambientais de funcionamento do circuito, tais como limites mecânicos
-> (altura, largura, profundidade) e limites de dissipação térmica.
+> Componentes Principais
+
+> Módulo GPS:
+
+> Função: Fornecer rastreamento em tempo real da localização dos veículos.
+> Características: Alta sensibilidade, baixo consumo de energia, atualização rápida de posição.
+
+> MCU (Microcontrolador):
+
+> Função: Processamento dos dados de localização e outros parâmetros do veículo.
+> Características: Processador de alta performance, memória suficiente para armazenamento de dados temporários, interfaces para comunicação com módulos externos (GPS, GSM/4G, sensores).
+
+> Sensores de Velocidade e Manutenção:
+
+> Função: Monitorar a velocidade do veículo e registrar dados de manutenção (quilometragem, tempo de uso, temperatura).
+> Características: Precisão alta, rápida resposta, integração fácil com o MCU.
+
+> Comunicação GSM/4G:
+
+> Função: Enviar dados em tempo real para o servidor central.
+> Características: Conectividade confiável, cobertura ampla, suporte para altas taxas de transferência de dados.
+
+Servidor e Interface Web/Móvel:
+
+> Função: Plataforma central para visualização dos dados, geração de relatórios e gestão da frota.
+> Características: Interface acessível via web e dispositivos móveis, suporte para múltiplos usuários simultâneos.
+
+
+
+> Condiões Ambientais de Funcionamento:
+> Temperatura de Operação: -20°C a 60°C
+> Umidade Relativa: 20% a 90% sem condensação.
+> Resistência a Vibração e Impacto: Seguindo normas automotivas relevantes
+
+
+> (Se preferir, adicione um link para o documento de especificação estrutural)
 
 ### Especificação de Algoritmos 
 
-> (Se preferir, adicione um link para o documento de especificação de algoritmos).
-> 
-> Deve ser elaborado para CADA evento o algoritmo de tratamento deste evento. Com base no
-> tamanho de cada algoritmo, estima-se o tamanho de memória necessária para armazenar todos
-> os programas e os dados associados. Isso permitirá especificar a memória a ser utilizada e o
-> espaço onde serão armazenados os programas. O algoritmo de tratamento de evento pode
-> ser representado graficamente por um fluxograma. Recomenda-se usar símbolos gráficos consistentes 
-> com a norma internacional ISO 1028-1973 e IS0 2972-1979.
+> Recebimento de Dados do GPS
 
-## Referências (ATUALIZAR SE NECESSÁRIO)
-> Seção obrigatória. Inclua aqui referências utilizadas no projeto.
+> Descrição: Captura de dados de localização (latitude, longitude, altitude) em tempo real.
+> Algoritmo:
+> Iniciar módulo GPS.
+> Ler dados de localização.
+> Validar dados (verificar se são atualizados e precisos).
+> Armazenar dados na memória temporária.
+> Enviar dados para o MCU.
+
+
+> Monitoramento de Velocidade
+
+> Descrição: Verificação contínua da velocidade do veículo.
+> Algoritmo:
+> Iniciar sensores de velocidade.
+> Capturar dados de velocidade a intervalos regulares.
+> Comparar velocidade atual com limites predefinidos.
+
+> Gerar alerta se a velocidade ultrapassar os limites.
+
+
+> Descrição: Envio de dados coletados para o servidor central.
+> Algoritmo:
+> Estabelecer conexão com a rede GSM/4G.
+> Compactar dados de localização e velocidade.
+> Transmitir dados para o servidor.
+> Verificar confirmação de recebimento do servidor.
+
+
+> Alerta de Manutenção
+
+> Descrição: Notificação de manutenção baseada em parâmetros como quilometragem e tempo de uso.
+> Algoritmo:
+> > Iniciar sensores de temperatura do freio.
+> Monitorar quilometragem acumulada.
+> Verificar parâmetros de manutenção (tempo de uso, quilometragem).
+Gerar alerta se os parâmetros excederem os limites predefinidos, ou se o freio estiver no estado super aquecido.
+Enviar alerta para a interface de usuário.
+
+
+## Referências 
+
+> 1. Documentação Técnica de Componentes Eletrônicos
+
+> 2. Normas e Regulamentações
+
+> 3. https://ieeexplore.ieee.org/document/7488452
+
+> 4. https://www.irjmets.com/uploadedfiles/paper//issue_4_april_2023/37054/final/fin_irjmets1682683200.pdf
