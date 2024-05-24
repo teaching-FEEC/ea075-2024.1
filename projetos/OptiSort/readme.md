@@ -73,10 +73,6 @@ Ao longo da sua operação definem-se vários tipos de "eventos" que descrevem o
     Periodicidade: _Contínua (7.5 vezes por segundo)._  
     Descrição: _O sistema aplica algoritmos de visão computacional e aprendizado de máquina para identificar os itens de interesse e realizar a análise da sua qualidade._
 
-3. **Monitoramento do Sistema:**  
-    Periodicidade: _Variável (pode ser configurado)._  
-    Descrição: _O sistema monitora seu próprio desempenho, realiza tarefas dependendo do estado atual e encaminha a informação a uma base de dados._
-
 #### Eventos Não Periódicos:
 1. **Atuação na Linha de Produção:**  
     Descrição: _O sistema detecta um item de qualidade baixa na linha principal e ativa os atuadores._
@@ -99,9 +95,7 @@ Abaixo, detalhamos mais sobre o comportamento do sistema para cada tipo de event
 #### Eventos Periódicos:
 1. **Aquisição de Imagens:** O sistema captura imagens da esteira transportadora mediante uma câmera ligada ao dispositivo controlador. As imagens são armazenadas em um buffer de memória para serem processadas posteriormente.  
 
-2. **Processamento de Imagens:** O sistema aplica algoritmos de visão computacional e aprendizado de máquina para analisar as imagens e identificar os itens. Mediante os pesos internos do modelo de aprendizado de máquina (determinados por prévio treinamento do algoritmo) o dispositivo determina a qualidade dos itens dentro da imagem.  
-
-3. **Monitoramento do Sistema:** O sistema monitora alguns parâmetros, como temperatura, humidade, vibração e consumo de energia. Se um parâmetro estiver fora da faixa normal, o sistema gera um alarme para alertar o operador.  
+2. **Processamento de Imagens:** O sistema aplica algoritmos de visão computacional e aprendizado de máquina para analisar as imagens e identificar os itens. Mediante os pesos internos do modelo de aprendizado de máquina (determinados por prévio treinamento do algoritmo) o dispositivo determina a qualidade dos itens dentro da imagem.
 
 #### Eventos Não Periódicos:
 1. **Atuação na Linha de Produção:** Se um item defeituoso for detectado, o sistema aciona um servomotor para removê-lo da esteira. O item defeituoso é direcionado para uma linha secundária para reavaliação ou descarte.
@@ -115,7 +109,7 @@ Abaixo, detalhamos mais sobre o comportamento do sistema para cada tipo de event
 5. **Atualizações de Software:** Reprogramação do controlador principal acrescentando ou modificando features dentro do funcionamento dele.
 
 ## Descrição Estrutural do Sistema
-![Diagrama de blocos do sistema](./DiagramaBlocos.jpeg)
+![Diagrama de blocos do sistema](./EA075_Diagram.jpeg)
 
 ## Especificações
 ### Especificação Estrutural
