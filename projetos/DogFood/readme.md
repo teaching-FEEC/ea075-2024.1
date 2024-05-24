@@ -61,33 +61,36 @@ O sistema deve tratar sobre os seguintes eventos/inputs:
 - Liberar comida pelo menos 1 vez ao dia - sistema de segurança para caso evento principal não funcionar - EVENTO 2 e EVENTO 5
 - Recolher a ração restante no pote SE passado tempo de recolhimento de restos de ração - EVENTO 6
 
-## Especificações (⚠️ NOVO ⚠️)
+## Especificações
 
 ### Especificação Estrutural
 
-> (Se preferir, adicione um link para o documento de especificação estrutural)
-> 
-> Entende-se por estrutural a descrição tanto das características elétricas e temporais como das restrições físicas de cada bloco funcional.
-> Nessa etapa do projeto, ainda não será solicitado o diagrama elétrico mas espera-se que já estejam identificados os componentes e circuitos integrados propostos
-> para implementação do sistema embarcado proposto.
-> 
-> Como o projeto de um sistema embarcado é centralizado nas tarefas, recomenda-se iniciar com a definição dos periféricos de entrada e saída (atuadores e/ou sensores) apropriados para o
-> sistema. Pode ser necessário definir um endereço distinto para cada um deles. 
-> Este endereço será utilizado pela unidade micro-controladora para acessá-los tanto para leitura como para escrita.
+#### Para o projeto, foi pensado nos seguintes componentes que irão compor:
+##### Obtenção de peso/sensor de peso:
+ - Célula de carga fina + Amplificador de instrumentação HX711 ( Protocolo 2 - Wire Serial)
+https://pt.aliexpress.com/item/1005002937997868.html?src=google&src=google&albch=shopping&acnt=768-202-3196&slnk=&plac=&mtctp=&albbt=Google_7_shopping&isSmbAutoCall=false&needSmbHouyi=false&albcp=19505955113&albag=&trgt=&crea=pt1005002937997868&netw=x&device=c&albpg=&albpd=pt1005002937997868&gad_source=1&gclid=CjwKCAjw3NyxBhBmEiwAyofDYRGehXTtspwNVskHUFuc1mfH2A00fBgz_DDGlJimxvi-jeKrE_2LtRoCYBUQAvD_BwE&gclsrc=aw.ds&aff_fcid=de7b9b6c73c34f0689d0c223d42e8937-1714939331446-04013-UneMJZVf&aff_fsk=UneMJZVf&aff_platform=aaf&sk=UneMJZVf&aff_trace_key=de7b9b6c73c34f0689d0c223d42e8937-1714939331446-04013-UneMJZVf&terminal_id=74fd28b9fc36469bb5d951ec78224d83&afSmartRedirect=y
 
-> Nesta etapa do projeto espera-se que a unidade micro-controladora seja definida.
-> Tendo definidos os periféricos e a memória, é possível projetar um decodificador de endereços
-> que converte o endereço referenciado no programa em sinal *Chip Select – CS* do dispositivo
-> correspondente, habilitando-o para realizar um ciclo de leitura ou de escrita.
-> 
-> Nesta etapa do projeto espera-se que sejam identificada também a eventual necessidade do projeto de circuitos de interface para os periféricos do projeto.
-> Assim, devem ser incluídos na especificação, se necessário:
-> - conversores AD e DA;
-> - padrões de comunicação a serem adotados;
-> - circuitos de sincronização de sinais temporais.
-> 
-> Finalmente, deve-se especificar as restrições físicas e ambientais de funcionamento do circuito, tais como limites mecânicos
-> (altura, largura, profundidade) e limites de dissipação térmica.
+##### Gravação e reprodução de voz:
+- Módulo de gravação - ISD1820(10s de gravação) ( GPIO Digital Output Model)
+https://pt.aliexpress.com/item/1005002704344165.html?src=google&src=google&albch=shopping&acnt=768-202-3196&slnk=&plac=&mtctp=&albbt=Google_7_shopping&isSmbAutoCall=false&needSmbHouyi=false&albcp=18736772764&albag=&trgt=&crea=pt1005002704344165&netw=x&device=c&albpg=&albpd=pt1005002704344165&gad_source=1&gclid=CjwKCAjw3NyxBhBmEiwAyofDYZaBUzQLTxdDntmrVyY9pu7ErHc-hT9fNscnh-hkeQkaj9Hb57paQhoCEtMQAvD_BwE&gclsrc=aw.ds&aff_fcid=ac01cc00485b482284fb0e77babc408c-1714939576449-03603-UneMJZVf&aff_fsk=UneMJZVf&aff_platform=aaf&sk=UneMJZVf&aff_trace_key=ac01cc00485b482284fb0e77babc408c-1714939576449-03603-UneMJZVf&terminal_id=74fd28b9fc36469bb5d951ec78224d83&afSmartRedirect=y
+
+##### Abertura e fechamento de recipientes:
+- Servo motores + Driver (Protocolo I2C)
+https://pt.aliexpress.com/item/1005004635272899.html?src=google&src=google&albch=shopping&acnt=768-202-3196&slnk=&plac=&mtctp=&albbt=Google_7_shopping&isSmbAutoCall=false&needSmbHouyi=false&albcp=19505955113&albag=&trgt=&crea=pt1005004635272899&netw=x&device=c&albpg=&albpd=pt1005004635272899&gad_source=1&gclid=CjwKCAjw3NyxBhBmEiwAyofDYdny76c2EqZJTNfVzMmznkt0t-7nc24DXPKSnwfdZxo2tTC3FR5QjxoC1cYQAvD_BwE&gclsrc=aw.ds&aff_fcid=382a0e3b0d61429fa40ef586e037f3bf-1714941085660-06892-UneMJZVf&aff_fsk=UneMJZVf&aff_platform=aaf&sk=UneMJZVf&aff_trace_key=382a0e3b0d61429fa40ef586e037f3bf-1714941085660-06892-UneMJZVf&terminal_id=74fd28b9fc36469bb5d951ec78224d83&afSmartRedirect=y
+
+##### Reconhecer a presença de do animal:
+- Sensor de tag RFID(GPIO Digital Input Mode)(1º opção):
+https://pt.aliexpress.com/item/1005006629654871.html?src=google&src=google&albch=shopping&acnt=768-202-3196&slnk=&plac=&mtctp=&albbt=Google_7_shopping&isSmbAutoCall=false&needSmbHouyi=false&albcp=17364768653&albag=&trgt=&crea=pt1005006629654871&netw=x&device=c&albpg=&albpd=pt1005006629654871&gad_source=1&gclid=Cj0KCQjw0ruyBhDuARIsANSZ3woOMucpQwsIxdRB9m06N8ggAO-eRsb2vqzGIqlnW64eDq4NSmVibBUaAojjEALw_wcB&gclsrc=aw.ds&aff_fcid=13e410193ec2479297dbe6567cf2fc9f-1716514140591-01671-UneMJZVf&aff_fsk=UneMJZVf&aff_platform=aaf&sk=UneMJZVf&aff_trace_key=13e410193ec2479297dbe6567cf2fc9f-1716514140591-01671-UneMJZVf&terminal_id=74fd28b9fc36469bb5d951ec78224d83&afSmartRedirect=y
+
+- Sensor magnético + super imã permanente na coleira (GPIO Digital Input Mode)(2ª opção):
+https://www.wjcomponentes.com.br/sensor-mc-37?parceiro=6298&gad_source=1&gclid=Cj0KCQjw0ruyBhDuARIsANSZ3woI4ijoYCaGIUjOzMTRTMOqhkjNWsH7YAL87XvFT12BhyF4fgBBF4waAqaIEALw_wcB
++
+https://pt.aliexpress.com/item/1005004685830211.html?src=google&src=google&albch=shopping&acnt=768-202-3196&slnk=&plac=&mtctp=&albbt=Google_7_shopping&isSmbAutoCall=false&needSmbHouyi=false&albcp=19639392923&albag=&trgt=&crea=pt1005004685830211&netw=x&device=c&albpg=&albpd=pt1005004685830211&gad_source=1&gclid=Cj0KCQjw0ruyBhDuARIsANSZ3wpQ0dnnthJ7Kx2YZVJR-eIah9MO3mKc-hu7Q5qzpO-56gmFITltgLoaArbdEALw_wcB&gclsrc=aw.ds&aff_fcid=e733aef517d04fa385c0979992d75d4f-1716515382192-04796-UneMJZVf&aff_fsk=UneMJZVf&aff_platform=aaf&sk=UneMJZVf&aff_trace_key=e733aef517d04fa385c0979992d75d4f-1716515382192-04796-UneMJZVf&terminal_id=74fd28b9fc36469bb5d951ec78224d83&afSmartRedirect=y
+
+##### Unidade microcontroladora:
+- Arduino nano:
+https://pt.aliexpress.com/item/1005002197241012.html?src=google&src=google&albch=shopping&acnt=768-202-3196&slnk=&plac=&mtctp=&albbt=Google_7_shopping&isSmbAutoCall=false&needSmbHouyi=false&albcp=19505955113&albag=&trgt=&crea=pt1005002197241012&netw=x&device=c&albpg=&albpd=pt1005002197241012&gad_source=1&gclid=Cj0KCQjw0ruyBhDuARIsANSZ3wqTbNoTqbXYXB13uq3B4xDzB8ZSmqupx1SxVXr3UkpXwHsQbzIFYqgaAgyAEALw_wcB&gclsrc=aw.ds&aff_fcid=631af40bd8d842b08ae06513d1c34077-1716513627600-09798-UneMJZVf&aff_fsk=UneMJZVf&aff_platform=aaf&sk=UneMJZVf&aff_trace_key=631af40bd8d842b08ae06513d1c34077-1716513627600-09798-UneMJZVf&terminal_id=74fd28b9fc36469bb5d951ec78224d83&afSmartRedirect=y
+
 
 ### Especificação de Algoritmos 
 #### Diagrama de tratamento de eventos do algoritmo (desenvolvido com o _board_ Miro):
