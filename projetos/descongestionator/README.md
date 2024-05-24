@@ -96,7 +96,7 @@ Os módulos móveis tem como objetivo monitorar a velocidade do carro e informar
 
 Os dispostivos fixos são torres colocadas ao longo da via, e tem como objetivo detectar congestionamentos, recebendo informações de velocidade dos motoristas mais próximos, e repassar a informação para torres anteriores na via, que por sua vez avisam sobre as condições ao módulos móveis proxímos a elas.
 
-![Alt text here](diagramas/diagrama-estrutural.png)
+![Diagrama estrutural](diagramas/diagrama-estrutural.png)
 
 ## Especificações
 
@@ -139,7 +139,35 @@ A realização do projeto completo só é possível com a definição da forma d
 
 #### Módulo móvel
 
-// Componentes e especificoes de operação do módulo móvel
+Tabela de periféricos escolhidos
+
+| Nome | Interface | Links | Motivo | Custo |
+|--|--|--|--|--|
+| Display | I2C | [produto](https://curtocircuito.com.br/display-lcd-16x2-backlight-azul-i2c.html?srsltid=AfmBOorUBvmO1sjFAtLiMtKyeGpYR1-XtbEsuhcUkG65ZfNAgPfHhxg7naQ) [datasheet](https://www.handsontec.com/dataspecs/module/I2C_1602_LCD.pdf) | Menor display que atende as mensagens que deseja-se mostrar e com menor custo, quando comparado a displays OLED, por exemplo. | R$ 25 |
+| Buzzer ativo | GPIO | [produto](https://www.mercadolivre.com.br/3x-buzzer-ativo-5v-sinal-beep-arduino-raspberry-som/p/MLB32625316?matt_tool=18956390&utm_source=google_shopping&utm_medium=organic&item_id=MLB4440875150&from=gshop) | Apenas para realizar um aviso simples, buzzer ativo para não precisar gerar uma onda como entrada | R$ 3 |
+| GPS | I2C | [produto](https://pt.aliexpress.com/item/1005001325488063.html?spm=a2g0o.productlist.main.21.16bf6D4k6D4kkE&algo_pvid=ee1dfcd7-d9ed-4cb6-a019-f2d89ec01ed2&algo_exp_id=ee1dfcd7-d9ed-4cb6-a019-f2d89ec01ed2-10&pdp_npi=4%40dis%21BRL%2118.12%2118.12%21%21%213.38%213.38%21%402103252b17163011627366297e1daf%2112000015698279168%21sea%21BR%210%21AB&curPageLogUid=ytOUFtU2BXcg&utparam-url=scene%3Asearch%7Cquery_from%3A) [datasheet](https://content.u-blox.com/sites/default/files/products/documents/NEO-6_DataSheet_%28GPS.G6-HW-09005%29.pdf) | Dispositivo simples de GPS e com precisão suficiente para o projeto, existem variações na família porém a de pior velocidade e resolução já excede o que é necessário para o projeto. | R$ 20 |
+| Bússula de três eixos | I2C | [produto](https://pt.aliexpress.com/item/1005006291063452.html?spm=a2g0o.productlist.main.1.dc4evlYHvlYHY3&algo_pvid=c34535e0-7379-445e-bfe4-024fbe78167f&algo_exp_id=c34535e0-7379-445e-bfe4-024fbe78167f-0&pdp_npi=4%40dis%21BRL%2126.79%214.99%21%21%2136.19%216.74%21%402103248517163012654687965e29ec%2112000036755638743%21sea%21BR%210%21AB&curPageLogUid=qAsI2Sp9r1qq&utparam-url=scene%3Asearch%7Cquery_from%3A) [datasheet](https://pdf1.alldatasheet.com/datasheet-pdf/download/428790/HONEYWELL/HMC5883L.html) | Baixo custo e precisão suficiente para que a torre seja capaz de distinguir entre as duas direções da pista. | R$ 5 |
+| ELM327 | USB | [produto](https://pt.aliexpress.com/item/1005004078281314.html?src=google&albch=shopping&acnt=768-202-3196&slnk=&plac=&mtctp=&albbt=Google_7_shopping&isSmbAutoCall=false&needSmbHouyi=false&albcp=17364768653&albag=&trgt=&crea=pt1005004078281314&netw=x&device=c&albpg=&albpd=pt1005004078281314&gad_source=1&aff_fcid=ab8340a8c4924522a2f60389e0a5a9b5-1716303063740-03722-UneMJZVf&aff_fsk=UneMJZVf&aff_platform=aaf&sk=UneMJZVf&aff_trace_key=ab8340a8c4924522a2f60389e0a5a9b5-1716303063740-03722-UneMJZVf&terminal_id=8d6b63a746384503a8028a560225b27e&afSmartRedirect=y) | Dispositivo mais comum para este tipo de interface com o carro pela porta ODB | R$ 20 |
+
+Ainda é necessário definir um circuito integrado para realizar a conversão de USB para UART
+
+Escolha da MCU:
+
+Dos algoritmos especificados, vemos que este módulo exige baixa memória e pouca capacidade de processamento, porque a MCU é apenas responsável por intermediar os periféricos com as torres. Desta forma, encontramos a família de microcontroladoras de 8 bits ATtinyXXX.
+
+link do datasheet: https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/ATtiny202-04-402-04-06-Auto-DataSheet-DS40002159A.pdf
+
+Analisando entre as variações, a escolha deve ser feita com base no número de pinos e da quantidade de memória Flash/RAM. A versão com menos (8) pinos não disponibiliza nenhum pino multiplexável para I2C, e portanto não pode ser utilizada. Isto pode ser visto nas imagens abaixo, os pinos SDA e SCL são multiplexáveis apenas nos pinos PB0 e PB1, que não estão disponíveis nessa versão.
+
+Pinagem das versões com 8 e 14 pinos
+
+![Pinos ATtiny](imgs/pinout-attiny.png)
+
+Tabela de multiplexação dos pinos
+
+![Multiplexao de pinos ATtiny](imgs/io-multiplex-attiny.png)
+
+Já a versão de 14 pinos possibilita que sejam acessados os módulos USART, I2C e GPIO, que completa as interfaces necessárias. Quanto à memória, de acordo com nossas estimativas, a versão com 128 B de RAM e 2 kB de memória Flash deve ser suficiente. Portanto, definimos a microcontroladora ATtiny204, que tem um custo de apenas R$ 3. 
 
 #### Módulo fixo
 
