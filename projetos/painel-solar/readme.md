@@ -184,7 +184,8 @@ O preço total do projeto, desconsiderando componentes auxiliares, como resistor
 
 - Período útil de geração de energia
 
-1 - Identifica se a mínima claridade foi atingida por tempo mínimo;
+1 - Identifica se a mínima claridade foi atingida por tempo mínimo
+
 2 - Inicializa sistema de inclinação variável;
 3 - Conferência de segurança se há erro ou condição extrema;
 4 - Sem problemas: Posiciona placa para posição inicial;
