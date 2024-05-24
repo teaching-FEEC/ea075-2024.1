@@ -160,7 +160,7 @@ O motor de passo utilizado é o EasyServo, que possui um encoder acoplado, permi
 
 O torque necessário para sustentar e mover a placa solar, considerando suas especificações, é de aproximadamente 128Nm. No entanto, o motor EasyServo fornece um torque de apenas 12Nm. Para que esse motor possa ser utilizado de forma eficaz, é necessário acoplar um redutor de torque. A solução ideal é utilizar um redutor com uma relação de 1:15, aumentando o torque fornecido pelo motor para 180Nm, o que garante uma margem de segurança adequada.
 
-Além disso, a tensão de alimentação do driver varia entre 30V e 110Vdc ou 20V e 80Vac, sendo utilizada a tensão da rede para a alimentação do dispositivo. Isso facilita a integração do sistema em diversos ambientes e garante uma alimentação constante e confiável para o motor e o driver.
+Além disso, a tensão de alimentação do driver varia entre 30V e 110Vdc ou 20V e 80Vac, sendo utilizada a tensão da rede para a alimentação do dispositivo por meio de uma fonte chaveada de 500W suficiente para alimentação do Driver e do motor de passo. Isso facilita a integração do sistema em diversos ambientes e garante uma alimentação constante e confiável para o motor e o driver.
 
 #### Componentes do projeto
 Os componentes seus respectivos valores são apresentados na Tabela 1.
@@ -175,7 +175,7 @@ Tabela 1. Principais componentes utilizados no projeto
 |LM2576|Regulador de Tensão 60V|2|R$ 36,96|
 ||Bateria Estacionária|1|R$ 272,86|
 |NEMA 17| Redutor de torque| 1|R$ 192,98|
-|| Antena para ESP32 | 1 | R$ 25,19 |
+
 
 O preço total do projeto, desconsiderando componentes auxiliares, como resistores e capacitores, é de R$ 1896,80.
 
