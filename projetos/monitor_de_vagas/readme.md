@@ -46,7 +46,7 @@ Evento 4: reportar a liberação de vagas na entrada.
 Existem diversas maneiras de fazer a verificação acerca de quais vagas estão ou não disponíveis no estacionamento em um determinado momento, tais como: sensor ultrassônico, infravermelho, magnético, entre outros. O projeto visa atuar principalmente em ambientes externos, portanto lida com variações de luz, temperatura e umidade. Com isso, acredita-se que o candidato que melhor se adequa aos requisitos é o sensor ultrassônico, que lida bem com as variações citadas possuindo um baixo custo.
 O modelo escolhido de sensor ultrassônico escolhido foi o HC-SR04 dado sua alta disponibilidade no mercado, confiabilidade, precisão, facilidade na programação e o seu preço. É importante ressaltar, contudo, que o sensor não possui uma resistência mecânica suficiente para ser usado em ambiente externo, é necessário envolvê-lo com uma caixa.
 O princípio de funcionamento do sensor ultrassônico é simples, ele envia um pulso ultrassônico que bate em um determinado objeto a uma distância D e volta para o receptor. Sabendo a velocidade do som V e o tempo T que leva para o pulso ir e voltar até o receptor é possível estimar a distância do objeto encontrado por D = V / (T/2).
-![Sensor Ultrassônico]([https://media.licdn.com/dms/image/D4D12AQGhwpQId1yhpg/article-cover_image-shrink_600_2000/0/1706248069214?e=2147483647&v=beta&t=YJ0ueeT47Rg0cfao_EjJd3f4r_5b5WtO8TMQzZQesyY](https://cdn.shopify.com/s/files/1/0559/1970/6265/files/Blog_Images_90d67d8f-efb0-4d0d-ada5-4bf17847f6cd_2048x2048.gif?v=1715342134))
+![Sensor Ultrassônico](https://cdn.shopify.com/s/files/1/0559/1970/6265/files/Blog_Images_90d67d8f-efb0-4d0d-ada5-4bf17847f6cd_2048x2048.gif?v=1715342134)
 
 #### Atuadores
 
