@@ -25,7 +25,7 @@ O projeto consiste em um produto já estabelecido no mercado, que visa garantir 
 O sistema de controle de elevadores deverá ser capaz de executar as seguintes tarefas:
   - Chamadas do elevador: receber e registrar chamadas de todos os andares do prédio.
   - Registrar as solicitações dentro do elevador.
-  - Organizar as chamadas com base na localização, direção e disponibilidade.
+  - Organizar as chamadas com base em uma fila de prioridade.
   - Gerenciar a abertura e fechamento das portas.
   - Responder imediatamente a situações de emergência.
   - Diagnosticar problemas mecânicos e elétricos.
@@ -42,7 +42,7 @@ O sistema possui os seguintes estados:
     - Portas abertas:
       O elevador está parado em um andar específico e com a porta aberta para entrada e saída de passageiros.
     - Portas fechadas:
-      O elevador está fechada as portas após um tempo específico para entrada e saída dos passageiros e verificação de que não há passageiros se locomovendo pra dentro ou pra fora, bem como verificação de que não há possíveis falhas mecânicas e elétricas.
+      O elevador está parado em um andar com as portas fechadas, que ocorre após um tempo específico para entrada e saída dos passageiros e verificação de que não há passageiros se locomovendo pra dentro ou pra fora, bem como verificação de que não há possíveis falhas mecânicas e elétricas.
 
 Ao receber chamadas de andares, o elevador (com portas fechadas) muda para o estado "subindo" ou "descendo", assim como quando o passageiro seleciona o andar desejado. Ao chegar no andar, o elevador muda para o modo "parado", inicialmente de portas fechadas, e rapidamente muda para o modo "portas abertas". Após um determinado tempo para entrarem e saírem passageiros, há a mudança de estado para "portas fechadas" novamente, se as condições de segurança forem satisfeitas. Assim, novas chamadas ocorrem, reiniciando. 
 Há algumas mudanças de estado fora do funcionamento padrão. Ao verificar problemas mecânicos ou elétricos ou outras emergências, ele passa automaticamente para o modo "parado". Se está parado devido a problemas de segurança, suas portas podem permanecer abertas ou fechadas de acordo com a ocasião.
@@ -79,15 +79,15 @@ O sistema se baseia em um fluxo de estados onde definimos se um elevador sobe, d
 ![Diagrama Elevador drawio](https://github.com/andreglz/ea075-2024.2/assets/106714171/39f5be4c-cc7e-47d6-ad00-41ed6804440f)
 
 Note que o mesmo funciona tanto para uma pessoa que solicita o elevador pelo lado de fora, quanto para alguém que aperta o botão de um andar já dentro do elevador. O diagrama mostra a situação em condições típicas e síncronas de funcionamento, mas haverá também a necessidade de uma verificação assíncrona em casos de falhas durante o trajeto do elevador, onde o mesmo deve parar e acionar suporte/segurança.
-A fila também necessita ser desenvolvida, para saber se o elevador sobe ou desce de acordo com a ordem apertada, mas também pode levar a conta a distância, caso o prédio tenha muitos andares e haja necessidade de definir prioridades. De qualquer forma, de forma resumida, após alguma solicitação que entra em uma fila com uma determinada prioridade, a ideia é que o elevador se movimente baseado nessa fila para atender aos chamados.
+A fila também tem um papel importante, conforme explicado na sessão "Especificação de algoritmos", para saber se o elevador sobe ou desce de acordo com a ordem apertada e se para ou não em outro andar no caminho. De forma resumida, após alguma solicitação que entra em uma fila com uma determinada prioridade, a ideia é que o elevador se movimente baseado nessa fila para atender aos chamados.
 
 ## Especificações (⚠️ NOVO ⚠️)
 
 ### Especificação Estrutural
 
-O projeto possui dois atuadores, ambos motores CC, para controle de abertura e fechamento das portas do elevador e para subir e descer a cabine. O motor utilizado para o deslocamento vertical da cabine apresenta bastante torque, portanto, sua potência é alta. Com isso, a alimentação é feita utilizando um retificador controlado com tiristores. Para controle do sentido e da velocidade do motor, utiliza-se na saída do retificador uma ponte H com transistores MOSFET, conectada também ao microcontrolador. Já para o motor CC da porta, utiliza-se uma fonte de menor potência, e seu controle é feito da mesma maniera, por uma ponte H.
+O projeto possui dois atuadores, ambos motores CC, para controle de abertura e fechamento das portas do elevador e para subir e descer a cabine. O motor utilizado para o deslocamento vertical da cabine apresenta bastante torque, portanto, sua potência é alta. Com isso, a alimentação é feita utilizando um retificador controlado com tiristores. Para controle do sentido e da velocidade do motor, utiliza-se na saída do retificador uma ponte H com transistores MOSFET, conectada também ao microcontrolador. Já para o motor CC da porta, utiliza-se uma fonte de menor potência, e seu controle é feito da mesma maneira, por uma ponte H.
 
-O controle da parada correta da cabine do elevador é feito utilizando dois sensores magnéticos em cada andar, porém ainda não foi definido o modelo exato para o projeto. Assim, ao passar pelo sensor, o sistema saberá em que andar está a cabine e o momento correto para iniciar a frenagem. Outra importante função desse periférico é estacionar a cabine de forma extremamente precisa, alinhando o piso do elevador com o andar.
+A ideia do controle da parada correta da cabine do elevador é utilizar dois sensores fotoelétricos em cada andar (um para a parte inferior do piso e outro para a parte superior), sendo que o modelo em consideração é o E3Z-F da Omron. Assim, ao passar pelo sensor, o sistema saberá em que andar está a cabine e o momento correto para iniciar a frenagem. Outra importante função desse periférico é estacionar a cabine de forma extremamente precisa, alinhando o piso do elevador com o andar.
 
 A porta possui quatro sensores de infravermelho, sendo utilizados dois para cada altura pré-determinada, dispostos em ambos os lados da porta. O papel desses sensores é detectar se há algum objeto entre as portas. O modelo escolhido foi o E18-D80NK-N, que possui um alcance de 6 a 80 cm. Quando um objeto for detectado, o sensor envia ao microcontrolador um sinal de nível lógico baixo. Com a leitura do nível lógico, um comando é enviado para o motor manter a porta aberta.
 
@@ -95,49 +95,19 @@ O elevador irá se locomover por quatro andares, assim, teremos quatro push butt
 
 O microcontrolador utilizado ainda não foi definido. A ideia é utilizar comunicação I2C no sistema.
 
-> (Se preferir, adicione um link para o documento de especificação estrutural)
-> 
-> Entende-se por estrutural a descrição tanto das características elétricas e temporais como das restrições físicas de cada bloco funcional.
-> Nessa etapa do projeto, ainda não será solicitado o diagrama elétrico mas espera-se que já estejam identificados os componentes e circuitos integrados propostos
-> para implementação do sistema embarcado proposto.
-> 
-> Como o projeto de um sistema embarcado é centralizado nas tarefas, recomenda-se iniciar com a definição dos periféricos de entrada e saída (atuadores e/ou sensores) apropriados para o
-> sistema. Pode ser necessário definir um endereço distinto para cada um deles. 
-> Este endereço será utilizado pela unidade micro-controladora para acessá-los tanto para leitura como para escrita.
-
-> Nesta etapa do projeto espera-se que a unidade micro-controladora seja definida.
-> Tendo definidos os periféricos e a memória, é possível projetar um decodificador de endereços
-> que converte o endereço referenciado no programa em sinal *Chip Select – CS* do dispositivo
-> correspondente, habilitando-o para realizar um ciclo de leitura ou de escrita.
-> 
-> Nesta etapa do projeto espera-se que sejam identificada também a eventual necessidade do projeto de circuitos de interface para os periféricos do projeto.
-> Assim, devem ser incluídos na especificação, se necessário:
-> - conversores AD e DA;
-> - padrões de comunicação a serem adotados;
-> - circuitos de sincronização de sinais temporais.
-> 
-> Finalmente, deve-se especificar as restrições físicas e ambientais de funcionamento do circuito, tais como limites mecânicos
-> (altura, largura, profundidade) e limites de dissipação térmica.
-
 ### Especificação de Algoritmos 
 Para a gestão de fila dos andares, o projeto se baseia no seguinte fluxograma:
 ![Fila Elevador](https://github.com/andreglz/ea075-2024.2/assets/106714171/826400fe-9c3d-46b8-b4a3-8262b10adffc)
 
 Os eventos relacionados à abertura e ao fechamento de portas, bem como detecção de falha, sobrecarga e pessoa entre as portas são tratados no fluxograma da seção "_Descrição Estrutural do Sistema_", e tais eventos se relacionam diretamente com este acima no que resumimos pela tomada de decisão "Verificações de segurança ok?". Dessa forma, o algoritmo como um todo deve tratar dos dois fluxogramas, sendo que o primeiro diagrama se encaixa dentro do segundo para simplificarmos a visualização.
 
-Com isso podemos estimar que seria necessário **...............................**
-
-
-> (Se preferir, adicione um link para o documento de especificação de algoritmos).
-> 
-> Deve ser elaborado para CADA evento o algoritmo de tratamento deste evento. Com base no
-> tamanho de cada algoritmo, estima-se o tamanho de memória necessária para armazenar todos
-> os programas e os dados associados. Isso permitirá especificar a memória a ser utilizada e o
-> espaço onde serão armazenados os programas. O algoritmo de tratamento de evento pode
-> ser representado graficamente por um fluxograma. Recomenda-se usar símbolos gráficos consistentes 
-> com a norma internacional ISO 1028-1973 e IS0 2972-1979.
+Ainda não temos o tamanho de memória necessária bem definido, porém visto que projetaremos um controle para elevadores com até 4 andares (suficientemente representados por 2 bits), usando 2 sensores de nível por andar (mais 8 bits para monitoramento), e outras funções de controle como abertura das portas, detecção de movimento, etc, estimamos que seria necessário em torno de 16 bits para tal.
 
 ## Referências
 http://www.electrical-knowhow.com/2012/04/elevator-control-system.html
 
 http://fpgaparatodos.com.br/2011/08/04/exemplo-de-exemplo/
+
+https://cpi.com.ar/info_productos/pdf/E3Z-F.pdf
+
+https://www.watelectronics.com/e18-d80nk-adjustable-infrared-sensor/
