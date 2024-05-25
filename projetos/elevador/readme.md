@@ -81,7 +81,7 @@ O sistema se baseia em um fluxo de estados onde definimos se um elevador sobe, d
 Note que o mesmo funciona tanto para uma pessoa que solicita o elevador pelo lado de fora, quanto para alguém que aperta o botão de um andar já dentro do elevador. O diagrama mostra a situação em condições típicas e síncronas de funcionamento, mas haverá também a necessidade de uma verificação assíncrona em casos de falhas durante o trajeto do elevador, onde o mesmo deve parar e acionar suporte/segurança.
 A fila também tem um papel importante, conforme explicado na sessão "Especificação de algoritmos", para saber se o elevador sobe ou desce de acordo com a ordem apertada e se para ou não em outro andar no caminho. De forma resumida, após alguma solicitação que entra em uma fila com uma determinada prioridade, a ideia é que o elevador se movimente baseado nessa fila para atender aos chamados.
 
-## Especificações (⚠️ NOVO ⚠️)
+## Especificações 
 
 ### Especificação Estrutural
 
