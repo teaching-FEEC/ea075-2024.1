@@ -146,6 +146,16 @@ Já a versão de 14 pinos possibilita que sejam acessados os módulos USART, I2C
 > Finalmente, deve-se especificar as restrições físicas e ambientais de funcionamento do circuito, tais como limites mecânicos
 > (altura, largura, profundidade) e limites de dissipação térmica.
 
+##### Características de Operação
+
+| Componente | Intervalo de Tensão | Tensão recomendada |
+|--|--|--|
+| Display | - | 5V |
+| Buzzer | 4~8V | 5V |
+| GPS | 2.7~3.6V | 3V |
+| Bussola | 1.71~1.9 | 1.8V |
+| ATtiny204 | -0.5~6V | 3V |
+
 
 #### Módulo fixo
 
