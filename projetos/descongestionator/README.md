@@ -11,6 +11,13 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
  | Kevin Caio Marques dos Santos  | 247218  | Eng. de Computação|
  | Thiago Maximo Pavão  | 247381  | Eng. de Computação|
 
+## Arquivos Importantes (:warning: NOVO :warning:)
+
+>[Esquemático em PDF](link para imagens/pdf esquemático)
+>
+[Lista de Componentes](components.md)
+>
+>[PCB](link para imagens/pdf PCB)
 
 ## Descrição do Projeto
 
@@ -135,6 +142,10 @@ Tabela de multiplexação dos pinos
 ![Multiplexao de pinos ATtiny](imgs/io-multiplex-attiny.png)
 
 Já a versão de 14 pinos possibilita que sejam acessados os módulos USART, I2C e GPIO, que completa as interfaces necessárias. Quanto à memória, de acordo com nossas estimativas, a versão com 128 B de RAM e 2 kB de memória Flash deve ser suficiente. Portanto, definimos a microcontroladora ATtiny204, que tem um custo de apenas R$ 3. 
+
+> Finalmente, deve-se especificar as restrições físicas e ambientais de funcionamento do circuito, tais como limites mecânicos
+> (altura, largura, profundidade) e limites de dissipação térmica.
+
 
 #### Módulo fixo
 
