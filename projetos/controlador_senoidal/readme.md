@@ -12,6 +12,11 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 | Gabriel Tavares Coluccini Francisco  | 239640  | Eng. Elétrica|
 | João Pedro Souza Pascon  | 239733  | Eng. Elétrica|
 
+
+## Arquivos Importantes
+
+projetos/controlador_senoidal/componentes.md
+
 ## Descrição do Projeto
 
 No atual contexto macroeconômico global, marcado por cortes nas taxas de juros, tanto do FED quanto do BC, e a busca por oportunidades de investimento mais rentáveis, surge um cenário de oportunidades significativas para os empreendedores e investidores. É esperado que, nos próximos anos, o contexto econômico se recupere dos danos causados pela pandemia do COVID 19 e que o custo do capital diminua, impulsionando novos projetos de engenharia, novas oportunidades de negócios e novos setores da economia.
