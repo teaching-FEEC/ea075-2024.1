@@ -150,10 +150,10 @@ Já a versão de 14 pinos possibilita que sejam acessados os módulos USART, I2C
 
 | Componente | Intervalo de Tensão | Tensão recomendada |
 |--|--|--|
-| Display | - | 5V |
+| Display | -0.3~13V | 5V |
 | Buzzer | 4~8V | 5V |
 | GPS | 2.7~3.6V | 3V |
-| Bussola | 1.71~1.9 | 1.8V |
+| Bussola | 3~5 | 5V |
 | ATtiny204 | -0.5~6V | 3V |
 
 
