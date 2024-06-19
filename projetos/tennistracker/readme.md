@@ -29,16 +29,14 @@ O dispositivo poderia ser vendido para qualquer pessoa interessada em monitorar 
 ## Descrição Funcional
 
 ### Funcionalidades
-- **Fixar na raquete**: o sistema deve poder ser afixado na raquete de tênis.
-- **Armazenar os dados aquisitados**: o sistema deve ser capaz de salavar na memória os dados dos sensores.
-- **Medir a velocidade da raquete**: o sistema deve adquirir dados que permitam estimar velocidade.
-- **Medir a intensidade das colisões com a bolinha**: o sistema deve adquirir dados que permitam estimar a intensidade de colisões com a bola.
-- **Medir o ângulo com a horizontal da raquete**: o sistema deve adquirir dados que permitam estimar o ângulo da raquete em relação ao solo.
-- **Interface para controlar quando começar quando parar aquisição**: deve ser possível controlar quando interromper as medições.
-- **Interface para exportar os dados**: deve ser possível exportar os dados para análise externa.
-- **Peso reduzido**: o sistema deve ser leve, para que não influencie nas jogadas.
-- **Sinalizar o nível de bateria**: o sistema deve ser capaz de exibir o nível da bateria.
-- **Armazenamento de energia (bateria)**: o sistema deve ser capaz de funcionar sem necessidade de cabos de energia.
+- **Fixar na raquete**: o sistema pode ser afixado na raquete de tênis.
+- **Armazenar os dados aquisitados**: o sistema é capaz de salavar na memória os dados dos sensores.
+- **Medir a aceleração de translação**: o sistema consegue medir a aceleração de translação em três eixos.
+- **Medir a velocidade angular e a orientação**: o sistema consegue medir a velocidade angular de rotação e a orientação em torno dos três eixos.
+- **Salvar dados em cartão SD**: o sistema salva os dados coletados em um cartão SD que pode ser removido e inserido em um computador para leitura e análise dos dados.
+- **Peso reduzido**: o sistema é leve, para que não influencie nas jogadas.
+- **Sinalizar o nível de bateria**: o é capaz de sinalizar baixa bateria.
+- **Armazenamento de energia (bateria)**: o sistema é capaz de funcionar com bateria.
 
 ### Funcionalidade de análise:
 Uma vez que o dados forem aquisitados, via software poderemos executar:
@@ -52,14 +50,12 @@ Uma vez que o dados forem aquisitados, via software poderemos executar:
 
 ### Configurabilidade
 - Aquisição
-- Carregamento
-- Transferência de Dados
 
 ### Eventos
 |Eventos  | 
 |--|
-| Ligar (botão on/off)  | 
-| Desligar (botão on/off)  |
+| Ligar (Chave on/off)  | 
+| Desligar (Chave on/off)  |
 
 ### Tratamento de Eventos
 
@@ -67,7 +63,7 @@ Uma vez que o dados forem aquisitados, via software poderemos executar:
 |--|--|
 | Ligar (Chave On/Off)  | Iniciar medições de grandezas (posição, velocidade, aceleração, etc.) (periódico com taxa de amostragem de 1kHz) + Ativar LED (aceso continuo)  |
 | Desligar (Chave On/Off)  | Interromper as medições e o fornecimento de energia + apagar LED |
-| Baixa Bateria  |  Ativar LED (piscante) para sinalizar baixa bateria. O dispositivo continua funcionando se estiver ligado. |
+| Baixa Bateria  |  Quando ligado ativar LED piscante para sinalizar baixa bateria. |
 | Bateria Desconectada |  Com a bateria desligada a alimentação do circuito é desconectada, sendo assim todo o dispositivo fica desenergizado. |
 
 ## Descrição Estrutural do Sistema
