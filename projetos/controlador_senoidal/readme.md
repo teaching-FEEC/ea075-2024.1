@@ -129,6 +129,14 @@ Em relação aos capacitores, para as demandas do projeto foram escolhidos dois 
  Para mensurar a tensão e ajustar a frequência no projeto, foi optado pela escolha do potenciômetro Bourns 3296W Series, sua escolha foi motivada por diversos fatores, como precisão e resolução, visto que oferecem uma precisão excepcional, permitindo ajustes finos de tensão e frequência. Sua capacidade de múltiplas voltas oferece uma resolução alta o suficiente para garantir ajustes precisos, ou seja, ideal para aplicações em que a precisão é essencial. Além disso, apresentam alta durabilidade e estabilidade a longo prazo, garantindo que o ajuste realizado permaneça consistente ao longo do tempo, mesmo em ambientes com condições adversas ou sujeitos à vibrações. 
  Por fim, embora potênciometros de alta precisão geralmente tenham um cusco mais elevado, a série Bourns 3296W oferece uma ótima relação de custo-benefício, tornando-o uma escolha econômica para a aplicação desejada, além do fato de serem altamente disponíveis em distribuidores de componentes eletrônicos, facilitando sua aquisição e garantindo a disponibilidade para o projeto. Portanto, é uma escolha sólida ao analisarmos os fatores supracitados.
 
+## Futuras melhorias
+
+Melhoria e desenvolvimento contínuo são características que nós valorizamos e acreditamos para a engeharia de produtos. Dessa forma, gostaríamos de pontuar os próximos passos a serem desenvolvidos a fim de dar forma ao projeto. 
+Um circuito de bootstrap é necessário para a implementação desse cirucito, ele é responsápor por viabilizar um referencial  de tensão para o MOSFET superior  do  push-pull, visto que a tensão entre gate e source não tem o referencial no terra
+O algoritmo fornecido, é uma ótima base para a configuração do microcontrolador e da lógica. Apesar disso, um controle de frequência é difícil de ser aplicado nesse caso.
+O resistor shunt utilizado para medir a corrente, mede apenas a corrente que passa pelo source do MOSFET inferior da meia ponte, e seria interessante, para projetos mais elaborados, aferir a corrente em outros pontos também.
+Sobre a parte mecânica, que apesar de extremamente importante, foi quase completamente ignorada nesse projeto. Em futuras melhorias, é preciso dimensionar um dissipadora de calor a uma posição correta para o sensor de temperatura.
+
 ## Referencias
 
 RASHID, M. H. (2001) Power Electronics Handbook
