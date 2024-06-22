@@ -102,6 +102,12 @@ Nesse caso, temos, juntamente com o MOSFET, o componente mais importante do proj
 Em relação aos LEDs, como mostra a imagem abaixo, podemos nos embasar nos LEDs imbutidos na própria placa. Usaremos os pinos PTB18, PTB19, PTD1.
 ![image](https://github.com/jppascon/ea075-2024.1/assets/163413469/86a1ed5c-e399-4828-b749-14b842f9e5fd)
 
+Em relação aos  pinos a serem utilizados serão: PTE20, PTE21, PTE22, PTE23. Configurados em ADC.
+![image](https://github.com/jppascon/ea075-2024.1/assets/163413469/b99420d2-144f-40ab-bdbf-a6a1c7c82111)
+
+![image](https://github.com/jppascon/ea075-2024.1/assets/163413469/d99a68dc-318b-41c5-8954-af230b85a955)
+
+
 Para o output, devemos utilizar um pino GPIO ou PWM. A decisão ainda está em aberto, para manter conformidade com o código.
 
 ### Sensor de Temperatura
