@@ -90,7 +90,102 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 > 5. A interface com o usuário é um aplicativo móvel ou painel de controle no qual ele pode sozinho ou com auxilio de um administrador inserir as suas informações e solicitar acessos.
 > 
 Você sabia? Ferramentas como o `draw.io` permitem integração com o Github.
->  
+
+
+## Especificações
+### Especificações Estruturais
+> 1. Objetivo do Projeto
+>    Desenvolver um sistema de controle e gerenciamento de acesso utilizando ESP32-CAM para identificação de usuários via imagem ou leitura de QR Code. O administrador terá a opção de escolher o método de identificação
+> 
+> 2. Componentes Principais
+>    - ESP32-CAM: Módulo principal para captura de imagens e processamento.
+     - Câmera OV2640: Integrada ao ESP32-CAM para captura de imagens.
+     - Leitor de QR Code: Pode ser implementado via software utilizando a câmera do ESP32-CAM.
+     - Microcontrolador ESP32: Para controle do sistema, processamento de imagens e leitura de QR Codes.
+>    - Sensor de presença: detectar a presença do usuário para acionar a câmera
+
+> 3. Definição dos Periféricos
+>    - Câmera OV2640: Entrada para captura de imagens.
+     - Display LCD/OLED: Saída para que o usuário veja a imagem que ele está gerando na câmera, podendo posicionar o QR no local indicado para melhor leitura pela câmera.
+     - Buzzer: Indicação sonora de sucesso ou falha na identificação.
+>    - Sensor de presença: detectar a presença do usuário para acionar a câmera.
+
+> 4. Endereçamento
+>    - Câmera: Integrada no ESP32-CAM, acessada via GPIOs específicos do módulo
+>    - Banco de dados via WI-FI
+>    - Sensor de presença via SPI
+>    - Display via I2C
+>      
+> 5. Unidade Microcontroladora
+>    - Microcontrolador ESP32: Central do sistema, responsável pelo controle, captura de imagens, processamento e leitura de QR Codes. Não é necessário decodificador de endereços, pois a unidade microcontroladora possui GPIOs e interfaces de comunicação suficientes para conectar diretamente aos periféricos
+>      
+> 6. Circuitos de Interface
+>    - Conversores AD/DA: Não necessários, pois os sensores e atuadores são digitais.
+>    - Circuitos de Sincronização de Sinais Temporais: Não necessários para este projeto
+>    - Padrões de Comunicação: I2C/SPI
+>      
+> 7. Restrições Físicas e Ambientais
+>    - Dissipação Térmica: Monitorar a temperatura do módulo, garantindo ventilação adequada para evitar superaquecimento.
+>      
+> 8. Implementação do Sistema
+>    - Configuração Inicial:
+>     1. Configurar o ESP32-CAM para capturar imagens e processá-las utilizando bibliotecas de reconhecimento facial ou de QR Code.
+>     2. Implementar um sistema de seleção de modo de operação (imagem ou QR Code) via interface web.
+>    - Identificação por Imagem:
+>     1. Captura de Imagem: Utilizar a câmera OV2640 para capturar a imagem do usuário.
+>     2. Processamento: Implementar algoritmo de reconhecimento facial (utilizando bibliotecas como ESP-WHO da Espressif).
+>     3. Decisão: Verificar se o rosto identificado está na base de dados de usuários autorizados.
+>    - Identificação por QR Code:
+>     1. Leitura de QR Code: Capturar imagem e processar para leitura do QR Code utilizando bibliotecas como ZXing.
+>     2. Processamento: Decodificar o QR Code para obter informações do usuário.
+>     3. Decisão: Verificar se a informação obtida está na base de dados de usuários autorizados.
+>    - Interação com o Usuário
+>     1. Feedback Sonoro: Utilizar buzzers para indicar sucesso ou falha na identificação.
+>     2. Display: Mostrar feedback da imagem que o usuário está gerando na câmera e apontar o local correto para enquadramento do QR code.
+
+### Especificação de Algoritmos
+> Dado o diagrama de blocos do sistema apresentado abaixo, para cada evento do sistema temos
+> ![Alt](images/Diagrama_Funcional.drawio.svg)
+> 
+> Evento: Inicialização do Sistema
+>> ![Alt](images/Inicializacao_do_Sistema.drawio.svg)
+
+> Evento: Captura de Imagem
+>> ![Alt](images/Captura_de_Imagem.drawio.svg)
+
+> Evento: Processamento de Imagem
+>> ![Alt](images/Processamento_de_Imagem.drawio.svg)
+>> 
+> Evento: Leitura de QR Code
+>> ![Alt](images/Leitura_de_QR_Code.drawio.svg)
+>> 
+> Evento: Processamento de QR Code
+>> ![Alt](images/Processamento_de_QR_Code.drawio.svg)
+>> 
+> Evento: Feedback Sonoro
+>> ![Alt](images/Feedback_Sonoro.drawio.svg)
+
+> A estimativa da memória necessária é baseada nas informações encontradas nos datasheets dos componentes e outras encontradas na internet. Com isso, temos que
+>> Código do Programa:
+>>>          Inicialização do sistema: 15 KB
+>>>          Captura e processamento de imagem: 70 KB
+>>>          Captura e leitura de QR Code:  50 KB
+>>>          Interação com o usuário (buzzer): 5 KB
+>> Bibliotecas:
+>>>          Reconhecimento facial (ESP-WHO): 150 KB
+>>>          Leitura de QR Code (ZXing): 100 KB
+>>>          Periféricos (display, buzzer): 20 KB
+>> Dados:
+>>>          Base de dados de usuários: 100 KB
+>>>          Dados temporários (buffers): 100 KB
+>> Sistema Operacional e Overhead:
+>>>          Overhead: 50 KB
+>> Total:
+>>>          Código do Programa: 140 KB
+>>>          Bibliotecas: 270 KB
+>>>          Dados: 200 KB
+>>>          Sistema Operacional e Overhead: 50 KB
+>> Logo: 660KB
 
 ## Referências
 > Seção obrigatória. Inclua aqui referências utilizadas no projeto.
@@ -101,3 +196,6 @@ Você sabia? Ferramentas como o `draw.io` permitem integração com o Github.
 > 5) 5 programas de acesso remoto para controlar o seu PC a distância. https://www.techtudo.com.br/listas/2023/07/quer-controlar-seu-pc-a-distancia-veja-5-programas-de-acesso-remoto-edsoftwares.ghtml.
 > 6) Acesso remoto: veja o que é e como fazer em outro PC ou celular via app. https://www.techtudo.com.br/noticias/2023/02/o-que-e-acesso-remoto-entenda-tudo-sobre-conexao-distancia-edsoftwares.ghtml.
 > 7) Sistema de Controle e Gerenciamento de Acesso. https://riu.ufam.edu.br/bitstream/prefix/6638/11/TCC_DavidFigueira.pdf.
+> 8) ESP32 com Câmera e Reconhecimento Facial. YouTube, 13 mar. 2023. Disponível em: https://www.youtube.com/watch?v=915jxGwLxxI. Acesso em: 19 maio 2024.
+> 9) ESP32 e RFID - Liberando acessos e Travas #MaratonaMaker. YouTube, 23 maio 2024. Disponível em: https://youtu.be/L4vh95aklPc?feature=shared. Acesso em: 19 maio 2024.
+
