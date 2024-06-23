@@ -67,7 +67,7 @@ O sistema deve tratar sobre os seguintes eventos/inputs:
 ### Especificação Estrutural
 
 #### Para o projeto, foi pensado nos seguintes componentes que irão cumprir cada necessidade do sistema
-A lista de componentes, com respectivos Datasheets e justificativas para sua escolha pode ser acessada em [a relative link](components.md).
+A lista de componentes, com respectivos Datasheets e justificativas para sua escolha pode ser acessada em [components.md](components.md).
 ##### Obtenção de peso/sensor de peso:
  - Célula de carga fina + Amplificador de instrumentação HX711 ( Protocolo 2 - Wire Serial).
 
