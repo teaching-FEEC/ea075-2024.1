@@ -1,8 +1,7 @@
 # Lista de componentes elétricos utilizados para montagem do projeto:
 
 ## Obtenção de peso/sensor de peso:
- - Célula de carga fina + Amplificador de instrumentação HX711 ( Protocolo 2 - Wire Serial).
-  - Datasheet:
+ - Célula de carga fina + Amplificador de instrumentação HX711 ( Protocolo 2 - Wire Serial). [Link datasheet](datasheets/Célula de carga fina HX711.pdf).
  - Justificativa: 
 
 ## Gravação e reprodução de voz:
