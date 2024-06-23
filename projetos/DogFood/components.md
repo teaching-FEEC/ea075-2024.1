@@ -5,7 +5,7 @@
  - Justificativa: 
 
 ## Gravação e reprodução de voz:
-- Módulo de gravação - ISD1820(10s de gravação) ( GPIO Digital Output Model). [Link datasheet](datasheet/modulo_gravacao_ISD1820.pdf).
+- Módulo de gravação - ISD1820(10s de gravação) ( GPIO Digital Output Model). [Link datasheet](datasheets/modulo_gravacao_ISD1820.pdf).
 - Justificativa:
    
 ## Abertura e fechamento de recipientes:
@@ -18,5 +18,5 @@
 - Justificativa:
 
 ## Unidade microcontroladora:
-- Arduino nano. [Link datasheet](Arduino_nano_3.pdf).
+- Arduino nano. [Link datasheet](datasheets/Arduino_nano_3.pdf).
 - Justificativa:
