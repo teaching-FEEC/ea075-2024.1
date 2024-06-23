@@ -9,6 +9,8 @@ O presente projeto foi originado no contexto das atividades da disciplina de gra
  | Rafael Cristian Nascimento  | 223622  | Eng. Elétrica|
  | Victor Potença Macchini | 225205  | Eng.  de Computação |
 
+## Arquivos Importantes
+
 
 ## Descrição do Projeto
 Muitas vezes, pessoas que têm animais de estimação se encontram em uma situação onde precisam se ausentar de sua residência por alguns dias; nessas situações, a preocupação com a alimentação do pet é uma dor inevitável. O projeto é pensado para resolver esse problema,  garantindo a alimentação do animal de estimação de forma automática, regulada, segura e livre de desperdícios - evitando a dor de cabeça do dono com a gestão da ração.
@@ -27,7 +29,7 @@ Dispositivos com propostas semelhantes estão em torno de R$300,00 no mercado ho
 ### Funcionalidades
 - configurar porções (em gramas) por refeição
 - configurar horários de refeição
-- configurar horários de recolhimento de restos de ração
+- ~~configurar horários de recolhimento de restos de ração~~ --> E3: Foi decidido que o horário de recolhimento será fixo de 50 minutos após servida a comida, por simplicidade de uso do dispositivo pelo usuário final. O usuário não configura o horário de recolhimento.
 - liberar ração em horário configurado
 - detectar presença do pet por tag na coleira
 - detectar a quantidade de ração restante e aviso
@@ -40,8 +42,8 @@ Dispositivos com propostas semelhantes estão em torno de R$300,00 no mercado ho
 - quantidade de ração a ser liberada
 - voz gravada para reprodução
 - horário de liberação da refeição
-- horário de recolhimento de restos de ração
-- intervalo de chamada do pet quando em horário de refeição
+- ~~horário de recolhimento de restos de ração~~ --> E3: tempo de recolhimento é fixo 50min, não configurável
+- ~~intervalo de chamada do pet quando em horário de refeição~~ --> E3: intervalo é fixo 3min, não configurável
 
 
 ### Eventos
@@ -53,10 +55,9 @@ O sistema deve tratar sobre os seguintes eventos/inputs:
 5. Variação do peso de comida no reservatório (não periódico)
 6. Horário/tempo de recolhimento de restos de ração (periódico)
 
-
 ### Tratamento de Eventos
 - Indicar SE baixa quantidade de comida restante - EVENTO 4
-- Reproduzir áudio de chamada do pet em horário específico, dependendo da configuração do usuário, repetição a cada X minutos segundo configurado - EVENTO 1
+- ~~Reproduzir áudio de chamada do pet em horário específico, dependendo da configuração do usuário, repetição a cada X minutos segundo configurado - EVENTO 1~~ --> E3: Reproduzir áudio de chamada do pet em horário específico, repetição a cada 3 minutos - EVENTO 1
 - Liberar ração SE em horário de refeição E pet está próximo E enquanto a quantidade total de porções não for liberada - EVENTO 1, EVENTO 3 e EVENTO 5
 - Liberar comida pelo menos 1 vez ao dia - sistema de segurança para caso evento principal não funcionar - EVENTO 2 e EVENTO 5
 - Recolher a ração restante no pote SE passado tempo de recolhimento de restos de ração - EVENTO 6
@@ -105,6 +106,9 @@ https://pt.aliexpress.com/item/1005002197241012.html?src=google&src=google&albch
 ### Especificação de Algoritmos 
 #### Diagrama de tratamento de eventos do algoritmo (desenvolvido com o _board_ Miro):
 https://miro.com/app/board/uXjVKGq-ktg=/?share_link_id=296110568841
+Atualizações realizadas na entrega E3: 
+- tempo de chamada do pet (reprodução do áudio) é agora fixo de 3 minutos, e não configurável pelo usuário. Decisão visa simplificar configuração do dispositivo pelo usuário final.
+- tempo de recolhimento da ração é agora fixo de 50 minutos, e não configurável pelo usuário. Decisão visa simplificar configuração do dispositivo pelo usuário final.
 
 #### Estimativa de memória necessária para especificação de algoritmos
 Total de memória necessária estimada para armazenamento de todo o algorítmo 170kB. Composição:
