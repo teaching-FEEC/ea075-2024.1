@@ -24,7 +24,7 @@ Dispositivos com propostas semelhantes estão em torno de R$300,00 no mercado ho
 
 
 ## Descrição Funcional e Descrição Estrutural do Sistema
-<img src="\dogfood_diagr.png">
+<img src="\images\dogfood_diagr.png">
 
 ### Funcionalidades
 - configurar porções (em gramas) por refeição
