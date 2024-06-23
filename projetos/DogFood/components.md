@@ -2,7 +2,7 @@
 
 ## Obtenção de peso/sensor de peso:
  - Célula de carga fina + Amplificador de instrumentação HX711 ( Protocolo 2 - Wire Serial). [Link datasheet](datasheets/Célula_carga_fina_HX711.pdf).
- - Justificativa: 
+ - Justificativa: Baixo custo, compatível com controlador Arduino
 
 ## Gravação e reprodução de voz:
 - Módulo de gravação - ISD1820(10s de gravação) ( GPIO Digital Output Model). [Link datasheet](datasheets/modulo_gravacao_ISD1820.pdf).
