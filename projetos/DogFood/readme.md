@@ -100,7 +100,7 @@ https://pt.aliexpress.com/item/1005002197241012.html?src=google&src=google&albch
 
 #### Restrições físicas:
 - Área de trabalho do produto: Em torno de 60cm x 50cm x 40cm (teste em protótipos necessário para chegar nas dimensões exatas)
-- Peso máximo suportado pelo dispenser de ração: 10Kg
+- Peso máximo suportado pelo dispenser de ração: ~~10Kg~~ --> E3: 2Kg (melhor estimativa para o tamanho pensado).
 - Temperatura de trabalho: Temperatura suportada por animais domésticos (-10°C à 30°C)
 
 ### Especificação de Algoritmos 
@@ -115,7 +115,7 @@ Total de memória necessária estimada para armazenamento de todo o algorítmo 1
 - Arquivo de audio : 125kB
 - Display de led: 6 bytes
 - Variáveis usadas no algoritmo e armazenamento de leituras dos sensores:  ~ 116 bytes
-- Armazenamento do programa (estipulado para 150 linhas de código, compilado): ~50kB
+- Armazenamento do programa (estipulado para 150 linhas de código, compilado): ~~~50kB~~ --> E3: 32kB (melhor estimativa para utilizar o Arduíno)
 
 ## Referências
 https://www.google.com/search?sca_esv=7b4f5aad248322ac&sca_upv=1&rlz=1C1GCEB_enBR1053BR1053&q=alimentador+de+pet+automatico&tbm=isch&source=lnms&prmd=isvnbmtz&sa=X&ved=2ahUKEwiAr_nVmZqFAxUZppUCHSt9C3cQ0pQJegQIGBAB&biw=1280&bih=559&dpr=3
