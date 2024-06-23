@@ -101,7 +101,7 @@ Total de memória necessária estimada para armazenamento de todo o algorítmo 1
 - Arquivo de audio : 125kB
 - Display de led: 6 bytes
 - Variáveis usadas no algoritmo e armazenamento de leituras dos sensores:  ~ 116 bytes
-- Armazenamento do programa (estipulado para 150 linhas de código, compilado): ~~~50kB~~ --> E3: 32kB (melhor estimativa para utilizar o Arduíno)
+- Armazenamento do programa (estipulado para 150 linhas de código, compilado): ~~50kB~~ --> E3: 32kB (melhor estimativa para utilizar o Arduíno)
 
 ## Referências
 https://www.google.com/search?sca_esv=7b4f5aad248322ac&sca_upv=1&rlz=1C1GCEB_enBR1053BR1053&q=alimentador+de+pet+automatico&tbm=isch&source=lnms&prmd=isvnbmtz&sa=X&ved=2ahUKEwiAr_nVmZqFAxUZppUCHSt9C3cQ0pQJegQIGBAB&biw=1280&bih=559&dpr=3
