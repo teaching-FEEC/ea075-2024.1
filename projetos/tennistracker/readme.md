@@ -98,7 +98,7 @@ Comunicação:
 ### Especificação Estrutural
 
 #### Elementos do Sistema
-- [Microcontrolador Atmega48P](datasheets/ATmega48P_datasheet.pdf)
+- [Microcontrolador Atmega48P](datasheets/ATmega48P.pdf)
     - Descrição: é um microcontrolador de baixa potência (48P é a versão mais econômica) de 8 bits, com arquitetura Harvard e instruções RISC. O interesse nesse microcontrolador para este projeto é a presença de módulos para comunicação I2C e SPI, necessários para interface com sensores e memória externa, além de sua ampla disponibilidade. Além disso, também possui um módulo de timer que pode ser configurado como RTC (real time counter, configurável no módulo Timer/Counter2), que é útil para medição do tempo nas partidas de tênis. 
     - **Interfaces necessárias:** SPI (pinos PORTB: PB2 = SS, PB3 = MOSI, PB4 = MISO, PB5 = SCK) e _ 2-wire Serial Interface_, que é compatível com o protocolo I2C (pinos PORTC: PC4 = SDA, PC5 = SCL)
     - **Outros módulos úteis:** Timer/Counter2 configurável como RTC (real time counter), para registro de tempo.
