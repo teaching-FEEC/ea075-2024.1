@@ -13,7 +13,7 @@
   - Taxa de amostragem suficiente
   - Baixo consumo de energia
 
-- Leitor de cartão SD + Cartão Micro SD 
+- Leitor de cartão SD + Cartão Micro SD (https://produto.mercadolivre.com.br/MLB-3647392309-modulo-leitor-de-carto-tf-micro-sd-_JM)
   - Memória Flash (não volátil)
   - Velocidade de escrita suficiente para a aquisição e armazenamento dos dados em tempo real
   - Capacidade de armazenamento suficiente
