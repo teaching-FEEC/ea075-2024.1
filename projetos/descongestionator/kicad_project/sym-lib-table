@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "NEO-6M-GPS")(type "KiCad")(uri "D:/Projetos/ea075-smooth-highways/projetos/descongestionator/components_kicad/NEO-6M-GPS.kicad_sym")(options "")(descr ""))
+  (lib (name "U.FL-R-SMT_01_")(type "KiCad")(uri "D:/Projetos/ea075-smooth-highways/projetos/descongestionator/components_kicad/U.FL-R-SMT_01_.kicad_sym")(options "")(descr ""))
+)
