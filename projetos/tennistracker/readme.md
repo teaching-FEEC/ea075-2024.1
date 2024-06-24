@@ -129,7 +129,7 @@ Comunicação:
 -  Amostragem o sensor de movimento
     - a saída do sensor será conectada
 
-[![fluxchart_int.svg editável](/projetos/tennistracker/images/fluxchart_int.drawio)](https://app.diagrams.net/#Hshen-n%2Fea075-2024.1%2Fmain%2Fprojetos%2Ftennistracker%2Ffluxchart_int.drawio#%7B%22pageId%22%3A%22C5RBs43oDa-KdzZeNtuy%22%7D)
+[![fluxchart_int.svg editável](/projetos/tennistracker/images/fluxchart_int.svg)](https://app.diagrams.net/#Hshen-n%2Fea075-2024.1%2Fmain%2Fprojetos%2Ftennistracker%2Ffluxchart_int.drawio#%7B%22pageId%22%3A%22C5RBs43oDa-KdzZeNtuy%22%7D)
 
 ## Referências
 
