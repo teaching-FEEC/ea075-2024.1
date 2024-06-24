@@ -113,10 +113,10 @@ Comunicação:
     - **Alimentação:**: 3.3V
     - **Armazenamento mínimo**: ~100Mb por hora de treino
     - **Velocidade mínima de escrita**: ~32kb/s
-- [**Bateria moeda CR2032**](projetos/tennistracker/datasheets/Bateria_Moeda_CR2032.PDF) + [**Suporte para Bateria**](https://br.mouser.com/ProductDetail/TE-Connectivity-Linx-Technologies/BAT-HLD-011-THM?qs=4ASt3YYao0WKtc10bmWNSw%3D%3D&mgh=1&utm_id=17633168520&gad_source=1&gclid=Cj0KCQjw0ruyBhDuARIsANSZ3woK8IEvQmS6peeeEQRn4wNmX4v5xKLucU6E8l-pq9uxHL3q0Zxz6iAaAnUpEALw_wcB)
-    - **Descrição**: A bateria CR2032 é uma bateria do tipo moeda com dimesões de 20mm(d)/3,2mm e seu suporte pode ser instalado paralelo a PCB e tem diâmetro de 23mm.
-    - **Alimentação:**: 2.9 V
-    - **Capacidade**: 225 mAh
+- [**Bateria LR44**](datasheets/bateria_lr44.pdf) + [**Contatos elétricos para bateria**](https://pt.aliexpress.com/item/1005003653489918.html?src=google&src=google&albch=shopping&acnt=768-202-3196&slnk=&plac=&mtctp=&albbt=Google_7_shopping&gclsrc=aw.ds&albagn=888888&isSmbAutoCall=false&needSmbHouyi=false&src=google&albch=shopping&acnt=768-202-3196&slnk=&plac=&mtctp=&albbt=Google_7_shopping&gclsrc=aw.ds&albagn=888888&ds_e_adid=&ds_e_matchtype=&ds_e_device=c&ds_e_network=x&ds_e_product_group_id=&ds_e_product_id=pt1005003653489918&ds_e_product_merchant_id=109139790&ds_e_product_country=BR&ds_e_product_language=pt&ds_e_product_channel=online&ds_e_product_store_id=&ds_url_v=2&albcp=19639392923&albag=&isSmbAutoCall=false&needSmbHouyi=false&gad_source=1&gclid=CjwKCAjw7NmzBhBLEiwAxrHQ-fnqVuuvNvoQg-XtbdGzZpf212cEHeSA4qzC3V2jcb424mBHsuvUrxoCtm0QAvD_BwE&aff_fcid=61534da5cb624ba9b464e5f80048f2dc-1719065829563-09911-UneMJZVf&aff_fsk=UneMJZVf&aff_platform=aaf&sk=UneMJZVf&aff_trace_key=61534da5cb624ba9b464e5f80048f2dc-1719065829563-09911-UneMJZVf&terminal_id=90e96157b48e4cc0b4ec8227361a3fb2&afSmartRedirect=y)
+    - **Descrição**: A bateria LR44 é uma bateria do tipo botão com dimensões de 11.36mm(d)/5.4mm. Serão usadas três baterias em série, para se obter 4.5V de alimentação. Sua tensão de _cut-off_ é de 1.2V, de forma que a menor tensão fornecida na alimentação será 3.6V. Sua capacidade de corrente é suficiente para o projeto, uma vez que é previsto consumo menor que 170mA (a 3.3V) quando todos os componentes estão ativos.
+    - **Tensão disponível:**: 3 X 1.5 = 4.5 V
+    - **Capacidade**: 130 mAh
 
 #### Circuitos de Interface
   A bateria deve alimentar todo o dispositivo atravez de um power rail de onde podem derivar se necessário reguladores de tensão para nivelar a tensão de acordo com cada dispositivo. O LED não será conectado a bateria e sim diretamente a uma das saídas digitais do microcontrolador. O conversor AD interno do microcontrolador será utilizado para monitorar a tensão de alimentação de forma que com uma lógica programada o LED começe a piscar quando a tensão abaixar de um certo valor, indicando que a bateria está com baixa capacidade remanescente.
@@ -125,6 +125,8 @@ Comunicação:
   O dispositivo deve ter dimensões de no máximo 4cmX4cmX0,5cm para que sua fixação na raquete não comprometa as caracteristicas da raquete. Sua fixação deve ser firme o suficiente para suportar impactos a altas velocidades, por isso seu pedo também deve ser reduzido, idealmente por volta de 5 a 10g. Considerando que o disitivo não vai operar com altas correntes justamente pela sua caracteristica de paixa potência, a dissipação térmica não será um problema.
 
 ### Especificação de Algoritmos 
+
+Quando no estado "LIGADO", o dispositivo deve atuar conforme o esquema abaixo. 
 
 [![fluxograma_2.svg editável](/projetos/tennistracker/images/fluxograma_2.svg)](https://app.diagrams.net/#Hshen-n%2Fea075-2024.1%2Fmain%2Fprojetos%2Ftennistracker%2Ffluxograma_2.svg#%7B%22pageId%22%3A%22C5RBs43oDa-KdzZeNtuy%22%7D)
 
