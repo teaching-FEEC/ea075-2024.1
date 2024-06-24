@@ -1,8 +1,8 @@
 # Instruções para abrir o projeto no KiCad
 1. Faça download do arquivo .zip nesta pasta:
-  - Clique no arquivo _DogFood.zip_ nesta pasta, dentro do GitHub
-  - No canto superior direito, ao lado do nome do diretório em questão, clique no ícone com três pontos _"..."_
-  - Clique em _"Download"_
+    1. Clique no arquivo _DogFood.zip_ nesta pasta, dentro do GitHub
+    2. No canto superior direito, ao lado do nome do diretório em questão, clique no ícone com três pontos _"..."_
+    3. Clique em _"Download"_
 5. Extraia o arquivo para uma pasta em seu computador (Ex. "DogFood"), utilizando um descompactador
 6. Abra o software KiCad
 7. Clique em _"Arquivo"_ no canto superior esquerdo
