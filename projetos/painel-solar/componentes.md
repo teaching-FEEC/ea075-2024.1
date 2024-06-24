@@ -25,3 +25,5 @@
 ||Capacitor eletrolítico 330uF 50V|2|R$ 0,50|-|
 |1N5819|Diodo retificador|2|R$ 0,20|-|
 ||Indutor 100uH|2|R$ 0,72|-|
+
+O valor total do projeto, considerando os valores dos componentes obtidos em junho de 2024, é de R$ 1879,95.
