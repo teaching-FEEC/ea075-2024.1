@@ -91,6 +91,7 @@ Figura 1. Representação do sistema embarcado - Painéis solares de inclinaçã
 8. Interação do usuário (variável de acordo com a necessidade do usuário): dedicado quando o usuário interage com o sistema, como ajustar configurações, monitorar o desempenho ou receber notificações sobre o status do sistema.
 9. Falhas no sistema (imprevisível, dependendo da natureza e gravidade da falha): ocorrência de problemas ou mau funcionamento no sistema solar que exigem intervenção técnica. Isso pode incluir falhas de hardware, erros de software ou interrupções na geração de energia.
 
+
 ### Tratamento de Eventos
 1. Período útil de geração de energia: 
     - Iniciar automaticamente os painéis solares e o sistema de geração de energia ao nascer do sol e ajustar a inclinação dos painéis solares ao longo do dia para acompanhar o movimento do sol, de modo a maximizar a captação de energia.
@@ -183,23 +184,6 @@ O torque necessário para sustentar e mover a placa solar, considerando suas esp
 
 Além disso, a tensão de alimentação do driver varia entre 30V e 110Vdc ou 20V e 80Vac, sendo utilizada a tensão da rede para a alimentação do dispositivo por meio de uma fonte chaveada de 500W suficiente para alimentação do Driver e do motor de passo. Isso facilita a integração do sistema em diversos ambientes e garante uma alimentação constante e confiável para o motor e o driver.
 
-#### Componentes do projeto
-Os componentes seus respectivos valores são apresentados na Tabela 1.
-
-Tabela 1. Principais componentes utilizados no projeto
-| Código | Nome | Quantidade | Preço |
-|-----| ----- | ------- | ---------- |
-| VEML6075 | Sensor de radiação solar | 4 | R$ 14,15 |
-| | Motor de passo + controlador | 1 | R$ 1130,00 |
-|TMA-FC500W-48V-10A|Fonte Chaveada 500W|1|R$ 129,90|
-|ESP32-S3-WROOM-1-N4|Módulo ESP|1|R$ 15,22|
-|LM2576|Regulador de Tensão 60V|2|R$ 36,96|
-|12MN36 - 36AH|Bateria Estacionária|1|R$ 272,86|
-|NEMA 17| Redutor de torque| 1|R$ 192,98|
-|2N5401| TBJ NPN| 4|R$ 1,36|
-
-
-O preço total do projeto, desconsiderando componentes auxiliares, como resistores e capacitores, é de R$ 1.872,84.
 
 ### Especificação de Algoritmos 
 - Período útil de geração de energia
@@ -252,7 +236,6 @@ O preço total do projeto, desconsiderando componentes auxiliares, como resistor
 	1. Identificação de erros do microcontrolador;
 	2. Mantém painel em posição segura pré-definida;
 	3. Comunicar ao usuário.
-
 
 
 ## Referências
