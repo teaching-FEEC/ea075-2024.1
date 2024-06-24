@@ -122,15 +122,29 @@ Já no esquemático do comedouro, são implementados dois sensores de pressão:
 
 ALIEXPRESS. ESP32-WROOM-32D. Disponível em: https://pt.aliexpress.com/item/1005001627605230.html?src=google&albch=shopping&acnt=768-202-3196&slnk=&plac=&mtctp=&albbt=Google_7_shopping&isSmbAutoCall=false&needSmbHouyi=false&albcp=19505955113&albag=&trgt=&crea=pt1005001627605230&netw=x&device=c&albpg=&albpd=pt1005001627605230&gad_source=1&aff_fcid=10ff2be7156b4d3e9c7d2f4fb1933b0f-1716399480646-09717-UneMJZVf&aff_fsk=UneMJZVf&aff_platform=aaf&sk=UneMJZVf&aff_trace_key=10ff2be7156b4d3e9c7d2f4fb1933b0f-1716399480646-09717-UneMJZVf&terminal_id=57b0948c82b44f7685bed38bf9809434&afSmartRedirect=y
 
+ALIEXPRESS. 4PCS Human Scale Load Cell Weight Sensors + HX711 AD Module Weight Sensor Electronic Scale Weighing Pressure Sensor DIY Kit. Disponível em: https://www.aliexpress.us/item/3256806107202593.html?spm=a2g0o.detail.pcDetailTopMoreOtherSeller.1.7c8fOWFPOWFPRo&gps-id=pcDetailTopMoreOtherSeller&scm=1007.40050.354490.0&scm_id=1007.40050.354490.0&scm-url=1007.40050.354490.0&pvid=a9e49e7e-c76e-4265-a1fc-220758a4834b&_t=gps-id%3ApcDetailTopMoreOtherSeller%2Cscm-url%3A1007.40050.354490.0%2Cpvid%3Aa9e49e7e-c76e-4265-a1fc-220758a4834b%2Ctpp_buckets%3A668%232846%238110%231995&pdp_npi=4%40dis%21BRL%2117.44%214.99%21%21%2122.32%216.38%21%402101e9ec17192663794496234e2205%2112000036640070164%21rec%21BR%21%21AB&utparam-url=scene%3ApcDetailTopMoreOtherSeller%7Cquery_from%3A&gatewayAdapt=glo2usa4itemAdapt
+
+ALIEXPRESS. Mitoot MG90S 360 Metal gear Digital Servo For tower pro Rc Helicopter Plane Boat Car MG90 servo mg90s. Disponível em: https://www.aliexpress.us/item/3256805664001347.html?spm=a2g0o.productlist.main.1.721eqLDJqLDJZn&algo_pvid=c5bea2a6-a45a-4419-9868-02af43845375&algo_exp_id=c5bea2a6-a45a-4419-9868-02af43845375-0&pdp_npi=4%40dis%21BRL%2113.54%2113.54%21%21%2117.33%2117.33%21%40210308a417192673266407147ecc36%2112000035298772732%21sea%21BR%210%21AB&curPageLogUid=fnH53M4UAkIU&utparam-url=scene%3Asearch%7Cquery_from%3A&gatewayAdapt=bra2usa4itemAdapt
+
+ALIEXPRESS. TZT HC-SR04 HCSR04 to world Ultrasonic Wave Detector Ranging Module HC-SR04 HC SR04 HCSR04 Distance Sensor. Disponível em: https://www.aliexpress.us/item/3256805450474555.html?spm=a2g0o.productlist.main.41.7ffb4e0a1Jgtnx&algo_pvid=986ea335-1e7b-43c6-ab31-907905f6c244&algo_exp_id=986ea335-1e7b-43c6-ab31-907905f6c244-20&pdp_npi=4%40dis%21BRL%219.78%216.50%21%21%2112.52%218.32%21%40210308a417192716632716355ecb7f%2112000033859091113%21sea%21BR%210%21AB&curPageLogUid=ogNzMf9UvrDU&utparam-url=scene%3Asearch%7Cquery_from%3A&gatewayAdapt=bra2usa4itemAdapt
+
 COBASI. Comedouro Alumínio Pesado. Disponível em: https://www.cobasi.com.br/comedouro-aluminio-pesado-nf-pet-3936367/p?idsku=936413&gad_source=1
 
 DOGIS. Alimentador Automático. Disponível em: https://www.dogis.com.br/som-e-video/alimentador-automatico-pet-dogis-da010br-com-camera-full-hd-wi-fi-aplicativo-capacidade-de-6-litros?parceiro=4972&gad_source=1&gclid=CjwKCAjwtqmwBhBVEiwAL-WAYek92ZZTHrK0SYdxBEBao9r93Kz1aHOxFH06iLSiU2fGpBTl1r9t4hoCixwQAvD_BwE
+
+ELECTRONICOSCALDAS. MG90S Datasheet. Disponível em: https://www.electronicoscaldas.com/datasheet/MG90S_Tower-Pro.pdf
+
+ESPRESSIF. ESP32 Series. Disponível em: https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf
 
 MADOG. Comedouro Automático. Disponível em: https://www.madog.com.br/MLB-2161381341-comedouro-automatico-inteligente-madog-com-gravador-voz-_JM
 
 NINHO DO PET. Comedouro Automático Eletrônico para Cães e Gatos. Disponível em: https://www.ninhodopet.com.br/produtos/comedouro-automatico-eletronico-para-caes-e-gatos/
 
 ROBOCORE. ESP32 - WiFi + Bluetooth. Disponível em: https://www.robocore.net/wifi/esp32-wifi-bluetooth
+
+SPARKFUN. HX711 Datasheet. Disponível em: https://cdn.sparkfun.com/datasheets/Sensors/ForceFlex/hx711_english.pdf
+
+SPARKFUN. Ultrasonic Ranging Module HC - SR04. Disponível em: https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf 
 
 WEASY. Weasy Oasis. Disponível em: https://www.weasy.com.br/products/weasy-oasis?variant=32277452783695&currency=BRL&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&gad_source=1&gclid=Cj0KCQjw2a6wBhCVARIsABPeH1sAXLDyqX-aO8CgqyUsDRRZeY-H1G8rfBFdN8DTA2uM9PdB25bSHzEaAvQEEALw_wcB
 
