@@ -3,8 +3,7 @@
 
 ## Apresentação 
 
-O presente projeto foi originado no contexto das atividades da disciplina de graduação *EA075 - Sistemas Embarcados*, 
-oferecida no orimeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dra. Paula Dornhofer Paro Costa, do Departamento de Engenharia de Computação e Automação (DCA) da Faculdade de Engenharia Elétrica e de Computação (FEEC).
+O presente projeto foi originado no contexto das atividades da disciplina de graduação EA075 - Sistemas Embarcados, oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dra. Paula Dornhofer Paro Costa, do Departamento de Engenharia de Computação e Automação (DCA) da Faculdade de Engenharia Elétrica e de Computação (FEEC).
 
 > |Nome  | RA | Curso|
 > |--|--|--|
@@ -13,78 +12,50 @@ oferecida no orimeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 
 ## Descrição do Projeto 
 
->O objetivo principal deste projeto é desenvolver um sistema de rastreamento e monitoramento de veículos de frota que permita o acompanhamento em tempo real da localização dos veículos, além de monitorar e controlar parâmetros críticos como velocidade, tempo de uso e manutenção. Uma das motivações para este projeto surge da experiência na área de consultoria de logística, onde foi possível perceber os prejuízos e perdas de desempenho e controle que as empresas enfrentam por não poderem monitorar e replanejar com horários reais suas entregas e coletas de maneira eficiente. Pretendemos resolver o desafio enfrentado por empresas de logística, transporte e outras organizações com frotas de veículos, fornecendo uma solução eficiente para a gestão e operação desses ativos. Os potenciais usuários incluem empresas de logística e transporte, empresas com frotas de veículos comerciais, serviços de entrega e transporte urbano, e empresas de aluguel de veículos. Estima-se que a implementação desse sistema possa resultar em economia de combustível, redução de custos de manutenção, aumento da vida útil dos veículos e melhoria da eficiência operacional, além de reduzir riscos de roubo e mau uso dos veículos, ajudando também na prevenção de acidentes.
+>O objetivo principal deste projeto é desenvolver um sistema de rastreamento e monitoramento de veículos de frota que permita o acompanhamento em tempo real da localização dos veículos, além de monitorar e controlar parâmetros críticos como velocidade, tempo de uso e manutenção. Uma das motivações para este projeto surge da experiência na área de consultoria de logística, onde foi possível perceber os prejuízos e perdas de desempenho e controle que as empresas enfrentam por não poderem monitorar e replanejar com horários reais suas entregas e coletas de maneira eficiente. Pretendemos resolver o desafio enfrentado por empresas de logística, transporte e outras organizações com frotas de veículos, fornecendo uma solução eficiente para a gestão e operação desses ativos.
+
+Os potenciais usuários incluem empresas de logística e transporte, empresas com frotas de veículos comerciais, serviços de entrega e transporte urbano, e empresas de aluguel de veículos. Estima-se que a implementação desse sistema possa resultar em economia de combustível, redução de custos de manutenção, aumento da vida útil dos veículos e melhoria da eficiência operacional, além de reduzir riscos de roubo e mau uso dos veículos, ajudando também na prevenção de acidentes.
 
 
-## Descrição Funcional (ATUALIZAR SE NECESSÁRIO)
-> A descrição funcional do projeto é a principal entrega do E1 e pode ser realizada neste próprio arquivo Markdown,
+## Descrição Funcional 
+
 > com links para diagramas ou outros arquivos que estejam no próprio repositório.
 
 ### Funcionalidades
-> Detalhe todas as tarefas que o sistema será capaz de executar
-> Rastreamento em Tempo Real:
+> Rastreamento em Tempo Real: Monitoramento contínuo da localização dos veículos via GPS, fornecendo informações atualizadas sobre sua posição. Visualização da localização dos veículos em um mapa digital, permitindo fácil acompanhamento e gerenciamento da frota.
 
-> Monitoramento contínuo da localização dos veículos via GPS, fornecendo informações atualizadas sobre sua posição.
-> Visualização da localização dos veículos em um mapa digital, permitindo fácil acompanhamento e gerenciamento da frota.
-> Monitoramento de Velocidade:
+> Monitoramento de Velocidade: Registro preciso da velocidade de cada veículo, permitindo análise de padrões de condução e identificação de comportamentos de risco. Geração de alertas em tempo real para velocidades excessivas, promovendo a segurança na direção e reduzindo o risco de acidentes.
 
-> Registro preciso da velocidade de cada veículo, permitindo análise de padrões de condução e identificação de comportamentos de > risco.
-> Geração de alertas em tempo real para velocidades excessivas, promovendo a segurança na direção e reduzindo o risco de acidentes.
-> Gestão de Manutenção Proativa:
+> Gestão de Manutenção Proativa: Acompanhamento da quilometragem percorrida por cada veículo, gerando notificações quando os prazos de manutenção preventiva se aproximam. Otimização do cronograma de manutenções, prevenindo falhas inesperadas e reduzindo custos com reparos.
 
-> Acompanhamento da quilometragem percorrida por cada veículo, gerando notificações quando os prazos de manutenção preventiva se aproximam.
-> Otimização do cronograma de manutenções, prevenindo falhas inesperadas e reduzindo custos com reparos.
-> Relatórios Detalhados e Personalizáveis:
+> Relatórios Detalhados e Personalizáveis: Geração de relatórios abrangentes sobre o uso dos veículos, incluindo quilometragem percorrida, tempo de uso, consumo de combustível e outros parâmetros relevantes. Personalização dos relatórios de acordo com as necessidades específicas do cliente, permitindo uma análise aprofundada do desempenho da frota.
 
-> Geração de relatórios abrangentes sobre o uso dos veículos, incluindo quilometragem percorrida, tempo de uso, consumo de combustível e outros parâmetros relevantes.
-> Personalização dos relatórios de acordo com as necessidades específicas do cliente, permitindo uma análise aprofundada do desempenho da frota.
-> Alertas e Notificações Inteligentes:
+> Alertas e Notificações Inteligentes: Envio de alertas imediatos para comportamentos anormais, como desvios de rota, paradas não autorizadas ou abertura de portas sem autorização. Notificações personalizadas para eventos específicos, como início e término de viagens, chegada a destinos predefinidos ou violações de regras de uso.
 
-> Envio de alertas imediatos para comportamentos anormais, como desvios de rota, paradas não autorizadas ou abertura de portas sem autorização.
-> Notificações personalizadas para eventos específicos, como início e término de viagens, chegada a destinos predefinidos ou violações de regras de uso.
 
 ### Configurabilidade
-> Detalhe, se houver, todas as possíveis configurações do circuito e todos os pontos de alteração da configuração.
+
 > O sistema oferece diversas opções de configuração para atender às necessidades específicas de cada cliente:
 
-> Frequência de Atualização:
+> Frequência de Atualização: Definição da frequência de envio de dados de localização e parâmetros dos veículos, permitindo um equilíbrio entre precisão e consumo de dados. Opções personalizáveis para diferentes cenários, desde atualizações em tempo real para rastreamento crítico até atualizações menos frequentes para otimizar o uso de dados.
 
-> Definição da frequência de envio de dados de localização e parâmetros dos veículos, permitindo um equilíbrio entre precisão e consumo de dados.
-> Opções personalizáveis para diferentes cenários, desde atualizações em tempo real para rastreamento crítico até atualizações menos frequentes para otimizar o uso de dados.
-> Limites de Velocidade:
+> Limites de Velocidade: Estabelecimento de limites de velocidade personalizados para cada veículo ou zona geográfica, considerando fatores como tipo de veículo, condições de tráfego e leis locais. Flexibilidade para ajustar os limites de velocidade de acordo com as necessidades e políticas da empresa, promovendo um ambiente de condução mais seguro.
 
-> Estabelecimento de limites de velocidade personalizados para cada veículo ou zona geográfica, considerando fatores como tipo de veículo, condições de tráfego e leis locais.
-> Flexibilidade para ajustar os limites de velocidade de acordo com as necessidades e políticas da empresa, promovendo um ambiente de condução mais seguro.
-> Intervalos de Manutenção:
-
-> Configuração de intervalos de manutenção preventiva baseados na quilometragem, tempo de uso ou outros indicadores relevantes para cada tipo de veículo.
-> Personalização dos intervalos de acordo com as recomendações do fabricante e as condições reais de operação, garantindo o bom funcionamento dos veículos e otimizando custos.
+> Intervalos de Manutenção: Configuração de intervalos de manutenção preventiva baseados na quilometragem, tempo de uso ou outros indicadores relevantes para cada tipo de veículo. Personalização dos intervalos de acordo com as recomendações do fabricante e as condições reais de operação, garantindo o bom funcionamento dos veículos e otimizando custos.
 
 ### Eventos
 
 > Eventos Periódicos:
 
-> Envio de Dados de Localização:
+> Envio de Dados de Localização: Transmissão da posição GPS de cada veículo para o servidor central a cada 1 minuto, garantindo monitoramento preciso e contínuo da frota. Possibilidade de ajustar a frequência de envio de acordo com as necessidades, considerando fatores como precisão desejada e consumo de bateria dos dispositivos embarcados.
 
-> Transmissão da posição GPS de cada veículo para o servidor central a cada 1 minuto, garantindo monitoramento preciso e contínuo da frota.
-> Possibilidade de ajustar a frequência de envio de acordo com as necessidades, considerando fatores como precisão desejada e consumo de bateria dos dispositivos embarcados.
-Atualização de Parâmetros de Veículo:
-
-> Registro e envio de dados como velocidade, tempo de uso, consumo de combustível e outros parâmetros relevantes a cada 5 minutos.
-> Fornecimento de informações valiosas para análise do comportamento dos veículos e identificação de oportunidades de otimização.
-
-> *Tempos de recorrência de eventos foram previamente estipulados, mas poderão ser customizados conforme regra de negócio específica, para atender melhor a necessidade da empresa*
+> Atualização de Parâmetros de Veículo:Atualização de Parâmetros de Veículo: Registro e envio de dados como velocidade, tempo de uso, consumo de combustível e outros parâmetros relevantes a cada 5 minutos. Fornecimento de informações valiosas para análise do comportamento dos veículos e identificação de oportunidades de otimização.
 
 > Eventos Não Periódicos:
 
-> Detecção de Velocidade Excessiva:
+> Detecção de Velocidade Excessiva: Geração de alertas imediatos para o gestor da frota quando a velocidade de um veículo ultrapassa o limite configurado. Ações proativas para prevenir comportamentos de risco e garantir a segurança na direção, reduzindo o risco de acidentes e multas.
 
-> Geração de alertas imediatos para o gestor da frota quando a velocidade de um veículo ultrapassa o limite configurado.
-Ações proativas para prevenir comportamentos de risco e garantir a segurança na direção, reduzindo o risco de acidentes e multas.
-Alerta de Manutenção:
-
-> Envio de notificação ao gestor da frota quando a quilometragem de um veículo atinge o limite configurado para manutenção preventiva.
-> Agendamento proativo de manutenções, prevenindo falhas inesperadas e custos com reparos emergenciais.
+> Alerta de Manutenção: Envio de notificação ao gestor da frota quando a quilometragem de um veículo atinge o limite configurado para manutenção preventiva. Agendamento proativo de manutenções, prevenindo falhas inesperadas e custos com reparos emergenciais.
 
 ### Tratamento de Eventos
 
@@ -93,22 +64,26 @@ Alerta de Manutenção:
 > Ação: O dispositivo GPS transmite a posição atual do veículo para o servidor central.
 > Frequência: A cada 1 minuto (personalizável).
 > Dados: Latitude, longitude, data, hora, velocidade e outras informações relevantes.
+> 
 > Atualização de Parâmetros do Veículo:
 
 > Ação: O dispositivo registra e envia dados do veículo para o servidor central.
 > Frequência: A cada 5 minutos (personalizável).
 > Dados: Velocidade, tempo de uso, consumo de combustível, odômetro e outros parâmetros relevantes.
+
 > Detecção de Velocidade Excessiva:
 
 > Ação: O sistema gera um alerta imediato para o gestor da frota quando a velocidade do veículo ultrapassa o limite configurado.
 > Critério: Limite de velocidade definido pelo gestor para cada veículo ou zona.
 > Notificação: Alerta visual e sonoro no sistema de monitoramento, e-mail ou SMS para o gestor.
+
 > Alerta de Manutenção:
 
 > Ação: O sistema envia uma notificação ao gestor da frota quando a quilometragem do veículo atinge o limite configurado para manutenção preventiva.
 > Critério: Limite de quilometragem definido para cada tipo de veículo ou com base em outros indicadores.
 Notificação: Alerta no sistema de monitoramento, e-mail ou SMS para o gestor, com informações sobre o veículo e a necessidade de manutenção.
-Observações:
+
+> Observações:
 
 > A frequência de envio de dados e os limites de velocidade podem ser personalizados de acordo com as necessidades de cada empresa.
 O sistema oferece opções flexíveis para configurar alertas e notificações, garantindo que o gestor da frota receba as informações relevantes no momento certo.
@@ -122,8 +97,6 @@ O sistema oferece opções flexíveis para configurar alertas e notificações, 
 ## Especificações 
 
 ### Especificação Estrutural
-
-> A especificação estrutural do sistema de rastreamento e monitoramento de veículos de frota inclui a descrição das características elétricas e temporais, bem como as restrições físicas de cada bloco funcional. Esta etapa do projeto identifica os componentes e circuitos integrados propostos para a implementação do sistema embarcado.
 
 > Componentes Principais
 
@@ -159,8 +132,6 @@ Servidor e Interface Web/Móvel:
 > Umidade Relativa: 20% a 90% sem condensação.
 > Resistência a Vibração e Impacto: Seguindo normas automotivas relevantes
 
-
-
 ### Especificação de Algoritmos 
 
 > Recebimento de Dados do GPS
@@ -181,7 +152,6 @@ Servidor e Interface Web/Móvel:
 > Iniciar sensores de velocidade.
 > Capturar dados de velocidade a intervalos regulares.
 > Comparar velocidade atual com limites predefinidos.
-
 > Gerar alerta se a velocidade ultrapassar os limites.
 
 
@@ -202,6 +172,39 @@ Servidor e Interface Web/Móvel:
 > Verificar parâmetros de manutenção (tempo de uso, quilometragem).
 Gerar alerta se os parâmetros excederem os limites predefinidos, ou se o freio estiver no estado super aquecido.
 Enviar alerta para a interface de usuário.
+
+
+##Estimativa de Memória Necessária
+> Para determinar a memória necessária para armazenar os algoritmos e dados coletados, consideramos os principais eventos e o volume de dados gerados:
+
+> Dados de Localização (GPS)
+
+> Tamanho dos dados por envio: 50 bytes
+> Frequência de envio: 1 vez por minuto
+> Memória necessária por dia: 50 bytes * 60 minutos * 24 horas = 72 KB
+> Memória necessária por semana: 72 KB * 7 dias = 504 KB
+
+> Dados de Velocidade
+
+> Tamanho dos dados por envio: 20 bytes
+> Frequência de envio: 1 vez a cada 5 minutos
+> Memória necessária por dia: 20 bytes * 12 vezes/hora * 24 horas = 5.76 KB
+> Memória necessária por semana: 5.76 KB * 7 dias = 40.32 KB
+> Alertas de Velocidade Excessiva e Manutenção
+
+> Tamanho dos dados por evento: 30 bytes
+> Frequência estimada: 10 eventos/dia
+> Memória necessária por dia: 30 bytes * 10 eventos = 0.3 KB
+> Memória necessária por semana: 0.3 KB * 7 dias = 2.1 KB
+> Memória Total Necessária
+
+> Memória para dados de localização por semana: 504 KB
+> Memória para dados de velocidade por semana: 40.32 KB
+> Memória para alertas por semana: 2.1 KB
+> Total de Memória Estimada por Semana: 504 KB + 40.32 KB + 2.1 KB ≈ 546.42 KB
+
+> Para garantir que o sistema funcione corretamente e armazene dados por pelo menos duas semana sem necessidade de limpeza ou transmissão, seria ideal dispor de pelo menos 2 MB > > de memória Flash, considerando margens de segurança e possíveis expansões futuras. O microcontrolador ESP32-DEVKIT-V1 possui 4MB de memória Flash, o que é mais do que suficiente para esta aplicação.
+
 
 
 ## Referências 
