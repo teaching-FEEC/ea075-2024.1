@@ -174,7 +174,7 @@ Gerar alerta se os parâmetros excederem os limites predefinidos, ou se o freio 
 Enviar alerta para a interface de usuário.
 
 
-##Estimativa de Memória Necessária
+###Estimativa de Memória Necessária
 > Para determinar a memória necessária para armazenar os algoritmos e dados coletados, consideramos os principais eventos e o volume de dados gerados:
 
 > Dados de Localização (GPS)
@@ -182,28 +182,29 @@ Enviar alerta para a interface de usuário.
 > Tamanho dos dados por envio: 50 bytes
 > Frequência de envio: 1 vez por minuto
 > Memória necessária por dia: 50 bytes * 60 minutos * 24 horas = 72 KB
-> Memória necessária por semana: 72 KB * 7 dias = 504 KB
+
 
 > Dados de Velocidade
 
 > Tamanho dos dados por envio: 20 bytes
 > Frequência de envio: 1 vez a cada 5 minutos
 > Memória necessária por dia: 20 bytes * 12 vezes/hora * 24 horas = 5.76 KB
-> Memória necessária por semana: 5.76 KB * 7 dias = 40.32 KB
+
 > Alertas de Velocidade Excessiva e Manutenção
 
 > Tamanho dos dados por evento: 30 bytes
 > Frequência estimada: 10 eventos/dia
 > Memória necessária por dia: 30 bytes * 10 eventos = 0.3 KB
-> Memória necessária por semana: 0.3 KB * 7 dias = 2.1 KB
+
+
 > Memória Total Necessária
 
 > Memória para dados de localização por semana: 504 KB
 > Memória para dados de velocidade por semana: 40.32 KB
 > Memória para alertas por semana: 2.1 KB
-> Total de Memória Estimada por Semana: 504 KB + 40.32 KB + 2.1 KB ≈ 546.42 KB
 
-> Para garantir que o sistema funcione corretamente e armazene dados por pelo menos duas semana sem necessidade de limpeza ou transmissão, seria ideal dispor de pelo menos 2 MB > > de memória Flash, considerando margens de segurança e possíveis expansões futuras. O microcontrolador ESP32-DEVKIT-V1 possui 4MB de memória Flash, o que é mais do que suficiente para esta aplicação.
+
+> Para garantir que o sistema funcione corretamente e armazene dados por pelo menos duas semana sem necessidade de limpeza ou transmissão, seria ideal dispor de pelo menos 2 MB  de memória Flash, considerando margens de segurança e possíveis expansões futuras. O microcontrolador ESP32-DEVKIT-V1 possui 4MB de memória Flash, o que é mais do que suficiente para esta aplicação.
 
 
 
