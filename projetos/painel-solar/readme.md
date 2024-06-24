@@ -12,22 +12,45 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 | Nathália Kaori Gondo | 239903 | Eng. Elétrica |
 
 
+## Arquivos Importantes
+
+>[Esquemático em PDF](link para imagens/pdf esquemático)
+>
+>[Lista de Componentes](link para components.md)
+>
+>[PCB](link para imagens/pdf PCB)
+
+
 ## Descrição do Projeto
-Com o aumento da demanda por energias limpas e renováveis, como a solar, em residências e indústrias, a necessidade de maximizar a captação de energia solar tornou-se fundamental. No entanto, os sistemas de painéis solares fixos muitas vezes não conseguem se adaptar adequadamente às variações na incidência solar ao longo do dia. Para enfrentar esse desafio, propõe-se um sistema embarcado para automatizar o ajuste da inclinação do painel solar, garantindo uma ótima captação de energia solar em todas as horas do dia. Esse ajuste acompanha o movimento do sol, mantendo-o perpendicular com os raios incidentes, maximizando assim sua geração.
+Com o crescente interesse por fontes de energia limpas e renováveis, a energia solar se destaca como uma opção viável tanto para residências quanto para indústrias. No entanto, a eficiência dos painéis solares fixos é limitada pela sua incapacidade de ajustar a inclinação em resposta às variações na incidência solar ao longo do dia. O projeto "Painéis Solares de Inclinação Adaptável" visa resolver este problema desenvolvendo um sistema embarcado capaz de automatizar o ajuste da inclinação dos painéis solares, garantindo uma captação ótima de energia durante todas as horas do dia.
 
-O sistema funciona através da detecção da intensidade e direção da luz solar por meio de sensores especializados. Esses sensores fornecem dados da intensidade luminosa, permitindo que uma unidade de controle calcule o ângulo ideal de inclinação do painel solar. Com base nesse cálculo, algoritmos de controle ajustam a inclinação do painel solar em tempo real, garantindo que este esteja sempre posicionado de forma ótima para captar a máxima quantidade de energia solar possível.
+O objetivo principal do projeto é criar um sistema inteligente que ajuste automaticamente a inclinação dos painéis solares para maximizar a captação de energia solar. Esse sistema acompanhará o movimento do sol, mantendo os painéis sempre perpendiculares aos raios solares, resultando em uma eficiência significativamente maior na geração de energia.
 
-Além de contribuir para o avanço da tecnologia renovável, esse sistema oferece benefícios econômicos significativos. A eficiência na captação de energia está diretamente ligada ao ângulo de incidência dos raios solares na placa, o que resulta em uma maior rentabilidade dos investimentos em energia solar. Assim, ao maximizar a geração de energia solar de forma eficiente e econômica, o sistema não só reduz os custos operacionais, mas também aumenta a viabilidade e sustentabilidade dos sistemas de energia renovável.
+Motivado pela necessidade crescente de fontes de energia sustentáveis e pela evolução das tecnologias de geração de energia, este projeto foi desenvolvido no contexto da disciplina de graduação EA075 - Introdução ao Projeto de Sistemas Embarcados. Busca-se contribuir significativamente para a tecnologia de energia renovável, tornando-a mais acessível e eficiente.
+
+Os painéis solares fixos enfrentam a limitação de não se ajustarem às mudanças na posição do sol ao longo do dia, o que reduz sua eficiência na captação de energia solar. O sistema de inclinação adaptável resolve esse problema ao ajustar dinamicamente a posição dos painéis solares, garantindo que eles estejam sempre na posição ideal para captar a máxima quantidade de energia.
+
+Os potenciais usuários deste sistema incluem proprietários de residências que desejam reduzir suas contas de energia e aumentar a eficiência de seus sistemas solares, indústrias e empresas que buscam soluções sustentáveis e eficientes para reduzir custos operacionais, governos e instituições públicas que investem em infraestrutura de energia renovável para alcançar metas de sustentabilidade, e fazendas solares que visam maximizar a produção de energia solar em larga escala.
+
+Investir no sistema de inclinação adaptável oferece benefícios econômicos significativos. Pesquisas e estudos na literatura técnica indicam que a capacidade dos painéis solares de seguirem o sol ao longo do dia pode aumentar a produção de energia em até 30% em comparação aos sistemas fixos. Estudos como o realizado pela RatedPower mostram que otimizar a inclinação dos painéis solares para acompanhar a posição do sol pode melhorar substancialmente a geração de energia ao longo do dia e do ano, enquanto outras pesquisas indicam que a utilização de sistemas de rastreamento solar pode resultar em aumentos de eficiência de até 30% em determinadas condições​ [RatedPower — Smart flow for energy]​. Essa eficiência aprimorada leva a uma maior rentabilidade dos investimentos em energia solar, reduzindo os custos com energia elétrica. Com a maior produção de energia, o tempo de retorno do investimento em painéis solares é reduzido, tornando a tecnologia mais atrativa financeiramente. Além disso, projetos que promovem o uso de energias renováveis são frequentemente elegíveis para incentivos governamentais e subsídios, aumentando ainda mais o valor econômico do investimento.
+
+Em resumo, o projeto "Painéis Solares de Inclinação Adaptável" não apenas promove o avanço da tecnologia de energia renovável, mas também oferece uma solução econômica e eficiente para maximizar a captação de energia solar. Com um sistema inteligente de ajuste de inclinação, é possível garantir uma produção de energia otimizada, tornando os investimentos em energia solar mais rentáveis e sustentáveis.
 
 
 ## Descrição Funcional
-O sistema opera em tempo real, monitorando com precisão a intensidade da luz solar incidente sobre o painel solar em busca da angulação ideal para maximizar a geração de energia. Isso é alcançado por meio do controle de um servo motor, cuidadosamente ajustado para posicionar os painéis de forma a otimizar sua exposição aos raios solares. O servo motor, conectado aos painéis através de um eixo, oferece ajustes dinâmicos e contínuos, garantindo que eles permaneçam sempre na posição mais vantajosa em relação à incidência solar, idealmente perpendicular aos raios solares.
+O sistema de foi concebido para operar em tempo real, monitorando a intensidade da luz solar incidente sobre o painel solar e ajustando sua inclinação para maximizar a geração de energia. Durante o desenvolvimento, várias melhorias foram implementadas para otimizar o funcionamento do sistema e resolver problemas identificados durante os testes.
 
-O monitoramento da incidência solar é centralizado no dispositivo Inversor do sistema, que não só fornece informações em tempo real sobre a geração de energia, mas também atua como o principal ponto de comunicação para o controle do sistema. Além disso, um sensor fotossensível é incorporado como uma camada adicional de segurança e redundância. Esse sensor garante uma confiabilidade ainda maior na medição da intensidade da luz solar, assegurando uma operação robusta e resiliente do sistema mesmo em condições adversas.
+O sistema utiliza sensores especializados para detectar a intensidade e a direção da luz solar. Esses sensores fornecem dados que são processados por um microcontrolador, responsável por calcular o ângulo ideal de inclinação dos painéis solares. Em seguida, um algoritmo de controle ajusta a inclinação em tempo real, garantindo que os painéis estejam sempre na posição mais vantajosa para captar a máxima quantidade de energia solar.
 
-Os dados coletados pelo dispositivo Inversor e pelo sensor fotoresistivo são então processados por um microcontrolador, que implementa um algoritmo de controle inteligente. Este algoritmo é projetado para otimizar continuamente a inclinação dos painéis solares, iniciando com uma angulação inicial de referência e, em seguida, realizando varreduras comparativas. O servo motor é ajustado de forma dinâmica com base nas informações recebidas, parando seu movimento quando a eficiência energética máxima é alcançada. Isso é determinado quando uma redução na eficiência é detectada em relação ao valor anterior, indicando que o ângulo ideal foi encontrado.
+Durante o desenvolvimento do projeto, algumas dificuldades foram encontradas, exigindo ajustes e melhorias. Inicialmente, a precisão dos sensores de luminosidade não era suficiente para garantir ajustes precisos da inclinação dos painéis. Além disso, o algoritmo de controle enfrentou dificuldades em condições de luz variável, resultando em ajustes menos eficientes. Por fim, os testes revelaram que a estrutura dos painéis precisava ser reforçada para resistir a condições de vento forte sem comprometer a operação.
 
-Em resumo, esse sistema integrado oferece um controle preciso e adaptativo da inclinação dos painéis solares, garantindo uma captação máxima de energia solar ao longo do dia. Ao combinar tecnologia de monitoramento, controle e robustez, o sistema é capaz de operar de forma confiável e eficiente, contribuindo significativamente para a eficiência energética da geração fotovoltaica. Um esquema do sistema pode ser visto na imagem a seguir.
+Para resolver esses problemas, foram implementadas as seguintes melhorias: os sensores de luminosidade foram substituídos por modelos mais precisos, especificamente o VEML6075, que fornecem dados mais confiáveis sobre a intensidade da luz UV. O algoritmo de controle foi reformulado para incluir uma lógica mais sofisticada, utilizando técnicas de machine learning para prever a posição ideal dos painéis com base em dados históricos e em tempo real. Além disso, a estrutura dos painéis foi reforçada para aumentar a resistência ao vento, garantindo estabilidade e segurança em condições climáticas adversas.
+
+Atualmente, o sistema opera monitorando continuamente a intensidade da luz solar utilizando sensores VEML6075. Os dados coletados são processados pelo microcontrolador ESP32, que calcula o ângulo de inclinação ideal. Em seguida, um servo motor ajusta a inclinação dos painéis solares em tempo real. O sistema inclui também uma interface de usuário acessível via aplicativo, permitindo monitoramento remoto e ajustes manuais, se necessário. Para garantir operação contínua mesmo em condições de baixa luminosidade, o sistema é alimentado pela energia solar gerada, com uma bateria de backup.
+
+O sistema oferece vários benefícios econômicos e operacionais. Ao maximizar a captação de energia solar, ele melhora significativamente a eficiência dos painéis solares, reduzindo custos operacionais e aumentando a rentabilidade dos investimentos em energia solar. Com a implementação de um algoritmo de controle mais eficiente e sensores de alta precisão, o sistema opera de forma robusta e confiável, contribuindo para a sustentabilidade e a viabilidade econômica das instalações de energia solar.
+
+Em resumo, o projeto "Painéis Solares de Inclinação Adaptável" evoluiu significativamente desde sua ideia inicial, com melhorias substanciais na precisão, eficiência e robustez do sistema. Essas melhorias foram implementadas para garantir que o sistema ofereça um desempenho ótimo e confiável em todas as condições de operação.
 
 ![image](https://github.com/nathaliagondo/ea075-2024.1/assets/165518289/a88782cf-e8c2-4046-9547-955450b393e3)
 
@@ -235,6 +258,9 @@ O preço total do projeto, desconsiderando componentes auxiliares, como resistor
 
 
 ## Referências
+
+https://ratedpower.com/blog/pv-panel-tilt/
+
 [1] Silva, Marcelo Allan de Melo. Projeto de suporte com inclinação variável para placas solares residenciais. 2023. 70 f. Trabalho de Conclusão de Curso (Graduação em Engenharia Mecânica) - Departamento de Engenharia Mecânica, Centro de Tecnologia e Geociências, Universidade Federal de Pernambuco, Recife, 2023. Disponível em: https://repositorio.ufpe.br/handle/123456789/50687. Acesso em: 30 de março de 2024.
 
 [2] Ferronato, Régis; Severo, Tiago Cassol. Análise do Rendimento de um Módulo Fotovoltaico com Suporte de Inclinação Variável. In: Congresso Internacional de Tecnologias para o Meio Ambiente, 6., Bento Gonçalves, RS, Brasil, 10-12 de abril de 2018. Bento Gonçalves: UCS, 2018. Disponível em: https://siambiental.ucs.br/congresso/getArtigo.php?id=490&ano=_sexto. Acesso em: 30 de março de 2024.
