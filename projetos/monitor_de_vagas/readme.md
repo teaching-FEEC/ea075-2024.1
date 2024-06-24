@@ -45,6 +45,11 @@ Evento 3: na entrada, reportar que o estacionamento está lotado direcionando pa
 Evento 4: reportar a liberação de vagas na entrada.
 
 ## Descrição Estrutural do Sistema
+1. Sensores de Ultrassom Detectam a presença ou ausência de veículos no estacionamento
+2. Módulos de Comunicação LoRa Transmitem os dados enviados pela MCU à central de comando via ondas de rádio
+3. Central de Comandos gerenciada pelo MCU pic16f877a trata os dados enviados pelas unidades LoRa em campo e envia sinais para o painel de LED
+4. Painel de LED exibe o número de vagas disponíveis no setor especificado do estacionamento fornecendo uma interface visual para os motoristas
+5. Alimentação e Infraestrutura Elétrica individual para cada subsistema por baterias
 ![Diagrama de blocos do sistema](https://github.com/EduardoTejada/ea075-2024.1/blob/main/projetos/monitor_de_vagas/imagens/Descri%C3%A7%C3%A3o%20Estrutural%20do%20Sistema%20(1).jpg?raw=true)
 
 ## Especificações
