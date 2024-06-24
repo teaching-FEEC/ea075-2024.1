@@ -26,3 +26,9 @@ O TowerPro MG90S foi escolhido, pois oferece um bom equilíbrio entre força, pr
 - [Link do datasheet - MG90S](https://www.electronicoscaldas.com/datasheet/MG90S_Tower-Pro.pdf)
 - [Link de compra do MG90S](https://pt.aliexpress.com/item/1005005850316099.html?spm=a2g0o.productlist.main.1.721eqLDJqLDJZn&algo_pvid=c5bea2a6-a45a-4419-9868-02af43845375&algo_exp_id=c5bea2a6-a45a-4419-9868-02af43845375-0&pdp_npi=4%40dis%21BRL%2113.54%2113.54%21%21%2117.33%2117.33%21%40210308a417192673266407147ecc36%2112000035298772732%21sea%21BR%210%21AB&curPageLogUid=fnH53M4UAkIU&utparam-url=scene%3Asearch%7Cquery_from%3A)
 
+## Sensor para detectar o nível de água
+
+O sensor ultrassônico HC-SR04 foi escolhido para monitorar o nível de água devido à sua precisão em uma faixa de 2 cm a 400 cm, adequada para o recipiente definido pro SmartFeeder. Além disso, o HC-SR04 integra-se facilmente ao ESP32 com apenas dois pinos, simplificando a conexão e a programação, sendo econômico e amplamente disponível, com boa documentação e suporte, facilitando o desenvolvimento do projeto. Sua robustez e confiabilidade em condições ambientais diversas, incluindo resistência a poeira e umidade, tornam-no adequado para ambientes próximos a água e ração, oferecendo, assim, uma excelente relação custo-benefício, precisão e simplicidade.
+
+- [Link do datasheet - HC-SR04](https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf)
+- [Link de compra do HC-SR04](https://pt.aliexpress.com/item/1005005636789307.html?spm=a2g0o.productlist.main.41.7ffb4e0a1Jgtnx&algo_pvid=986ea335-1e7b-43c6-ab31-907905f6c244&algo_exp_id=986ea335-1e7b-43c6-ab31-907905f6c244-20&pdp_npi=4%40dis%21BRL%219.78%216.50%21%21%2112.52%218.32%21%40210308a417192716632716355ecb7f%2112000033859091113%21sea%21BR%210%21AB&curPageLogUid=ogNzMf9UvrDU&utparam-url=scene%3Asearch%7Cquery_from%3A)
