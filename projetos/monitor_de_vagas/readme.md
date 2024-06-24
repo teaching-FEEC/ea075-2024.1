@@ -95,4 +95,9 @@ Como é possível verificar na seção de Especificação de Algoritmos, estima-
   https://robocraze.com/blogs/post/what-is-ultrasonic-sensor
   https://www.msseletronica.com.br/detalhes/display-de-7-segmentos-0-56-catodo-comum-vermelho-gnd-comum_pid976.html
   https://www.cdebyte.com/pdf-down.aspx?id=3044
+  https://www.ti.com/lit/ds/symlink/cd4511b.pdf
+  https://www.build-electronic-circuits.com/4000-series-integrated-circuits/ic-4511/
+  https://cdn.awsli.com.br/945/945993/arquivos/E220-900T22D_UserManual_EN_v1.0.pdf
+  https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/39582C.pdf
+  https://www.theengineeringprojects.com/2015/03/pic-microcontroller-projects.html
   
