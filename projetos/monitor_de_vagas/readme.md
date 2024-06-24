@@ -26,7 +26,7 @@ O projeto visa solucionar o problema de encontrar espaços de estacionamento dis
 
 ## Descrição Funcional
 O sistema de controle de vagas de estacionamento opera em uma lógica de sensores de proximidade em campo que se comunicam com uma central de comandos conectada a um painel de led encarregado de mostrar o número de vagas disponíveis na totalidade do recinto. os sensores em campo utilizam de comunicação via ondas de rádio LoRa para com a central, dessa forma, os riscos de danificação do sistema por intempéries a fiações é minimizado, já que a maior parte das conexões físicas são por parte das conexões dos dispositivos na placa de circuito impressa. É também um projeto de baixa necessidade de mantenção e configuração, operando sempre em uma mesma lógica.
-![Diagrama funcional do sistema](https://github.com/Gabriel-Diasss/ea075-2024.1/blob/main/projetos/monitor_de_vagas/imagens/diagrama_funcional.png?raw=true)
+![Diagrama funcional do sistema](https://github.com/EduardoTejada/ea075-2024.1/blob/main/projetos/monitor_de_vagas/imagens/Diagrama_funcional_vf.drawio.png)
 
 
 ### Funcionalidades
