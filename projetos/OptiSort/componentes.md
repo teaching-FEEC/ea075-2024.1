@@ -1,4 +1,4 @@
-# `Optisort: Componentes`
+# Optisort: Componentes
 ## Componentes Principais
 * **STM32H747AII6 (UFGBA169)**: O microcontrolador utilizado dentro deste projeto, escolhido pelos mótivos apresentados na descrição estrutural. url: https://www.alldatasheet.com/datasheet-pdf/pdf/1277966/STMICROELECTRONICS/STM32H747AIT6TR.html
 * **GC2145**: Câmera de luz visível. Foi escolhido utilizar a versão retirada do módulo Arducam-GC2145 pelo fato que ela fornece uma pinagem mais organizada e pronta para ser acoplada na nossa placa.
