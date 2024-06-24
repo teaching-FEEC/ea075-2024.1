@@ -19,7 +19,7 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 
 [Lista de Componentes](components.md)
 
-> [PCB](link para imagens/pdf PCB)
+[PCB](pdf/layout_pcb.pdf)
 
 ## Descrição do Projeto
 
