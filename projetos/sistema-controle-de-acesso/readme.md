@@ -11,6 +11,12 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 > | Thiago Masanori Hata | 194345  | Eng. Elétrica|
 > | Victoria Helena Alves Navarro  | 236015  | Eng. Elétrica|
 
+## Arquivos Importantes
+(link para imagens/pdf esquemático)
+
+(link para components.md)
+
+(link para imagens/pdf PCB)
 
 ## Descrição do Projeto
 
