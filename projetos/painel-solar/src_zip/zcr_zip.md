@@ -15,4 +15,5 @@ Verificar a Importação: Compare a placa importada com o design original para g
 
 Este processo facilita a transição de projetos do Altium Designer para o KiCad, permitindo que os designers aproveitem os recursos do KiCad sem redesenhar suas placas do zero. A validação pós-conversão é essencial para garantir a precisão do design importado.
 
-Mais detalhes e imagens de como realizar o processo, há o texto detalhado disponível em: https://refcircuit.com/articles/18-how-to-import-altium-designer-pcb-board-in-kicad.html
+### Referências
+RefCircuit. (n.d.). How to import Altium Designer PCB board in KiCad? Disponível em: https://refcircuit.com/articles/18-how-to-import-altium-designer-pcb-board-in-kicad.html. Acesso em: 24 de junho de 2024.
