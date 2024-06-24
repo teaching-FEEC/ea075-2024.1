@@ -11,6 +11,7 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 | André Guilherme da Luz  | 231343  | Eng. Elétrica|
 | Gabriel Vianna Serra  | 258555  | Eng. Elétrica|
 
+## Arquivos Importantes
 
 ## Descrição do Projeto
 A ideia do projeto consiste em desenvolver um circuito controlador para elevadores, a fim de tomar decisões como a escolha de que o elevador deve subir, descer ou manter-se no lugar com base no andar atual, prioridade de chamada e situações de segurança, por exemplo. Nosso contexto de concepção desse projeto veio do motivo de que é algo muito útil e presente no dia a dia de pessoas, bem como factível de ser projetado durante o semestre da disciplina, permitindo nos desafiar com as possíveis variáveis de desenvolvimento sem sobrecarregar os esforços dentro do tempo estipulado.
