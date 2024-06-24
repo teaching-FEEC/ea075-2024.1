@@ -3,8 +3,8 @@
 
 ## Componentes do projeto
 
-| Código | Nome | Quantidade | Preço |
-|-----| ----- | ------- | ---------- |
+| Código | Nome | Quantidade | Preço | Datasheet |
+|------- | ---- | ---------- | ----- | --------- |
 |ESP32-S3-WROOM-1-N4|Módulo ESP|1|R$ 15,22|https://github.com/nathaliagondo/ea075-2024.1/blob/main/projetos/painel-solar/datasheets/painel-solar_esp32.pdf|
 |TMA.DES.HSS86| Motor de passo + controlador/driver|1| R$ 1130,00 |https://github.com/nathaliagondo/ea075-2024.1/blob/main/projetos/painel-solar/datasheets/painel-solar_tma-des-hss86.pdf|
 |LM2576|Regulador de Tensão 60V|2|R$ 36,96|https://github.com/nathaliagondo/ea075-2024.1/blob/main/projetos/painel-solar/datasheets/painel-solar_lm2576.pdf|
