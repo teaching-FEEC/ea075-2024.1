@@ -91,7 +91,7 @@ Memória:
 | Estado  | Função | 
 |--|--|
 | Desligado  | Neste estado, o produto está em modo dormente: o LED fica apagado, o sensor fica desabilitado e o microcontrolador entra em modo de baixa potência. A saída deste estado ocorre quando a chave é posicinada em On, passando para o estado de Aquisição |
-| Aquisição  | Neste modo, o dispositivo está fazendo sua atividade-fim: adquirindo dados do sensor de movimento e salvando no cartão SD. Para indicar que está ativo, o LED fica aceso continuo. Para sair do estado de aquisição, a chave deve ser posicionada em Off, o que leva o dispositivo ao estado 'desligado'  |
+| Aquisição  | Neste modo, o dispositivo está fazendo sua função principal: adquirindo dados do sensor de movimento e salvando no cartão SD. Para indicar que está ativo, o LED fica aceso continuo. Para sair do estado de aquisição, a chave deve ser posicionada em Off, o que leva o dispositivo ao estado 'desligado'  |
 
 ## Especificações
 
