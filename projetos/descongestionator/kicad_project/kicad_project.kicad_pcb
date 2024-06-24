@@ -1491,7 +1491,7 @@
 		(descr "TE, 826576-5, 5 Pins (https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=826576&DocType=Customer+Drawing&DocLang=English), generated with kicad-footprint-generator")
 		(tags "connector TE 826576 vertical")
 		(property "Reference" "J2"
-			(at 7.92 -4.4 90)
+			(at 5.92 -1.9825 90)
 			(layer "F.SilkS")
 			(uuid "e38ee859-06e0-47af-b393-f5439325decb")
 			(effects
@@ -8812,6 +8812,54 @@
 		(fill none)
 		(layer "Edge.Cuts")
 		(uuid "b58abb76-c2b1-46ec-a09f-68e45102e399")
+	)
+	(gr_text "SDA"
+		(at 194 69 0)
+		(layer "F.SilkS")
+		(uuid "3b60bf80-358b-4efa-9e15-07b8d77f257e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "+3V3"
+		(at 193 81 0)
+		(layer "F.SilkS")
+		(uuid "47cc86e3-1546-4dcc-a382-d6d9a528df23")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "GND"
+		(at 194 77 0)
+		(layer "F.SilkS")
+		(uuid "4caec752-906d-45fa-803a-9e4b2cbb730b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "SCL"
+		(at 194 73 0)
+		(layer "F.SilkS")
+		(uuid "52897419-6b51-4651-85a3-5a4a3ef74e02")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
 	)
 	(gr_text "CaseTars"
 		(at 133 110.5 0)
