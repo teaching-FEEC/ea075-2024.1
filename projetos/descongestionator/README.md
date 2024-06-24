@@ -11,13 +11,15 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
  | Kevin Caio Marques dos Santos  | 247218  | Eng. de Computação|
  | Thiago Maximo Pavão  | 247381  | Eng. de Computação|
 
-## Arquivos Importantes (:warning: NOVO :warning:)
+## Arquivos Importantes
 
->[Esquemático em PDF](link para imagens/pdf esquemático)
->
+[Modelo 3D do projeto](3d_models/3d_models.pdf)
+
+> [Esquemático em PDF](link para imagens/pdf esquemático)
+
 [Lista de Componentes](components.md)
->
->[PCB](link para imagens/pdf PCB)
+
+> [PCB](link para imagens/pdf PCB)
 
 ## Descrição do Projeto
 
