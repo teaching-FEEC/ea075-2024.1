@@ -13,8 +13,11 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 
 
 ## Arquivos Importantes
-![PDF do Esquemático]([https://link-url-here.org](https://github.com/EduardoTejada/ea075-2024.1/blob/main/projetos/monitor_de_vagas/imagens/Esquem%C3%A1tico.pdf))
-![PDF da PCB](https://github.com/EduardoTejada/ea075-2024.1/blob/main/projetos/monitor_de_vagas/imagens/PCB.pdf)
+[PDF do Esquemático]([https://link-url-here.org](https://github.com/EduardoTejada/ea075-2024.1/blob/main/projetos/monitor_de_vagas/imagens/Esquem%C3%A1tico.pdf))
+
+[PDF da PCB](https://github.com/EduardoTejada/ea075-2024.1/blob/main/projetos/monitor_de_vagas/imagens/PCB.pdf)
+
+Print do projeto da PCB no Altium Designer:
 ![Print do projeto da PCB no Altium Designer](https://github.com/EduardoTejada/ea075-2024.1/blob/main/projetos/monitor_de_vagas/imagens/PCB_img.png?raw=true)
 
 ## Descrição do Projeto
