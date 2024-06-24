@@ -14,9 +14,11 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 
 ## Arquivos Importantes
 
-Esquemático em PDF: (link para imagens/pdf esquemático)
+Esquemático em PDF: https://github.com/nathaliagondo/ea075-2024.1/tree/main/projetos/painel-solar/pdf
+
 Lista de Componentes: https://github.com/nathaliagondo/ea075-2024.1/blob/main/projetos/painel-solar/componentes.md
-PCB: link para imagens/pdf PCB
+
+PCB: https://github.com/nathaliagondo/ea075-2024.1/tree/main/projetos/painel-solar/images
 
 
 ## Descrição do Projeto
@@ -30,7 +32,7 @@ Os painéis solares fixos enfrentam a limitação de não se ajustarem às mudan
 
 Os potenciais usuários deste sistema incluem proprietários de residências que desejam reduzir suas contas de energia e aumentar a eficiência de seus sistemas solares, indústrias e empresas que buscam soluções sustentáveis e eficientes para reduzir custos operacionais, governos e instituições públicas que investem em infraestrutura de energia renovável para alcançar metas de sustentabilidade, e fazendas solares que visam maximizar a produção de energia solar em larga escala.
 
-Investir no sistema de inclinação adaptável oferece benefícios econômicos significativos. Pesquisas e estudos na literatura técnica indicam que a capacidade dos painéis solares de seguirem o sol ao longo do dia pode aumentar a produção de energia em até 30% em comparação aos sistemas fixos. Estudos como o realizado pela RatedPower mostram que otimizar a inclinação dos painéis solares para acompanhar a posição do sol pode melhorar substancialmente a geração de energia ao longo do dia e do ano, enquanto outras pesquisas indicam que a utilização de sistemas de rastreamento solar pode resultar em aumentos de eficiência de até 30% em determinadas condições​ [RatedPower — Smart flow for energy]​. Essa eficiência aprimorada leva a uma maior rentabilidade dos investimentos em energia solar, reduzindo os custos com energia elétrica. Com a maior produção de energia, o tempo de retorno do investimento em painéis solares é reduzido, tornando a tecnologia mais atrativa financeiramente. Além disso, projetos que promovem o uso de energias renováveis são frequentemente elegíveis para incentivos governamentais e subsídios, aumentando ainda mais o valor econômico do investimento.
+Investir no sistema de inclinação adaptável oferece benefícios econômicos significativos. Pesquisas e estudos na literatura técnica indicam que a capacidade dos painéis solares de seguirem o sol ao longo do dia pode aumentar a produção de energia em até 30% em comparação aos sistemas fixos. Estudos como o realizado pela RatedPower mostram que otimizar a inclinação dos painéis solares para acompanhar a posição do sol pode melhorar substancialmente a geração de energia ao longo do dia e do ano, enquanto outras pesquisas indicam que a utilização de sistemas de rastreamento solar pode resultar em aumentos de eficiência de até 30% em determinadas condições​​. Essa eficiência aprimorada leva a uma maior rentabilidade dos investimentos em energia solar, reduzindo os custos com energia elétrica. Com a maior produção de energia, o tempo de retorno do investimento em painéis solares é reduzido, tornando a tecnologia mais atrativa financeiramente. Além disso, projetos que promovem o uso de energias renováveis são frequentemente elegíveis para incentivos governamentais e subsídios, aumentando ainda mais o valor econômico do investimento.
 
 Em resumo, o projeto "Painéis Solares de Inclinação Adaptável" não apenas promove o avanço da tecnologia de energia renovável, mas também oferece uma solução econômica e eficiente para maximizar a captação de energia solar. Com um sistema inteligente de ajuste de inclinação, é possível garantir uma produção de energia otimizada, tornando os investimentos em energia solar mais rentáveis e sustentáveis.
 
@@ -53,6 +55,7 @@ Em resumo, o projeto "Painéis Solares de Inclinação Adaptável" evoluiu signi
 ![image](https://github.com/nathaliagondo/ea075-2024.1/assets/165518289/a88782cf-e8c2-4046-9547-955450b393e3)
 
 Figura 1. Representação do sistema embarcado - Painéis solares de inclinação adaptável.
+
 
 ### Funcionalidades
 1. _Sun tracking_: o sistema irá monitorar a posição solar usando sensores e ajustando o ângulo de inclinação dos painéis solares para garantir a maior exposição aos raios incidentes.
@@ -140,7 +143,7 @@ O diagrama das atividades podem ser vistas pela Figura 2. abaixo.
 Figura 2. Diagrama de blocos dos processos realizados pelo sistema.
 
 
-## Especificações (⚠️ NOVO ⚠️)
+## Especificações
 
 ### Especificação Estrutural
 Para facilitar o entendimento, o projeto foi dividido em cinco grandes partes, que serão detalhadas ao longo da descrição estrutural e podem ser visualizadas na Figura 3. O diagrama apresentado ilustra o funcionamento de um sistema de controle de angulação de painéis solares, utilizando um microcontrolador alimentado por um painel solar com backup de bateria e regulador de tensão.
@@ -239,11 +242,10 @@ Além disso, a tensão de alimentação do driver varia entre 30V e 110Vdc ou 20
 
 
 ## Referências
-
-https://ratedpower.com/blog/pv-panel-tilt/
-
 [1] Silva, Marcelo Allan de Melo. Projeto de suporte com inclinação variável para placas solares residenciais. 2023. 70 f. Trabalho de Conclusão de Curso (Graduação em Engenharia Mecânica) - Departamento de Engenharia Mecânica, Centro de Tecnologia e Geociências, Universidade Federal de Pernambuco, Recife, 2023. Disponível em: https://repositorio.ufpe.br/handle/123456789/50687. Acesso em: 30 de março de 2024.
 
 [2] Ferronato, Régis; Severo, Tiago Cassol. Análise do Rendimento de um Módulo Fotovoltaico com Suporte de Inclinação Variável. In: Congresso Internacional de Tecnologias para o Meio Ambiente, 6., Bento Gonçalves, RS, Brasil, 10-12 de abril de 2018. Bento Gonçalves: UCS, 2018. Disponível em: https://siambiental.ucs.br/congresso/getArtigo.php?id=490&ano=_sexto. Acesso em: 30 de março de 2024.
 
 [3] Cravo, E. (s.d.). Servo Motor: o que é um, como funciona e quais as vantagens? Recuperado de: https://blog.kalatec.com.br/o-que-e-servo-motor/?utm_source=google&utm_medium=cpc&utm_campaign=npbr_search_DSA&utm_id=21012797249&utm_term=&gad_source=1&gclid=CjwKCAjwtqmwBhBVEiwAL-WAYQnYY9Xp7LGsU-SsAqGSzuhZBELNIFGqw1FDFUnbnq8aRlu-L0fVyBoC-r4QAvD_BwE
+
+[4] Negro, I. (2022, April 20). How PV panel tilt affects solar plant performance. RatedPower. Disponível em: https://ratedpower.com/blog/pv-panel-tilt/. Acesso em: 24 de junho de 2024.
