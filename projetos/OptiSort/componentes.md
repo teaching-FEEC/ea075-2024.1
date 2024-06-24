@@ -27,7 +27,8 @@ url_arducam: https://e2e.ti.com/cfs-file/__key/communityserver-discussions-compo
 
   
 ## Bill of Materials
-* *STM32H747AII6*: $18,74 url: https://br.mouser.com/ProductDetail/STMicroelectronics/STM32H747AII6?qs=vLWxofP3U2xKTIBLp63b7g%3D%3D (Acessado 24/06/2024)
+Todos os sites foram acessados em 24/06/2024.
+* *STM32H747AII6*: $18,74 url: https://br.mouser.com/ProductDetail/STMicroelectronics/STM32H747AII6?qs=vLWxofP3U2xKTIBLp63b7g%3D%3D
 * *Arducam GC2145*: $6,99 url: https://www.arducam.com/product/2mp-gc2145-color-dvp-camera-module-for-arduino-giga-r1-wifi-board/
 * *FLIR Lepton 2.5*: $209.95 url: https://www.sparkfun.com/products/16465
 * *MAX485EESA+*: $6,78 url: https://br.mouser.com/ProductDetail/Analog-Devices-Maxim-Integrated/MAX487EESA%2b?qs=1THa7WoU59F%252BN4QTTVMhEw%3D%3D
