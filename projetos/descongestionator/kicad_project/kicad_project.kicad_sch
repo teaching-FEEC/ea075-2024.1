@@ -4,6 +4,11 @@
 	(generator_version "8.0")
 	(uuid "565aefe7-7662-430e-b0c2-a78de3cec118")
 	(paper "A4")
+	(title_block
+		(title "Projeto Descongestionator")
+		(date "2024-06-24")
+		(company "EA075 UNICAMP CaseTars")
+	)
 	(lib_symbols
 		(symbol "Connector:Conn_01x05_Socket"
 			(pin_names
