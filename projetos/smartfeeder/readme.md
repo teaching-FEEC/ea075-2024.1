@@ -22,7 +22,7 @@ O SmartFeeder representa uma revolução na forma como cuidamos dos nossos pets.
 
 <img src="\images\logo1.png">
 
-<img src="\Smart feeder.png" width="65%" height="65%">
+<img src="\images\Smart feeder.png" width="65%" height="65%">
 
 ## Descrição Funcional
 O projeto contempla dois funcionamentos distintos: Comedouro e Bebedouro, assim, cada função foi tratada separadamente, pois independem em funcionamento.
@@ -64,10 +64,10 @@ Os comportamentos para tratamento dos eventos descritos serão:
 ## Descrição Estrutural do Sistema
 Os dois sistemas (bebedouro e comedouro) descritos:
  - Função de Bebedouro:
-<img src="\bebedouro.drawio.png">
+<img src="\images\bebedouro.drawio.png">
 
  - Função de Comedouro:
-<img src="\comedouro1.drawio.png">
+<img src="\images\comedouro1.drawio.png">
 
 ## Especificação Estrutural
 O sistema proposto para o *Smart Feeder* é composto por dois módulos paralelos de funcionamento; um da função de bebedouro e outro de comedouro.
@@ -93,7 +93,7 @@ Quando o dispositivo está operando com alimentação por pilhas, a capacidade d
 O microcontrolador escolhido foi o ESP32, uma vez uqe possui as funcionalidades desejadas de conectividade bluetooth, Wi-fi, diversidade de antenas e fácil integração com apps já exixtentes, como o Tasmota, ESPEasy e ESPHome.
 Desta forma, escolhemos um módulo ESP32, que conta com uma memória Flash suficiente para os arquivos de programa e configurações. Tal módulo conta com a pinagem descrita no diagrama abaixo:
 
-<img src="\ESP32-Pinout.jpg">
+<img src="\images\ESP32-Pinout.jpg">
 
 *BEBEDOURO*
 
@@ -112,11 +112,11 @@ Já no esquemático do comedouro, são implementados dois sensores de pressão:
 
 *Função Bebedouro*
 
-<img src="\E3 - algoritmo - água.drawio.png">
+<img src="\images\E3 - algoritmo - água.drawio.png">
 
 *Função Comedouro*
 
-<img src="\E3 - Algoritmo - comida1.drawio.png">
+<img src="\images\E3 - Algoritmo - comida1.drawio.png">
 
 ## Referências
 
