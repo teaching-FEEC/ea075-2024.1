@@ -153,6 +153,8 @@ Outra característica útil é a presença de um módulo de timer na placa, pois
 | Bussola | 3~5 | 5V | -30 ~ 85 |
 | ATtiny202 | 2.7~5.5V | 3V | -40 ~ 105 |
 
+__Alterações com relação à entrega 2: Agora especificamos componentes auxliares aos periféricos principais, são eles: controlador para o display com interface I2C (PCF8574A), transistor para controle do buzzer (PN2222A), antena de GPS, conversor USB-UART (CP2120N). Além disso, trocamos a versão de 14 pinos da MCU para uma versão com menos pinos, 8. Acreditávamos que a versão de 8 pinos não seria suficiente por uma má interpretação do datasheet, agora foi possível perceber que ela é.__
+
 #### Módulo fixo
 
 Para simplificação do projeto, optou-se por focar na especificação do módulo móvel, e portanto não foram escolhidos precisamente os componentes e placa micro controladora para o módulo fixo. 
