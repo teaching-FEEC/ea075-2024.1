@@ -149,3 +149,9 @@ Comunicação:
 [1] Arduino and MPU6050 Accelerometer and Gyroscope Tutorial https://howtomechatronics.com/tutorials/arduino/arduino-and-mpu6050-accelerometer-and-gyroscope-tutorial/
 
 [2] E. van der Kruk and M. M. Reijne, “Accuracy of human motion capture systems for sport applications; state-of-the-art review,” European journal of sport science, vol. 18, no. 6, pp. 806–819, 2018, doi: https://doi.org/10.1080/17461391.2018.1463397.
+
+[3] J. Tan, “Guide: Batteries for Embedded Devices,” Latest Open Tech From Seeed, Jan. 20, 2021. https://www.seeedstudio.com/blog/2021/01/20/guide-to-batteries-for-embedded-devices/.
+
+[4] “PCB Trace Width Calculator | Trace Width Vs. Current Table,” mcl, Jun. 18, 2018. https://www.mclpcb.com/blog/pcb-trace-width-vs-current-table/.
+
+[5] “How much current does a microSD card use?,” Electrical Engineering Stack Exchange. https://electronics.stackexchange.com/questions/33472/how-much-current-does-a-microsd-card-use.
