@@ -1,7 +1,7 @@
 # `Componentes do Projeto`
 
 ## Microcontrolador:
-
+### ESP32
 O ESP32 foi a escolha para o projeto do SmartFeeder devido à sua conectividade Wi-Fi e Bluetooth integrada, permitindo fácil configuração via aplicativo móvel. Com um processador dual-core, ele oferece desempenho poderoso e suporte a multitarefa, essenciais para gerenciar sensores, motores e comunicação simultaneamente. Seus múltiplos GPIOs, conversores Analógico-Digitais e suporte a PWM garantem flexibilidade na integração dos sensores e atuadores. Além disso, o ESP32 é eficiente em termos de consumo de energia, possui suporte de aplicativos disponíveis gratuitamente, e é uma solução economicamente viável, por não possuir um custo elevado.
 
 - [Link do datasheet - ESP32](https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf)
