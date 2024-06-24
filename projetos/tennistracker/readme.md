@@ -77,8 +77,8 @@ Sensores:
 Botões:
 - Chave On/Off
 
-Comunicação:
-- Comunicação dos dados coletados é feita atravez de cartão SD que, uma vez preenchido, pode ser retirado do dispositivo para passar os dados para um computador.
+Memória:
+- Armazenamento dos dados coletados é feita atravez de cartão SD que, uma vez preenchido, pode ser retirado do dispositivo para passar os dados para um computador.
 
 ### Diagrama Estrutural:
 
