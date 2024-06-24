@@ -1,4 +1,4 @@
-### Componentes do Projeto
+# `Componentes do Projeto`
 
 ## Microcontrolador:
 
