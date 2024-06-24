@@ -14,11 +14,9 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 
 ## Arquivos Importantes
 
->[Esquemático em PDF](link para imagens/pdf esquemático)
->
->[Lista de Componentes](link para components.md)
->
->[PCB](link para imagens/pdf PCB)
+Esquemático em PDF: (link para imagens/pdf esquemático)
+Lista de Componentes: https://github.com/nathaliagondo/ea075-2024.1/blob/main/projetos/painel-solar/componentes.md
+PCB: link para imagens/pdf PCB
 
 
 ## Descrição do Projeto
