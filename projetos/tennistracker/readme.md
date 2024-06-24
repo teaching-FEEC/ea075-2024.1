@@ -72,7 +72,7 @@ Atuadores:
 - LED
 
 Sensores:
-- Acelerômetro e Giroscópio [MPU-6050](https://www.makerhero.com/produto/acelerometro-e-giroscopio-3-eixos-6-dof-mpu-6050/?utm_source=google&utm_medium=organic&utm_campaign=shopping&utm_content=surfaces_across_google&gad_source=1&gclid=CjwKCAjwtqmwBhBVEiwAL-WAYQ2EM5FQUUMtuxIyKFbXBxsoUhK2dI_2Ud5VmFDbftmgO3FnrXPz_hoCWkoQAvD_BwE#tab-blogrelacionados)
+- Acelerômetro e Giroscópio [MPU-6050](datasheets/MPU-6050.pdf)
 
 Botões:
 - Chave On/Off
@@ -103,7 +103,7 @@ Comunicação:
     - **Interfaces necessárias:** SPI (pinos PORTB: PB2 = SS, PB3 = MOSI, PB4 = MISO, PB5 = SCK) e _ 2-wire Serial Interface_, que é compatível com o protocolo I2C (pinos PORTC: PC4 = SDA, PC5 = SCL)
     - **Outros módulos úteis:** Timer/Counter2 configurável como RTC (real time counter), para registro de tempo.
     - **Alimentação:** 1.8 - 5.5V (pretende-se usar alimentação em 2 V - segundo o datasheet, nesta tensão, a corrente típica necessária é: 0,3 mA (funcionando) ou 0,06 mA (idle))
-- [Acelerômetro e Giroscópio MPU-6050](datasheets/MPU-6000-Datasheet1.pdf)
+- [Acelerômetro e Giroscópio MPU-6050](datasheets/MPU-6050.pdf)
     - **Descrição:** sensor de movimento de 6 eixos (acelerômetro de 3-eixos + giroscópio de 3 eixos) com processamento embutido. A interface de comunicação do disposito é a I2C e a velocidade máxima do barramento de comunicação é 400kHz, atendendo os requisitos do projeto (taxa de amostragem: 1kHz). Cada sensor (acelerômetro/giroscópio) tem um conversor AD dedicado de 16 bits, de forma que 32 bits são necessários por amostra.
     - **Interface:** I2C
     - **Alimentação:** 2.375V-3.46V / 3,8 mA típico
