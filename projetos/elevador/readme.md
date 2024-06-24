@@ -13,7 +13,11 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 
 ## Arquivos Importantes
 
+Esquemático --  
+
 Lista de Componentes -- https://github.com/gaserra/ea075-2024.1/blob/99e6916becb7f16d3520f543a689d3d09d11a9cd/projetos/elevador/componentes.md
+
+PCB -- 
 
 ## Descrição do Projeto
 A ideia do projeto consiste em desenvolver um circuito controlador para elevadores, a fim de tomar decisões como a escolha de que o elevador deve subir, descer ou manter-se no lugar com base no andar atual, prioridade de chamada e situações de segurança, por exemplo. Nosso contexto de concepção desse projeto veio do motivo de que é algo muito útil e presente no dia a dia de pessoas, bem como factível de ser projetado durante o semestre da disciplina, permitindo nos desafiar com as possíveis variáveis de desenvolvimento sem sobrecarregar os esforços dentro do tempo estipulado.
