@@ -26,14 +26,11 @@ Sensor de Presença:
  alguém, o LED acende, permitindo que os moradores saibam que há movimento no ambiente monitorado. Além disso, o sistema permite que o usuário configure a ativação de um alarme sonoro ao detectar presença. Esta 
  funcionalidade é particularmente útil quando os moradores estão ausentes, oferecendo uma camada adicional de segurança ao alertar sobre movimentos inesperados.
 
- Sensor de Gás:
+ Sensor de Gás e Fumaça:
  O sensor de gás é projetado para detectar a presença de gases potencialmente perigosos no ambiente, como gás de cozinha. Quando o sensor detecta níveis elevados de gás, um alarme sonoro é imediatamente acionado 
  para alertar os moradores. Esta função é essencial para prevenir incidentes graves, como explosões ou intoxicações, garantindo a segurança dos habitantes da casa. O sensor é calibrado para identificar 
  concentrações de gás que ultrapassem limites seguros, proporcionando uma resposta rápida e segura em situações de risco.
 
-Sensor de Fumaça:
- O sensor de fumaça é fundamental para a detecção precoce de incêndios. Este sensor monitora continuamente os níveis de fumaça no ambiente e, ao identificar concentrações elevadas, aciona um alarme sonoro. A 
- rápida detecção de fumaça permite que os moradores tomem medidas imediatas para evacuar a área e chamar os serviços de emergência , minimizando danos e salvaguardando vidas. O sensor é sensível a variações súbitas na quantidade de fumaça, garantindo que qualquer início de incêndio seja rapidamente percebido.
 
  Sensor de Temperatura :
    O sensor de temperatura desempenha um papel crucial ao fornecer informações essenciais aos moradores. Ele monitora atentamente a temperatura de cada cômodo e apresenta, de forma clara e precisa, os resultados em um display LCD.
@@ -116,9 +113,8 @@ Para Detecção de Temperatura: As informações lidas pelo sensor são atualiza
 
 Sensor de Presença: Detecta movimento e envia sinais ao controlador central.
 
-Sensor de Gás: Monitora a concentração de gás no ambiente e envia um sinal ao controlador quando níveis perigosos são detectados.
+Sensor de Gás: Monitora a concentração de gás e fumaça no ambiente e envia um sinal ao controlador quando níveis perigosos são detectados.
 
-Sensor de Fumaça: Detecta a presença de fumaça e envia um sinal ao controlador ao identificar concentrações elevadas.
 
 Sensor de Temperatura: Monitora a Temperatura do ambiente e envia um sinal para controlador da informação lida.
 
@@ -138,9 +134,7 @@ Display de LCD: Apresenta de forma clara e instantânea a temperatura ambiente a
 
 Sensor de Presença para Microcontrolador: Envia um sinal digital quando detecta movimento.
 
-Sensor de Gás para Microcontrolador: Envia um sinal analógico  quando os níveis de gás são perigosos.
-
-Sensor de Fumaça para Microcontrolador: Envia um sinal Analógico quando a fumaça é detectada.
+Sensor de Gás e Fumaça para Microcontrolador: Envia um sinal analógico  quando os níveis de gás são perigosos.
 
 Sensor de Temperatura para Microcontrolador: Envia um sinal digital da temperatura lida.
 
@@ -168,8 +162,8 @@ O sensor escolhido é o MQ-2 possui alimentação recomendada de 5V DC, ele moni
 
 Sensor de Temperatura
 
-O sensor escolhido é o DHT22 (AM2302), um sensor de temperatura e umidade. Ele possui uma alimentação recomendada de 5V DC e sua saída é digital serial, com um total de 40 bits. Esses 40 bits são divididos em 8 bits para o valor integral da temperatura, 8 bits para o valor decimal da temperatura, 8 bits para o valor integral da umidade, 8 bits para o valor decimal da umidade e 8 bits de checksum para validar os dados. O tempo médio de comunicação com o MCU é de 5 ms.
-O DHT22 tem uma faixa de medição que vai de -40 a 125 graus Celsius e um tempo de leitura de 2 segundos. O principal motivo para a escolha deste sensor é sua precisão de ±5 graus, que atende aos requisitos do nosso projeto.
+O sensor escolhido é o  DS18B20, um sensor de temperatura . Ele possui uma alimentação recomendada de 5V DC e sua saída é digital, com uma resolução de 9 a 12 bits.
+O DS18B20 tem uma faixa de medição que vai de -55 a +125 graus Celsius. O principal motivo para a escolha deste sensor é sua precisão de ±0,5 graus nas medições de -10 a 80 graus Celsius, podendo ter uma resolução maior ao escolher a quantidade de bits de comunicação, que atende aos requisitos do nosso projeto, além de possuir o protocolo One-Wire, no qual é possível conectar varios sensores na mesma porta digital, podendo assim ser mais facil para espandir o projeto.
 
 #### Atuadores
 
@@ -179,6 +173,10 @@ Alarme Sonoro: um Alarme Sonoro será ativado em caso de possíveis invasões qu
 
 Display LCD: um Display será utilizado para exibir a temperatura medida pelos sensores de temperatura. Isso permitirá que os ocupantes monitorem a temperatura em diferentes áreas da casa em tempo real, o que pode ser útil para garantir o conforto e a segurança, especialmente em situações como controle de temperatura ambiente ou detecção de superaquecimento em determinadas áreas.
 
+
+#### Microcontrolador
+
+O microcontrolador escolhido é o ATmega2560
 
 
 
