@@ -10,6 +10,7 @@ url_arducam: https://e2e.ti.com/cfs-file/__key/communityserver-discussions-compo
 ## Componentes de conexão:
 * **Borne 3T (5,08mm)**: Escolhido por possuir o pitch de 5,08 mm especificamente, o que permitiu sua inclusão no projeto sem necessidade de desenvolver um footprint próprio. url: https://www.phoenixcontact.com/en-us/products/printed-circuit-board-terminal-mkkdsnh-15-3-508-1731831?type=pdf
 * **Borne 2T (5,08mm)**: Escolhido por possuir o pitch de 5,08 mm. url: https://www.phoenixcontact.com/en-us/products/printed-circuit-board-terminal-mkdsn-15-2-508-1729128?type=pdf
+* **Molex 105028-1001**: Conector utilizado para conectar a câmera infravermelha com o resto do circuito. Ela foi sugerida pelo fabricante na folha de dados da câmera. url: https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/salesdrawingpdf/105/105028/1050281001_sd.pdf
 
 ## Componentes Eletrônicos
 * **Resistor CRCW060322R1FKEA (22,1Ω)**: Escolhido por conta do seu tamanho (0603 pol). Sua classificação energética (100mW) não será atingida pelos circuitos que ele liga. url: https://www.vishay.com/docs/20035/dcrcwe3.pdf
@@ -30,6 +31,7 @@ url_arducam: https://e2e.ti.com/cfs-file/__key/communityserver-discussions-compo
 Todos os sites foram acessados em 24/06/2024.
 * *STM32H747AII6*: $18,74 url: https://br.mouser.com/ProductDetail/STMicroelectronics/STM32H747AII6?qs=vLWxofP3U2xKTIBLp63b7g%3D%3D
 * *Arducam GC2145*: $6,99 url: https://www.arducam.com/product/2mp-gc2145-color-dvp-camera-module-for-arduino-giga-r1-wifi-board/
+* *Molex 105028-1001*: $1,58 url: https://br.mouser.com/ProductDetail/Molex/105028-1001?qs=3OKVfsn1b5DSpyA99lGNjg%3D%3D
 * *FLIR Lepton 2.5*: $209.95 url: https://www.sparkfun.com/products/16465
 * *MAX485EESA+*: $6,78 url: https://br.mouser.com/ProductDetail/Analog-Devices-Maxim-Integrated/MAX487EESA%2b?qs=1THa7WoU59F%252BN4QTTVMhEw%3D%3D
 * *Borne 2T*: $0,77 url: https://br.mouser.com/ProductDetail/Phoenix-Contact/1729128?
