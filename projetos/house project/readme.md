@@ -173,6 +173,7 @@ O DS18B20 tem uma faixa de medição que vai de -55 a +125 graus Celsius. O prin
 Painel de LEDs: O sistema proposto consiste em um Painel de LEDs para identificação visual de movimentação em cada cômodo da casa, com base nas informações dos sensores de presença. Quando movimento é detectado em um determinado cômodo, os LEDs correspondentes a esse cômodo são acionados, permitindo uma visualização rápida da atividade em diferentes áreas da casa.
 
 Alarme Sonoro: um Alarme Sonoro será ativado em caso de possíveis invasões quando os donos não estiverem na residência, ou se for identificada uma alta concentração de fumaça ou gás de cozinha. Isso fornecerá um alerta audível para os ocupantes da casa ou para vizinhos, indicando uma situação de emergência.
+Teremos 2 diferentes alarmes sonoros, 1 será um buzzer piezoelétrico ativo, que será alimentado quando o sensor de gâs/fumaça detectar a presença de qualquer um, acionando um alarme sonoro e ativando um LED correspondente a onde ele detectou esse gâs.
 
 Display LCD: um Display será utilizado para exibir a temperatura medida pelos sensores de temperatura. Isso permitirá que os ocupantes monitorem a temperatura em diferentes áreas da casa em tempo real, o que pode ser útil para garantir o conforto e a segurança, especialmente em situações como controle de temperatura ambiente ou detecção de superaquecimento em determinadas áreas.
 
@@ -215,6 +216,8 @@ https://www.mouser.com/datasheet/2/321/605-00008-MQ-2-Datasheet-370464.pdf (Sens
 https://pdf1.alldatasheet.com/datasheet-pdf/view/227472/DALLAS/DS18B20.html (Sensor de Temperatura)
 
 https://components101.com/diodes/5mm-round-led (LED)
+
+https://www.usinainfo.com.br/buzzer/buzzer-ativo-5v-bip-continuo-pci-12mm-2988.html (Buzzer Piezoelétrico)
 
 https://ww1.microchip.com/downloads/en/DeviceDoc/doc2503.pdf (ATMega32)
 
