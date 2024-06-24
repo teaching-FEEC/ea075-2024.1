@@ -7,9 +7,9 @@ O presente projeto foi originado no contexto das atividades da disciplina de gra
 oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dra. Paula Dornhofer Paro Costa, do Departamento de Engenharia de Computação e Automação (DCA) da Faculdade de Engenharia Elétrica e de Computação (FEEC).
 
 > |Nome  | RA | Curso|
-> |--|--|--|
-> | Alice Nunes Oliveira  | 214181  | Eng. Elétrica|
-> | José Henrique Araújo de Oliveira  | 239753  | Eng. Elétrica|
+|--|--|--|
+ | Alice Nunes Oliveira  | 214181  | Eng. Elétrica|
+ | José Henrique Araújo de Oliveira  | 239753  | Eng. Elétrica|
 
 
 ## Descrição do Projeto
