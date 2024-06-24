@@ -10,7 +10,11 @@ O presente projeto foi originado no contexto das atividades da disciplina de gra
  | Victor Potença Macchini | 225205  | Eng.  de Computação |
 
 ## Arquivos Importantes
+[Esquemático em PDF](pdf/esquematico_DogFood.pdf)
 
+[Lista de Componentes](components.md)
+
+[PCB](pdf/pcb_DogFood.pdf)
 
 ## Descrição do Projeto
 Muitas vezes, pessoas que têm animais de estimação se encontram em uma situação onde precisam se ausentar de sua residência por alguns dias; nessas situações, a preocupação com a alimentação do pet é uma dor inevitável. O projeto é pensado para resolver esse problema,  garantindo a alimentação do animal de estimação de forma automática, regulada, segura e livre de desperdícios - evitando a dor de cabeça do dono com a gestão da ração.
