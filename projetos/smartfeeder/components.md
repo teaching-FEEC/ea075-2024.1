@@ -17,6 +17,8 @@ O HX711 é um amplificador de precisão para células de carga, de fácil integr
 ### TowerPro MG90S
 O TowerPro MG90S foi escolhido, pois oferece um bom equilíbrio entre força, precisão e tamanho compacto. Ele se integra bem com o ESP32 e pode ser controlado facilmente usando sinais PWM. Dentre suas qualidades podemos destacar:
 
+
+> |Nome  | RA |
 > |--|--|
 > | Torque Máximo  | 2.2 kg/cm (4.8V)  |
 > | Velocidade  | 0.11 s/60° (4.8V) |
