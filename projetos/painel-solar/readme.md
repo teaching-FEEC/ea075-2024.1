@@ -20,6 +20,8 @@ Lista de Componentes: https://github.com/nathaliagondo/ea075-2024.1/blob/main/pr
 
 PCB: https://github.com/nathaliagondo/ea075-2024.1/tree/main/projetos/painel-solar/images
 
+Modelo 3D: https://github.com/nathaliagondo/ea075-2024.1/tree/main/projetos/painel-solar/images
+
 
 ## Descrição do Projeto
 Com o crescente interesse por fontes de energia limpas e renováveis, a energia solar se destaca como uma opção viável tanto para residências quanto para indústrias. No entanto, a eficiência dos painéis solares fixos é limitada pela sua incapacidade de ajustar a inclinação em resposta às variações na incidência solar ao longo do dia. O projeto "Painéis Solares de Inclinação Adaptável" visa resolver este problema desenvolvendo um sistema embarcado capaz de automatizar o ajuste da inclinação dos painéis solares, garantindo uma captação ótima de energia durante todas as horas do dia.
