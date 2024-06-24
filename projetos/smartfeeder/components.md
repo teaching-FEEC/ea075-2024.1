@@ -14,3 +14,11 @@ O HX711 é um amplificador de precisão para células de carga, de fácil integr
 - [Link do datasheet - HX711](https://cdn.sparkfun.com/datasheets/Sensors/ForceFlex/hx711_english.pdf)
 - [Link de compra do HX711 + Load Cell](https://pt.aliexpress.com/item/1005006293517345.html?spm=a2g0o.detail.pcDetailTopMoreOtherSeller.1.7c8fOWFPOWFPRo&gps-id=pcDetailTopMoreOtherSeller&scm=1007.40050.354490.0&scm_id=1007.40050.354490.0&scm-url=1007.40050.354490.0&pvid=a9e49e7e-c76e-4265-a1fc-220758a4834b&_t=gps-id:pcDetailTopMoreOtherSeller,scm-url:1007.40050.354490.0,pvid:a9e49e7e-c76e-4265-a1fc-220758a4834b,tpp_buckets:668%232846%238110%231995&pdp_npi=4%40dis%21BRL%2117.44%214.99%21%21%2122.32%216.38%21%402101e9ec17192663794496234e2205%2112000036640070164%21rec%21BR%21%21AB&utparam-url=scene%3ApcDetailTopMoreOtherSeller%7Cquery_from%3A)
 ## Motor para dispersão de comida
+### TowerPro MG90S
+O TowerPro MG90S foi escolhido, pois oferece um bom equilíbrio entre força, precisão e tamanho compacto. Ele se integra bem com o ESP32 e pode ser controlado facilmente usando sinais PWM. Dentre suas qualidades podemos destacar:
+
+> |--|--|--|
+> | Torque Máximo  | 2.2 kg/cm (4.8V)  |
+> | Velocidade  | 0.11 s/60° (4.8V) |
+> | Tensão de Operação  | 4.8V - 6.0V |
+
