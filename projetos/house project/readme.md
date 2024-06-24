@@ -163,7 +163,10 @@ O sensor escolhido é o MQ-2 possui alimentação recomendada de 5V DC, ele moni
 Sensor de Temperatura
 
 O sensor escolhido é o  DS18B20, um sensor de temperatura . Ele possui uma alimentação recomendada de 5V DC e sua saída é digital, com uma resolução de 9 a 12 bits.
-O DS18B20 tem uma faixa de medição que vai de -55 a +125 graus Celsius. O principal motivo para a escolha deste sensor é sua precisão de ±0,5 graus nas medições de -10 a 80 graus Celsius, podendo ter uma resolução maior ao escolher a quantidade de bits de comunicação, que atende aos requisitos do nosso projeto, além de possuir o protocolo One-Wire, no qual é possível conectar varios sensores na mesma porta digital, podendo assim ser mais facil para espandir o projeto.
+O DS18B20 tem uma faixa de medição que vai de -55 a +125 graus Celsius. O principal motivo para a escolha deste sensor é sua precisão de ±0,5 graus nas medições de -10 a 80 graus Celsius, podendo ter uma resolução maior ao escolher a quantidade de bits de comunicação, que atende aos requisitos do nosso projeto, além de possuir o protocolo One-Wire, no qual é possível conectar varios sensores na mesma porta digital, podendo assim ser mais facil para espandir o projeto. 
+
+![image](https://github.com/EndlessLight9/ea075-2024.1-dolc/assets/165411886/28c4457c-86fc-479e-9f09-121f3273a25b)
+
 
 #### Atuadores
 
@@ -176,7 +179,7 @@ Display LCD: um Display será utilizado para exibir a temperatura medida pelos s
 
 #### Microcontrolador
 
-O microcontrolador escolhido é o ATmega2560
+O microcontrolador escolhido é o ATmega32, um microcontrolador AVR de 8 bits. Ele possui uma capacidade de memória flash de 32 KB, 2 KB de SRAM e 1 KB de EEPROM, oferecendo espaço suficiente para o armazenamento do código e dos dados necessários para o nosso sistema e inclusive um pouco mais caso for desejada expansão no futuro. Ele opera a uma velocidade de clock de até 16 MHz e suporta uma ampla gama de periféricos, incluindo conversores ADC de 10 bits, PWM, timers/counters, interfaces de comunicação SPI, USART e I2C. Com 32 linhas de I/O programáveis, ele permite a conexão de múltiplos sensores e atuadores, tornando-o altamente versátil para diversas aplicações. O ATmega32 também é conhecido por suas características de baixo consumo de energia, suporte a modos de economia de energia e ampla faixa de tensão de operação de 4.5V a 5.5V. A extensa documentação, bibliotecas disponíveis e a grande comunidade de desenvolvedores AVR facilitam o desenvolvimento e a implementação de novas funcionalidades.
 
 
 
@@ -209,9 +212,10 @@ https://components101.com/sensors/hc-sr501-pir-sensor (Sensor movimento hc-Sr 50
 
 https://www.mouser.com/datasheet/2/321/605-00008-MQ-2-Datasheet-370464.pdf (Sensor de Gás e Fumaça)
 
-https://www.sparkfun.com/datasheets/Sensors/Temperature/DHT22.pdf (Sensor de Temperatura)
+https://pdf1.alldatasheet.com/datasheet-pdf/view/227472/DALLAS/DS18B20.html (Sensor de Temperatura)
 
 https://components101.com/diodes/5mm-round-led (LED)
 
+https://ww1.microchip.com/downloads/en/DeviceDoc/doc2503.pdf (ATMega32)
 
 
