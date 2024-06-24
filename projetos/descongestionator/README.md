@@ -13,9 +13,9 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 
 ## Arquivos Importantes
 
-[Modelo 3D do projeto](3d_models/3d_models.pdf)
+[Modelo 3D do projeto](images/3d_models.pdf)
 
-> [Esquemático em PDF](link para imagens/pdf esquemático)
+[Esquemático em PDF](pdf/esquema_eletrico.pdf)
 
 [Lista de Componentes](components.md)
 
@@ -137,11 +137,11 @@ Analisando entre as variações, a escolha deve ser feita com base no número de
 
 Pinagem das versões com 8 e 14 pinos
 
-![Pinos ATtiny](imgs/pinout-attiny.png)
+![Pinos ATtiny](images/pinout-attiny.png)
 
 Tabela de multiplexação dos pinos
 
-![Multiplexao de pinos ATtiny](imgs/io-multiplex-attiny.png)
+![Multiplexao de pinos ATtiny](images/io-multiplex-attiny.png)
 
 Já a versão de 14 pinos possibilita que sejam acessados os módulos USART, I2C e GPIO, que completa as interfaces necessárias. Quanto à memória, de acordo com nossas estimativas, a versão com 128 B de RAM e 2 kB de memória Flash deve ser suficiente. Portanto, definimos a microcontroladora ATtiny204, que tem um custo de apenas R$ 3. 
 

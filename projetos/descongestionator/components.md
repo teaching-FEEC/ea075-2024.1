@@ -20,11 +20,11 @@ Dos dispositivos e circuitos integrados inseridos na tabela, dois deles não ser
 
 - ELM327 é o circuito integrado responsável pelo gerenciamento da comunicação com a porta OBD2, no entanto é necessário um conector para se encaixar diretamente nesta porta. Optamos então por um [produto](https://pt.aliexpress.com/item/1005004078281314.html) que contém já o chip e possibilita a comunicação por uma interface USB, desta também será obtida a energia necessária para ligar os outros componentes do sistema.
 
-![Produto ELM327, interface USB](imgs/produto_elm327.png)
+![Produto ELM327, interface USB](images/produto_elm327.png)
 
 - O chip da bússula de 3 eixos exige um circuito relativamente complexo para ser conectado ao resto do circuito, em parte devido ao seu funcionamento em 1.8V. Optamos por utilizar um [produto](https://pt.aliexpress.com/item/1005006291063452.html) que implementa o circuito necessário. Em nosso sistema, há um conector para um dispositivo como esse.
 
-![Circuito com chip da bússula de 3 eixos](imgs/produto_bussula.png)
+![Circuito com chip da bússula de 3 eixos](images/produto_bussula.png)
 
 ### Energização do sistema
 
