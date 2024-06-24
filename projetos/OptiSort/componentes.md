@@ -23,7 +23,7 @@ url_arducam: https://e2e.ti.com/cfs-file/__key/communityserver-discussions-compo
 * **Capacitor MLASE105AB5225KFNA01 (2,2uF)**: Escolhido por ter encapsulamento SMD, pelo seu tamanho (0402 pol) e por suportar as tensões com as quais ele terá contato. url: https://br.mouser.com/datasheet/2/396/ML_mlcc_all_e-3369844.pdf
 * **Capacitor JMK105BBJ475MV8F (4,7uF)**: Escolhido por ter encapsulamento SMD, pelo seu tamanho (0402 pol). Este componente tem como regime de tensão 6,3V. url: https://br.mouser.com/datasheet/2/396/mlcc06_hq_AUTO_e-1901145.pdf
 * **Capacitor MEASJ105CB5106MF1A01 (10uF)**: Escolhido por ter encapsulamento SMD, pelo seu tamanho (0402 pol). Interessantemente, este capacitor tem como foco ser usado em dispositivos móveis. url: https://br.mouser.com/datasheet/2/396/Taiyo_Yuden_2_8_2024_MEASJ105CB5106MF1A01_SS-3395943.pdf
-* **Diodo 1N4148W-7-F**: Escolhido para ser usado com diodo flyback, ele aguenta a tensão de operação do solenoide (12V). Seu empacotamento é url: https://br.mouser.com/datasheet/2/115/ds30086-3214660.pdf
+* **Diodo 1N4148W-7-F**: Escolhido para ser usado com diodo flyback, ele aguenta a tensão de operação do solenoide (12V). Seu empacotamento é SOD123. url: https://br.mouser.com/datasheet/2/115/ds30086-3214660.pdf
 * **Transistor MOS FQP30N06L**: Escolhido para realizar o chaveamento do sinal que controla o solenoide do pistão pneumático. Sua tensão de ativação (2,0V), que é baixa o suficiente como para ser controlado mediante lógica TTL. url: https://br.mouser.com/datasheet/2/308/1/FQP30N06L_D-2314160.pdf
 
   
