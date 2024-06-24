@@ -98,12 +98,12 @@ Comunicação:
 ### Especificação Estrutural
 
 #### Elementos do Sistema
-- [Microcontrolador Atmega48P](projetos/tennistracker/datasheets/ATmega48P_datasheet.pdf)
+- [Microcontrolador Atmega48P](datasheets/ATmega48P_datasheet.pdf)
     - Descrição: é um microcontrolador de baixa potência (48P é a versão mais econômica) de 8 bits, com arquitetura Harvard e instruções RISC. O interesse nesse microcontrolador para este projeto é a presença de módulos para comunicação I2C e SPI, necessários para interface com sensores e memória externa, além de sua ampla disponibilidade. Além disso, também possui um módulo de timer que pode ser configurado como RTC (real time counter, configurável no módulo Timer/Counter2), que é útil para medição do tempo nas partidas de tênis. 
     - **Interfaces necessárias:** SPI (pinos PORTB: PB2 = SS, PB3 = MOSI, PB4 = MISO, PB5 = SCK) e _ 2-wire Serial Interface_, que é compatível com o protocolo I2C (pinos PORTC: PC4 = SDA, PC5 = SCL)
     - **Outros módulos úteis:** Timer/Counter2 configurável como RTC (real time counter), para registro de tempo.
     - **Alimentação:** 1.8 - 5.5V (pretende-se usar alimentação em 2 V - segundo o datasheet, nesta tensão, a corrente típica necessária é: 0,3 mA (funcionando) ou 0,06 mA (idle))
-- [Acelerômetro e Giroscópio MPU-6050](projetos/tennistracker/datasheets/MPU-6000-Datasheet1.pdf)
+- [Acelerômetro e Giroscópio MPU-6050](datasheets/MPU-6000-Datasheet1.pdf)
     - **Descrição:** sensor de movimento de 6 eixos (acelerômetro de 3-eixos + giroscópio de 3 eixos) com processamento embutido. A interface de comunicação do disposito é a I2C e a velocidade máxima do barramento de comunicação é 400kHz, atendendo os requisitos do projeto (taxa de amostragem: 1kHz). Cada sensor (acelerômetro/giroscópio) tem um conversor AD dedicado de 16 bits, de forma que 32 bits são necessários por amostra.
     - **Interface:** I2C
     - **Alimentação:** 2.375V-3.46V / 3,8 mA típico
@@ -114,27 +114,33 @@ Comunicação:
     - **Armazenamento mínimo**: ~100Mb por hora de treino
     - **Velocidade mínima de escrita**: ~32kb/s
 - [**Bateria LR44**](datasheets/bateria_lr44.pdf) + [**Contatos elétricos para bateria**](https://pt.aliexpress.com/item/1005003653489918.html?src=google&src=google&albch=shopping&acnt=768-202-3196&slnk=&plac=&mtctp=&albbt=Google_7_shopping&gclsrc=aw.ds&albagn=888888&isSmbAutoCall=false&needSmbHouyi=false&src=google&albch=shopping&acnt=768-202-3196&slnk=&plac=&mtctp=&albbt=Google_7_shopping&gclsrc=aw.ds&albagn=888888&ds_e_adid=&ds_e_matchtype=&ds_e_device=c&ds_e_network=x&ds_e_product_group_id=&ds_e_product_id=pt1005003653489918&ds_e_product_merchant_id=109139790&ds_e_product_country=BR&ds_e_product_language=pt&ds_e_product_channel=online&ds_e_product_store_id=&ds_url_v=2&albcp=19639392923&albag=&isSmbAutoCall=false&needSmbHouyi=false&gad_source=1&gclid=CjwKCAjw7NmzBhBLEiwAxrHQ-fnqVuuvNvoQg-XtbdGzZpf212cEHeSA4qzC3V2jcb424mBHsuvUrxoCtm0QAvD_BwE&aff_fcid=61534da5cb624ba9b464e5f80048f2dc-1719065829563-09911-UneMJZVf&aff_fsk=UneMJZVf&aff_platform=aaf&sk=UneMJZVf&aff_trace_key=61534da5cb624ba9b464e5f80048f2dc-1719065829563-09911-UneMJZVf&terminal_id=90e96157b48e4cc0b4ec8227361a3fb2&afSmartRedirect=y)
-    - **Descrição**: A bateria LR44 é uma bateria do tipo botão com dimensões de 11.36mm(d)/5.4mm. Serão usadas três baterias em série, para se obter 4.5V de alimentação. Sua tensão de _cut-off_ é de 1.2V, de forma que a menor tensão fornecida na alimentação será 3.6V. Sua capacidade de corrente é suficiente para o projeto, uma vez que é previsto consumo menor que 170mA (a 3.3V) quando todos os componentes estão ativos.
-    - **Tensão disponível:**: 3 X 1.5 = 4.5 V
+    - **Descrição**: A bateria LR44 é uma bateria do tipo botão com dimensões de 11.36mm(d)/5.4mm. Serão usadas quatro baterias em série, para se obter 6V de alimentação. Sua tensão de _cut-off_ é de 1.2V, de forma que a menor tensão fornecida na alimentação será 4.8V. Sua capacidade de corrente é suficiente para o projeto, uma vez que é previsto consumo menor que 110mA (a 6V) quando todos os componentes estão ativos.
+    - **Tensão disponível:**: 4 X 1.5 = 6 V
     - **Capacidade**: 130 mAh
-
+- [**Regulador de tensão - saída fixa 3.3V**](datasheets/regulador_LM1117.pdf)
+    - **Descrição**: Cada componente escolhido possui uma faixa de tensão de alimentação distinta. No entanto, o valor de 3.3V é comum a todos. Assim, é necessário um regulador de tensão step-down para converter a tensão da bateria de 6V para uma saída estável de 3.3V, robusta também à descarga da bateria. O LM1117 foi escolhido por ser simples de ser utilizado e por ter a faixa de tensão de entrada desejada (tensão de dropout típica: 1.1V).
+    - **Tensão de entrada**: ~ 4.4 - 15V
+    - **Tensão de saída:**: 3.3V
+    
 #### Circuitos de Interface
-  A bateria deve alimentar todo o dispositivo atravez de um power rail de onde podem derivar se necessário reguladores de tensão para nivelar a tensão de acordo com cada dispositivo. O LED não será conectado a bateria e sim diretamente a uma das saídas digitais do microcontrolador. O conversor AD interno do microcontrolador será utilizado para monitorar a tensão de alimentação de forma que com uma lógica programada o LED começe a piscar quando a tensão abaixar de um certo valor, indicando que a bateria está com baixa capacidade remanescente.
+  Será apenas necessário o regulador de tensão LM1117, para converter a tensão de 6V da bateria para 3.3V. Também será necessária a conversão analógico-digital dos valores de tensão da bateria e valores do sensor de movimento, mas o microcontrolador e o MPU-6050 já possuem conversores internamente. Por fim, serão necessário resistores de _pull-up_ no barramento I2C entre o microcontrolador e o sensor de movimento.
 
 #### Restrições Físicas
   O dispositivo deve ter dimensões de no máximo 4cmX4cmX0,5cm para que sua fixação na raquete não comprometa as caracteristicas da raquete. Sua fixação deve ser firme o suficiente para suportar impactos a altas velocidades, por isso seu pedo também deve ser reduzido, idealmente por volta de 5 a 10g. Considerando que o disitivo não vai operar com altas correntes justamente pela sua caracteristica de paixa potência, a dissipação térmica não será um problema.
 
 ### Especificação de Algoritmos 
 
-O programa inicia com a configuração dos módulos do microcontrolador e seus pinos: escolha da fonte de sinais de relógio, funções dos pinos e fluxo do sinal (entrada ou saída, caso função seja GPIO), configuração dos timers e habilitação das interrupções por overflow dos timers.
+- O programa inicia com a configuração dos módulos do microcontrolador e seus pinos: escolha da fonte de sinais de relógio, funções dos pinos e fluxo do sinal (entrada ou saída, caso função seja GPIO), configuração dos timers e habilitação das interrupções por overflow dos timers.
 
-O timer1 é configurado com um período de contagem de 1ms (f=1kHz) e é habilitada sua interrupção a cada overflow do contador. Depois da configuração básica, o programa fica em um loop, aguardando chamadas da rotina de interrupção do timer1. Dentro desta rotina, chamada a cada 1ms, é feita a conversão do ADC0 (tensão da bateria) e a leitura e armazenamento dos dados do sensor de movimento. 
+- O timer1 é configurado com um período de contagem de 1ms (f=1kHz) e é habilitada sua interrupção a cada overflow do contador. Depois da configuração básica, o programa fica em um loop, aguardando chamadas da rotina de interrupção do timer1. Dentro desta rotina, chamada a cada 1ms, é feita a conversão do ADC0 (tensão da bateria) e a leitura e armazenamento dos dados do sensor de movimento. 
 
-O valor binário lido ('ADC_result') pode ser convertido para valor de tensão ('battery_level') com a equação a seguir: "battery_level = (ADC_result/1024)*(3.3*22/32);"
+- O valor binário lido ('ADC_result') pode ser convertido para valor de tensão ('battery_level') com a equação a seguir: "battery_level = (ADC_result/1024)*(3.3*22/32);"
 
-Essa equação leva em conta que: (i) ADC é de 10 bits e, portanto, o valor máximo é 1024; (ii) VCC = 3.3V; (iii) são usados resistores de 10kOhm e 22kOhm no divisor de tensão na entrada do ADC. 
+- Essa equação leva em conta que: (i) ADC é de 10 bits e, portanto, o valor máximo é 1024; (ii) VCC = 3.3V; (iii) são usados resistores de 10kOhm e 22kOhm no divisor de tensão na entrada do ADC. 
 
-Se a bateria tiver tensão menor que BATTERY_THRESHOLD=3.9V (aproximadamente 15% de capacidade restante), levanta-se a flag 'led_blink_flag', indicando que o LED deve piscar. O LED pisca com período de 500ms (toggle a cada 250ms). Como o timer1 já tem período de 1ms, a cada overflow seu, é incrementada a variável 'pisca LED' que, quando igual a 250 (250ms decorridos), ocasiona o toggle do LED.
+- Se a bateria tiver tensão menor que BATTERY_THRESHOLD=3.9V (aproximadamente 15% de capacidade restante), o LED deve piscar. O LED pisca com período de 500ms (toggle a cada 250ms). Como o timer1 já tem período de 1ms, a cada overflow seu, é incrementada a variável 'blink_counter' que, quando igual a 250 (250ms decorridos), ocasiona o toggle do LED.
+
+- Fluxograma:
 
 [![fluxchart_int.svg editável](/projetos/tennistracker/images/fluxchart_int.svg)](https://app.diagrams.net/#Hshen-n%2Fea075-2024.1%2Fmain%2Fprojetos%2Ftennistracker%2Ffluxchart_int.drawio#%7B%22pageId%22%3A%22C5RBs43oDa-KdzZeNtuy%22%7D)
 
