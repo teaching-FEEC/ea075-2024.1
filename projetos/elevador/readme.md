@@ -102,7 +102,7 @@ Para a gestão de fila dos andares, o projeto se baseia no seguinte fluxograma:
 
 Os eventos relacionados à abertura e ao fechamento de portas, bem como detecção de falha, sobrecarga e pessoa entre as portas são tratados no fluxograma da seção "_Descrição Estrutural do Sistema_", e tais eventos se relacionam diretamente com este acima no que resumimos pela tomada de decisão "Verificações de segurança ok?". Dessa forma, o algoritmo como um todo deve tratar dos dois fluxogramas, sendo que o primeiro diagrama se encaixa dentro do segundo para simplificarmos a visualização.
 
-Ainda não temos o tamanho de memória necessária bem definido, porém visto que projetaremos um controle para elevadores com até 4 andares (suficientemente representados por 2 bits), usando 2 sensores de nível por andar (mais 8 bits para monitoramento), e outras funções de controle como abertura das portas, detecção de movimento, etc, estimamos que seria necessário em torno de 16 bits para tal.
+O microcontrolador apresenta memórias integradas, ROM, Flash e SRAM, que satisfazem o projeto. Ele trabalha com palavras de 32 bits, assim é mais que sufiente para nosso projeoto, visto que projetaremos um controle para elevadores com até 4 andares (suficientemente representados por 2 bits), usando 2 sensores de nível por andar (mais 8 bits para monitoramento), e outras funções de controle como abertura das portas, detecção de movimento, etc, estimamos que seria necessário em torno de 16 bits para tal. O microcontrolador possibilita o uso de memórias externas, porém visto a demanda do projeto, não há necessidade da utilização.
 
 ## Referências
 http://www.electrical-knowhow.com/2012/04/elevator-control-system.html
