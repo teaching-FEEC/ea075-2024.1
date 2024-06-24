@@ -20,7 +20,7 @@ Lista de Componentes: https://github.com/nathaliagondo/ea075-2024.1/blob/main/pr
 
 PCB: https://github.com/nathaliagondo/ea075-2024.1/tree/main/projetos/painel-solar/images
 
-Modelo 3D: https://github.com/nathaliagondo/ea075-2024.1/tree/main/projetos/painel-solar/images
+Modelo 3D: https://github.com/nathaliagondo/ea075-2024.1/tree/main/projetos/painel-solar/3d_models
 
 
 ## Descrição do Projeto
