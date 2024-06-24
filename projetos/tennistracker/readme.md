@@ -126,7 +126,8 @@ Comunicação:
 
 ### Especificação de Algoritmos 
 
-Quando no estado "LIGADO", o dispositivo deve atuar conforme o esquema abaixo. 
+-  Amostragem o sensor de movimento
+    - a saída do sensor será conectada
 
 [![fluxograma_2.svg editável](/projetos/tennistracker/images/fluxograma_2.svg)](https://app.diagrams.net/#Hshen-n%2Fea075-2024.1%2Fmain%2Fprojetos%2Ftennistracker%2Ffluxograma_2.svg#%7B%22pageId%22%3A%22C5RBs43oDa-KdzZeNtuy%22%7D)
 
