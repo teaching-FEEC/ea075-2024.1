@@ -13,7 +13,6 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 > | Luciano Cardoso Ferreira Filho     | 240276  | Eng. Elétrica|
 
 ## Arquivos Importantes
-[Esquematico.pdf](https://github.com/user-attachments/files/15963672/House_Project.pdf)
 
 [Placa PCB e esquematico](https://github.com/EndlessLight9/ea075-2024.1-dolc/tree/main/projetos/house%20project/pdf)
 
