@@ -9,6 +9,11 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 | Henrique Stumm Rocha  | 239694  | Eng. Elétrica|
 | Melvin Gustavo Maradiaga Elvir  | 185068  | Eng. Elétrica|
 
+## Arquivos Importantes
+![Esquematico_PDF](./pdf/schematic.pdf)
+![Lista_Componentes](./componentes.md)
+![PCB](./pdf/pcb_layout.pdf)
+
 ## Descrição do Projeto
 ### Contexto Gerador e Motivação
 Todo ano a ONU realiza um estudo, nomeado _Food Waste Index Report_, onde reportam a produção global de alimento e analizam o desperdiço alimentar gerado nos níveis de distribuição e consumidor final. Na versão mais recente [1] apresentaram-se os resultados oriundos de uma pesquisa realizada no Rio de Janeiro (pg.20-21) coletando dados de 102 lares distintos de díversos posicionamentos socio-econômicos. Nele, reportaram que um 39% do desperdiço era de alimentos ainda comestíveis, e estimaram uma produção anual de 77kg/capita de resíduo desta classe (classe II).  
