@@ -1,6 +1,6 @@
 # Optisort: Componentes
 ## Componentes Principais
-* **STM32H747AII6 (UFGBA169)**: O microcontrolador utilizado dentro deste projeto, escolhido pelos mótivos apresentados na descrição estrutural. url: https://www.alldatasheet.com/datasheet-pdf/pdf/1277966/STMICROELECTRONICS/STM32H747AIT6TR.html
+* **STM32H747AII6 (UFGBA169)**: O microcontrolador utilizado dentro deste projeto. Com custo de &#36;18.74 por unidade, ele é competitivo com outras plataformas que seriam usadas para aplicações de IA, como o Raspberry Pi 4 (&#36;35), e está no estado da arte do processamento em baixo consumo de energia, com apenas 2.95 μA de corrente utilizados em Standby, 1 Mbyte de RAM e 480 MHz em uma unidade de processamento 32 bits. url: https://www.alldatasheet.com/datasheet-pdf/pdf/1277966/STMICROELECTRONICS/STM32H747AIT6TR.html
 * **GC2145**: Câmera de luz visível. Foi escolhido utilizar a versão retirada do módulo Arducam-GC2145 pelo fato que ela fornece uma pinagem mais organizada e pronta para ser acoplada na nossa placa.
 url_camera: https://www.uctronics.com/download/Datasheet/Arducam-GC2145.pdf
 url_arducam: https://e2e.ti.com/cfs-file/__key/communityserver-discussions-components-files/968/GC2145-CSP-DataSheet-release-V1.0_5F00_20131201.pdf
