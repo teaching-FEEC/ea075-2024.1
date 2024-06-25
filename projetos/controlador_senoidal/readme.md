@@ -12,17 +12,22 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 | Gabriel Tavares Coluccini Francisco  | 239640  | Eng. Elétrica|
 | João Pedro Souza Pascon  | 239733  | Eng. Elétrica|
 
+
+## Arquivos Importantes
+
+projetos/controlador_senoidal/componentes.md
+
 ## Descrição do Projeto
 
-No atual contexto macroeconômico global, marcado por cortes nas taxas de juros, tanto do FED quanto BC, e a busca por oporunidades de investimento mais rentáveis, surge um cenário de oportunidades significativas para os empreendedores e investidores. É esperado que, nos próximos anos, o contexto ecônomico se recupere dos danos causados pela pandemia do COVID 19 e que o custo do capital diminua, impulsionando novos projetos de engenharia, novas oportunidades de negócios e novos setores da economia.
+No atual contexto macroeconômico global, marcado por cortes nas taxas de juros, tanto do FED quanto do BC, e a busca por oportunidades de investimento mais rentáveis, surge um cenário de oportunidades significativas para os empreendedores e investidores. É esperado que, nos próximos anos, o contexto econômico se recupere dos danos causados pela pandemia do COVID 19 e que o custo do capital diminua, impulsionando novos projetos de engenharia, novas oportunidades de negócios e novos setores da economia.
 
-É dentro desse cenário promissor que visamos o projeto de um Gate Driver, cuja função principal é comandar motores e tratar energia elétrica. Observe a versatilidade do dispositivo, dado a pungência do uso de motores e energia elétrica. No contexto de novas oportunidades, podemos destacar os emergentes mercados de transição energética e eletrificação veicular, além das antigas indústrias já bem consolidadas que utilizam esses equipamentos para controle de motores.
+É dentro desse cenário promissor que visamos o projeto de um Gate Driver, cuja função principal é comandar motores e tratar energia elétrica. Observe a versatilidade do dispositivo, dada a importância do uso de motores e energia elétrica. No contexto de novas oportunidades, podemos destacar os emergentes mercados de transição energética e eletrificação veicular, além das antigas indústrias já bem consolidadas que utilizam esses equipamentos para controle de motores.
 
-Em relação ao setor de automação, temso em mente os desafios de mercado a serem enfrentados, visto que este setor é dominado por gigantes multinacionais (como Siemens; RockWell; ABB e a brasileira WEG) com produtos muito bem estabelecidos e alto poder de investimentos.
+Em relação ao setor de automação, temos em mente os desafios de mercado a serem enfrentados, visto que este setor é dominado por gigantes multinacionais (como Siemens; RockWell; ABB e a brasileira WEG) com produtos muito bem estabelecidos e alto poder de investimentos.
 
 No entanto, apesar dos desafios, destacamos as oportunidades apresentadas pela transição energética e pela eletrificação veicular. Setores diversos, desde usinas sucroalcooleiras (Raízen e São Martinho), empresas de celulose como Klabin e Suzano, além de novas áreas, como novos parques eólicos (muito proeminentes nas regiões sul e nordeste); parques solares; novas usinas de etanol de milho e as empresas geradoras, transmissoras e distribuidoras de energia (CPFL e NeoEnergia) estão buscando soluções eficazes para o controle de motores e sistemas de energia.
 
-Um catalizador importante para a tese são as novas tecnologias de MOSFETs utilizando os materiais WBG – como SiC e GaN – que  emergem como um ponto de inflexão no mercado, oferecendo vantagens substanciais, ainda que em estágio de desenvolvimento de pesquisa, uma vez que essa tecnologia ainda não está bem consolidada e em constante avanço. O aprofundamento em nuances destes materiais alongaria o corpo deste texto para o projeto específico desta disciplina, mas, é preciso ter consciência da importância destes materiais para a viabilização econômica do dispositivo.
+Um catalizador importante para a tese são as novas tecnologias de MOSFETs utilizando os materiais WBG – como SiC e GaN – que  emergem como um ponto de inflexão no mercado, oferecendo vantagens substanciais, ainda que em estágio de desenvolvimento de pesquisa, uma vez que essa tecnologia ainda não está bem consolidada e está em constante avanço. O aprofundamento em nuances destes materiais alongaria o corpo deste texto para o projeto específico desta disciplina, mas, é preciso ter consciência da importância destes materiais para a viabilização econômica do dispositivo.
 
 
 
@@ -97,6 +102,12 @@ Nesse caso, temos, juntamente com o MOSFET, o componente mais importante do proj
 Em relação aos LEDs, como mostra a imagem abaixo, podemos nos embasar nos LEDs imbutidos na própria placa. Usaremos os pinos PTB18, PTB19, PTD1.
 ![image](https://github.com/jppascon/ea075-2024.1/assets/163413469/86a1ed5c-e399-4828-b749-14b842f9e5fd)
 
+Em relação aos  pinos a serem utilizados serão: PTE20, PTE21, PTE22, PTE23. Configurados em ADC.
+![image](https://github.com/jppascon/ea075-2024.1/assets/163413469/b99420d2-144f-40ab-bdbf-a6a1c7c82111)
+
+![image](https://github.com/jppascon/ea075-2024.1/assets/163413469/d99a68dc-318b-41c5-8954-af230b85a955)
+
+
 Para o output, devemos utilizar um pino GPIO ou PWM. A decisão ainda está em aberto, para manter conformidade com o código.
 
 ### Sensor de Temperatura
@@ -123,6 +134,15 @@ Em relação aos capacitores, para as demandas do projeto foram escolhidos dois 
 
  Para mensurar a tensão e ajustar a frequência no projeto, foi optado pela escolha do potenciômetro Bourns 3296W Series, sua escolha foi motivada por diversos fatores, como precisão e resolução, visto que oferecem uma precisão excepcional, permitindo ajustes finos de tensão e frequência. Sua capacidade de múltiplas voltas oferece uma resolução alta o suficiente para garantir ajustes precisos, ou seja, ideal para aplicações em que a precisão é essencial. Além disso, apresentam alta durabilidade e estabilidade a longo prazo, garantindo que o ajuste realizado permaneça consistente ao longo do tempo, mesmo em ambientes com condições adversas ou sujeitos à vibrações. 
  Por fim, embora potênciometros de alta precisão geralmente tenham um cusco mais elevado, a série Bourns 3296W oferece uma ótima relação de custo-benefício, tornando-o uma escolha econômica para a aplicação desejada, além do fato de serem altamente disponíveis em distribuidores de componentes eletrônicos, facilitando sua aquisição e garantindo a disponibilidade para o projeto. Portanto, é uma escolha sólida ao analisarmos os fatores supracitados.
+
+## Futuras melhorias
+
+Melhoria e desenvolvimento contínuo são características que nós valorizamos e acreditamos para a engeharia de produtos. Dessa forma, gostaríamos de pontuar os próximos passos a serem desenvolvidos a fim de dar forma ao projeto. 
+Um circuito de bootstrap é necessário para a implementação desse cirucito, ele é responsápor por viabilizar um referencial  de tensão para o MOSFET superior  do  push-pull, visto que a tensão entre gate e source não tem o referencial no terra
+O algoritmo fornecido, é uma ótima base para a configuração do microcontrolador e da lógica. Apesar disso, um controle de frequência é difícil de ser aplicado nesse caso.
+O resistor shunt utilizado para medir a corrente, mede apenas a corrente que passa pelo source do MOSFET inferior da meia ponte, e seria interessante, para projetos mais elaborados, aferir a corrente em outros pontos também.
+Sobre a parte mecânica, que apesar de extremamente importante, foi quase completamente ignorada nesse projeto. Em futuras melhorias, é preciso dimensionar um dissipadora de calor a uma posição correta para o sensor de temperatura.
+O processamento de dados e a inteligência artificial cresceram enormemento nos últimos anos. Com isso, os sensores e a coleta de dados nas plantas industriais se tornam atitudes críticas a fim de predizer falhas e estimar manutenção em ativos. Diversas empresas (Tractian, WEG, Emerson Electric) já estão vendendo produtos e soluções do gênero; sensores a fim de coletar esses dados por telemetria e analisá-los por inteligência artificial (clientes: Petrobras, Shell). Destarte, um diferencial no produto é não só a coleta desses dados, mas um inversor integrado e em um abiente de tratamento de dados integrado se mostra uma atitude primordial na competição de mercado, uma grande melhoria para o projeto.
 
 ## Referencias
 
