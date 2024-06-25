@@ -92,6 +92,7 @@ A fila também tem um papel importante, conforme explicado na sessão "Especific
 
 ### Especificação Estrutural
 
+
 O projeto possui dois atuadores, ambos motores CC, para controle de abertura e fechamento das portas do elevador e para subir e descer a cabine. O motor utilizado para o deslocamento vertical da cabine apresenta bastante torque, portanto, sua potência é alta. Com isso, a alimentação é feita utilizando um conversor AC/DC RAC20-K, que entrega 48V para alimentação do circuito do motor. O controle do sentido e da velocidade  é feito na saída do retificador utilizando uma ponte H L298N, conectada também ao microcontrolador, que consegue fazer o controle de ambos os motores paralelamente. 
 
 A ideia do controle da parada correta da cabine do elevador é utilizar dois sensores fotoelétricos em cada andar (um para a parte inferior do piso e outro para a parte superior), sendo que o modelo em consideração é o E3Z-F da Omron. Assim, ao passar pelo sensor, o sistema saberá em que andar está a cabine e o momento correto para iniciar a frenagem. Outra importante função desse periférico é estacionar a cabine de forma extremamente precisa, alinhando o piso do elevador com o andar. Com as informações do andar, um display de sete seguimentos mostrará ao passageiro o andar que a cabine está, o modelo utilizado é o D1X8K-14BL. Os dados são enviados como dois bits, que são decodificados pelo 74LS48, e em seguida enviados para o display.
@@ -102,11 +103,13 @@ O elevador irá se locomover por quatro andares, assim, teremos quatro push butt
 
 O microcontrolador escolhido para o sistema foi RP2040 desenvolvido pela Raspbarry Pi. A escolha ocorreu devido à quantidade de portas necessárias para todo o controle do sistema, e como o projeto não precisa uma compexidade alta, este microcontrolador atende os requisitos, além de possuir um custo acessível. Para a comunicação serial, a comunicação do tipo I2C foi escolhida, pois não há necessidade de uma alta velocidade de comunicação que vença em detrimento da menor complexidade.
 
+
 ### Especificação de Algoritmos 
 Para a gestão de fila dos andares, o projeto se baseia no seguinte fluxograma:
 ![Fila Elevador](https://github.com/andreglz/ea075-2024.2/assets/106714171/826400fe-9c3d-46b8-b4a3-8262b10adffc)
 
 Os eventos relacionados à abertura e ao fechamento de portas, bem como detecção de falha, sobrecarga e pessoa entre as portas são tratados no fluxograma da seção "_Descrição Estrutural do Sistema_", e tais eventos se relacionam diretamente com este acima no que resumimos pela tomada de decisão "Verificações de segurança ok?". Dessa forma, o algoritmo como um todo deve tratar dos dois fluxogramas, sendo que o primeiro diagrama se encaixa dentro do segundo para simplificarmos a visualização.
+
 
 O microcontrolador apresenta memórias integradas, ROM, Flash e SRAM, que trabalham com palavras de 32 bits. Visto que projetaremos um controle para elevadores com até 4 andares (suficientemente representados por 2 bits), usando 2 sensores de nível por andar (mais 8 bits para monitoramento), e outras funções de controle como abertura das portas, detecção de movimento, etc, estimamos que seria necessário em torno de 16 bits para tal, portanto o microcontrolador satisfaz a demanda, não necessitando da utilização de uma memnória externa.
 
