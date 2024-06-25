@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "components_kicad")(type "KiCad")(uri "D:/Projetos/ea075-smooth-highways/projetos/descongestionator/components_kicad")(options "")(descr ""))
+)
