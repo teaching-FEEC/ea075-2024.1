@@ -18,7 +18,7 @@ https://github.com/thiagomasanori/ea075-2024.1/blob/8f103071f3dedd26249b199364f3
 (![Alt](images/lista_componentes)
 
 
-(![Alt](images/3d e 2d.pdf)
+(![Alt](images/3d_e_2d.pdf)
 
 ## Descrição do Projeto
 
