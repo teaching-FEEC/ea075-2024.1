@@ -24,7 +24,7 @@ Com esses dados espera-se ter apontado que Brasil gera bastante desperdiço alim
 O OptiSort tem como objetivo realizar a classificação do desperdiço em centros de coleta alimentar (como bancos de alimentos) mediante a utilização de técnicas avançadas de visão computacional e aprendizado de máquina, sendo capaz de armazenar e disponibilizar os dados coletados ao longo da sua operação para o usuario.
 Mediante sua implementação espera-se agilizar a classificação alimentar dentro dos locais onde ele for instalado, espera-se diminuir a perda de alimentos oriunda do erro humano dentro da classificação e espera-se apoiar o registro de desperdiço alimentar dentro da cidade.
 
-> Levantar valor econômico
+Utilizando os preços unitários apresentados na seção de componentes, e descontando o preço do frete dos materiais, de montagem, e de produção. Estima-se um investimento de $341.759 para a acquisição dos materiais (incluindo o módulo Lepton). Sem a câmera infravermelha, $131.8.
 
 ## Descrição Funcional
 ### Funcionalidades
