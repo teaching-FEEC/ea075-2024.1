@@ -18,8 +18,9 @@ https://github.com/thiagomasanori/ea075-2024.1/blob/8f103071f3dedd26249b199364f3
 
 (![Alt](images/lista_componentes)
 
-https://github.com/thiagomasanori/ea075-2024.1/blob/41950efd01c12084240726d7f200ded03d53a9aa/projetos/sistema-controle-de-acesso/images/PCB_PCB_controle_acesso_2_2024-06-24.pdf (link para PCBo)
-(![Alt](images/3d_e_2d.pdf)
+https://github.com/thiagomasanori/ea075-2024.1/blob/41950efd01c12084240726d7f200ded03d53a9aa/projetos/sistema-controle-de-acesso/images/PCB_PCB_controle_acesso_2_2024-06-24.pdf (link para PCB)
+
+https://github.com/thiagomasanori/ea075-2024.1/blob/79c40f1059280c65454eb4e4ba6332e73848c7f3/projetos/sistema-controle-de-acesso/images/controle_acesso.zip (link para Pasta ZIP)
 
 ## Descrição do Projeto
 
