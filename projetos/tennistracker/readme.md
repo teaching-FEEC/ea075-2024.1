@@ -134,7 +134,7 @@ Memória:
 
 - O timer1 é configurado com um período de contagem de 1ms (f=1kHz) e é habilitada sua interrupção a cada overflow do contador. Depois da configuração básica, o programa fica em um loop, aguardando chamadas da rotina de interrupção do timer1. Dentro desta rotina, chamada a cada 1ms, é feita a conversão do ADC0 (tensão da bateria) e a leitura e armazenamento dos dados do sensor de movimento. 
 
-- O valor binário lido ('ADC_result') pode ser convertido para valor de tensão ('battery_level') com a equação a seguir: "battery_level = (ADC_result/1024)*(3.3*22/32);"
+- O valor binário lido ('ADC_result') pode ser convertido para valor de tensão ('battery_level') com a equação a seguir: "battery_level = (ADC_result/1024)(3.3*22/32);"
 
 - Essa equação leva em conta que: (i) ADC é de 10 bits e, portanto, o valor máximo é 1024; (ii) VCC = 3.3V; (iii) são usados resistores de 10kOhm e 22kOhm no divisor de tensão na entrada do ADC. 
 
