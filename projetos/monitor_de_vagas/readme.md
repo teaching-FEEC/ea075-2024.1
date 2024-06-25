@@ -93,19 +93,34 @@ A escolha do microcontrolador PIC16F877A se alinha com os requisitos de simplici
 ## Referências
   Notas de aula de EA075 \
   https://www.sofit4.com.br/blog/controle-de-entrada-e-saida-de-veiculos/ \
+  
   https://autopark.com.br/tecnologia-e-automatizacao-para-estacionamentos/
+  
   https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf
+  
   https://www.handsontec.com/dataspecs/HC-SR04-Ultrasonic.pdf
+  
   https://cdn.standards.iteh.ai/samples/5500/6b28378512604ff7bdaace506be7dc0c/ISO-1028-1973.pdf
+  
   https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf
+  
   https://www.microchip.com/en-us/products/microcontrollers-and-microprocessors/8-bit-mcus/pic-mcus
+  
   https://en.wikipedia.org/wiki/ATmega328
+  
   https://robocraze.com/blogs/post/what-is-ultrasonic-sensor
+  
   https://www.msseletronica.com.br/detalhes/display-de-7-segmentos-0-56-catodo-comum-vermelho-gnd-comum_pid976.html
+  
   https://www.cdebyte.com/pdf-down.aspx?id=3044
+  
   https://www.ti.com/lit/ds/symlink/cd4511b.pdf
+  
   https://www.build-electronic-circuits.com/4000-series-integrated-circuits/ic-4511/
+  
   https://cdn.awsli.com.br/945/945993/arquivos/E220-900T22D_UserManual_EN_v1.0.pdf
+  
   https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/39582C.pdf
+  
   https://www.theengineeringprojects.com/2015/03/pic-microcontroller-projects.html
   
