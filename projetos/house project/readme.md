@@ -14,6 +14,24 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 
 ## Arquivos Importantes
 
+Lista de Componentes:
+- 6 Sensores de Presença HC-SR501
+- 5 Sensores de Gás e Fumaça MQ-2
+- 1 Sensor de Temperatura DS18B20
+- Painel de LEDs com 5 LEDs 5 mm
+- Buzzer Piezoelétrico Ativo 5V
+- Alto-falante Visaton SC 5.9
+- Display LCD
+- Microcontrolador ATmega32
+- 5 Resistores de 220 Ohms
+- 3 Resistores de de 10k Ohms
+- 1 Resistor de 4,7k Ohms
+- 2 Capacitores de 100nF
+- 2 Capacitores de 22pF
+- Cristal de 16 MHz
+- Conectores
+- Conversor 110V/220V para 5V
+  
 ## Descrição do Projeto
  O objetivo principal deste projeto é criar um sistema de segurança eficiente, focado em casas de menor porte, mas que também possa ser otimizado para residências maiores. O sistema de segurança proporciona 
  eficiência energética e conforto aos moradores. Ele inclui funcionalidades como: sensor de presença conectado a um LED, permitindo monitoramento conforme desejado pelo usuário e podendo também acionar um alarme 
