@@ -12,9 +12,9 @@ O presente projeto foi originado no contexto das atividades da disciplina de gra
 
 ## Descrição do Projeto 
 
->O objetivo principal deste projeto é desenvolver um sistema de rastreamento e monitoramento de veículos de frota que permita o acompanhamento em tempo real da localização dos veículos, além de monitorar e controlar parâmetros críticos como velocidade, tempo de uso e manutenção. Uma das motivações para este projeto surge da experiência na área de consultoria de logística, onde foi possível perceber os prejuízos e perdas de desempenho e controle que as empresas enfrentam por não poderem monitorar e replanejar com horários reais suas entregas e coletas de maneira eficiente. Pretendemos resolver o desafio enfrentado por empresas de logística, transporte e outras organizações com frotas de veículos, fornecendo uma solução eficiente para a gestão e operação desses ativos.
+> O objetivo principal deste projeto é desenvolver um sistema de rastreamento e monitoramento de veículos de frota que permita o acompanhamento em tempo real da localização dos veículos, além de monitorar e controlar parâmetros críticos como velocidade, tempo de uso e manutenção. Uma das motivações para este projeto surge da experiência na área de consultoria de logística, onde foi possível perceber os prejuízos e perdas de desempenho e controle que as empresas enfrentam por não poderem monitorar e replanejar com horários reais suas entregas e coletas de maneira eficiente. Pretendemos resolver o desafio enfrentado por empresas de logística, transporte e outras organizações com frotas de veículos, fornecendo uma solução eficiente para a gestão e operação desses ativos.
 
-Os potenciais usuários incluem empresas de logística e transporte, empresas com frotas de veículos comerciais, serviços de entrega e transporte urbano, e empresas de aluguel de veículos. Estima-se que a implementação desse sistema possa resultar em economia de combustível, redução de custos de manutenção, aumento da vida útil dos veículos e melhoria da eficiência operacional, além de reduzir riscos de roubo e mau uso dos veículos, ajudando também na prevenção de acidentes.
+> Os potenciais usuários incluem empresas de logística e transporte, empresas com frotas de veículos comerciais, serviços de entrega e transporte urbano, e empresas de aluguel de veículos. Estima-se que a implementação desse sistema possa resultar em economia de combustível, redução de custos de manutenção, aumento da vida útil dos veículos e melhoria da eficiência operacional, além de reduzir riscos de roubo e mau uso dos veículos, ajudando também na prevenção de acidentes.
 
 
 ## Descrição Funcional 
@@ -174,7 +174,8 @@ Gerar alerta se os parâmetros excederem os limites predefinidos, ou se o freio 
 Enviar alerta para a interface de usuário.
 
 
-###Estimativa de Memória Necessária
+### Estimativa de memória utilizada:
+
 > Para determinar a memória necessária para armazenar os algoritmos e dados coletados, consideramos os principais eventos e o volume de dados gerados:
 
 > Dados de Localização (GPS)
