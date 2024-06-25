@@ -12,3 +12,7 @@ Ponte H L298N -- Download [L298N - datasheet.PDF](https://github.com/user-attach
 Decodificador de display de 7 segmentos 74LS48 -- Download [74LS48 - datasheet.PDF](https://github.com/user-attachments/files/15963273/74LS48.-.datasheet.PDF)
 
 Display de 7 segmentos -- Download [Cromatek D168K.pdf](https://github.com/user-attachments/files/15963276/Cromatek.D168K.pdf)
+
+## Componentes
+
+20 conectores Pin Socket 2.00mm
