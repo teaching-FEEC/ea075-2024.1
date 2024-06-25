@@ -12,12 +12,22 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 | Gabriel Dias Vasconcelos  | 248134  | Eng. Elétrica|
 
 
+## Arquivos Importantes
+[PDF do Esquemático](https://github.com/EduardoTejada/ea075-2024.1/blob/main/projetos/monitor_de_vagas/pdf/Esquem%C3%A1tico.pdf)
+
+[PDF da PCB](https://github.com/EduardoTejada/ea075-2024.1/blob/main/projetos/monitor_de_vagas/pdf/PCB.pdf)
+
+Print do projeto da PCB no Altium Designer:
+![Print do projeto da PCB no Altium Designer](https://github.com/EduardoTejada/ea075-2024.1/blob/main/projetos/monitor_de_vagas/imagens/PCB_img.png?raw=true)
+
 ## Descrição do Projeto
 O projeto visa solucionar o problema de encontrar espaços de estacionamento disponíveis. Oferecendo uma solução automatizada e inteligente para melhorar a experiência dos usuários, bem como a eficiência no uso das vagas. Podem se beneficiar dessa ideia diversos estabelecimentos comerciais como shoppings e supermercados e ainda leva vantagens aos motoristas individuais. O monitor de vagas agrega valor econômico às empresas aumentando o fluxo de clientes, que perderão menos tempo presos no estacionamento procurando um lugar vago e portanto ficarão mais propensos à retornarem ao estabelecimento futuramente, além poder vir a ser útil para a segurança e extração de dados sobre o padrão de uso do estacionamento.
 
 
 ## Descrição Funcional
-![Diagrama funcional do sistema](https://github.com/Gabriel-Diasss/ea075-2024.1/blob/main/projetos/monitor_de_vagas/imagens/diagrama_funcional.png?raw=true)
+O sistema de controle de vagas de estacionamento opera em uma lógica de sensores de proximidade em campo que se comunicam com uma central de comandos conectada a um painel de led encarregado de mostrar o número de vagas disponíveis na totalidade do recinto. os sensores em campo utilizam de comunicação via ondas de rádio LoRa para com a central, dessa forma, os riscos de danificação do sistema por intempéries a fiações é minimizado, já que a maior parte das conexões físicas são por parte das conexões dos dispositivos na placa de circuito impressa. É também um projeto de baixa necessidade de mantenção e configuração, operando sempre em uma mesma lógica.
+![Diagrama funcional do sistema](https://github.com/EduardoTejada/ea075-2024.1/blob/main/projetos/monitor_de_vagas/imagens/Diagrama_funcional_vf.drawio.png)
+
 
 ### Funcionalidades
 O sistema deve ser capaz de identificar quais vagas estão ocupadas através de um sensor de presença, computar quantos espaços ainda se encontram disponíveis e reportar esses resultados para os usuários do estacionamento através de um painel LED.
@@ -35,6 +45,11 @@ Evento 3: na entrada, reportar que o estacionamento está lotado direcionando pa
 Evento 4: reportar a liberação de vagas na entrada.
 
 ## Descrição Estrutural do Sistema
+1. Sensores de Ultrassom Detectam a presença ou ausência de veículos no estacionamento
+2. Módulos de Comunicação LoRa Transmitem os dados enviados pela MCU à central de comando via ondas de rádio
+3. Central de Comandos gerenciada pelo MCU pic16f877a trata os dados enviados pelas unidades LoRa em campo e envia sinais para o painel de LED
+4. Painel de LED exibe o número de vagas disponíveis no setor especificado do estacionamento fornecendo uma interface visual para os motoristas
+5. Alimentação e Infraestrutura Elétrica individual para cada subsistema por baterias
 ![Diagrama de blocos do sistema](https://github.com/EduardoTejada/ea075-2024.1/blob/main/projetos/monitor_de_vagas/imagens/Descri%C3%A7%C3%A3o%20Estrutural%20do%20Sistema%20(1).jpg?raw=true)
 
 ## Especificações
@@ -65,7 +80,8 @@ Portanto, dentre outras possibilidades foi escolhido o módulo de comunicação 
 
 #### Microcontrolador
 
-Como é possível verificar na seção de Especificação de Algoritmos, estima-se que o código em questão não precisa de grandes memórias tanto de programa quanto de dados. Além disso, o sistema em questão não é crítico, precisa ser capaz de enviar e receber os pulsos de TRIG e ECHO de múltiplos sensores ultrassônicos (no mínimo 10 μS) e também de enviar e receber dados através dos módulos LoRa. Compilamos na IDE do Arduino um código de transmissão de dados e outro de recepção, com uma biblioteca otimizada para o módulo e uma biblioteca de configuração de portas seriais e o resultado foi códigos que ocupam em média 8300 bytes de memória. Como o sistema não precisa lidar com armazenamento de um grande número de dados, é possível utilizar microcontroladores mais simples. Dados os requisitos do projeto, a família de MCU’s que melhor se adequa são processadores de entrada de famílias como a Intel 8051 ou os PIC’s produzidos pela Microchip Technology, por serem simples e efetivos. Porém, como tais placas de desenvolvimento não se encontram disponíveis, a solução adotada será o ATmega328P, produzido pela Atmel (comprada pela Microchip Technology em 2016), que também atende bem as propostas colocadas.
+Como é possível verificar na seção de Especificação de Algoritmos, estima-se que o código em questão não precisa de grandes memórias tanto de programa quanto de dados. Além disso, o sistema em questão não é crítico, precisa ser capaz de enviar e receber os pulsos de TRIG e ECHO de múltiplos sensores ultrassônicos (no mínimo 10 μS) e também de enviar e receber dados através dos módulos LoRa. Compilamos na IDE do Arduino um código de transmissão de dados e outro de recepção, com uma biblioteca otimizada para o módulo e uma biblioteca de configuração de portas seriais e o resultado foi códigos que ocupam em média 8300 bytes de memória. Como o sistema não precisa lidar com armazenamento de um grande número de dados, é possível utilizar microcontroladores mais simples. Dados os requisitos do projeto, a família de MCU’s que melhor se adequa são processadores de entrada de famílias como a Intel 8051 ou os PIC’s produzidos pela Microchip Technology, por serem simples e efetivos. A escolha do microcontrolador PIC16F877A se alinha com os requisitos de simplicidade, eficiência e baixo custo do projeto. Sua ampla gama de funcionalidades e a capacidade de memória o tornam uma escolha robusta e adequada para o sistema de controle de vagas de estacionamento, garantindo a operação eficiente e confiável dos sensores ultrassônicos e módulos de comunicação LoRa.
+A escolha do microcontrolador PIC16F877A se alinha com os requisitos de simplicidade, eficiência e baixo custo do projeto. Sua ampla gama de funcionalidades e a capacidade de memória o tornam uma escolha robusta e adequada para o sistema de controle de vagas de estacionamento, garantindo a operação eficiente e confiável dos sensores ultrassônicos e módulos de comunicação LoRa. o microcontrolador possui 14KB de memória flash, apresentando certa margem de programação além dos 8KB estipulados para o código do LoRa, também possui oscilador interno capaz de operar em 20MHz, viabilizando a comunicação com o sensor ultrassônico.
 
 
 #### Diagrama
@@ -75,16 +91,37 @@ Como é possível verificar na seção de Especificação de Algoritmos, estima-
 ![Fluxograma](https://github.com/EduardoTejada/ea075-2024.1/blob/main/projetos/monitor_de_vagas/imagens/Especifica%C3%A7%C3%A3o%20do%20Algoritmo.jpg?raw=true)
 
 ## Referências
-  Notas de aula de EA075 \
-  https://www.sofit4.com.br/blog/controle-de-entrada-e-saida-de-veiculos/ \
+  Notas de aula de EA075
+  
+  https://www.sofit4.com.br/blog/controle-de-entrada-e-saida-de-veiculos/
+  
   https://autopark.com.br/tecnologia-e-automatizacao-para-estacionamentos/
+  
   https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf
+  
   https://www.handsontec.com/dataspecs/HC-SR04-Ultrasonic.pdf
+  
   https://cdn.standards.iteh.ai/samples/5500/6b28378512604ff7bdaace506be7dc0c/ISO-1028-1973.pdf
+  
   https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf
+  
   https://www.microchip.com/en-us/products/microcontrollers-and-microprocessors/8-bit-mcus/pic-mcus
+  
   https://en.wikipedia.org/wiki/ATmega328
+  
   https://robocraze.com/blogs/post/what-is-ultrasonic-sensor
+  
   https://www.msseletronica.com.br/detalhes/display-de-7-segmentos-0-56-catodo-comum-vermelho-gnd-comum_pid976.html
+  
   https://www.cdebyte.com/pdf-down.aspx?id=3044
+  
+  https://www.ti.com/lit/ds/symlink/cd4511b.pdf
+  
+  https://www.build-electronic-circuits.com/4000-series-integrated-circuits/ic-4511/
+  
+  https://cdn.awsli.com.br/945/945993/arquivos/E220-900T22D_UserManual_EN_v1.0.pdf
+  
+  https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/39582C.pdf
+  
+  https://www.theengineeringprojects.com/2015/03/pic-microcontroller-projects.html
   
