@@ -12,12 +12,38 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 > | Daniel Alexander Ortega Rodriguez  | 261261  | Eng. Elétrica|
 > | Luciano Cardoso Ferreira Filho     | 240276  | Eng. Elétrica|
 
+## Arquivos Importantes
 
+[Placa PCB e esquematico](https://github.com/EndlessLight9/ea075-2024.1-dolc/tree/main/projetos/house%20project/pdf)
+
+Lista de Componentes:
+- 6 Sensores de Presença HC-SR501
+- 5 Sensores de Gás e Fumaça MQ-2
+- 1 Sensor de Temperatura DS18B20
+- Painel de LEDs com 5 LEDs 5 mm
+- Buzzer Piezoelétrico Ativo 5V
+- Alto-falante Visaton SC 5.9
+- Display LCD
+- Microcontrolador ATmega32
+- 5 Resistores de 220 Ohms
+- 3 Resistores de de 10k Ohms
+- 1 Resistor de 4,7k Ohms
+- 2 Capacitores de 100nF
+- 2 Capacitores de 22pF
+- Cristal de 16 MHz
+- Conectores
+- Conversor 110V/220V para 5V
+  
 ## Descrição do Projeto
  O objetivo principal deste projeto é criar um sistema de segurança eficiente, focado em casas de menor porte, mas que também possa ser otimizado para residências maiores. O sistema de segurança proporciona 
  eficiência energética e conforto aos moradores. Ele inclui funcionalidades como: sensor de presença conectado a um LED, permitindo monitoramento conforme desejado pelo usuário e podendo também acionar um alarme 
  sonoro, se desejado (por exemplo, ao sair de casa); sensor de gás com alarme sonoro, ativado ao detectar níveis potencialmente perigosos, sensor de fumaça, que aciona um alarme sonoro ao detectar altos níveis 
  de fumaça e sensor de temperatura, utilizado para vizualização da temperatura dos cômodos.
+
+
+A crescente preocupação com a segurança residencial, aliada ao aumento de incidentes envolvendo gases inflamáveis e incêndios domésticos, motiva a criação deste sistema. Nosso projeto busca atender à demanda por soluções acessíveis e eficientes para a segurança doméstica, que sejam fáceis de instalar e operar. Estamos abordando a necessidade crítica de monitoramento e resposta rápida a situações de risco em ambientes residenciais, como presença de intrusos, vazamentos de gás, fumaça e temperaturas anômalas. Este sistema pretende reduzir os riscos de acidentes graves e melhorar a sensação de segurança dos moradores. Este sistema é ideal proprietários de residências pequenas e médias que desejam um sistema de segurança integrado e fácil de usar. Também é adequado para idosos que vivem sozinhos, famílias com crianças e qualquer pessoa preocupada com a segurança e a eficiência energética de sua casa. Nosso sistema tem potencial para gerar valor econômico significativo, tanto na redução de custos com danos residenciais quanto na diminuição de despesas com energia, devido à automação inteligente e monitoramento contínuo. Além disso, ao prevenir incidentes graves, ele pode reduzir gastos médicos e de seguros, proporcionando um retorno financeiro positivo para os usuários e investidores.
+
+
  
 ## Descrição Funcional
 
@@ -26,22 +52,19 @@ Sensor de Presença:
  alguém, o LED acende, permitindo que os moradores saibam que há movimento no ambiente monitorado. Além disso, o sistema permite que o usuário configure a ativação de um alarme sonoro ao detectar presença. Esta 
  funcionalidade é particularmente útil quando os moradores estão ausentes, oferecendo uma camada adicional de segurança ao alertar sobre movimentos inesperados.
 
- Sensor de Gás:
+ Sensor de Gás e Fumaça:
  O sensor de gás é projetado para detectar a presença de gases potencialmente perigosos no ambiente, como gás de cozinha. Quando o sensor detecta níveis elevados de gás, um alarme sonoro é imediatamente acionado 
  para alertar os moradores. Esta função é essencial para prevenir incidentes graves, como explosões ou intoxicações, garantindo a segurança dos habitantes da casa. O sensor é calibrado para identificar 
  concentrações de gás que ultrapassem limites seguros, proporcionando uma resposta rápida e segura em situações de risco.
 
-Sensor de Fumaça:
- O sensor de fumaça é fundamental para a detecção precoce de incêndios. Este sensor monitora continuamente os níveis de fumaça no ambiente e, ao identificar concentrações elevadas, aciona um alarme sonoro. A 
- rápida detecção de fumaça permite que os moradores tomem medidas imediatas para evacuar a área e chamar os serviços de emergência , minimizando danos e salvaguardando vidas. O sensor é sensível a variações súbitas na quantidade de fumaça, garantindo que qualquer início de incêndio seja rapidamente percebido.
 
  Sensor de Temperatura :
    O sensor de temperatura desempenha um papel crucial ao fornecer informações essenciais aos moradores. Ele monitora atentamente a temperatura de cada cômodo e apresenta, de forma clara e precisa, os resultados em um display LCD.
 
-
+Microcontrolador ATmega32: 
+O ATmega32 é o núcleo do sistema, coordenando a operação de todos os sensores e atuadores. Este microcontrolador oferece várias portas I/O, alta capacidade de processamento e flexibilidade para futuras expansões. Ele facilita a integração de múltiplos sensores e dispositivos de saída, garantindo que o sistema seja robusto e escalável.
 
 ### Funcionalidades
-
 
 
 Detecção de Presença: Utilizando sensores de movimento, o sistema pode identificar a presença de indivíduos em áreas específicas da casa. Isso permite a ativação de alertas visuais (LEDs) e sonoros para notificar os moradores sobre atividades suspeitas.
@@ -116,9 +139,8 @@ Para Detecção de Temperatura: As informações lidas pelo sensor são atualiza
 
 Sensor de Presença: Detecta movimento e envia sinais ao controlador central.
 
-Sensor de Gás: Monitora a concentração de gás no ambiente e envia um sinal ao controlador quando níveis perigosos são detectados.
+Sensor de Gás: Monitora a concentração de gás e fumaça no ambiente e envia um sinal ao controlador quando níveis perigosos são detectados.
 
-Sensor de Fumaça: Detecta a presença de fumaça e envia um sinal ao controlador ao identificar concentrações elevadas.
 
 Sensor de Temperatura: Monitora a Temperatura do ambiente e envia um sinal para controlador da informação lida.
 
@@ -138,9 +160,7 @@ Display de LCD: Apresenta de forma clara e instantânea a temperatura ambiente a
 
 Sensor de Presença para Microcontrolador: Envia um sinal digital quando detecta movimento.
 
-Sensor de Gás para Microcontrolador: Envia um sinal analógico  quando os níveis de gás são perigosos.
-
-Sensor de Fumaça para Microcontrolador: Envia um sinal Analógico quando a fumaça é detectada.
+Sensor de Gás e Fumaça para Microcontrolador: Envia um sinal analógico  quando os níveis de gás são perigosos.
 
 Sensor de Temperatura para Microcontrolador: Envia um sinal digital da temperatura lida.
 
@@ -168,17 +188,25 @@ O sensor escolhido é o MQ-2 possui alimentação recomendada de 5V DC, ele moni
 
 Sensor de Temperatura
 
-O sensor escolhido é o DHT22 (AM2302), um sensor de temperatura e umidade. Ele possui uma alimentação recomendada de 5V DC e sua saída é digital serial, com um total de 40 bits. Esses 40 bits são divididos em 8 bits para o valor integral da temperatura, 8 bits para o valor decimal da temperatura, 8 bits para o valor integral da umidade, 8 bits para o valor decimal da umidade e 8 bits de checksum para validar os dados. O tempo médio de comunicação com o MCU é de 5 ms.
-O DHT22 tem uma faixa de medição que vai de -40 a 125 graus Celsius e um tempo de leitura de 2 segundos. O principal motivo para a escolha deste sensor é sua precisão de ±5 graus, que atende aos requisitos do nosso projeto.
+O sensor escolhido é o  DS18B20, um sensor de temperatura . Ele possui uma alimentação recomendada de 5V DC e sua saída é digital, com uma resolução de 9 a 12 bits.
+O DS18B20 tem uma faixa de medição que vai de -55 a +125 graus Celsius. O principal motivo para a escolha deste sensor é sua precisão de ±0,5 graus nas medições de -10 a 80 graus Celsius, podendo ter uma resolução maior ao escolher a quantidade de bits de comunicação, que atende aos requisitos do nosso projeto, além de possuir o protocolo One-Wire, no qual é possível conectar varios sensores na mesma porta digital, podendo assim ser mais facil para espandir o projeto. 
+
+![image](https://github.com/EndlessLight9/ea075-2024.1-dolc/assets/165411886/28c4457c-86fc-479e-9f09-121f3273a25b)
+
 
 #### Atuadores
 
 Painel de LEDs: O sistema proposto consiste em um Painel de LEDs para identificação visual de movimentação em cada cômodo da casa, com base nas informações dos sensores de presença. Quando movimento é detectado em um determinado cômodo, os LEDs correspondentes a esse cômodo são acionados, permitindo uma visualização rápida da atividade em diferentes áreas da casa.
 
 Alarme Sonoro: um Alarme Sonoro será ativado em caso de possíveis invasões quando os donos não estiverem na residência, ou se for identificada uma alta concentração de fumaça ou gás de cozinha. Isso fornecerá um alerta audível para os ocupantes da casa ou para vizinhos, indicando uma situação de emergência.
+Teremos 2 diferentes alarmes sonoros, 1 será um buzzer piezoelétrico ativo, que será alimentado quando o sensor de gâs/fumaça detectar a presença de qualquer um, acionando um alarme sonoro e ativando um LED correspondente a onde ele detectou esse gâs. O sistema de segurança contará com o alto-falante Visaton SC 5.9 que permitirá um alarme potente ser acionado junto com o uso de um relê para a ativação do mesmo.
 
-Display LCD: um Display será utilizado para exibir a temperatura medida pelos sensores de temperatura. Isso permitirá que os ocupantes monitorem a temperatura em diferentes áreas da casa em tempo real, o que pode ser útil para garantir o conforto e a segurança, especialmente em situações como controle de temperatura ambiente ou detecção de superaquecimento em determinadas áreas.
+Display LCD: um Display será utilizado para exibir a temperatura medida pelo sensore de temperatura. Isso permitirá que os ocupantes monitorem a temperatura em tempo real, o que pode ser útil para garantir o conforto e a segurança, especialmente em situações como controle de temperatura ambiente ou detecção de superaquecimento em determinadas áreas.
 
+
+#### Microcontrolador
+
+O microcontrolador escolhido é o ATmega32, um microcontrolador AVR de 8 bits. Ele possui uma capacidade de memória flash de 32 KB, 2 KB de SRAM e 1 KB de EEPROM, oferecendo espaço suficiente para o armazenamento do código e dos dados necessários para o nosso sistema e inclusive um pouco mais caso for desejada expansão no futuro. Ele opera a uma velocidade de clock de até 16 MHz e suporta uma ampla gama de periféricos, incluindo conversores ADC de 10 bits, PWM, timers/counters, interfaces de comunicação SPI, USART e I2C. Com 32 linhas de I/O programáveis, ele permite a conexão de múltiplos sensores e atuadores, tornando-o altamente versátil para diversas aplicações. O ATmega32 também é conhecido por suas características de baixo consumo de energia, suporte a modos de economia de energia e ampla faixa de tensão de operação de 4.5V a 5.5V. A extensa documentação, bibliotecas disponíveis e a grande comunidade de desenvolvedores AVR facilitam o desenvolvimento e a implementação de novas funcionalidades.
 
 
 
@@ -197,10 +225,10 @@ Portanto, no total, precisaremos de 6 bits de memória para armazenar o estado d
 
 ![image](https://github.com/EndlessLight9/ea075-2024.1-dolc/assets/165414259/1a6b275f-ee80-4e4d-a321-b54577b86b2a)
 
-Os sensores de temperatura comunicam-se utilizando 40 bits de dados. Considerando que planejamos utilizar 3 sensores - distribuídos nos 2 quartos e 1 sala de estar - necessitaremos de 120 bits de armazenamento para registrar as leituras desses sensores.
-Além disso, contamos com 3 displays LCD em nosso sistema. Cada um desses displays requer 32 bits para armazenar os dados a serem exibidos. Portanto, o total de bits necessários, incluindo os dados dos sensores e os dados a serem exibidos nos displays, será de 216 bits.
+Os sensores de temperatura comunicam-se utilizando 9 até 12 bits de dados. Considerando que planejamos utilizar 1 sensor necessitaremos de apenas 9 bits que será suficiente para termos uma boa precisão
+Além disso, contamos com um display de LCD em nosso sistema. que requer 32 bits para armazenar os dados a serem exibidos. Portanto, o total de bits necessários, incluindo os dados dos sensores e os dados a serem exibidos nos displays, será de 41 bits.
 
-Se somarmos as necessidades de memória para todos os sistemas mencionados, incluindo os sensores e atuadores, teríamos aproximadamente necessidade de 235 bits de memória
+Pensando no uso de bibiotecas e código base temos que será necessário cerca de 10Kbytes de memória ROM, para as variaveis envolvendo variaveis globais para armazenamento de dados dos sensores e buffers para o display LCD aproximadamente 1,5Kbyte será necessário de memória RAM
 
 
 
@@ -211,7 +239,14 @@ https://components101.com/sensors/hc-sr501-pir-sensor (Sensor movimento hc-Sr 50
 
 https://www.mouser.com/datasheet/2/321/605-00008-MQ-2-Datasheet-370464.pdf (Sensor de Gás e Fumaça)
 
-https://www.sparkfun.com/datasheets/Sensors/Temperature/DHT22.pdf (Sensor de Temperatura)
+https://pdf1.alldatasheet.com/datasheet-pdf/view/227472/DALLAS/DS18B20.html (Sensor de Temperatura)
 
+https://components101.com/diodes/5mm-round-led (LED)
+
+https://www.usinainfo.com.br/buzzer/buzzer-ativo-5v-bip-continuo-pci-12mm-2988.html (Buzzer Piezoelétrico)
+
+https://www.visaton.de/en/products/drivers/fullrange-systems/sc-59-om-8-ohm (alto-falante Visaton SC 5.9)
+
+https://ww1.microchip.com/downloads/en/DeviceDoc/doc2503.pdf (ATMega32)
 
 
