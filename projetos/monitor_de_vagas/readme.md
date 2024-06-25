@@ -91,8 +91,9 @@ A escolha do microcontrolador PIC16F877A se alinha com os requisitos de simplici
 ![Fluxograma](https://github.com/EduardoTejada/ea075-2024.1/blob/main/projetos/monitor_de_vagas/imagens/Especifica%C3%A7%C3%A3o%20do%20Algoritmo.jpg?raw=true)
 
 ## Referências
-  Notas de aula de EA075 \
-  https://www.sofit4.com.br/blog/controle-de-entrada-e-saida-de-veiculos/ \
+  Notas de aula de EA075
+  
+  https://www.sofit4.com.br/blog/controle-de-entrada-e-saida-de-veiculos/
   
   https://autopark.com.br/tecnologia-e-automatizacao-para-estacionamentos/
   
