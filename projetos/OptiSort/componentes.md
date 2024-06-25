@@ -14,6 +14,7 @@ url_arducam: https://e2e.ti.com/cfs-file/__key/communityserver-discussions-compo
 * **Molex 105028-1001**: Conector utilizado para conectar a câmera infravermelha com o resto do circuito. Ela foi sugerida pelo fabricante na folha de dados da câmera. url: https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/salesdrawingpdf/105/105028/1050281001_sd.pdf
 * **FH19C-6S-0.5SH(05)**: Um dos conectores a serem utilizados com o LCD. url: https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/822/FH19C_FH19SC_Series.pdf
 * **FH26W-25S-0.3SHW(97)**: Um substituto direto do FH26-25S-0.3SHW(99) utilizado na placa, por conta dele não estar mais sendo produzido. É outro conector a ser utilizado com o LCD. url: https://www.hirose.com/product/document?clcode=CL0580-2401-1-97&productname=FH26W-13S-0.3SHW(97)&series=FH26&documenttype=2DDrawing&lang=en&documentid=0001143173
+* **Molex 213083-0005**: Conector USB utilizado para alimentar e programar o LCD. url: https://www.molex.com/en-us/products/part-detail/2130830005?display=pdf
 
 ## Componentes Eletrônicos
 * **Resistor CRCW060322R1FKEA (22,1Ω)**: Escolhido por conta do seu tamanho (0603 pol). Sua classificação energética (100mW) não será atingida pelos circuitos que ele liga. url: https://www.vishay.com/docs/20035/dcrcwe3.pdf
@@ -35,7 +36,7 @@ url_arducam: https://e2e.ti.com/cfs-file/__key/communityserver-discussions-compo
 * **Ferrite Bead FCM 1608KF-601T03**: Ele é utilizado pelo módulo driver. url: https://www.alldatasheet.com/datasheet-pdf/pdf/1207269/TAI-TECH/FCM1608KF-601T03.html
   
 ## Preços
-Todos os sites foram acessados em 24/06/2024. Não consideramos o frete dos componentes ainda, mas para facilitar o processo, os componentes que podiam ser comprados do mesmo fabricante foram comprados do mesmo fabricante. 
+Todos os sites foram acessados em 24/06/2024. Não consideramos o frete dos componentes ainda, mas para facilitar o processo, os componentes que podiam ser comprados do mesmo fabricante foram comprados do mesmo fabricante. Todos os preços mostrados aqui são para um único componente, sem eles vir em lote.
 * *STM32H747AII6*: $18,74 url: https://br.mouser.com/ProductDetail/STMicroelectronics/STM32H747AII6?qs=vLWxofP3U2xKTIBLp63b7g%3D%3D
 * *Arducam GC2145*: $6,99 url: https://www.arducam.com/product/2mp-gc2145-color-dvp-camera-module-for-arduino-giga-r1-wifi-board/
 * *FLIR Lepton 2.5*: $209.95 **módulo opcional**url: https://www.sparkfun.com/products/16465
@@ -44,6 +45,7 @@ Todos os sites foram acessados em 24/06/2024. Não consideramos o frete dos comp
 * *Borne 2T*: $0,77 url: https://br.mouser.com/ProductDetail/Phoenix-Contact/1729128?
 * *Borne 3T*: $1,74 url: https://br.mouser.com/ProductDetail/Phoenix-Contact/1731831?qs=o3rrLWFGhRnv%252Ba3%2FC%252B10UQ%3D%3D
 * *Molex 105028-1001*: $1,58 url: https://br.mouser.com/ProductDetail/Molex/105028-1001?qs=3OKVfsn1b5DSpyA99lGNjg%3D%3D
+* *Molex 213083-0005*: $4,30 url: https://br.mouser.com/ProductDetail/Molex/213083-0005?qs=IS%252B4QmGtzzp3iDJcXWaSTg%3D%3D
 * *FH19C-6S-0.5SH(05)*: $1,3 url: https://www.digikey.com.br/en/products/detail/hirose-electric-co-ltd/FH19C-6S-0-5SH-05/1124146
 * *FH26W-25S-0.3SHW(97)*: $1,819 url: https://www.digikey.com.br/pt/products/detail/hirose-electric-co-ltd/FH26W-25S-0-3SHW-97/8558595
 * *Resistor 22,1*: $0,10 url: https://br.mouser.com/ProductDetail/Vishay-Dale/CRCW060322R1FKEA?qs=zWI4UZgPOoTm0WgHtMVBQw%3D%3D
