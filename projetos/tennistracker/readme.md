@@ -123,7 +123,7 @@ Memória:
     - **Tensão de saída:**: 3.3V
     
 #### Circuitos de Interface
-  Será apenas necessário o regulador de tensão LM1117, para converter a tensão de 6V da bateria para 3.3V. Também será necessária a conversão analógico-digital dos valores de tensão da bateria e valores do sensor de movimento, mas o microcontrolador e o MPU-6050 já possuem conversores internamente. Por fim, serão necessário resistores de _pull-up_ no barramento I2C entre o microcontrolador e o sensor de movimento.
+  Será necessário o regulador de tensão LM1117, para converter a tensão de 6V da bateria para 3.3V. Também será necessária a conversão analógico-digital dos valores de tensão da bateria e valores do sensor de movimento, mas o microcontrolador e o MPU-6050 já possuem conversores internamente. Por fim, serão necessário resistores de _pull-up_ no barramento I2C entre o microcontrolador e o sensor de movimento.
 
 #### Restrições Físicas
   O dispositivo deve ter dimensões de no máximo 7cmX7cmX0,5cm para que sua fixação na raquete não comprometa as caracteristicas da raquete. Sua fixação deve ser firme o suficiente para suportar impactos a altas velocidades, por isso seu pedo também deve ser reduzido, idealmente por volta de 5 a 10g. Considerando que o disitivo não vai operar com altas correntes justamente pela sua caracteristica de paixa potência, a dissipação térmica não será um problema.
