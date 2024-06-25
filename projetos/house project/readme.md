@@ -13,6 +13,9 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 > | Luciano Cardoso Ferreira Filho     | 240276  | Eng. Elétrica|
 
 ## Arquivos Importantes
+[Esquematico.pdf](https://github.com/user-attachments/files/15963672/House_Project.pdf)
+
+[Placa PCB e esquematico](https://github.com/EndlessLight9/ea075-2024.1-dolc/tree/main/projetos/house%20project/pdf)
 
 Lista de Componentes:
 - 6 Sensores de Presença HC-SR501
@@ -37,6 +40,8 @@ Lista de Componentes:
  eficiência energética e conforto aos moradores. Ele inclui funcionalidades como: sensor de presença conectado a um LED, permitindo monitoramento conforme desejado pelo usuário e podendo também acionar um alarme 
  sonoro, se desejado (por exemplo, ao sair de casa); sensor de gás com alarme sonoro, ativado ao detectar níveis potencialmente perigosos, sensor de fumaça, que aciona um alarme sonoro ao detectar altos níveis 
  de fumaça e sensor de temperatura, utilizado para vizualização da temperatura dos cômodos.
+
+
 A crescente preocupação com a segurança residencial, aliada ao aumento de incidentes envolvendo gases inflamáveis e incêndios domésticos, motiva a criação deste sistema. Nosso projeto busca atender à demanda por soluções acessíveis e eficientes para a segurança doméstica, que sejam fáceis de instalar e operar. Estamos abordando a necessidade crítica de monitoramento e resposta rápida a situações de risco em ambientes residenciais, como presença de intrusos, vazamentos de gás, fumaça e temperaturas anômalas. Este sistema pretende reduzir os riscos de acidentes graves e melhorar a sensação de segurança dos moradores. Este sistema é ideal proprietários de residências pequenas e médias que desejam um sistema de segurança integrado e fácil de usar. Também é adequado para idosos que vivem sozinhos, famílias com crianças e qualquer pessoa preocupada com a segurança e a eficiência energética de sua casa. Nosso sistema tem potencial para gerar valor econômico significativo, tanto na redução de custos com danos residenciais quanto na diminuição de despesas com energia, devido à automação inteligente e monitoramento contínuo. Além disso, ao prevenir incidentes graves, ele pode reduzir gastos médicos e de seguros, proporcionando um retorno financeiro positivo para os usuários e investidores.
 
 
@@ -197,7 +202,7 @@ Painel de LEDs: O sistema proposto consiste em um Painel de LEDs para identifica
 Alarme Sonoro: um Alarme Sonoro será ativado em caso de possíveis invasões quando os donos não estiverem na residência, ou se for identificada uma alta concentração de fumaça ou gás de cozinha. Isso fornecerá um alerta audível para os ocupantes da casa ou para vizinhos, indicando uma situação de emergência.
 Teremos 2 diferentes alarmes sonoros, 1 será um buzzer piezoelétrico ativo, que será alimentado quando o sensor de gâs/fumaça detectar a presença de qualquer um, acionando um alarme sonoro e ativando um LED correspondente a onde ele detectou esse gâs. O sistema de segurança contará com o alto-falante Visaton SC 5.9 que permitirá um alarme potente ser acionado junto com o uso de um relê para a ativação do mesmo.
 
-Display LCD: um Display será utilizado para exibir a temperatura medida pelos sensores de temperatura. Isso permitirá que os ocupantes monitorem a temperatura em diferentes áreas da casa em tempo real, o que pode ser útil para garantir o conforto e a segurança, especialmente em situações como controle de temperatura ambiente ou detecção de superaquecimento em determinadas áreas.
+Display LCD: um Display será utilizado para exibir a temperatura medida pelo sensore de temperatura. Isso permitirá que os ocupantes monitorem a temperatura em tempo real, o que pode ser útil para garantir o conforto e a segurança, especialmente em situações como controle de temperatura ambiente ou detecção de superaquecimento em determinadas áreas.
 
 
 #### Microcontrolador
@@ -221,10 +226,10 @@ Portanto, no total, precisaremos de 6 bits de memória para armazenar o estado d
 
 ![image](https://github.com/EndlessLight9/ea075-2024.1-dolc/assets/165414259/1a6b275f-ee80-4e4d-a321-b54577b86b2a)
 
-Os sensores de temperatura comunicam-se utilizando 40 bits de dados. Considerando que planejamos utilizar 3 sensores - distribuídos nos 2 quartos e 1 sala de estar - necessitaremos de 120 bits de armazenamento para registrar as leituras desses sensores.
-Além disso, contamos com 3 displays LCD em nosso sistema. Cada um desses displays requer 32 bits para armazenar os dados a serem exibidos. Portanto, o total de bits necessários, incluindo os dados dos sensores e os dados a serem exibidos nos displays, será de 216 bits.
+Os sensores de temperatura comunicam-se utilizando 9 até 12 bits de dados. Considerando que planejamos utilizar 1 sensor necessitaremos de apenas 9 bits que será suficiente para termos uma boa precisão
+Além disso, contamos com um display de LCD em nosso sistema. que requer 32 bits para armazenar os dados a serem exibidos. Portanto, o total de bits necessários, incluindo os dados dos sensores e os dados a serem exibidos nos displays, será de 41 bits.
 
-Se somarmos as necessidades de memória para todos os sistemas mencionados, incluindo os sensores e atuadores, teríamos aproximadamente necessidade de 235 bits de memória
+Pensando no uso de bibiotecas e código base temos que será necessário cerca de 10Kbytes de memória ROM, para as variaveis envolvendo variaveis globais para armazenamento de dados dos sensores e buffers para o display LCD aproximadamente 1,5Kbyte será necessário de memória RAM
 
 
 
