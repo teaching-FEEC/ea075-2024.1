@@ -10,3 +10,6 @@ Módulo de comunicação sem fio baseado na tecnologia LoRa (Long Range), que of
 ## CI decodificador: CD4511
 Escolhido para utilizar menos pinos do microcontrolador e facilitar a programação no controle dos displays, tensão de operação compatível e baixa potência. 
   [Datasheet](https://www.ti.com/lit/ds/symlink/cd4511b.pdf)
+## Display 7 segumentos
+Escolhido pela facilidade na representação de digitos de 0 a 9, podendo ser escalado para um display maior com o mesmo princípio
+[Datasheet](https://www.farnell.com/datasheets/2095789.pdf)
