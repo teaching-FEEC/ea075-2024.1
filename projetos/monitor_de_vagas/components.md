@@ -5,6 +5,7 @@ Escolhido pela simplicidade, baixa potência consumida, interface UART, tensão 
 Baixo custo, alta precisão, tensão de operação compatível, facilidade de uso, velocidade de resposta, resistência e confiabilidade.
   [Datasheet](https://www.handsontec.com/dataspecs/HC-SR04-Ultrasonic.pdf)
 ## Módulo LoRa: E220-900t22d
+Módulo de comunicação sem fio baseado na tecnologia LoRa (Long Range), que oferece uma comunicação de longa distância com baixo consumo de energia, amplamente utilizado em aplicações de IoT.
   [Datasheet](https://cdn.awsli.com.br/945/945993/arquivos/E220-900T22D_UserManual_EN_v1.0.pdf)
 ## CI decodificador: CD4511
 Escolhido para utilizar menos pinos do microcontrolador e facilitar a programação no controle dos displays, tensão de operação compatível e baixa potência. 
