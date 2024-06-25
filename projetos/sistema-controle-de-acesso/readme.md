@@ -12,7 +12,7 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 > | Victoria Helena Alves Navarro  | 236015  | Eng. Elétrica|
 
 ## Arquivos Importantes
-https://github.com/thiagomasanori/ea075-2024.1/blob/8f103071f3dedd26249b199364f347b71992c265/projetos/sistema-controle-de-acesso/images/Schematic_controle_acesso.pdf(link para imagens/pdf esquemático)
+https://github.com/thiagomasanori/ea075-2024.1/blob/8f103071f3dedd26249b199364f347b71992c265/projetos/sistema-controle-de-acesso/images/Schematic_controle_acesso.pdf (link para imagens/pdf esquemático)
 
 (![Alt](images/lista_componentes)
 
