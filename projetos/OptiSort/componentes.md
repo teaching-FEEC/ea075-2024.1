@@ -6,7 +6,7 @@ url_camera: https://www.uctronics.com/download/Datasheet/Arducam-GC2145.pdf
 url_arducam: https://e2e.ti.com/cfs-file/__key/communityserver-discussions-components-files/968/GC2145-CSP-DataSheet-release-V1.0_5F00_20131201.pdf
 * **FLIR Lepton 2.5**: Câmera de luz infravermelho. url: https://flir.netx.net/file/asset/13333/original/attachment
 * **MAX485EESA+**: Escolhido devido a ser o componente utilizado para o projeto de módulos comuns de interface entre TTL e RS485. Esta versão foi escolhida pelo fato de ser SMD, com um empacotamento SOIC-8, que irá permitir sua implementação direta no esquemático. url: https://www.analog.com/media/en/technical-documentation/data-sheets/MAX1487E-MAX491E.pdf
-* **FRD400B25025-A-CTK**: Monitor LCD táctil, que será utilizado para o controle da velocidade da esteira e para visualização de dados. url: https://community.st.com/ysqtg83639/attachments/ysqtg83639/mcu-touch-gfx-gui-forum/841/1/FRD400B25025-A-CTK%20(1).pdf
+* **FRD400B25025-A-CTK**: Monitor LCD táctil, que será utilizado para o controle da velocidade da esteira e para visualização de dados. Ele precisa ser adquirido diretamente com a empresa, ou mediante a compra da placa STM32F769I-DISCO para remover ele. url: https://community.st.com/ysqtg83639/attachments/ysqtg83639/mcu-touch-gfx-gui-forum/841/1/FRD400B25025-A-CTK%20(1).pdf
 
 ## Componentes de conexão:
 * **Borne 3T (5,08mm)**: Escolhido por possuir o pitch de 5,08 mm especificamente, o que permitiu sua inclusão no projeto sem necessidade de desenvolver um footprint próprio. url: https://www.phoenixcontact.com/en-us/products/printed-circuit-board-terminal-mkkdsnh-15-3-508-1731831?type=pdf
@@ -40,6 +40,7 @@ Todos os sites foram acessados em 24/06/2024.
 * *STM32H747AII6*: $18,74 url: https://br.mouser.com/ProductDetail/STMicroelectronics/STM32H747AII6?qs=vLWxofP3U2xKTIBLp63b7g%3D%3D
 * *Arducam GC2145*: $6,99 url: https://www.arducam.com/product/2mp-gc2145-color-dvp-camera-module-for-arduino-giga-r1-wifi-board/
 * *FLIR Lepton 2.5*: $209.95 **módulo opcional**url: https://www.sparkfun.com/products/16465
+* *FRD400B25025-A-CTK*: $85,75 (assumindo compra do devkit STM) url: https://estore.st.com/en/stm32f769i-disco-cpn.html
 * *MAX485EESA+*: $6,78 url: https://br.mouser.com/ProductDetail/Analog-Devices-Maxim-Integrated/MAX487EESA%2b?qs=1THa7WoU59F%252BN4QTTVMhEw%3D%3D
 * *Borne 2T*: $0,77 url: https://br.mouser.com/ProductDetail/Phoenix-Contact/1729128?
 * *Borne 3T*: $1,74 url: https://br.mouser.com/ProductDetail/Phoenix-Contact/1731831?qs=o3rrLWFGhRnv%252Ba3%2FC%252B10UQ%3D%3D
