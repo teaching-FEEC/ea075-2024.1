@@ -19,8 +19,6 @@ O presente projeto foi originado no contexto das atividades da disciplina de gra
 
 ## Descrição Funcional 
 
-> com links para diagramas ou outros arquivos que estejam no próprio repositório.
-
 ### Funcionalidades
 > Rastreamento em Tempo Real: Monitoramento contínuo da localização dos veículos via GPS, fornecendo informações atualizadas sobre sua posição. Visualização da localização dos veículos em um mapa digital, permitindo fácil acompanhamento e gerenciamento da frota.
 
