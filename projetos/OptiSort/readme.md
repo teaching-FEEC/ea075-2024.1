@@ -1,5 +1,5 @@
-# `OptiSort: Classificador de objetos`
-# `OptiSort: Object classifier`
+# OptiSort: Classificador de objetos
+# OptiSort: Object classifier
 ## Apresentação
 
 O presente projeto foi originado no contexto das atividades da disciplina de graduação *EA075 - Introdução ao Projeto de Sistemas Embarcados*, 
@@ -19,7 +19,7 @@ Com esses dados espera-se ter apontado que Brasil gera bastante desperdiço alim
 O OptiSort tem como objetivo realizar a classificação do desperdiço em centros de coleta alimentar (como bancos de alimentos) mediante a utilização de técnicas avançadas de visão computacional e aprendizado de máquina, sendo capaz de armazenar e disponibilizar os dados coletados ao longo da sua operação para o usuario.
 Mediante sua implementação espera-se agilizar a classificação alimentar dentro dos locais onde ele for instalado, espera-se diminuir a perda de alimentos oriunda do erro humano dentro da classificação e espera-se apoiar o registro de desperdiço alimentar dentro da cidade.
 
-Atualmente não conseguimos levantar o valor econômico associado ao projeto por conta de ainda estar determinando a escala do protótipo que será desenvolvido e os materiais que serão utilizados para o seu desenvolvimento. Após termos feito isso, será possível realizar uma estimativa inicial.
+> Levantar valor econômico
 
 ## Descrição Funcional
 ### Funcionalidades
@@ -28,19 +28,19 @@ O OptiSort, como dito anteriormente, é um sistema de classificação automátic
 Ele realiza três grandes tarefas:
 * **Identificação e classificação:** Reconhece os tipos de frutas que temos inserido na esteira e as separa em categorias, utilizando técnicas de visão computacional e aprendizado de máquina para identificar a qualidade associada a cada uma.
 * **Atuação na linha de produção:** Controle de atuadores para remover automaticamente as frutas estragdas da esteira principal, direcionando-as para uma linha secundária para reavaliação ou descarte.
-* **Registro:** Monitora o funcionamento do sistema e armazena os dados de qualidade, quantidade e descarte numa base de dados. 
+* **Registro:** Monitora o funcionamento do sistema e armazena os dados de qualidade, quantidade internamente.
 
 **Exemplo de aplicação:**  
-No linha de separação de frutas, o OptiSort:
+Na linha de separação de frutas, o OptiSort:
 * Detecta frutas estragadas por visão computacional.
 * Empurra as frutas estragadas para fora da esteira principal.
 * Direciona as frutas estragadas para uma linha secundária para reavaliação ou descarte.
 
 ### Configurabilidade
-Para atingir a flexibilidade desejada deste sistema, o OptiSort conta com diversas configurações para atender às necessidades específicas de cada aplicação. Podemos agrupar as suas principais configurações em três grandes grupos:
+Para atingir a flexibilidade desejada deste sistema, o OptiSort conta com diversas configurações para atender às necessidades específicas de cada aplicação. Os seus três grupos de configuração são:
 
 #### Parâmetros de Identificação:
-   - **Tipos de itens:** Definição dos tipos de itens que o sistema deve identificar e classificar. O usuário precisará capturar imagens das frutas que ele precisa Optisort consiga classifcar, colocando imagens de diferentes níveis de qualidade para treinar o classificador com visão computacional. O processo de treinamento deve ser simples e intuitivo e não requerer o uso de programação.
+   - **Tipos de itens:** Definição dos tipos de itens que o sistema deve identificar e classificar. O usuário precisará capturar imagens das frutas que ele precisa Optisort classifique, colocando imagens de diferentes níveis de qualidade para treinar o classificador com visão computacional. O processo de treinamento é simples e intuitivo e não requer o uso de programação.
    - **Probabilidade de rejeição:** A saída do classificador visual é um número correspondente à probabilidade de um item ser da categoria rejeitada. O limite de rejeição é a probabilidade a partir da qual o item deve ser identificado e retirado da linha de separação. Por exemplo, se o limite de rejeição for de 0.7, apenas produtos atribuídos com mais de 70% de probabilidade pelo sistema de visão computacional são removidos da esteira.
    - **Número máximo de itens rejeitados abandonados:** No caso de um item rejeitado não ser removido da esteira por fatores externos, o sistema registra esse evento. Se o número de itens rejeitados que passarem pela inspeção passar de uma determinada taxa, a esteira é interrompida
 
@@ -59,7 +59,6 @@ Na linha de separação de frutas, o sistema OptiSort pode ser configurado para:
 * Identificar diferentes tipos de frutas (por exemplo, maçãs, laranjas, bananas).
 * Classificar as frutas por qualidade, considerando estragadas aquelas cuja probabilidade for menor de 50%.
 * Um segundo depois da fruta estragada ter sido identificada, remover ela da esteira mediante um servomotor.
-* Gerar um relatório de produção detalhando o número de frutas processadas e separadas da linha principal.
 
 ### Eventos
 Ao longo da sua operação definem-se vários tipos de "eventos" que descrevem o comportamento do sistema num determinado instante de tempo.
@@ -84,10 +83,7 @@ Ao longo da sua operação definem-se vários tipos de "eventos" que descrevem o
    Descrição: _O sistema detecta que houve uma manipulação ao controlador de configuração._
    
 4. **Registro de dados de operação:**  
-   Descrição: _O sistema armazena os dados de operação da esteira numa base de dados._
-
-5. **Atualizações de Software:**  
-    Descrição: _O sistema pode receber atualizações de software para melhorar seu desempenho ou adicionar novas funcionalidades._
+   Descrição: _O sistema armazena os dados de operação da esteira internamente._
 
 ### Tratamento de Eventos
 Abaixo, detalhamos mais sobre o comportamento do sistema para cada tipo de evento.
@@ -104,22 +100,20 @@ Abaixo, detalhamos mais sobre o comportamento do sistema para cada tipo de event
 
 3.  **Captação de dados do controlador:** O usuario manipula o controlador vinculado ao dispositivo, gerando uma série de interrupções que permitem a manipulação da interface enquanto o controlador realiza suas tarefas principais. Após ter colocado e confirmado as alterações, o controlador controla a esteira com a nova informação armazenada dentro da sua memória.
 
-4.  **Registro de dados de operação:** Depois de cada registro e classificação de item sendo realizado pela câmera e o controlador, ele vai encaminhando os dados registrados dentro da sua memória a uma base de dados que possa ser visualizada pelo operador.
-
-5. **Atualizações de Software:** Reprogramação do controlador principal acrescentando ou modificando features dentro do funcionamento dele.
+4.  **Registro de dados de operação:** Depois de cada registro e classificação de item sendo realizado pela câmera e o controlador, ele vai armazenando dados de operação (hora, quantidade de frutas detectadas, velocidade estimada da esteira) dentro da sua memória. Os dados armazenados poderão ser visualizados pelo operador mediante a tela LCD.
 
 ## Descrição Estrutural do Sistema
 ![Diagrama de blocos do sistema](./EA075_Diagram.jpg)
 
 ## Especificações
 ### Especificação Estrutural
-Primeiramente, estabelecemos o microcontrolador STM32H747AII6 (configuração de packaging UFBGA-169) como nossa unidade de computação básica. Como nossa aplicação envolve visão computacional, precisamos de um nível alto de memória e processamento comparado com uma aplicação de software embarcado tradicional. Com custo de &#36;18.74 por unidade [3], ele é competitivo com outras plataformas que seriam usadas para aplicações de IA, como o Raspberry Pi 4 (&#36;35) [5], e está no estado da arte do processamento em baixo consumo de energia, com apenas 2.95 μA de corrente utilizados em Standby, 1 Mbyte de RAM e 480 MHz em uma unidade de processamento 32 bits. A MCU possui sensor de temperatura embutido. [4] 
+Primeiramente, contamos com o microcontrolador STM32H747AII6 (configuração de packaging UFBGA-169, [3] e [4]) como nossa unidade de computação básica. Como nossa aplicação envolve visão computacional, precisamos de um nível alto de memória e processamento comparado com uma aplicação de software embarcado tradicional, o que descarta controladores como o Raspberry PI [5].
 
-O microcontrolador tem suporte à interface de comunicação paralela (DCMI) [18], que iremos utilizar para conectar com a câmera que irá monitorar as frutas. Essa interface precisa de 8-14 bits, dependendo do formato de compressão digital de imagens usado pelo sistema. No caso, vamos usar 10 bits de barramento com o formato YCbCr 4:2:2 para a primeira câmera (GC2145 [6]), consumindo 10 entradas digitais de dados, uma de pixel clock (PIXCLK) e duas de sincronização vertical e horizontal da câmera (HSYNC e VSYNC). Também será integrada uma câmera infravermelho ao circuito, para melhorar a qualidade da detecção. A câmera escolhida foi a FLIR Lepton 2.5, que se conecta ao microcontrolador via uma interface SPI. [19]
+O microcontrolador tem suporte à interface de comunicação paralela (DCMI) [18], que iremos utilizar para conectar com a câmera que irá monitorar as frutas. Essa interface precisa de 8-14 bits, dependendo do formato de compressão digital de imagens usado pelo sistema. No caso, vamos usar 10 bits de barramento com o formato YCbCr 4:2:2 para a primeira câmera (GC2145 [6]), consumindo 10 entradas digitais de dados, uma de pixel clock (PIXCLK) e duas de sincronização vertical e horizontal da câmera (HSYNC e VSYNC). Também será integrada uma câmera infravermelho ao circuito, para melhorar a qualidade da detecção. A câmera escolhida foi a FLIR Lepton 2.5, que mediante seu próprio protocolo de comunicação serial (VoSPI) consegue encaminhar dados de vídeo mediante a pinagem de SPI [19]. Para a utilização desta câmera, precisa-se configurar o STM32 no modo SPI3 (CPOL=1, CPOH=1), e precisamos disponibilizar pinos de comunicação I2C (2) que irão realizar a configuração da câmera mediante sua interface de configuração (CCI). Note-se que, em total, consumiremos 9 entradas digitais, 5 delas correspondendo ao SPI (contando o VSYNC), 2 ao I2C, 1 para ativar a câmera e 1 última para o masterclock que irá alimentar o dispositivo.
 
-O STM32H7 estará conectado via uma interface TFT com uma tela LCD para exibir os parâmetros de funcionamento do sistema como velocidade da esteira e temperatura. A tela escolhida foi o modelo WF121ETWAMLNN0 [7], pois é compatível com o protocolo de comunicação TFT e tem a resolução máxima suportada pelo TFT do microcontrolador (1024x768). Para a conexão com a LCD, é necessário 8 bits de pinos para cada canal de cor (R, G, B) e 3 pinos de clock e sincronização (LCD_CLK, LCD_VSYNC e LCD_HSYNC), diferentes dos usados nas câmeras. 
+O STM32H7, também, estará conectado via uma interface MIPDSI (de dois sinais diferenciais) com uma tela LCD táctil que será utilizada para manipular os parâmetros de atuação do nosso sistema e exibir eles ao operador. A tela escolhida foi o modelo WF121ETWAMLNN0 [7], pois é compatível com o protocolo de comunicação TFT e tem a resolução máxima suportada pelo TFT do microcontrolador (1024x768). Para a conexão com a LCD, é necessário 8 bits de pinos para cada canal de cor (R, G, B) e 3 pinos de clock e sincronização (LCD_CLK, LCD_VSYNC e LCD_HSYNC), diferentes dos usados nas câmeras. 
 
-Embora as conexões com a câmera de luz visível (10 + 3), a câmera infravermelho (3) atuadores (2+2) e LCD (24 + 3) ocupem uma quantidade considerável de pinos, o modelo de packaging possui 169, mais do que o suficiente para todos os sistemas de sensoreamento e atuação. 
+Embora as conexões com a câmera de luz visível (10 + 3), a câmera infravermelho (9) atuadores (2+1) e LCD (24 + 3) ocupem uma quantidade considerável de pinos, o modelo de packaging possui 169, mais do que o suficiente para todos os sistemas de sensoreamento e atuação. 
 
 
 #### Controle da Esteira
@@ -130,9 +124,11 @@ Na imagem apresentada anteriormente, retirada de [14], podemos visualizar o diag
 
 ![DiagramaEstimado](https://github.com/hsrocha-source/optisort/assets/113446522/a6dfcc02-1946-4f32-9df1-2aa4caf2072d)
 
-Ela será adquirida de uma das empresas de produção de esteiras dentro do estado de São Paulo (como sendo [9] e [10]), favorecendo o modelo modular pela simplicidade da limpeza das suas peças. Estima-se a esteira seja de uns 3 m de extensão. O CLP da esteira solicitada precisa ter acesso ao padrão EIA485 (RS485) de comunicação serial, que será utilizado para interconectar o controlador lógico com o STM32H7. Por conta dos níveis de tensão associados ao padrão serial (-7V até +12V) iremos usar um conversor TTL a RS485 montado com o chip MAX485 (visível neste link [11]), seguindo a montagem utilizada em módulos comerciais (como [12]). No projeto deste circuito conectaremos um conjunto de pinos RX e TX do USART do STM32H7 no MAX485, ligando ele no nosso CLP mediante um cabo de Ethernet CAT5, atendendo as especificações de cabo para o EIA422 (padrão anterior) [13]. Mediante esta conexão serão controlados e supervisionados aspectos da esteira, como a velocidade. A correia transportadora precisa ser modular (como aquela apresentada em [9]) para permitir funilamento e espaçamento dos elementos colocados no "stream" de entrada. 
+Ela será adquirida de uma das empresas de produção de esteiras dentro do estado de São Paulo (como sendo [9] e [10]), favorecendo o modelo modular pela simplicidade da limpeza das suas peças. A correia transportadora ca esteira precisa ser modular (como aquela apresentada em [9]) para permitir funilamento e espaçamento dos elementos colocados no "stream" de entrada.  O CLP da esteira solicitada precisa ter acesso ao padrão EIA485 (RS485) de comunicação serial, que será utilizado para interconectar o controlador lógico com o STM32H7.
 
-A câmera precisa estar com uma angulação de 45° com relação à esteira, de forma que consiga enxergar os componentes em cima da esteira desde um plano superior. Feito o reconhecimento conforme apresentado na seção anterior, dois dos pinos GPIO do STM32H7 (pinos digitais) serão utilizados para o acionamento de dois cilindros pneumáticos [16], que, por conta da sua velocidade e força de acionamento, vão servir como o nosso atuador separador de fruta estragada. Para disparar os cilindros iremos utilizar duas válvulas pneumáticas 5/2 com solenoide [15], que, devido à tensão de operação (12V), serão acionadas mediante Mosfets FQP30N06L conectados aos pinos digitais escolhidos. Cada válvula estará conectada à fonte de gás pressurizado, cuja pressão depende da velocidade desejada para o cilindro, que pode ser escolhida olhando na tabela em [16]. Finalmente, os cilindros terão uma impressão 3D cobrindo a sua ponta, tal que a área em contato com a fruta seja plana e não pontual, de forma a distribuir melhor a força na superficie da fruta impactada.
+Por conta dos níveis de tensão associados ao padrão serial (-7V até +12V) usamos um conversor TTL a RS485 montado com o chip MAX485E (visível neste link [11]), fundamentando a montagem naquela utilizada em módulos comerciais (como [12]), realizando ajustes conforme for específicado nas folhas técnicas de uso. Neste circuito conectaram-se um set de pinos RX e TX do USART do STM32H7, que após serem processados pelo módulo, irão interagir com o CLP Ethernet CAT5 (atendendo as especificações de cabo para o EIA422 [13]). De forma periódica, serão coletados dados sobre a esteira, e serão encaminhados dados para a esteira, exibindo eles na tela LCD descrita anteriormente. 
+
+A câmera precisa ser controlada com uma angulação de 45° com relação à esteira, de forma que consiga enxergar os componentes em cima da esteira desde um plano superior. Feito o reconhecimento conforme apresentado na seção anterior, dois dos pinos GPIO do STM32H7 (pinos digitais) serão utilizados para o acionamento de um cilindro pneumáticos [16], que, por conta da sua velocidade e força de acionamento, vão servir como o nosso atuador separador de fruta estragada. Para disparar o cilindros usamos uma válvula pneumática 5/2 com solenoide [15], que, devido à tensão de operação (12V), é acionada mediante um mosfet FQP30N06L conectado ao pino digital de controle. A válvula estará conectada à fonte de gás pressurizado, cuja pressão depende da velocidade desejada para o cilindro, que pode ser escolhida olhando na tabela em [16]. Finalmente, o cilindros terá uma impressão 3D cobrindo a sua ponta, tal que a área em contato com a fruta seja plana e não pontual, de forma a distribuir melhor a força na superficie da fruta impactada.
 
 Note-se que a montagem requer bastante espaço, com 3m^3 (3x1x1) para ela. A sala precisa contar com acesso à rede elétrica para utilizar uma fonte de alimentação [17], com o objetivo de obter as tensões de alimentação para os circuitos e o acionamento dos dois cilindros. Abaixo da esteira pode-se colocar um cesto grande coletor de fruta estraga, ou pode-se colocar um sistema de funilamento que coloca a fruta estraga numa outra esteira transportadora.
 
