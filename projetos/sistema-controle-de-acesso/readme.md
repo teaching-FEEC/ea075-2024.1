@@ -13,10 +13,12 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 
 ## Arquivos Importantes
 https://github.com/thiagomasanori/ea075-2024.1/blob/8f103071f3dedd26249b199364f347b71992c265/projetos/sistema-controle-de-acesso/images/Schematic_controle_acesso.pdf (link para imagens/pdf esquemático)
+(![Alt](images/Schematic_controle-de-acesso_2024-06-24.png)
 
 (![Alt](images/lista_componentes)
 
-(link para imagens/pdf PCB)
+
+(![Alt](images/3d e 2d.pdf)
 
 ## Descrição do Projeto
 
