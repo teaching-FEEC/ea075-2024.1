@@ -12,7 +12,11 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 > | José Henrique Araújo de Oliveira  | 239753  | Eng. Elétrica|
 
 ## Arquivos Importantes
-
+>[Esquemático em PDF](link para imagens/pdf esquemático)
+>
+>[Lista de Componentes](link para components.md)
+>
+>[PCB](link para imagens/pdf PCB)
 
 
 ## Descrição do Projeto
