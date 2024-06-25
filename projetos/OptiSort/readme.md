@@ -116,9 +116,9 @@ Primeiramente, contamos com o microcontrolador STM32H747AII6 (configuração de 
 
 O microcontrolador tem suporte à interface de comunicação paralela (DCMI) [18], que iremos utilizar para conectar com a câmera que irá monitorar as frutas. Essa interface precisa de 8-14 bits, dependendo do formato de compressão digital de imagens usado pelo sistema. No caso, vamos usar 10 bits de barramento com o formato YCbCr 4:2:2 para a primeira câmera (GC2145 [6]), consumindo 10 entradas digitais de dados, uma de pixel clock (PIXCLK) e duas de sincronização vertical e horizontal da câmera (HSYNC e VSYNC). Também será integrada uma câmera infravermelho ao circuito, para melhorar a qualidade da detecção. A câmera escolhida foi a FLIR Lepton 2.5, que mediante seu próprio protocolo de comunicação serial (VoSPI) consegue encaminhar dados de vídeo mediante a pinagem de SPI [19]. Para a utilização desta câmera, precisa-se configurar o STM32 no modo SPI3 (CPOL=1, CPOH=1), e precisamos disponibilizar pinos de comunicação I2C (2) que irão realizar a configuração da câmera mediante sua interface de configuração (CCI). Note-se que, em total, consumiremos 9 entradas digitais, 5 delas correspondendo ao SPI (contando o VSYNC), 2 ao I2C, 1 para ativar a câmera e 1 última para o masterclock que irá alimentar o dispositivo.
 
-O STM32H7, também, estará conectado via uma interface MIPDSI (de dois sinais diferenciais) com uma tela LCD táctil que será utilizada para manipular os parâmetros de atuação do nosso sistema e exibir eles ao operador. A tela escolhida foi o modelo WF121ETWAMLNN0 [7], pois é compatível com o protocolo de comunicação TFT e tem a resolução máxima suportada pelo TFT do microcontrolador (1024x768). Para a conexão com a LCD, é necessário 8 bits de pinos para cada canal de cor (R, G, B) e 3 pinos de clock e sincronização (LCD_CLK, LCD_VSYNC e LCD_HSYNC), diferentes dos usados nas câmeras. 
+O STM32H7, também, estará conectado via uma interface MIPDSI (de dois sinais diferenciais) com uma tela LCD táctil que será utilizada para manipular os parâmetros de atuação do nosso sistema e exibir eles ao operador. A tela escolhida foi o modelo FRD400B25025-A-CTK [7], pela sua prévia implementação em projetos com o STM32 (a placa STM32F769I-DISCO) ele vira conveniente para o desenvolvimento do projeto. Para a conexão com o LCD iremos precisar de 14 pinos, 7 sendo para interconectar o DSI do STM com o tela, 2 sendo de interação mediante I2C, e 5 para controle da tela. 
 
-Embora as conexões com a câmera de luz visível (10 + 3), a câmera infravermelho (9) atuadores (2+1) e LCD (24 + 3) ocupem uma quantidade considerável de pinos, o modelo de packaging possui 169, mais do que o suficiente para todos os sistemas de sensoreamento e atuação. 
+Embora as conexões com a câmera de luz visível (10 + 3), a câmera infravermelho (9) atuadores (2+1) e LCD (14) ocupem uma quantidade considerável de pinos, o modelo de packaging possui 169, mais do que o suficiente para todos os sistemas de sensoreamento e atuação. 
 
 
 #### Controle da Esteira
@@ -157,7 +157,7 @@ A câmera irá utilizar 7.5 fps para que haja tempo suficiente para que a infer�
 
 [6] Datasheet da câmera GC2145. https://e2e.ti.com/cfs-file/__key/communityserver-discussions-components-files/968/GC2145-CSP-DataSheet-release-V1.0_5F00_20131201.pdf
 
-[7] Datasheet da tela LCD WF121ETWAMLNN0. https://www.winstar.com.tw/uploads/files/04170fa78caf6e36d3dcec06f7f1042b.pdf
+[7] Datasheet da tela LCD. https://community.st.com/ysqtg83639/attachments/ysqtg83639/mcu-touch-gfx-gui-forum/841/1/FRD400B25025-A-CTK%20(1).pdf
 
 [8] Lin, Ji, et al. "Mcunet: Tiny deep learning on iot devices." Advances in Neural Information Processing Systems 33 (2020): 11711-11722.
 
