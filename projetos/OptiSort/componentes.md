@@ -48,22 +48,22 @@ Todos os sites foram acessados em 24/06/2024. Não consideramos o frete dos comp
 * *Molex 213083-0005*: $4,30 url: https://br.mouser.com/ProductDetail/Molex/213083-0005?qs=IS%252B4QmGtzzp3iDJcXWaSTg%3D%3D
 * *FH19C-6S-0.5SH(05)*: $1,3 url: https://www.digikey.com.br/en/products/detail/hirose-electric-co-ltd/FH19C-6S-0-5SH-05/1124146
 * *FH26W-25S-0.3SHW(97)*: $1,819 url: https://www.digikey.com.br/pt/products/detail/hirose-electric-co-ltd/FH26W-25S-0-3SHW-97/8558595
-* *Resistor 22,1*: $0,10 url: https://br.mouser.com/ProductDetail/Vishay-Dale/CRCW060322R1FKEA?qs=zWI4UZgPOoTm0WgHtMVBQw%3D%3D
-* *Resistor 110*: $0,22 url: https://br.mouser.com/ProductDetail/Vishay-Dale/CRCW0201110RFKED?qs=3bSaU8eFeoF0Lvza98Drvw%3D%3D
-* *Resistor 464*: $0,25 url: https://br.mouser.com/ProductDetail/Vishay-Dale/CRCW0201464RFKED?qs=3bSaU8eFeoHkvoGgNiUkCQ%3D%3D
-* *Resistor 4k7*: $0,10 url: https://br.mouser.com/ProductDetail/Vishay-Dale/CRCW06034K70FKEA?qs=4E3O%252BEEZcdLDG%2FSk4GmlWQ%3D%3D
-* *Resistor 10k*: $0,10 url: https://br.mouser.com/ProductDetail/Vishay-Dale/CRCW060310K0JNEAHP?qs=k2%2FDWSARqgH8Om6O4X312A%3D%3D
-* *Resistor 100k*: $0,10 url: https://br.mouser.com/ProductDetail/Vishay-Dale/CRCW0603100KFKEE?qs=%252B6g0mu59x7I1D%252BO0qMg%252Bjg%3D%3D
-* *Capacitor 0.1uF*: $0,10 url: https://br.mouser.com/ProductDetail/TAIYO-YUDEN/MLAST105SB5104KFNA01?qs=tlsG%2FOw5FFgoCYoXnQxViA%3D%3D
-* *Capacitor 1uF*: $0,10 url: https://br.mouser.com/ProductDetail/TAIYO-YUDEN/TMK105BJ105MV-F?qs=%252BAZVS4b%2FkgIaRFkNK4F9Wg%3D%3D
-* *Capacitor 2,2uF*: $0,16 url: https://br.mouser.com/ProductDetail/TAIYO-YUDEN/MLASE105AB5225KFNA01?qs=tlsG%2FOw5FFj9m%252Br72rkbgg%3D%3D
-* *Capacitor 4,7uF*: $0,16 url: https://br.mouser.com/ProductDetail/TAIYO-YUDEN/JMK105BBJ475MV8F?qs=hWgE7mdIu5TAqzIi0KjAXw%3D%3D
-* *Capacitor 10uF*: $0,19 url: https://br.mouser.com/ProductDetail/TAIYO-YUDEN/MEASJ105CB5106MF1A01?qs=Z%252BL2brAPG1LB%252BwvREar%252BZA%3D%3D
-* *Diodo 1N4148W-7-F*: $0,13 url: https://br.mouser.com/ProductDetail/Diodes-Incorporated/1N4148W-7-F?qs=LHX0FizJzg7Ae9ZM8LTAWw%3D%3D&utm_id=12168397652&gad_source=1&gclid=Cj0KCQjwsuSzBhCLARIsAIcdLm6crf8T9OdxRbaR2RrF6ghz7rSSXXY6n8mEHdbXS6ePBsVzwyIpTXYaAqM_EALw_wcB
-* *Transistor MOS FQP30N06L*: $0,78 url: https://www.makerhero.com/produto/transistor-mosfet-fqp30n06l-60v/
-* *Diodo Schottky STPS1L40M*: $0,44 url: https://br.mouser.com/ProductDetail/STMicroelectronics/STPS1L40M?qs=1tTY8DFIKADyj1WerxBVhA%3D%3D
-* *Driver STLD40DPUR*: $1,32 url: https://br.mouser.com/ProductDetail/STMicroelectronics/STLD40DPUR?qs=VhEFRjs49KX9ekB8ammGtQ%3D%3D
-* *Indutor 4,7uH*: $0,33 url: https://br.mouser.com/ProductDetail/Vishay-Dale/IHLL1008ABEZ4R7M1Z?qs=sGAEpiMZZMv126LJFLh8y%252BXouc50oricR1OSovi5oYE%3D
-* *Ferrite FCM 1608KF-601T03*: $0,10 url: https://www.digikey.com.br/en/products/detail/FCM%25201608KF-601T03/4816-FCM1608KF-601T03CT-ND/17836361?curr=usd&utm_campaign=buynow&utm_medium=aggregator&utm_source=octopart
+* *Resistor 22,1*: $0,10x2 url: https://br.mouser.com/ProductDetail/Vishay-Dale/CRCW060322R1FKEA?qs=zWI4UZgPOoTm0WgHtMVBQw%3D%3D
+* *Resistor 110*: $0,22x2 url: https://br.mouser.com/ProductDetail/Vishay-Dale/CRCW0201110RFKED?qs=3bSaU8eFeoF0Lvza98Drvw%3D%3D
+* *Resistor 464*: $0,25x2 url: https://br.mouser.com/ProductDetail/Vishay-Dale/CRCW0201464RFKED?qs=3bSaU8eFeoHkvoGgNiUkCQ%3D%3D
+* *Resistor 4k7*: $0,10x12 url: https://br.mouser.com/ProductDetail/Vishay-Dale/CRCW06034K70FKEA?qs=4E3O%252BEEZcdLDG%2FSk4GmlWQ%3D%3D
+* *Resistor 10k*: $0,10x3 url: https://br.mouser.com/ProductDetail/Vishay-Dale/CRCW060310K0JNEAHP?qs=k2%2FDWSARqgH8Om6O4X312A%3D%3D
+* *Resistor 100k*: $0,10x1 url: https://br.mouser.com/ProductDetail/Vishay-Dale/CRCW0603100KFKEE?qs=%252B6g0mu59x7I1D%252BO0qMg%252Bjg%3D%3D
+* *Capacitor 0.1uF*: $0,10x8 url: https://br.mouser.com/ProductDetail/TAIYO-YUDEN/MLAST105SB5104KFNA01?qs=tlsG%2FOw5FFgoCYoXnQxViA%3D%3D
+* *Capacitor 1uF*: $0,10x2 url: https://br.mouser.com/ProductDetail/TAIYO-YUDEN/TMK105BJ105MV-F?qs=%252BAZVS4b%2FkgIaRFkNK4F9Wg%3D%3D
+* *Capacitor 2,2uF*: $0,16x7 url: https://br.mouser.com/ProductDetail/TAIYO-YUDEN/MLASE105AB5225KFNA01?qs=tlsG%2FOw5FFj9m%252Br72rkbgg%3D%3D
+* *Capacitor 4,7uF*: $0,16x3url: https://br.mouser.com/ProductDetail/TAIYO-YUDEN/JMK105BBJ475MV8F?qs=hWgE7mdIu5TAqzIi0KjAXw%3D%3D
+* *Capacitor 10uF*: $0,19x2 url: https://br.mouser.com/ProductDetail/TAIYO-YUDEN/MEASJ105CB5106MF1A01?qs=Z%252BL2brAPG1LB%252BwvREar%252BZA%3D%3D
+* *Diodo 1N4148W-7-F*: $0,13x1 url: https://br.mouser.com/ProductDetail/Diodes-Incorporated/1N4148W-7-F?qs=LHX0FizJzg7Ae9ZM8LTAWw%3D%3D&utm_id=12168397652&gad_source=1&gclid=Cj0KCQjwsuSzBhCLARIsAIcdLm6crf8T9OdxRbaR2RrF6ghz7rSSXXY6n8mEHdbXS6ePBsVzwyIpTXYaAqM_EALw_wcB
+* *Transistor MOS FQP30N06L*: $0,78x1 url: https://www.makerhero.com/produto/transistor-mosfet-fqp30n06l-60v/
+* *Diodo Schottky STPS1L40M*: $0,44x1 url: https://br.mouser.com/ProductDetail/STMicroelectronics/STPS1L40M?qs=1tTY8DFIKADyj1WerxBVhA%3D%3D
+* *Driver STLD40DPUR*: $1,32x1 url: https://br.mouser.com/ProductDetail/STMicroelectronics/STLD40DPUR?qs=VhEFRjs49KX9ekB8ammGtQ%3D%3D
+* *Indutor 4,7uH*: $0,33x1 url: https://br.mouser.com/ProductDetail/Vishay-Dale/IHLL1008ABEZ4R7M1Z?qs=sGAEpiMZZMv126LJFLh8y%252BXouc50oricR1OSovi5oYE%3D
+* *Ferrite FCM 1608KF-601T03*: $0,10x1 url: https://www.digikey.com.br/en/products/detail/FCM%25201608KF-601T03/4816-FCM1608KF-601T03CT-ND/17836361?curr=usd&utm_campaign=buynow&utm_medium=aggregator&utm_source=octopart
 
 
