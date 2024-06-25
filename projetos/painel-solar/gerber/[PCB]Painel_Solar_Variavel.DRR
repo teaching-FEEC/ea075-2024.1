@@ -1,0 +1,20 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: [PCB]Painel_Solar_Variavel.PcbDoc   24/06/2024  17:45:47
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : [PCB]Painel_Solar_Variavel.TXT
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      0.4mm (16mil)                                             Round             11        PTH        98.05mm (3.86inch)
+T2      0.5mm (20mil)                                             Round             20        PTH        97.72mm (3.85inch)
+T3      0.711mm (28mil)                                           Round             3         PTH        56.98mm (2.24inch)
+T4      0.813mm (32mil)                                           Round             12        PTH        29.59mm (1.17inch)
+T5      0.9mm (35mil)                                             Round             30        PTH        99.83mm (3.93inch)
+T6      2.5mm (98mil)                                             Round             4         PTH        21.39mm (0.84inch)
+T7      3mm (118mil)                                              Round             2         PTH        83.57mm (3.29inch)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              82
+
+Total Processing Time (hh:mm:ss) : 00:00:00
