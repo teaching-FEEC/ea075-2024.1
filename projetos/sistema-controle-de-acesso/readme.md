@@ -14,7 +14,7 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 ## Arquivos Importantes
 (link para imagens/pdf esquemático)
 
-(link para components.md)
+(![Alt](images/lista_componentes)
 
 (link para imagens/pdf PCB)
 
