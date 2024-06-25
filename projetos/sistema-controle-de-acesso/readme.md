@@ -104,26 +104,26 @@ Você sabia? Ferramentas como o `draw.io` permitem integração com o Github.
 >    Desenvolver um sistema de controle e gerenciamento de acesso utilizando ESP32-CAM para identificação de usuários via imagem ou leitura de QR Code. O administrador terá a opção de escolher o método de identificação
 > 
 > 2. Componentes Principais
->    - ESP32-CAM: Módulo principal para captura de imagens e processamento.
-     - Câmera OV2640: Integrada ao ESP32-CAM para captura de imagens.
-     - Leitor de QR Code: Pode ser implementado via software utilizando a câmera do ESP32-CAM.
-     - Microcontrolador ESP32: Para controle do sistema, processamento de imagens e leitura de QR Codes.
+>    - ESP32-S2: Módulo principal para captura de imagens e processamento.
+     - Câmera OV5640: Integrada ao ESP32-S2 para captura de imagens.
+     - Leitor de QR Code: Pode ser implementado via software utilizando a câmera OV5640 no ESP32-S2.
+     - Microcontrolador ESP32-S2: Para controle do sistema, processamento de imagens e leitura de QR Codes.
 >    - Sensor de presença: detectar a presença do usuário para acionar a câmera
 
 > 3. Definição dos Periféricos
->    - Câmera OV2640: Entrada para captura de imagens.
-     - Display LCD/OLED: Saída para que o usuário veja a imagem que ele está gerando na câmera, podendo posicionar o QR no local indicado para melhor leitura pela câmera.
-     - Buzzer: Indicação sonora de sucesso ou falha na identificação.
->    - Sensor de presença: detectar a presença do usuário para acionar a câmera.
+>    - Câmera OV5640: Entrada para captura de imagens.
+     - Display LCD/OLED (HS13L03W2C01): Saída para que o usuário veja a imagem que ele está gerando na câmera, podendo posicionar o QR no local indicado para melhor leitura pela câmera.
+     - Buzzer(QMB-09B-03): Indicação sonora de sucesso ou falha na identificação.
+>    - Sensor de presença(MC12G): detectar a presença do usuário para acionar a câmera.
 
 > 4. Endereçamento
->    - Câmera: Integrada no ESP32-CAM, acessada via GPIOs específicos do módulo
+>    - Câmera: Integrada no ESP32-S2, acessada via GPIOs específicos do módulo
 >    - Banco de dados via WI-FI
 >    - Sensor de presença via SPI
 >    - Display via I2C
 >      
 > 5. Unidade Microcontroladora
->    - Microcontrolador ESP32: Central do sistema, responsável pelo controle, captura de imagens, processamento e leitura de QR Codes. Não é necessário decodificador de endereços, pois a unidade microcontroladora possui GPIOs e interfaces de comunicação suficientes para conectar diretamente aos periféricos
+>    - Microcontrolador ESP32-S2: Central do sistema, responsável pelo controle, captura de imagens, processamento e leitura de QR Codes. Não é necessário decodificador de endereços, pois a unidade microcontroladora possui GPIOs e interfaces de comunicação suficientes para conectar diretamente aos periféricos
 >      
 > 6. Circuitos de Interface
 >    - Conversores AD/DA: Não necessários, pois os sensores e atuadores são digitais.
@@ -135,10 +135,10 @@ Você sabia? Ferramentas como o `draw.io` permitem integração com o Github.
 >      
 > 8. Implementação do Sistema
 >    - Configuração Inicial:
->     1. Configurar o ESP32-CAM para capturar imagens e processá-las utilizando bibliotecas de reconhecimento facial ou de QR Code.
+>     1. Configurar o ESP32-S2 para capturar imagens e processá-las utilizando bibliotecas de reconhecimento facial ou de QR Code.
 >     2. Implementar um sistema de seleção de modo de operação (imagem ou QR Code) via interface web.
 >    - Identificação por Imagem:
->     1. Captura de Imagem: Utilizar a câmera OV2640 para capturar a imagem do usuário.
+>     1. Captura de Imagem: Utilizar a câmera OV5640 para capturar a imagem do usuário.
 >     2. Processamento: Implementar algoritmo de reconhecimento facial (utilizando bibliotecas como ESP-WHO da Espressif).
 >     3. Decisão: Verificar se o rosto identificado está na base de dados de usuários autorizados.
 >    - Identificação por QR Code:
@@ -204,4 +204,7 @@ Você sabia? Ferramentas como o `draw.io` permitem integração com o Github.
 > 7) Sistema de Controle e Gerenciamento de Acesso. https://riu.ufam.edu.br/bitstream/prefix/6638/11/TCC_DavidFigueira.pdf.
 > 8) ESP32 com Câmera e Reconhecimento Facial. YouTube, 13 mar. 2023. Disponível em: https://www.youtube.com/watch?v=915jxGwLxxI. Acesso em: 19 maio 2024.
 > 9) ESP32 e RFID - Liberando acessos e Travas #MaratonaMaker. YouTube, 23 maio 2024. Disponível em: https://youtu.be/L4vh95aklPc?feature=shared. Acesso em: 19 maio 2024.
-
+> 10) LCSC. Datasheet HS-HS13L03W2C01. Disponível em: https://www.lcsc.com/datasheet/lcsc_datasheet_2307201018_HS-HS13L03W2C01_C7465997.pdf. Acesso em: 15 jun. 2024.
+> 11) HardwareHarry. Mysentech MC12G EN translation, 22 June 2024. Disponível em: https://github.com/HardwareHarry/MC12G-Documentation/blob/main/Mysentech-MC12G_EN_translation_22_June_2024.pdf. Acesso em: 15 jun. 2024.
+> 12) SparkFun. OV5640 Datasheet. Disponível em: https://cdn.sparkfun.com/datasheets/Sensors/LightImaging/OV5640_datasheet.pdf. Acesso em: 15 jun. 2024.
+> 13) Espressif Systems. ESP32-S2 Datasheet EN. Disponível em: https://www.espressif.com/sites/default/files/documentation/esp32-s2_datasheet_en.pdf. Acesso em: 15 jun. 2024.
