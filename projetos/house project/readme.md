@@ -12,12 +12,16 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 > | Daniel Alexander Ortega Rodriguez  | 261261  | Eng. Elétrica|
 > | Luciano Cardoso Ferreira Filho     | 240276  | Eng. Elétrica|
 
+## Arquivos Importantes
 
 ## Descrição do Projeto
  O objetivo principal deste projeto é criar um sistema de segurança eficiente, focado em casas de menor porte, mas que também possa ser otimizado para residências maiores. O sistema de segurança proporciona 
  eficiência energética e conforto aos moradores. Ele inclui funcionalidades como: sensor de presença conectado a um LED, permitindo monitoramento conforme desejado pelo usuário e podendo também acionar um alarme 
  sonoro, se desejado (por exemplo, ao sair de casa); sensor de gás com alarme sonoro, ativado ao detectar níveis potencialmente perigosos, sensor de fumaça, que aciona um alarme sonoro ao detectar altos níveis 
  de fumaça e sensor de temperatura, utilizado para vizualização da temperatura dos cômodos.
+A crescente preocupação com a segurança residencial, aliada ao aumento de incidentes envolvendo gases inflamáveis e incêndios domésticos, motiva a criação deste sistema. Nosso projeto busca atender à demanda por soluções acessíveis e eficientes para a segurança doméstica, que sejam fáceis de instalar e operar. Estamos abordando a necessidade crítica de monitoramento e resposta rápida a situações de risco em ambientes residenciais, como presença de intrusos, vazamentos de gás, fumaça e temperaturas anômalas. Este sistema pretende reduzir os riscos de acidentes graves e melhorar a sensação de segurança dos moradores. Este sistema é ideal proprietários de residências pequenas e médias que desejam um sistema de segurança integrado e fácil de usar. Também é adequado para idosos que vivem sozinhos, famílias com crianças e qualquer pessoa preocupada com a segurança e a eficiência energética de sua casa. Nosso sistema tem potencial para gerar valor econômico significativo, tanto na redução de custos com danos residenciais quanto na diminuição de despesas com energia, devido à automação inteligente e monitoramento contínuo. Além disso, ao prevenir incidentes graves, ele pode reduzir gastos médicos e de seguros, proporcionando um retorno financeiro positivo para os usuários e investidores.
+
+
  
 ## Descrição Funcional
 
@@ -35,10 +39,10 @@ Sensor de Presença:
  Sensor de Temperatura :
    O sensor de temperatura desempenha um papel crucial ao fornecer informações essenciais aos moradores. Ele monitora atentamente a temperatura de cada cômodo e apresenta, de forma clara e precisa, os resultados em um display LCD.
 
-
+Microcontrolador ATmega32: 
+O ATmega32 é o núcleo do sistema, coordenando a operação de todos os sensores e atuadores. Este microcontrolador oferece várias portas I/O, alta capacidade de processamento e flexibilidade para futuras expansões. Ele facilita a integração de múltiplos sensores e dispositivos de saída, garantindo que o sistema seja robusto e escalável.
 
 ### Funcionalidades
-
 
 
 Detecção de Presença: Utilizando sensores de movimento, o sistema pode identificar a presença de indivíduos em áreas específicas da casa. Isso permite a ativação de alertas visuais (LEDs) e sonoros para notificar os moradores sobre atividades suspeitas.
