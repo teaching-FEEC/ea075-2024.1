@@ -13,7 +13,7 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 
 ## Arquivos Importantes
 
-Esquemático --  
+Esquemático -- https://github.com/gaserra/ea075-2024.1/blob/636cf3e964390284290cc4d843cebd671a3fc66c/projetos/elevador/pdf/Esquem%C3%A1tico.pdf
 
 Lista de Componentes -- https://github.com/gaserra/ea075-2024.1/blob/99e6916becb7f16d3520f543a689d3d09d11a9cd/projetos/elevador/componentes.md
 
