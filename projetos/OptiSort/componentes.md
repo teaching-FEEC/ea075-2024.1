@@ -33,10 +33,9 @@ url_arducam: https://e2e.ti.com/cfs-file/__key/communityserver-discussions-compo
 * **Diodo Schottky STPS1L40M**: Para manter a tensão constante nos LEDs. url: https://www.st.com/content/ccc/resource/technical/document/datasheet/62/69/a4/97/73/11/43/c2/CD00003015.pdf/files/CD00003015.pdf/jcr:content/translations/en.CD00003015.pdf
 * **Indutor IHLL1008ABEZ4R7M1Z (4,7uH)**: Este nivel de indutância foi sugerido na folha de dados para a boa utilização do módulo driver. url: https://www.vishay.com/docs/34610/ihll-1008ab-1z.pdf
 * **Ferrite Bead FCM 1608KF-601T03**: Ele é utilizado pelo módulo driver. url: https://www.alldatasheet.com/datasheet-pdf/pdf/1207269/TAI-TECH/FCM1608KF-601T03.html
-* 
   
-## Bill of Materials
-Todos os sites foram acessados em 24/06/2024.
+## Preços
+Todos os sites foram acessados em 24/06/2024. Não consideramos o frete dos componentes ainda, mas para facilitar o processo, os componentes que podiam ser comprados do mesmo fabricante foram comprados do mesmo fabricante. 
 * *STM32H747AII6*: $18,74 url: https://br.mouser.com/ProductDetail/STMicroelectronics/STM32H747AII6?qs=vLWxofP3U2xKTIBLp63b7g%3D%3D
 * *Arducam GC2145*: $6,99 url: https://www.arducam.com/product/2mp-gc2145-color-dvp-camera-module-for-arduino-giga-r1-wifi-board/
 * *FLIR Lepton 2.5*: $209.95 **módulo opcional**url: https://www.sparkfun.com/products/16465
