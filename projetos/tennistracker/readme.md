@@ -138,7 +138,7 @@ Memória:
 
 - Essa equação leva em conta que: (i) ADC é de 10 bits e, portanto, o valor máximo é 1024; (ii) VCC = 3.3V; (iii) são usados resistores de 10kOhm e 22kOhm no divisor de tensão na entrada do ADC. 
 
-- Se a bateria tiver tensão menor que BATTERY_THRESHOLD=3.9V (aproximadamente 15% de capacidade restante), o LED deve piscar. O LED pisca com período de 500ms (toggle a cada 250ms). Como o timer1 já tem período de 1ms, a cada overflow seu, é incrementada a variável 'blink_counter' que, quando igual a 250 (250ms decorridos), ocasiona o toggle do LED.
+- Se a bateria tiver tensão menor que BATTERY_THRESHOLD=5.2V (aproximadamente 15% de capacidade restante), o LED deve piscar. O LED pisca com período de 500ms (toggle a cada 250ms). Como o timer1 já tem período de 1ms, a cada overflow seu, é incrementada a variável 'blink_counter' que, quando igual a 250 (250ms decorridos), ocasiona o toggle do LED.
 
 - Fluxograma:
 
