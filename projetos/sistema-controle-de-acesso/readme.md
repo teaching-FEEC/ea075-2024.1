@@ -13,12 +13,12 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 
 ## Arquivos Importantes
 https://github.com/thiagomasanori/ea075-2024.1/blob/8f103071f3dedd26249b199364f347b71992c265/projetos/sistema-controle-de-acesso/images/Schematic_controle_acesso.pdf (link para imagens/pdf esquemático)
-(![Alt](images/Schematic_controle-de-acesso_2024-06-24.png)
+(![Alt](images/images-E3/Schematic_controle-de-acesso_2024-06-24.png)
 
 
-(![Alt](images/lista_componentes)
+(![Alt](images/images-E3/lista_componentes)
 
-https://github.com/thiagomasanori/ea075-2024.1/blob/41950efd01c12084240726d7f200ded03d53a9aa/projetos/sistema-controle-de-acesso/images/PCB_PCB_controle_acesso_2_2024-06-24.pdf (link para PCB)
+https://github.com/thiagomasanori/ea075-2024.1/blob/41950efd01c12084240726d7f200ded03d53a9aa/projetos/sistema-controle-de-acesso/images/images-E3/PCB_PCB_controle_acesso_2_2024-06-24.pdf (link para PCB)
 
 https://github.com/thiagomasanori/ea075-2024.1/blob/79c40f1059280c65454eb4e4ba6332e73848c7f3/projetos/sistema-controle-de-acesso/images/controle_acesso.zip (link para Pasta ZIP)
 
