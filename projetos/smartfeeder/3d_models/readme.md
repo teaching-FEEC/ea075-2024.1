@@ -1,1 +1,1 @@
-<img src="\images\logo1.png">
+<img src="\SmartFeeder 3D.png">
