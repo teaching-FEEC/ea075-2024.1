@@ -12,7 +12,7 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 > | José Henrique Araújo de Oliveira  | 239753  | Eng. Elétrica|
 
 ## Arquivos Importantes
-[Esquemático em PDF](link para imagens/pdf esquemático)
+[Esquemático em PDF](https://github.com/itsjosehenrique/ea075-2024.1/blob/main/projetos/smartfeeder/pdf/Esquem%C3%A1tico%20SmartFeeder.pdf)
 
 [Lista de Componentes](https://github.com/itsjosehenrique/ea075-2024.1/blob/main/projetos/smartfeeder/components.md)
 
