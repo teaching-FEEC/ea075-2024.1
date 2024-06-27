@@ -22,6 +22,8 @@ https://github.com/thiagomasanori/ea075-2024.1/blob/41950efd01c12084240726d7f200
 
 https://github.com/thiagomasanori/ea075-2024.1/blob/79c40f1059280c65454eb4e4ba6332e73848c7f3/projetos/sistema-controle-de-acesso/images/controle_acesso.zip (link para Pasta ZIP)
 
+https://github.com/thiagomasanori/ea075-2024.1/blob/09c57e48370c131b52c00f0a246e518fe4f3c49f/projetos/sistema-controle-de-acesso/gerber/Gerber_controle_acesso_2_PCB_controle_acesso_2_2024-06-27.zip (link para arquivo Gerber)
+
 ## Descrição do Projeto
 
 > Descrição do objetivo principal do projeto, incluindo contexto gerador, motivação.
