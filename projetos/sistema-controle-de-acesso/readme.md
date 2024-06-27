@@ -93,7 +93,7 @@ https://github.com/thiagomasanori/ea075-2024.1/blob/09c57e48370c131b52c00f0a246e
 > Além disso, deve-se esclarecer também o relacionamento entre estes blocos, incluindo os principais sinais de comunicação entre
 > os blocos de forma a assegurar a execução de todas as tarefas que o sistema deve realizar.
 
-> ![Alt](images/Diagrama_acesso.drawio.svg)
+> ![Alt](images/images-E1/Diagrama_acesso.drawio.svg)
 >
 > 1. O módulo de entrada com reconhecimento facial ou QR Code é responsável por capturar as imagens e processá-las para identificação
 > 2. O banco de dados armazena as informações sobre os usuários com ID, foto e permissões de entrada. Utilizado para relacionar os resultados o módulo de entrada com cada usuário
@@ -157,25 +157,25 @@ Você sabia? Ferramentas como o `draw.io` permitem integração com o Github.
 
 ### Especificação de Algoritmos
 > Dado o diagrama de blocos do sistema apresentado abaixo, para cada evento do sistema temos
-> ![Alt](images/Diagrama_Funcional.drawio.svg)
+> ![Alt](images/images-E2/Diagrama_Funcional.drawio.svg)
 > 
 > Evento: Inicialização do Sistema
->> ![Alt](images/Inicializacao_do_Sistema.drawio.svg)
+>> ![Alt](images/images-E2/Inicializacao_do_Sistema.drawio.svg)
 
 > Evento: Captura de Imagem
->> ![Alt](images/Captura_de_Imagem.drawio.svg)
+>> ![Alt](images/images-E2/Captura_de_Imagem.drawio.svg)
 
 > Evento: Processamento de Imagem
->> ![Alt](images/Processamento_de_Imagem.drawio.svg)
+>> ![Alt](images/images-E2/Processamento_de_Imagem.drawio.svg)
 >> 
 > Evento: Leitura de QR Code
->> ![Alt](images/Leitura_de_QR_Code.drawio.svg)
+>> ![Alt](images/images-E2/Leitura_de_QR_Code.drawio.svg)
 >> 
 > Evento: Processamento de QR Code
->> ![Alt](images/Processamento_de_QR_Code.drawio.svg)
+>> ![Alt](images/images-E2/Processamento_de_QR_Code.drawio.svg)
 >> 
 > Evento: Feedback Sonoro
->> ![Alt](images/Feedback_Sonoro.drawio.svg)
+>> ![Alt](images/images-E2/Feedback_Sonoro.drawio.svg)
 
 > A estimativa da memória necessária é baseada nas informações encontradas nos datasheets dos componentes e outras encontradas na internet. Com isso, temos que
 >> Código do Programa:
